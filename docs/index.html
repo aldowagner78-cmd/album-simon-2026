@@ -313,9 +313,9 @@
       </div>
       <p>Mundial 2026 · Marca tus figus, anota repetidas y cambia con tus amigos.</p>
       <div class="stats">
-        <div class="stat tengo"><strong id="sTengo">0</strong><span>Las tengo</span></div>
-        <div class="stat faltan"><strong id="sFaltan">0</strong><span>Faltan</span></div>
-        <div class="stat rep"><strong id="sRep">0</strong><span>Repetidas</span></div>
+        <div class="stat tengo"><strong id="sTengo">0</strong><span>✅ Las tengo</span></div>
+        <div class="stat faltan"><strong id="sFaltan">0</strong><span>❌ Me faltan</span></div>
+        <div class="stat rep"><strong id="sRep">0</strong><span>🔁 Repetidas</span></div>
       </div>
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
       <div class="updaterow">
@@ -347,14 +347,14 @@
 
     <section class="repbox">
       <div class="repbox-head">
-        <h3>📋 Mi grilla completa</h3>
-        <p>Tocá un número para sumar repetidas. Doble toque (+/-) o usá las tarjetas de abajo.</p>
+        <h3>📋 Marcá tus figuritas aquí</h3>
+        <p><b>1er toque</b> = ✅ La tengo &nbsp;·&nbsp; <b>2do toque</b> = 🔁 Repetida &nbsp;·&nbsp; <b>Manten presionado</b> = ❌ Quitar</p>
       </div>
       <div class="replist" id="replist"></div>
       <div class="legend">
-        <span><i style="background:#fdecec;border:1px solid rgba(183,58,58,0.2)"></i>Falta</span>
-        <span><i style="background:linear-gradient(180deg, #e6f7ee, #c4ecd5);border:1px solid rgba(25,179,107,0.3)"></i>La tengo</span>
-        <span><i style="background:linear-gradient(180deg, #fff1c8, #ffd97a);border:1px solid rgba(246,180,14,0.5)"></i>Repetida (xN)</span>
+        <span><i style="background:#fdecec;border:1px solid rgba(183,58,58,0.2)"></i>❌ Me falta</span>
+        <span><i style="background:linear-gradient(180deg, #e6f7ee, #c4ecd5);border:1px solid rgba(25,179,107,0.3)"></i>✅ La tengo</span>
+        <span><i style="background:linear-gradient(180deg, #fff1c8, #ffd97a);border:1px solid rgba(246,180,14,0.5)"></i>🔁 Repetida (xN)</span>
       </div>
     </section>
 
@@ -389,7 +389,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.3";
+    const APP_VERSION = "2026.05.09.4";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -885,30 +885,61 @@
       if (els.overlay.classList.contains("open")) refreshSummary();
     });
 
-    // EVENTOS - replist (tap = +1, doble tap = -1)
-    let lastTap = { btn: null, time: 0 };
+    // EVENTOS - replist
+    // Flujo: rojo (falta) → 1er tap → verde (tengo) → 2do tap → dorado rep×1 → tap → rep×2...
+    // Mantener presionado (longpress) → resetear a "no tengo"
+    let pressTimer = null;
+    els.replist.addEventListener("pointerdown", (event) => {
+      const t = event.target.closest(".repnum");
+      if (!t) return;
+      pressTimer = setTimeout(() => {
+        pressTimer = null;
+        const row = t.closest(".reprow");
+        const c = row.dataset.code, n = Number(t.dataset.num);
+        const k = key(c, n);
+        if (!state[k].la_tengo && state[k].repetidas === 0) return; // ya está en rojo
+        pushHistory(`${LABELS[c]||c} #${n} quitada`);
+        state[k].la_tengo = false;
+        state[k].repetidas = 0;
+        updateRepRowCell(c, n);
+        syncStickerCard(c, n);
+        save(); stats(); refreshHeader();
+        if (els.overlay.classList.contains("open")) refreshSummary();
+        toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
+        // vibración de feedback en mobile
+        try { navigator.vibrate && navigator.vibrate(80); } catch {}
+      }, 600);
+    });
+    els.replist.addEventListener("pointerup", () => { clearTimeout(pressTimer); pressTimer = null; });
+    els.replist.addEventListener("pointercancel", () => { clearTimeout(pressTimer); pressTimer = null; });
     els.replist.addEventListener("click", (event) => {
+      if (pressTimer === null) return; // fue longpress, ignorar click
+      clearTimeout(pressTimer); pressTimer = null;
       const t = event.target.closest(".repnum");
       if (!t) return;
       const row = t.closest(".reprow");
       const c = row.dataset.code, n = Number(t.dataset.num);
       const k = key(c, n);
-      const now = Date.now();
-      const isDouble = lastTap.btn === t && (now - lastTap.time) < 350;
-      lastTap = { btn: t, time: now };
-      const curr = Number(state[k].repetidas || 0);
-      let next = curr + 1;
-      if (isDouble) next = Math.max(0, curr - 1);
-      if (next === curr && state[k].la_tengo) return;
-      const willMarkHave = next > 0 && !state[k].la_tengo;
-      pushHistory(`${LABELS[c]||c} #${n} ${isDouble ? "-1 repetida" : "+1 repetida"}`);
-      state[k].repetidas = next;
-      if (willMarkHave) state[k].la_tengo = true;
+      const s = state[k];
+      if (!s.la_tengo) {
+        // ESTADO: rojo → marcar como tengo (verde)
+        pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+        s.la_tengo = true;
+        s.repetidas = 0;
+        try { navigator.vibrate && navigator.vibrate(40); } catch {}
+        fireConfetti(
+          t.getBoundingClientRect().left + t.offsetWidth / 2,
+          t.getBoundingClientRect().top + t.offsetHeight / 2
+        );
+      } else {
+        // ESTADO: verde o dorado → sumar repetida
+        pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+        s.repetidas = Number(s.repetidas || 0) + 1;
+        try { navigator.vibrate && navigator.vibrate([30, 20, 30]); } catch {}
+      }
       updateRepRowCell(c, n);
       syncStickerCard(c, n);
-      save();
-      stats();
-      refreshHeader();
+      save(); stats(); refreshHeader();
       if (els.overlay.classList.contains("open")) refreshSummary();
     });
 
