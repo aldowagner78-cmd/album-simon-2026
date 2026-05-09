@@ -1,5 +1,5 @@
 // Bump esta version cada vez que se publiquen cambios clave para forzar refresco en el celular.
-const CACHE_NAME = "album-simon-pages-v9";
+const CACHE_NAME = "album-simon-pages-v10";
 const ASSETS = [
   "./",
   "./index.html",
@@ -30,7 +30,7 @@ const isHTML = (req) =>
   req.destination === "document" ||
   (req.headers.get("accept") || "").includes("text/html");
 
-const isAppCode = (url) => /\/(index\.html|sw\.js|manifest\.webmanifest|version\.json)$/.test(url.pathname);
+const isAppCode = (url) => /\/(index\.html|sw\.js|manifest\.webmanifest|version\.json|preload\.json)$/.test(url.pathname);
 
 self.addEventListener("fetch", (event) => {
   const req = event.request;

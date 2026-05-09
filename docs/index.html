@@ -329,6 +329,7 @@
           <button class="btn-main" id="compareBtn">🔁 Comparar</button>
           <button class="btn-soft" id="shareBtn">📤 Compartir</button>
           <button class="btn-soft" id="waBtn">💬 WhatsApp</button>
+          <button class="btn-main" id="importPreloadBtn">📥 Cargar figus de Simón</button>
           <button class="btn-soft" id="backupBtn">💾 Backup</button>
           <button class="btn-soft" id="restoreBtn">📂 Restaurar</button>
           <input id="restoreFile" type="file" accept="application/json" style="display:none">
@@ -389,7 +390,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.5";
+    const APP_VERSION = "2026.05.09.6";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -457,6 +458,7 @@
       friendMissing: document.getElementById("friendMissing"),
       friendRepeated: document.getElementById("friendRepeated"),
       friendResult: document.getElementById("friendResult"),
+      importPreloadBtn: document.getElementById("importPreloadBtn"),
       backupBtn: document.getElementById("backupBtn"),
       restoreBtn: document.getElementById("restoreBtn"),
       restoreFile: document.getElementById("restoreFile"),
@@ -993,6 +995,28 @@
       const fm = parse(els.friendMissing.value);
       const fr = parse(els.friendRepeated.value);
       els.friendResult.textContent = compare(fm, fr);
+    });
+    els.importPreloadBtn.addEventListener("click", async () => {
+      try {
+        const res = await fetch("preload.json?t=" + Date.now());
+        if (!res.ok) throw new Error("fetch");
+        const p = await res.json();
+        if (!p || typeof p !== "object") throw new Error("bad");
+        pushHistory("Cargar figus de Simón");
+        let count = 0;
+        Object.keys(state).forEach(k => {
+          if (p[k] !== undefined) {
+            state[k].la_tengo = Boolean(p[k].la_tengo);
+            state[k].repetidas = Math.max(0, Number(p[k].repetidas || 0));
+            if (state[k].la_tengo) count++;
+          }
+        });
+        save();
+        renderCountries();
+        renderReplist();
+        stats();
+        toast(count + " figus cargadas ✅", "ok");
+      } catch { toast("No se pudo cargar los datos", "warn"); }
     });
     els.backupBtn.addEventListener("click", () => {
       const blob = new Blob([JSON.stringify(state)], { type: "application/json" });
