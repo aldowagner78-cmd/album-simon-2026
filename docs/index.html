@@ -239,6 +239,29 @@
     /* CONFETTI */
     .confetti { position: fixed; pointer-events: none; z-index: 100; width: 8px; height: 14px; opacity: 0; }
 
+    /* TABS Tengo / Faltan */
+    .listbox { margin-top: 14px; border-radius: 22px; overflow: hidden; box-shadow: 0 12px 26px rgba(7, 18, 40, 0.18); border: 1px solid rgba(255,255,255,0.5); background:#fff; }
+    .listtabs { display:grid; grid-template-columns:1fr 1fr; }
+    .listtabs button { min-height:54px; border:0; font-family: Montserrat,sans-serif; font-weight:900; font-size:0.95rem; color:#fff; cursor:pointer; letter-spacing:0.3px; }
+    .listtabs .tt-have { background: linear-gradient(135deg,#19b36b,#0e7a45); }
+    .listtabs .tt-miss { background: linear-gradient(135deg,#c33a6a,#7a1f3f); }
+    .listtabs button.off { filter: brightness(0.6) saturate(0.6); }
+    .listcontent { padding: 12px; max-height: 56vh; overflow:auto; background: linear-gradient(180deg,#fff,#eef4fc); }
+    .listcountry { margin-bottom: 14px; }
+    .listcountry h4 { display:flex; align-items:center; gap:8px; margin:0 0 8px; font-family:Montserrat,sans-serif; font-size:0.92rem; color:#0a3d79; }
+    .listcountry h4 img { width:26px; height:18px; border-radius:3px; box-shadow:0 2px 4px rgba(0,0,0,0.25); object-fit:cover; }
+    .listcountry h4 .ccount { margin-left:auto; font-size:0.78rem; color:#fff; background:linear-gradient(135deg,#0a3d79,#1f5ea9); padding:3px 10px; border-radius:999px; }
+    .lthumbs { display:grid; grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 6px; }
+    .lthumb { position:relative; aspect-ratio:1; border-radius:10px; overflow:hidden; background:linear-gradient(135deg,#e9eef8,#cfd9ec); border:1px solid rgba(10,61,121,0.18); display:grid; place-items:center; }
+    .lthumb img { width:100%; height:100%; object-fit:cover; }
+    .lthumb .ln { position:absolute; bottom:2px; right:3px; font-family:Bangers,Montserrat,sans-serif; font-size:0.85rem; color:#fff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 4px rgba(0,0,0,0.8); }
+    .lthumb.miss { background:linear-gradient(135deg,#fdecec,#f7c0c0); border-color:rgba(183,58,58,0.4); }
+    .lthumb.miss .ln { color:#b73a3a; text-shadow: 1px 1px 0 #fff; }
+    .lthumb.miss::after { content:"?"; position:absolute; inset:0; display:grid; place-items:center; font-family:Bangers,sans-serif; font-size:1.5rem; color:rgba(183,58,58,0.5); }
+    .lthumb.have { box-shadow: 0 0 0 2px #19b36b inset; }
+    .lthumb .badge-rep { position:absolute; top:2px; left:2px; background:#f6b40e; color:#5a3a00; border-radius:999px; padding:1px 6px; font-size:0.66rem; font-weight:900; box-shadow:0 2px 4px rgba(0,0,0,0.3); }
+    .lempty { text-align:center; padding: 30px 16px; color:#7a8aa8; font-family:Montserrat,sans-serif; font-weight:700; }
+
     /* TOAST */
     .toast { position: fixed; bottom: 86px; left: 50%; transform: translate(-50%, 30px); z-index: 200;
       background: rgba(15, 30, 60, 0.95); color: #fff; padding: 11px 18px; border-radius: 14px;
@@ -314,6 +337,14 @@
       </div>
     </section>
 
+    <section class="listbox">
+      <div class="listtabs" id="listTabs">
+        <button class="tt-have" data-tab="have" id="tabHave">✅ Las que tengo (<span id="tHaveN">0</span>)</button>
+        <button class="tt-miss off" data-tab="miss" id="tabMiss">❌ Me faltan (<span id="tMissN">0</span>)</button>
+      </div>
+      <div class="listcontent" id="listContent"></div>
+    </section>
+
     <section class="repbox">
       <div class="repbox-head">
         <h3>📋 Mi grilla completa</h3>
@@ -358,7 +389,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.2";
+    const APP_VERSION = "2026.05.09.3";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -435,6 +466,12 @@
       versBadge: document.getElementById("versBadge"),
       updBtn: document.getElementById("updBtn"),
       updStatus: document.getElementById("updStatus"),
+      listTabs: document.getElementById("listTabs"),
+      listContent: document.getElementById("listContent"),
+      tHaveN: document.getElementById("tHaveN"),
+      tMissN: document.getElementById("tMissN"),
+      tabHave: document.getElementById("tabHave"),
+      tabMiss: document.getElementById("tabMiss"),
     };
     let deferredPrompt = null;
     const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -640,6 +677,50 @@
       els.sRep.textContent = String(rep);
       const total = COUNTRIES.length * 20;
       els.progressFill.style.width = `${(tengo/total)*100}%`;
+      els.tHaveN.textContent = String(tengo);
+      els.tMissN.textContent = String(faltan);
+      renderActiveList();
+    };
+
+    let activeTab = "have";
+    const switchTab = (tab) => {
+      activeTab = tab;
+      els.tabHave.classList.toggle("off", tab !== "have");
+      els.tabMiss.classList.toggle("off", tab !== "miss");
+      renderActiveList();
+    };
+    const renderActiveList = () => {
+      if (!els.listContent) return;
+      const want = activeTab; // "have" o "miss"
+      let html = "";
+      let totalShown = 0;
+      COUNTRIES.forEach(c => {
+        const items = [];
+        for (let n = 1; n <= 20; n++) {
+          const s = state[key(c, n)];
+          const has = !!s.la_tengo;
+          if (want === "have" && has) items.push({ n, rep: Number(s.repetidas || 0) });
+          else if (want === "miss" && !has) items.push({ n, rep: 0 });
+        }
+        if (!items.length) return;
+        totalShown += items.length;
+        const flagImg = FLAGS[c] ? `<img src="${flagUrl(c, 80)}" alt="${c}">` : `<span style="font-size:1.3rem">${SPECIAL_EMOJI[c] || "⚽"}</span>`;
+        const cls = want === "have" ? "have" : "miss";
+        const thumbs = items.map(({ n, rep }) => {
+          const repBadge = rep > 0 ? `<span class="badge-rep">x${rep}</span>` : "";
+          if (want === "have") {
+            return `<div class="lthumb ${cls}"><img src="./img/stickers/${c}-${n}.jpg" loading="lazy" onerror="this.style.display='none'" alt="${c}-${n}"><span class="ln">${n}</span>${repBadge}</div>`;
+          }
+          return `<div class="lthumb miss"><span class="ln">${n}</span></div>`;
+        }).join("");
+        html += `<div class="listcountry"><h4>${flagImg}<span>${LABELS[c] || c}</span><span class="ccount">${items.length}</span></h4><div class="lthumbs">${thumbs}</div></div>`;
+      });
+      if (!totalShown) {
+        html = want === "have"
+          ? `<div class="lempty">Aún no marcaste ninguna figurita.<br>Tocala desde abajo ↓</div>`
+          : `<div class="lempty">🎉 ¡Las tienes todas!</div>`;
+      }
+      els.listContent.innerHTML = html;
     };
 
     const getMissing = () => {
@@ -1006,6 +1087,12 @@
         e.preventDefault();
         undo();
       }
+    });
+
+    // ===== TABS Tengo/Faltan =====
+    els.listTabs.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-tab]");
+      if (btn) switchTab(btn.dataset.tab);
     });
 
     renderCountries();
