@@ -1,106 +1,219 @@
-# Album de Simon - Mundial 2026
+# Album Simon - FIFA Mundial 2026
 
-App web simple (Flask + HTML/CSS/JS) para llevar control de figuritas desde celular Android.
+App web offline para rastrear figuritas del álbum Panini del Mundial 2026.
 
-## Que hace hoy
+## ✨ Características
 
-- Registro de figuritas por pais (1..20): la tengo / falta.
-- Registro de repetidas por figurita.
-- Resumen para copiar o compartir.
-- Comparacion con amigo: sugiere que puedes recibir, que puedes dar y canjes mutuos.
-- UI mobile-first con controles grandes.
+- **Sin servidor:** Funciona completamente en el navegador
+- **Instalable:** Se puede instalar en Android como app nativa (PWA)
+- **Offline:** Funciona sin conexión a internet
+- **Grid completa:** Edición masiva de repetidas (50 países × 20 figuritas)
+- **Comparación:** Analiza figuritas con amigos para sugerencias de intercambio
+- **Compartir:** Botón WhatsApp directo para enviar resumen
+- **Backup:** Exportar e importar JSON
+- **Miniaturas:** Soporte para imágenes reales con fallback a colores degradados
 
-## Requisitos
+## 🚀 Instalación Rápida
 
-- Python 3.10+
-- Dependencias:
+### Opción A: GitHub Pages (RECOMENDADO - Sin servidor)
 
-```bash
-py -m pip install -r requirements.txt
-```
+Lee el archivo **`GITHUB_PAGES_INSTRUCTIONS.md`** para instrucciones completas paso-a-paso para principiantes.
 
-## Ejecutar en PC para usar desde Android (misma Wi-Fi)
+**Resumen:**
+1. Crea un repositorio en GitHub
+2. Configura Git en tu PC
+3. Sube esta carpeta a `main`
+4. Activa GitHub Pages en Settings (rama: main, carpeta: /docs)
+5. Accede a: `https://tu-usuario.github.io/album-simon-2026/`
 
-1. En Windows, desde la carpeta del proyecto:
+**Ventajas:**
+- ✓ Completamente gratis
+- ✓ Funciona desde cualquier dispositivo con el link
+- ✓ Offline después de cargar
+- ✓ Sin necesidad de servidor propio
 
-```bash
-py -m flask --app app run --host 0.0.0.0 --port 5000
-```
-
-2. En tu PC, averigua la IP local (ejemplo 192.168.1.35).
-
-3. En Android, abre en el navegador:
-
-```text
-http://192.168.1.35:5000
-```
-
-## Instalar como app (PWA) en Android
-
-1. Abre la app desde Chrome en Android con la URL local.
-2. Si aparece el boton "Instalar app" en la esquina inferior izquierda, tocalo.
-3. Si no aparece, abre menu de Chrome y elige "Agregar a pantalla de inicio".
-4. Una vez instalada, la app abre en modo standalone (sin barra del navegador).
-
-## Notas de assets
-
-- Si no hay escudos descargados, la app usa `static/img/default-shield.svg` como fallback.
-- El scraping de assets es opcional. Puedes usar la app sin scraping.
-- El script `scrape_assets.py` ahora usa una estrategia curada:
-	- Banderas SVG por pais desde FlagCDN (consistentes y limpias).
-	- Logos especiales locales para `FWC` y `CC`.
-	- Extra opcional para Argentina desde Wikipedia.
-- `CC` usa un logo inspirado con estilo clasico para mejorar legibilidad visual.
-
-## Publicar sin servidor (GitHub Pages)
-
-Esta opcion publica la app estatica de la carpeta `docs/` para abrirla desde cualquier red.
-
-1. Crea un repositorio nuevo en GitHub (vacio).
-2. Desde la carpeta del proyecto, ejecuta:
+### Opción B: Local (solo desarrollo)
 
 ```bash
-git init
-git add .
-git commit -m "App album Simon lista para GitHub Pages"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
-git push -u origin main
+# Requiere Python 3.10+
+python app.py
+# Abre: http://localhost:5000
 ```
 
-3. En GitHub: `Settings` -> `Pages` -> `Build and deployment`:
-	- Source: `Deploy from a branch`
-	- Branch: `main`
-	- Folder: `/docs`
+## 📁 Estructura
 
-4. Tu link quedara asi:
-
-```text
-https://TU_USUARIO.github.io/TU_REPO/
+```
+FIGUS MUNDIAL/
+├── docs/                          # GitHub Pages (producción)
+│   ├── index.html                 # App completa (standalone)
+│   ├── manifest.webmanifest       # PWA metadata
+│   ├── sw.js                      # Service worker
+│   ├── icons/                     # Iconos PWA
+│   └── img/stickers/              # Miniaturas (OPCIONAL)
+│       ├── ARG-1.jpg
+│       ├── ARG-2.jpg
+│       └── ...
+├── app.py                         # Flask backend (desarrollo)
+├── album_simon.json               # Datos JSON (desarrollo)
+├── GITHUB_PAGES_INSTRUCTIONS.md   # 📖 Guía para publicar
+├── MINIATURAS_INSTRUCCIONES.md    # 📖 Como descargar imágenes
+└── README.md                      # Este archivo
 ```
 
-## Paleta y estilo (hibrido)
+## 🎨 Colores (Híbrido Argentina + Mundial)
 
-Se aplica un estilo "Argentina + Mundial" inspirado (no claiming de branding oficial exacto):
+- **Navy:** #0a3d79 (azul profundo)
+- **Sky Blue:** #74acdf (celeste argentina)
+- **Gold:** #f6b40e (dorado)
+- **Gradientes:** Fondo degradado celeste → navy
 
-- Celeste Argentina: `#74ACDF`
-- Azul profundo: `#0A3D79`
-- Blanco: `#FFFFFF`
-- Dorado sol: `#F6B40E`
+## 🔧 Tecnología
 
-Fuentes usadas:
+| Aspecto | Tecnología |
+|---------|-----------|
+| Frontend | HTML5 + CSS3 + Vanilla JavaScript |
+| Storage | localStorage (clave: `album_simon_2026_v3`) |
+| PWA | Service Worker + manifest.webmanifest |
+| Desarrollo | Flask (Python 3.10+) |
+| Hosting | GitHub Pages estático |
 
-- `Montserrat` (titulos)
-- `Barlow` (texto y UI)
+## 📊 Contenido
 
-## Formato para comparar con amigo
+- **50 países** representados
+- **20 figuritas** por país = 1000 figuritas totales
+- **Faltantes predefinidas** con distribución realista
+- **Grid editable:** Tabla 50×20 para edición masiva de repetidas
 
-En los dos cuadros de texto (faltantes y repetidas), una linea por pais:
+**Códigos de países:** FWC, MEX, RSA, KOR, CZE, CAN, BIH, QAT, SUI, BRA, MAR, HAI, SCO, USA, PAR, AUS, TUR, GER, COW, CIV, ECU, NED, JPN, SWE, TUN, CC, BEL, EGY, IRN, NZL, ESP, CPV, KSA, URU, FRA, SEN, IRQ, NOR, ARG, ALG, AUT, JOR, POR, COD, UZB, COL, ENG, CRO, GHA, PAN
 
-```text
-ARG: 1,2,3
-BRA: 4,10
+## 🛠️ Como usar
+
+### 1️⃣ Agregar figuritas
+
+1. Expande un país (ej: Argentina)
+2. Marca "La tengo" en la tarjeta
+3. Usa los botones +/- para cantidad de repetidas
+
+### 2️⃣ Editar en lote (Grid)
+
+1. Scroll hasta la tabla "Grilla completa de repetidas"
+2. Haz clic en cualquier celda para cambiar cantidad
+3. Los cambios se sincronizan automáticamente con las tarjetas
+
+### 3️⃣ Comparar con amigos
+
+1. Pega en el primer cuadro: Faltantes del amigo (formato: `ARG: 1,2,3`)
+2. Pega en el segundo cuadro: Repetidas del amigo (formato: `BRA: 4,10`)
+3. Haz clic en "Comparar" para ver sugerencias
+4. Resultado muestra:
+   - Lo que tu amigo puede darte
+   - Lo que Simon puede darle
+   - Canjes mutuos posibles
+
+### 4️⃣ Compartir resumen
+
+Haz clic en "Resumen" y elige:
+
+- **Copiar:** Copia al portapapeles
+- **Compartir:** Usa el navegador para compartir
+- **WhatsApp:** Abre wa.me con texto codificado para enviar directo
+
+### 5️⃣ Backup & Restaurar
+
+- **Exportar backup:** Descarga JSON con todos tus datos
+- **Importar backup:** Sube un JSON previo para recuperar estado
+
+## 📱 En Android (Como PWA)
+
+1. Abre la app en Chrome/navegador
+2. Menu → "Instalar app" (o "Agregar a pantalla de inicio")
+3. Se instala como app nativa
+4. Funciona completamente offline
+5. Los datos se guardan en el dispositivo
+
+## 🎞️ Miniaturas (Opcional)
+
+El album funciona 100% sin imágenes (muestra colores degradados). Para agregar miniaturas reales:
+
+Ver archivo **`MINIATURAS_INSTRUCCIONES.md`** que incluye:
+- Como descargar desde last-sticker.com
+- Extensión recomendada: Image Downloader
+- Estructura de carpetas
+- Convención de nombres: `{CODIGO}-{NUMERO}.jpg`
+
+**Ejemplos de nombres:**
+- `ARG-1.jpg` (Argentina figurita 1)
+- `BRA-20.jpg` (Brasil figurita 20)
+- `FWC-1.jpg` (Logo Mundial figurita 1)
+
+## 💾 Datos & Privacidad
+
+### Formato de almacenamiento
+
+Los datos se guardan en localStorage del navegador como JSON:
+
+```json
+{
+  "ARG-1": {"codigo_pais": "ARG", "numero": 1, "la_tengo": true, "repetidas": 0},
+  "ARG-2": {"codigo_pais": "ARG", "numero": 2, "la_tengo": false, "repetidas": 3}
+}
 ```
 
-- Codigo de pais en 3 letras (o codigo usado en el album).
-- Numeros validos de 1 a 20.
+### Privacidad
+
+✓ **Todos los datos se guardan LOCALMENTE** en tu dispositivo  
+✓ **No se envía información a servidores** (excepto GitHub Pages para servir archivos)  
+✓ **Puedes desconectarte** de internet después de cargar la app  
+✓ **Puedes exportar/importar** tus datos en cualquier momento  
+
+## 🐛 Solución de Problemas
+
+### Las imágenes no aparecen
+- Verifica que estén en `docs/img/stickers/`
+- El nombre debe ser exacto: `ARG-1.jpg` (mayúsculas)
+- Recarga la página (Ctrl+F5)
+- Abre la consola (F12) y busca errores 404
+
+### El sitio no aparece en GitHub Pages
+- Espera 1-2 minutos después de hacer push
+- Recarga la página (Ctrl+F5)
+- Ve a Settings → Pages y verifica:
+  - Branch: main
+  - Folder: /docs
+
+### Perdí mis datos
+- **Prevención:** Haz backups regularmente (botón "Exportar")
+- **Recuperación:** Los datos están en localStorage de tu navegador
+- **Cuidado:** Limpiar cookies/cache del navegador borra todo
+
+### El app no funciona offline
+- Verifica que el navegador soporte PWA (Chrome, Edge, Firefox)
+- Asegúrate de haber abierto la app una vez online
+- El service worker se instala automáticamente
+
+## 📚 Recursos útiles
+
+- **GitHub Pages Docs:** https://docs.github.com/en/pages
+- **PWA Docs:** https://web.dev/progressive-web-apps/
+- **localStorage MDN:** https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
+- **Guía GitHub Pages (nuestra):** Leer `GITHUB_PAGES_INSTRUCTIONS.md`
+
+## 🔄 Versiones
+
+| Versión | Tipo | Ubicación | Cuando usar |
+|---------|------|-----------|-------------|
+| Flask | Desarrollo | `app.py` en local | Testing, cambios de código |
+| GitHub Pages | Producción | `docs/index.html` en GitHub | Compartir con otros, usar desde celular |
+
+## 📄 Licencia
+
+Uso personal y educativo. No comercial.
+
+---
+
+**Última actualización:** 2026  
+**Versión:** 1.0  
+**Estado:** ✅ Producción (GitHub Pages)  
+**Soporte:** Sin servidor - completamente offline
+
+**¡A disfrutar del album! 🎉**
