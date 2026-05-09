@@ -105,7 +105,8 @@
     .repflag { width: 56px; height: 38px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.08); display: grid; place-items: center; background: linear-gradient(135deg, var(--c1), var(--c2)); color: #fff; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 0.78rem; }
     .repflag img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .repnums { display: flex; flex-wrap: wrap; gap: 3px; }
-    .repnum { min-width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.1s; padding: 0 4px; }
+    .repnum { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.1s; position: relative; overflow: visible; flex-shrink: 0; }
+    .repnum .rbadge { position: absolute; top: -6px; left: -6px; min-width: 15px; height: 15px; border-radius: 999px; background: linear-gradient(135deg, #f6b40e, #d99a00); color: #5a3a00; font-size: 0.58rem; font-weight: 900; display: grid; place-items: center; padding: 0 3px; line-height: 1; box-shadow: 0 1px 4px rgba(0,0,0,0.35); pointer-events: none; z-index: 2; border: 1.5px solid #fff; }
     .repnum:active { transform: scale(0.92); }
     .repnum.have { background: linear-gradient(180deg, #e6f7ee, #c4ecd5); color: #16834a; border-color: rgba(25,179,107,0.3); }
     .repnum.rep { background: linear-gradient(180deg, #fff1c8, #ffd97a); color: #7b4f00; border-color: rgba(246,180,14,0.5); box-shadow: 0 2px 6px rgba(246,180,14,0.3); }
@@ -390,7 +391,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.7";
+    const APP_VERSION = "2026.05.09.8";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -543,6 +544,7 @@
         const [c1, c2] = col(c);
         const details = document.createElement("details");
         details.className = "country";
+        details.dataset.code = c;
         details.style.setProperty("--c1", c1);
         details.style.setProperty("--c2", c2);
         if (i === 0) details.open = true;
@@ -613,10 +615,10 @@
           const r = Number(s.repetidas || 0);
           total += r;
           let cls = "miss";
-          let txt = String(n);
-          if (r > 0) { cls = "rep"; txt = `${n}·${r}`; }
+          let inner = String(n);
+          if (r > 0) { cls = "rep"; inner = `${n}<span class="rbadge">${r}</span>`; }
           else if (s.la_tengo) cls = "have";
-          nums += `<button type="button" class="repnum ${cls}" data-num="${n}" aria-label="numero ${n}">${txt}</button>`;
+          nums += `<button type="button" class="repnum ${cls}" data-num="${n}" aria-label="numero ${n}">${inner}</button>`;
         }
         row.innerHTML = `
           <div class="repflag">${flagHTML(c)}</div>
@@ -637,9 +639,9 @@
         const s = state[key(c, n)];
         const r = Number(s.repetidas || 0);
         btn.classList.remove("miss", "have", "rep");
-        if (r > 0) { btn.classList.add("rep"); btn.textContent = `${n}·${r}`; }
-        else if (s.la_tengo) { btn.classList.add("have"); btn.textContent = String(n); }
-        else { btn.classList.add("miss"); btn.textContent = String(n); }
+        if (r > 0) { btn.classList.add("rep"); btn.innerHTML = `${n}<span class="rbadge">${r}</span>`; }
+        else if (s.la_tengo) { btn.classList.add("have"); btn.innerHTML = String(n); }
+        else { btn.classList.add("miss"); btn.innerHTML = String(n); }
       }
       let total = 0;
       for (let i = 1; i <= 20; i++) total += Number(state[key(c, i)].repetidas || 0);
@@ -647,22 +649,10 @@
       if (cell) cell.textContent = String(total);
     };
 
-    const updateCountryProgressInHeader = (c) => {
-      const det = els.countries.querySelector(`details.country[data-code-temp="${c}"]`);
-      // re-render simple: actualizar cprog y barra
-      els.countries.querySelectorAll("details.country").forEach(d => {
-        const heading = d.querySelector(".country-meta h2");
-        if (!heading) return;
-      });
-      // método simple por ID: buscar todos summary y comparar
-    };
-
     const refreshHeader = () => {
-      // actualiza barras de progreso de cada país
-      const all = els.countries.querySelectorAll("details.country");
-      let idx = 0;
-      all.forEach(det => {
-        const c = COUNTRIES[idx++];
+      COUNTRIES.forEach(c => {
+        const det = els.countries.querySelector(`details.country[data-code="${c}"]`);
+        if (!det) return;
         const have = countryProgress(c);
         const cp = det.querySelector(".cprog");
         const bar = det.querySelector(".mini-progress span");
