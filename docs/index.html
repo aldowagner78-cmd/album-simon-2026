@@ -308,6 +308,7 @@
         <h3>📋 Resumen para cambiar</h3>
         <div class="sheet-actions">
           <button class="copy" id="copyBtn">Copiar</button>
+          <button class="wa-share" id="waShareBtn" style="background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;min-height:40px;border-radius:11px;padding:0 14px;font-family:Montserrat,sans-serif;font-weight:800;font-size:0.86rem;">💬 WhatsApp</button>
           <button class="close" id="closeBtn">Cerrar</button>
         </div>
       </div>
@@ -761,6 +762,16 @@
       await navigator.clipboard.writeText(summary());
       els.copyBtn.textContent = "✓ Copiado";
       setTimeout(() => els.copyBtn.textContent = "Copiar", 1200);
+    });
+    document.getElementById("waShareBtn").addEventListener("click", () => {
+      const t = summary();
+      if (navigator.share) {
+        navigator.share({ title: "Mis figuritas - Mundial 2026", text: t }).catch(() => {
+          window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
+        });
+      } else {
+        window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
+      }
     });
     els.shareBtn.addEventListener("click", async () => {
       const t = summary();
