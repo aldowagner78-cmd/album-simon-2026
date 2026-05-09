@@ -1,0 +1,6005 @@
+{
+  "version": 1,
+  "stickers": [
+    {
+      "codigo_pais": "FWC",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FWC",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MEX",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "RSA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KOR",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CZE",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CAN",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BIH",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "QAT",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SUI",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BRA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "MAR",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "HAI",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SCO",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "USA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAR",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUS",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUR",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GER",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COW",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CIV",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ECU",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NED",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JPN",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SWE",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "TUN",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CC",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "BEL",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "EGY",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRN",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NZL",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ESP",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CPV",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "KSA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "URU",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "FRA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "SEN",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "IRQ",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "NOR",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ARG",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ALG",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "AUT",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "JOR",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 3,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 7,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 11,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 16,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "POR",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COD",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "UZB",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "COL",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "ENG",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 2,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 6,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 18,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "CRO",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 1,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 4,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 5,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 8,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 9,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 10,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 12,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 13,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 14,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 15,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 17,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 19,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "GHA",
+      "numero": 20,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 1,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 2,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 3,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 4,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 5,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 6,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 7,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 8,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 9,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 10,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 11,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 12,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 13,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 14,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 15,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 16,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 17,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 18,
+      "la_tengo": false,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 19,
+      "la_tengo": true,
+      "repetidas": 0
+    },
+    {
+      "codigo_pais": "PAN",
+      "numero": 20,
+      "la_tengo": false,
+      "repetidas": 0
+    }
+  ]
+}

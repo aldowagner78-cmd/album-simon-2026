@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a3d79">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Album Simon">
+  <title>Album Simon - Mundial 2026</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg">
+  <link rel="apple-touch-icon" href="./icons/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1: #05244a;
+      --bg2: #1f5ea9;
+      --ink: #132440;
+      --muted: #5f7089;
+      --navy: #0a3d79;
+      --sky: #74acdf;
+      --gold: #f6b40e;
+      --card: #ffffff;
+      --line: rgba(10, 61, 121, 0.15);
+      --shadow: 0 16px 34px rgba(8, 20, 42, 0.2);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Barlow, sans-serif;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 0 0, rgba(246, 180, 14, 0.2), transparent 26%),
+        radial-gradient(circle at 100% 0, rgba(116, 172, 223, 0.35), transparent 30%),
+        linear-gradient(180deg, #041735, var(--bg1) 40%, #0c2f60 100%);
+    }
+
+    .shell {
+      width: min(1160px, 100%);
+      margin: 0 auto;
+      padding: 14px 12px 92px;
+    }
+
+    .hero {
+      border-radius: 26px;
+      padding: 18px;
+      background:
+        linear-gradient(135deg, rgba(8, 40, 84, 0.97), rgba(20, 86, 158, 0.94)),
+        radial-gradient(circle at right top, rgba(246, 180, 14, 0.36), transparent 28%);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(1.35rem, 4.8vw, 2.4rem);
+    }
+
+    .hero p {
+      margin: 8px 0 0;
+      color: rgba(255,255,255,0.86);
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .stat {
+      border-radius: 14px;
+      padding: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.06rem;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .stat span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .tools {
+      margin-top: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .tools textarea {
+      width: 100%;
+      min-height: 72px;
+      border-radius: 13px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(3, 18, 43, 0.46);
+      color: #fff;
+      padding: 10px;
+      font: inherit;
+    }
+
+    .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    button {
+      min-height: 44px;
+      border: 0;
+      border-radius: 14px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .btn-main { background: linear-gradient(135deg, var(--gold), #ffd45f); color: #13264a; }
+    .btn-soft { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.22); }
+
+    .friend-result {
+      white-space: pre-wrap;
+      border-radius: 14px;
+      background: rgba(5, 23, 52, 0.42);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.93);
+      padding: 10px;
+      font-size: 0.9rem;
+      line-height: 1.38;
+    }
+
+    .countries {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    details.country {
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ffffff, #f4f7fc);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow: 0 10px 24px rgba(7, 18, 40, 0.1);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .country-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: linear-gradient(90deg, rgba(116,172,223,0.18), rgba(246,180,14,0.14));
+    }
+
+    .country-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.92rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .country-meta h2 {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.98rem;
+      color: var(--navy);
+    }
+
+    .country-meta p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .chev {
+      margin-left: auto;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(10,61,121,0.1);
+      color: var(--navy);
+      transition: transform .22s ease;
+    }
+
+    details[open] .chev { transform: rotate(180deg); }
+
+    .stickers {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .sticker {
+      position: relative;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff, #edf3fc);
+      box-shadow: 0 8px 18px rgba(8, 17, 37, 0.09);
+      padding: 9px;
+      display: grid;
+      gap: 8px;
+      min-height: 172px;
+    }
+
+    .art {
+      border-radius: 14px;
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      background:
+        linear-gradient(135deg, var(--c1), var(--c2)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.16) 0 8px, rgba(255,255,255,0) 8px 16px);
+    }
+
+    .sticker-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .num {
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      font-size: 1.56rem;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .chip {
+      min-width: 52px;
+      text-align: center;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #7a5500;
+      background: rgba(246,180,14,0.2);
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 13px;
+      border: 1px solid var(--line);
+      background: rgba(10,61,121,0.03);
+      padding: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .check input { width: 26px; height: 26px; accent-color: #0a3d79; }
+
+    .rep {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+    }
+
+    .rep button {
+      min-height: 42px;
+      background: linear-gradient(180deg, #f2f5fa, #e5ecf8);
+      color: var(--navy);
+    }
+
+    .rep-value {
+      min-height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      background: linear-gradient(180deg, #0a3d79, #1b5ea9);
+    }
+
+    .fab, .install {
+      position: fixed;
+      bottom: 14px;
+      min-height: 56px;
+      border-radius: 999px;
+      padding: 0 16px;
+      z-index: 40;
+    }
+
+    .fab {
+      right: 14px;
+      background: linear-gradient(135deg, var(--gold), #ffd45f);
+      color: #132440;
+      box-shadow: 0 16px 30px rgba(246, 180, 14, 0.35);
+    }
+
+    .install {
+      left: 14px;
+      display: none;
+      background: rgba(7, 35, 72, 0.92);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+
+    .install.show { display: inline-flex; align-items: center; justify-content: center; }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      background: rgba(0,0,0,0.64);
+      backdrop-filter: blur(7px);
+      z-index: 60;
+      padding: 12px;
+    }
+
+    .overlay.open { display: grid; }
+
+    .sheet {
+      width: min(920px, 100%);
+      margin: auto;
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: var(--shadow);
+    }
+
+    .sheet-head {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      padding: 12px;
+      background: linear-gradient(135deg, #0a3d79, #1f5ea9);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sheet-head h3 { margin: 0; font-family: Montserrat, sans-serif; font-size: 1rem; }
+
+    .sheet-actions { display: flex; gap: 8px; }
+    .sheet-actions button { min-height: 40px; border-radius: 11px; padding: 0 12px; }
+
+    .copy { background: var(--gold); color: #16284d; }
+    .close { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.22); }
+
+    .sheet-body { padding: 12px; display: grid; gap: 10px; }
+
+    .box {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .box head, .box header {
+      display: block;
+      padding: 12px;
+      background: linear-gradient(90deg, rgba(116,172,223,0.22), rgba(246,180,14,0.2));
+      font-family: Montserrat, sans-serif;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .box pre {
+      margin: 0;
+      padding: 12px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font: inherit;
+      line-height: 1.45;
+    }
+
+    @media (min-width: 700px) {
+      .shell { padding: 18px 18px 96px; }
+      .stickers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sheet-body { grid-template-columns: 1fr 1fr; }
+      .btn-row { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    @media (min-width: 980px) {
+      .stickers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Album de Simon</h1>
+      <p>Version web publica: sin servidor, instalable en Android y con guardado local.</p>
+
+      <div class="stats">
+        <div class="stat"><strong id="sTengo">0</strong><span>las tiene</span></div>
+        <div class="stat"><strong id="sFaltan">0</strong><span>faltan</span></div>
+        <div class="stat"><strong id="sRep">0</strong><span>repetidas</span></div>
+      </div>
+
+      <div class="tools">
+        <textarea id="friendMissing" placeholder="Faltantes del amigo. Ej: ARG: 1,2,3"></textarea>
+        <textarea id="friendRepeated" placeholder="Repetidas del amigo. Ej: BRA: 4,10"></textarea>
+        <div class="btn-row">
+          <button class="btn-main" id="compareBtn" type="button">Comparar canje</button>
+          <button class="btn-soft" id="shareBtn" type="button">Compartir resumen</button>
+          <button class="btn-soft" id="backupBtn" type="button">Exportar backup</button>
+          <button class="btn-soft" id="restoreBtn" type="button">Importar backup</button>
+          <input id="restoreFile" type="file" accept="application/json" style="display:none">
+        </div>
+        <div class="friend-result" id="friendResult">Pega los datos de un amigo para ver sugerencias de intercambio.</div>
+      </div>
+    </section>
+
+    <section class="countries" id="countries"></section>
+  </main>
+
+  <button class="fab" id="summaryBtn" type="button">Resumen para cambiar</button>
+  <button class="install" id="installBtn" type="button">Instalar app</button>
+
+  <section class="overlay" id="overlay" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-modal="true">
+      <div class="sheet-head">
+        <h3>Resumen para cambiar</h3>
+        <div class="sheet-actions">
+          <button class="copy" id="copyBtn" type="button">Copiar</button>
+          <button class="close" id="closeBtn" type="button">Cerrar</button>
+        </div>
+      </div>
+      <div class="sheet-body">
+        <div class="box">
+          <header>Figuritas que me faltan</header>
+          <pre id="missingOut"></pre>
+        </div>
+        <div class="box">
+          <header>Figuritas repetidas</header>
+          <pre id="repeatedOut"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const STORAGE_KEY = "album_simon_2026_v2";
+
+    const COUNTRY_ORDER = [
+      "FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"
+    ];
+
+    const COUNTRY_LABELS = {
+      FWC: "Mundial 2026", MEX: "Mexico", RSA: "Sudafrica", KOR: "Corea del Sur", CZE: "Republica Checa",
+      CAN: "Canada", BIH: "Bosnia y Herzegovina", QAT: "Qatar", SUI: "Suiza", BRA: "Brasil", MAR: "Marruecos",
+      HAI: "Haiti", SCO: "Escocia", USA: "Estados Unidos", PAR: "Paraguay", AUS: "Australia", TUR: "Turquia",
+      GER: "Alemania", COW: "Costa de Marfil", CIV: "Costa de Marfil", ECU: "Ecuador", NED: "Paises Bajos",
+      JPN: "Japon", SWE: "Suecia", TUN: "Tunez", CC: "Coca-Cola", BEL: "Belgica", EGY: "Egipto", IRN: "Iran",
+      NZL: "Nueva Zelanda", ESP: "Espana", CPV: "Cabo Verde", KSA: "Arabia Saudita", URU: "Uruguay", FRA: "Francia",
+      SEN: "Senegal", IRQ: "Irak", NOR: "Noruega", ARG: "Argentina", ALG: "Argelia", AUT: "Austria", JOR: "Jordania",
+      POR: "Portugal", COD: "R. D. del Congo", UZB: "Uzbekistan", COL: "Colombia", ENG: "Inglaterra", CRO: "Croacia",
+      GHA: "Ghana", PAN: "Panama"
+    };
+
+    const MISSING = {
+      FWC:[2,3,4,5,12,14], MEX:[6,7,10,11,15,16,19,20], RSA:[2,8,9,10,11,12,14,15,17,18,19], KOR:[11,16,20],
+      CZE:[1,4,9,18], CAN:[4,8,16,17,18,20], BIH:[4,8,12,14,17,18], QAT:[1,3,5,11,12,17], SUI:[2,4,6,8,9,12,17,18],
+      BRA:[9,11,12], MAR:[1,2,3,4,6,7,10,11,12,14,17,18], HAI:[2,3,4,6,7,8,10,11,12,15,16,20], SCO:[2,6,10,15,18],
+      USA:[5,9], PAR:[2,3,4,5,8,9,13,14,18], AUS:[3,5], TUR:[3,7,15,16,20], GER:[1], COW:[7,11,17,20], CIV:[2,3,5,9,14,16],
+      ECU:[1], NED:[4,5,8,9,12,13], JPN:[1,2,3,5,13], SWE:[4,5,14,18], TUN:[2,4,7,8,10,11,12,15], CC:[1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+      BEL:[5,9,12,13,15,17,19], EGY:[1,3,8,11,12,13,15,16,17,19], IRN:[4,5,8,9,14,18], NZL:[3,7], ESP:[1,3,7,11,16,20],
+      CPV:[2,5,6,11,16], KSA:[1,12,14,18], URU:[4,5,6,8,11,15,19,20], FRA:[1,3,7,8,9,11,14,18], SEN:[2,7,8,10,11,12,16,19],
+      IRQ:[2,3,7,10,13,15], NOR:[11], ARG:[5,7,9,11,14,16,18,20], ALG:[12,17], AUT:[9,10,14,16,20], JOR:[3,7,9,11,16,18],
+      POR:[2,3,6,7,10,11,15,16,19,20], COD:[15,19], UZB:[2,6,20], COL:[1,13,20], ENG:[2,4,6,9,14,17,18],
+      CRO:[2,4,6,8,10,12,15,20], GHA:[1,13,18,19], PAN:[4,5,8,9,10,12,14,15,17,18,20]
+    };
+
+    const countriesEl = document.getElementById("countries");
+    const sTengo = document.getElementById("sTengo");
+    const sFaltan = document.getElementById("sFaltan");
+    const sRep = document.getElementById("sRep");
+
+    const overlay = document.getElementById("overlay");
+    const summaryBtn = document.getElementById("summaryBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const missingOut = document.getElementById("missingOut");
+    const repeatedOut = document.getElementById("repeatedOut");
+
+    const compareBtn = document.getElementById("compareBtn");
+    const shareBtn = document.getElementById("shareBtn");
+    const friendMissing = document.getElementById("friendMissing");
+    const friendRepeated = document.getElementById("friendRepeated");
+    const friendResult = document.getElementById("friendResult");
+
+    const backupBtn = document.getElementById("backupBtn");
+    const restoreBtn = document.getElementById("restoreBtn");
+    const restoreFile = document.getElementById("restoreFile");
+
+    const installBtn = document.getElementById("installBtn");
+    let deferredInstallPrompt = null;
+
+    function colorByCode(code) {
+      let seed = 0;
+      for (let i = 0; i < code.length; i++) seed += code.charCodeAt(i) * (i + 7);
+      const hue = seed % 360;
+      const hue2 = (hue + 42) % 360;
+      return [
+        `hsl(${hue} 64% 40%)`,
+        `hsl(${hue2} 72% 52%)`
+      ];
+    }
+
+    function stickerKey(code, number) {
+      return `${code}-${number}`;
+    }
+
+    function buildDefault() {
+      const state = {};
+      COUNTRY_ORDER.forEach((code) => {
+        const missing = new Set(MISSING[code] || []);
+        for (let n = 1; n <= 20; n++) {
+          state[stickerKey(code, n)] = {
+            codigo_pais: code,
+            numero: n,
+            la_tengo: !missing.has(n),
+            repetidas: 0
+          };
+        }
+      });
+      return state;
+    }
+
+    function loadState() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return buildDefault();
+      try {
+        const parsed = JSON.parse(raw);
+        if (!parsed || typeof parsed !== "object") throw new Error("invalid");
+        return parsed;
+      } catch {
+        return buildDefault();
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    const state = loadState();
+
+    function render() {
+      countriesEl.innerHTML = "";
+      COUNTRY_ORDER.forEach((code, idx) => {
+        const [c1, c2] = colorByCode(code);
+
+        const details = document.createElement("details");
+        details.className = "country";
+        if (idx === 0) details.open = true;
+
+        const summary = document.createElement("summary");
+        summary.innerHTML = `
+          <div class="country-head">
+            <div class="country-badge" style="background: linear-gradient(135deg, ${c1}, ${c2});">${code}</div>
+            <div class="country-meta">
+              <h2>${COUNTRY_LABELS[code] || code}</h2>
+              <p>${code} · 20 figuritas</p>
+            </div>
+            <div class="chev">⌄</div>
+          </div>
+        `;
+        details.appendChild(summary);
+
+        const stickers = document.createElement("div");
+        stickers.className = "stickers";
+
+        for (let n = 1; n <= 20; n++) {
+          const k = stickerKey(code, n);
+          const s = state[k];
+          const card = document.createElement("article");
+          card.className = "sticker";
+          card.dataset.code = code;
+          card.dataset.num = String(n);
+          card.innerHTML = `
+            <div class="art" style="--c1:${c1};--c2:${c2}">${code}</div>
+            <div class="sticker-top">
+              <div class="num">${n}</div>
+              <span class="chip">${code}</span>
+            </div>
+            <div class="check">
+              <input type="checkbox" ${s.la_tengo ? "checked" : ""}>
+              <span>La tengo</span>
+            </div>
+            <div class="rep">
+              <button type="button" class="minus">-</button>
+              <div class="rep-value">${s.repetidas}</div>
+              <button type="button" class="plus">+</button>
+            </div>
+          `;
+          stickers.appendChild(card);
+        }
+
+        details.appendChild(stickers);
+        countriesEl.appendChild(details);
+      });
+      updateStats();
+    }
+
+    function updateStats() {
+      let tengo = 0;
+      let faltan = 0;
+      let rep = 0;
+      Object.values(state).forEach((s) => {
+        if (s.la_tengo) tengo += 1; else faltan += 1;
+        rep += Number(s.repetidas || 0);
+      });
+      sTengo.textContent = String(tengo);
+      sFaltan.textContent = String(faltan);
+      sRep.textContent = String(rep);
+    }
+
+    function getMissingByCountry() {
+      const out = [];
+      COUNTRY_ORDER.forEach((code) => {
+        const nums = [];
+        for (let n = 1; n <= 20; n++) {
+          if (!state[stickerKey(code, n)].la_tengo) nums.push(n);
+        }
+        if (nums.length) out.push({ codigo_pais: code, nombre: COUNTRY_LABELS[code] || code, numeros: nums });
+      });
+      return out;
+    }
+
+    function getRepeatedItems() {
+      const out = [];
+      COUNTRY_ORDER.forEach((code) => {
+        for (let n = 1; n <= 20; n++) {
+          const s = state[stickerKey(code, n)];
+          if ((s.repetidas || 0) > 0) out.push({ codigo_pais: code, numero: n, repetidas: Number(s.repetidas || 0) });
+        }
+      });
+      return out;
+    }
+
+    function buildSummaryText() {
+      const missing = getMissingByCountry();
+      const reps = getRepeatedItems();
+
+      const lines = ["Figuritas que me faltan"];
+      if (!missing.length) lines.push("No faltan figuritas.");
+      missing.forEach((g) => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
+      lines.push("");
+      lines.push("Figuritas repetidas");
+      if (!reps.length) lines.push("No hay repetidas registradas.");
+      reps.forEach((r) => lines.push(`${r.codigo_pais} ${r.numero}: ${r.repetidas}`));
+      return lines.join("\n");
+    }
+
+    function refreshSummaryModal() {
+      const missing = getMissingByCountry();
+      const reps = getRepeatedItems();
+      missingOut.textContent = missing.length
+        ? missing.map((g) => `${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`).join("\n")
+        : "No faltan figuritas.";
+      repeatedOut.textContent = reps.length
+        ? reps.map((r) => `${r.codigo_pais} ${r.numero}: ${r.repetidas}`).join("\n")
+        : "No hay repetidas registradas.";
+    }
+
+    function parseCountryLines(text) {
+      const map = {};
+      text.split("\n").map((x) => x.trim()).filter(Boolean).forEach((line) => {
+        const parts = line.split(":");
+        if (parts.length < 2) return;
+        const code = parts[0].trim().toUpperCase();
+        const nums = parts[1]
+          .split(",")
+          .map((n) => Number(n.trim()))
+          .filter((n) => Number.isInteger(n) && n >= 1 && n <= 20);
+        if (nums.length) map[code] = Array.from(new Set(nums));
+      });
+      return map;
+    }
+
+    function compareWithFriend(friendMissingMap, friendRepeatedMap) {
+      const ownMissingMap = {};
+      getMissingByCountry().forEach((g) => { ownMissingMap[g.codigo_pais] = new Set(g.numeros); });
+
+      const ownRepMap = {};
+      getRepeatedItems().forEach((r) => {
+        if (!ownRepMap[r.codigo_pais]) ownRepMap[r.codigo_pais] = new Set();
+        ownRepMap[r.codigo_pais].add(r.numero);
+      });
+
+      const allCodes = Array.from(new Set([
+        ...Object.keys(friendMissingMap),
+        ...Object.keys(friendRepeatedMap),
+        ...Object.keys(ownMissingMap),
+        ...Object.keys(ownRepMap)
+      ])).sort();
+
+      const friendCanGive = [];
+      const simonCanGive = [];
+      const mutual = [];
+
+      allCodes.forEach((code) => {
+        const fRep = new Set(friendRepeatedMap[code] || []);
+        const fMissing = new Set(friendMissingMap[code] || []);
+        const ownMissing = ownMissingMap[code] || new Set();
+        const ownRep = ownRepMap[code] || new Set();
+
+        const receives = [...fRep].filter((n) => ownMissing.has(n)).sort((a,b) => a-b);
+        const gives = [...ownRep].filter((n) => fMissing.has(n)).sort((a,b) => a-b);
+
+        if (receives.length) friendCanGive.push({ code, nums: receives });
+        if (gives.length) simonCanGive.push({ code, nums: gives });
+        if (receives.length && gives.length) mutual.push({ code, receives, gives });
+      });
+
+      const lines = [];
+      lines.push("Lo que tu amigo puede darte:");
+      if (!friendCanGive.length) lines.push("Sin coincidencias.");
+      friendCanGive.forEach((x) => lines.push(`${x.code}: ${x.nums.join(", ")}`));
+      lines.push("");
+      lines.push("Lo que Simon puede darle:");
+      if (!simonCanGive.length) lines.push("Sin coincidencias.");
+      simonCanGive.forEach((x) => lines.push(`${x.code}: ${x.nums.join(", ")}`));
+      lines.push("");
+      lines.push("Sugerencias de canje mutuo:");
+      if (!mutual.length) lines.push("Aun no hay canje mutuo claro.");
+      mutual.forEach((m) => lines.push(`${m.code} -> recibes [${m.receives.join(", ")}], das [${m.gives.join(", ")}]`));
+      return lines.join("\n");
+    }
+
+    countriesEl.addEventListener("change", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+      if (target.type !== "checkbox") return;
+      const card = target.closest(".sticker");
+      const code = card.dataset.code;
+      const num = Number(card.dataset.num);
+      state[stickerKey(code, num)].la_tengo = target.checked;
+      saveState();
+      updateStats();
+      if (overlay.classList.contains("open")) refreshSummaryModal();
+    });
+
+    countriesEl.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      if (!target.classList.contains("plus") && !target.classList.contains("minus")) return;
+
+      const card = target.closest(".sticker");
+      const code = card.dataset.code;
+      const num = Number(card.dataset.num);
+      const key = stickerKey(code, num);
+      const current = Number(state[key].repetidas || 0);
+      const next = target.classList.contains("plus") ? current + 1 : Math.max(0, current - 1);
+      state[key].repetidas = next;
+      card.querySelector(".rep-value").textContent = String(next);
+      saveState();
+      updateStats();
+      if (overlay.classList.contains("open")) refreshSummaryModal();
+    });
+
+    summaryBtn.addEventListener("click", () => {
+      refreshSummaryModal();
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden", "true");
+    });
+
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        overlay.classList.remove("open");
+        overlay.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      const text = buildSummaryText();
+      await navigator.clipboard.writeText(text);
+      copyBtn.textContent = "Copiado";
+      setTimeout(() => copyBtn.textContent = "Copiar", 1200);
+    });
+
+    shareBtn.addEventListener("click", async () => {
+      const summary = buildSummaryText();
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: "Resumen figuritas Simon", text: summary });
+          return;
+        } catch (err) {
+          if (err && err.name === "AbortError") return;
+        }
+      }
+      await navigator.clipboard.writeText(summary);
+      shareBtn.textContent = "Resumen copiado";
+      setTimeout(() => shareBtn.textContent = "Compartir resumen", 1200);
+    });
+
+    compareBtn.addEventListener("click", () => {
+      const friendMissingMap = parseCountryLines(friendMissing.value);
+      const friendRepeatedMap = parseCountryLines(friendRepeated.value);
+      friendResult.textContent = compareWithFriend(friendMissingMap, friendRepeatedMap);
+    });
+
+    backupBtn.addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(state)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "album_simon_backup.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    restoreBtn.addEventListener("click", () => restoreFile.click());
+    restoreFile.addEventListener("change", () => {
+      const file = restoreFile.files && restoreFile.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || "{}"));
+          if (!parsed || typeof parsed !== "object") throw new Error("bad format");
+          Object.keys(state).forEach((k) => {
+            if (parsed[k]) {
+              state[k].la_tengo = Boolean(parsed[k].la_tengo);
+              state[k].repetidas = Math.max(0, Number(parsed[k].repetidas || 0));
+            }
+          });
+          saveState();
+          render();
+          alert("Backup importado.");
+        } catch {
+          alert("No se pudo importar ese backup.");
+        }
+      };
+      reader.readAsText(file, "utf-8");
+    });
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      installBtn.classList.add("show");
+    });
+
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
+      installBtn.classList.remove("show");
+    });
+
+    installBtn.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) {
+        alert('Si no aparece el instalador, usa el menu del navegador y toca "Agregar a pantalla de inicio".');
+        return;
+      }
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      installBtn.classList.remove("show");
+    });
+
+    render();
+  </script>
+</body>
+</html>

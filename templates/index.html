@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a3d79">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Album Simon">
+  <title>Álbum de Simón | Mundial 2026</title>
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/static/icons/icon-192.svg">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #05244a;
+      --bg-2: #0d3f7f;
+      --bg-3: #1f5ea9;
+      --card: rgba(255, 255, 255, 0.96);
+      --card-soft: rgba(255, 255, 255, 0.84);
+      --ink: #10213a;
+      --muted: #5c6f87;
+      --blue: #74acdf;
+      --blue-2: #3f8fce;
+      --navy: #0a3d79;
+      --gold: #f6b40e;
+      --gold-2: #ffd45b;
+      --line: rgba(10, 61, 121, 0.18);
+      --shadow: 0 18px 40px rgba(5, 14, 30, 0.22);
+      --shadow-soft: 0 10px 24px rgba(5, 14, 30, 0.12);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Barlow, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(246, 180, 14, 0.2), transparent 28%),
+        radial-gradient(circle at top right, rgba(116, 172, 223, 0.28), transparent 34%),
+        linear-gradient(180deg, #041735 0%, var(--bg-1) 40%, #0b2f60 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+      mask-image: radial-gradient(circle at 50% 12%, black 0%, transparent 82%);
+    }
+
+    .shell {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 18px 14px 96px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 20px 18px 24px;
+      color: white;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(135deg, rgba(5, 28, 63, 0.96), rgba(12, 63, 127, 0.96) 55%, rgba(31, 94, 169, 0.92)),
+        radial-gradient(circle at right top, rgba(246, 180, 14, 0.42), transparent 28%);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -34% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 197, 66, 0.45), rgba(245, 197, 66, 0) 68%);
+      filter: blur(4px);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      color: var(--gold-2);
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(1.5rem, 4.5vw, 2.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 8px 0 0;
+      max-width: 54ch;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.96rem;
+    }
+
+    .stats {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      padding: 12px 10px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.15rem;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+    }
+
+    .panel {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .country-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    details.country {
+      overflow: hidden;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,255,0.98));
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.72);
+    }
+
+    details.country[open] {
+      box-shadow: var(--shadow);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .country-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      background:
+        linear-gradient(90deg, rgba(11,59,122,0.14), rgba(245,197,66,0.08)),
+        linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,249,255,0.96));
+    }
+
+    .country-flag {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      border-radius: 16px;
+      object-fit: contain;
+      padding: 6px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 6px 18px rgba(4, 18, 42, 0.08);
+    }
+
+    .country-meta {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .country-meta h2 {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: 1rem;
+      color: var(--navy);
+    }
+
+    .country-meta p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .chevron {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: rgba(11,59,122,0.08);
+      color: var(--navy);
+      font-size: 1.1rem;
+      transition: transform .25s ease;
+    }
+
+    details[open] .chevron { transform: rotate(180deg); }
+
+    .stickers {
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      background: linear-gradient(180deg, rgba(245,247,252,0.6), rgba(255,255,255,1));
+    }
+
+    .sticker {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.95), rgba(255,255,255,0.82)),
+        linear-gradient(180deg, #fff, #eef3fb);
+      border: 1px solid rgba(11,59,122,0.12);
+      box-shadow: 0 10px 20px rgba(10, 20, 40, 0.1);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .sticker::after {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 18px;
+      border: 1px dashed rgba(11,59,122,0.08);
+      pointer-events: none;
+    }
+
+    .sticker-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sticker-number {
+      font-family: Montserrat, sans-serif;
+      font-size: clamp(1.55rem, 5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 58px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(245, 197, 66, 0.18);
+      color: #855d00;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .sticker-controls {
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 18px;
+      background: rgba(11,59,122,0.04);
+      border: 1px solid rgba(11,59,122,0.08);
+    }
+
+    .check-row input[type="checkbox"] {
+      width: 28px;
+      height: 28px;
+      accent-color: var(--blue);
+      transform: scale(1.08);
+    }
+
+    .check-row label {
+      font-weight: 700;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .repeat-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .repeat-controls button {
+      min-height: 44px;
+      border: 0;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f2f5fb, #e5ecf8);
+      color: var(--navy);
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .repeat-controls button:active,
+    .floating-action:active,
+    .summary-close:active,
+    .summary-copy:active {
+      transform: translateY(1px);
+    }
+
+    .repeat-value {
+      min-height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(10,61,121,0.96), rgba(31,94,169,0.96));
+      color: white;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .empty-state {
+      padding: 24px;
+      color: white;
+      text-align: center;
+    }
+
+    .floating-action {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 40;
+      min-height: 58px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), #ffce4d 72%, #f9b900);
+      color: #102040;
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      box-shadow: 0 18px 34px rgba(245, 197, 66, 0.32);
+    }
+
+    .install-action {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      z-index: 40;
+      min-height: 58px;
+      padding: 0 18px;
+      border: 1px solid rgba(255,255,255,0.38);
+      border-radius: 999px;
+      background: rgba(8, 36, 72, 0.92);
+      color: #ffffff;
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      box-shadow: 0 14px 28px rgba(6, 22, 42, 0.34);
+      display: none;
+    }
+
+    .install-action.visible {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .summary-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+      background: rgba(3, 8, 18, 0.72);
+      backdrop-filter: blur(8px);
+      padding: 14px;
+    }
+
+    .summary-overlay.open { display: grid; }
+
+    .summary-sheet {
+      width: min(920px, 100%);
+      margin: auto;
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      border-radius: 28px;
+      background: linear-gradient(180deg, #ffffff, #f4f7fc);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .summary-head {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(135deg, var(--navy), #1e69b7);
+      color: white;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      z-index: 1;
+    }
+
+    .summary-head h3 {
+      margin: 0;
+      font-family: Montserrat, sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .summary-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .summary-copy,
+    .summary-close {
+      min-height: 42px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .summary-copy {
+      background: var(--gold);
+      color: #12213f;
+    }
+
+    .summary-close {
+      background: rgba(255,255,255,0.14);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .summary-content {
+      padding: 16px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .summary-block {
+      border-radius: 22px;
+      background: white;
+      border: 1px solid rgba(11,59,122,0.12);
+      box-shadow: 0 10px 20px rgba(10, 20, 40, 0.06);
+      overflow: hidden;
+    }
+
+    .summary-block header {
+      padding: 14px 16px;
+      background: linear-gradient(90deg, rgba(11,59,122,0.08), rgba(245,197,66,0.1));
+      border-bottom: 1px solid rgba(11,59,122,0.08);
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .summary-block pre {
+      margin: 0;
+      padding: 16px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: Inter, sans-serif;
+      font-family: Barlow, sans-serif;
+      font-size: 0.96rem;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .friend-tools {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .friend-card {
+      border-radius: 18px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .friend-card strong {
+      font-family: Montserrat, sans-serif;
+      font-size: 0.96rem;
+      color: #fff;
+    }
+
+    .friend-card textarea {
+      width: 100%;
+      min-height: 78px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(8, 22, 48, 0.44);
+      color: white;
+      padding: 10px 12px;
+      font: inherit;
+      resize: vertical;
+    }
+
+    .friend-card textarea::placeholder {
+      color: rgba(255,255,255,0.62);
+    }
+
+    .friend-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .friend-btn {
+      min-height: 46px;
+      border: 0;
+      border-radius: 14px;
+      padding: 0 12px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 800;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .friend-btn.primary {
+      background: linear-gradient(135deg, var(--gold), #ffd15a);
+      color: #172c54;
+    }
+
+    .friend-btn.secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.26);
+    }
+
+    .friend-results {
+      margin-top: 10px;
+      border-radius: 16px;
+      background: rgba(4, 18, 44, 0.34);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 10px;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.4;
+      white-space: pre-wrap;
+      font-size: 0.92rem;
+    }
+
+    @media (min-width: 700px) {
+      .shell { padding: 24px 20px 96px; }
+      .hero { padding: 26px 26px 28px; }
+      .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .stickers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .summary-content { grid-template-columns: 1fr 1fr; }
+      .country-header { padding: 16px 18px; }
+      .stickers { padding: 18px; }
+      .friend-buttons { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 980px) {
+      .stickers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <div class="hero-mark">26</div>
+        <div>
+          <h1>Álbum de Simón</h1>
+          <p>Control táctil, rápido y claro de sus figuritas del Mundial 2026. Tema híbrido Argentina + torneo para un look fuerte y fácil de leer en Android.</p>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat">
+          <strong id="stat-tengo">0</strong>
+          <span>figuritas que ya tiene</span>
+        </div>
+        <div class="stat">
+          <strong id="stat-faltan">0</strong>
+          <span>figuritas que faltan</span>
+        </div>
+        <div class="stat">
+          <strong id="stat-rep">0</strong>
+          <span>repetidas registradas</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <strong style="font-family: Montserrat, sans-serif; color: #fff; display:block; margin-bottom: 8px;">Tip</strong>
+        <div style="color: rgba(255,255,255,0.82); font-size: 0.94rem; line-height: 1.45;">
+          Toca una categoría para desplegar el país y usa el check grande para “La tengo”. Los botones <strong>−</strong> y <strong>+</strong> actualizan la cantidad de repetidas al instante.
+        </div>
+
+        <div class="friend-tools">
+          <div class="friend-card">
+            <strong>Comparar con un amigo</strong>
+            <textarea id="friendMissingInput" placeholder="Faltantes del amigo (una línea por país). Ejemplo: ARG: 1,2,3"></textarea>
+            <textarea id="friendRepeatedInput" placeholder="Repetidas del amigo (una línea por país). Ejemplo: BRA: 4,10"></textarea>
+            <div class="friend-buttons">
+              <button id="compareBtn" type="button" class="friend-btn primary">Comparar y sugerir cambios</button>
+              <button id="shareSummaryBtn" type="button" class="friend-btn secondary">Compartir mi resumen</button>
+            </div>
+            <div id="friendResults" class="friend-results">Completa los datos de tu amigo para ver sugerencias automáticas de intercambio.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="country-list" aria-label="Figuritas por país">
+      {% for country in countries %}
+      <details class="country" {% if loop.first %}open{% endif %} data-country="{{ country.codigo }}">
+        <summary>
+          <div class="country-header">
+            <img class="country-flag" src="{{ country.imagen }}" alt="Escudo de {{ country.nombre }}" loading="lazy" onerror="this.onerror=null;this.src='/static/img/default-shield.svg';">
+            <div class="country-meta">
+              <h2>{{ country.nombre }}</h2>
+              <p>{{ country.codigo }} · 20 figuritas</p>
+            </div>
+            <div class="chevron">⌄</div>
+          </div>
+        </summary>
+
+        <div class="stickers">
+          {% for sticker in country.stickers %}
+          <article class="sticker" data-codigo="{{ sticker.codigo_pais }}" data-numero="{{ sticker.numero }}">
+            <div class="sticker-top">
+              <div class="sticker-number">{{ sticker.numero }}</div>
+              <span class="badge">{{ sticker.codigo_pais }}</span>
+            </div>
+
+            <div class="sticker-controls">
+              <div class="check-row">
+                <input
+                  id="chk-{{ sticker.codigo_pais }}-{{ sticker.numero }}"
+                  type="checkbox"
+                  {% if sticker.la_tengo %}checked{% endif %}
+                  data-field="la_tengo"
+                >
+                <label for="chk-{{ sticker.codigo_pais }}-{{ sticker.numero }}">La tengo</label>
+              </div>
+
+              <div class="repeat-controls" aria-label="Repetidas">
+                <button type="button" class="rep-minus" aria-label="Disminuir repetidas">−</button>
+                <div class="repeat-value" data-field="repetidas">{{ sticker.repetidas }}</div>
+                <button type="button" class="rep-plus" aria-label="Aumentar repetidas">+</button>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </details>
+      {% endfor %}
+    </section>
+  </main>
+
+  <button class="floating-action" id="summaryBtn" type="button">Resumen para Cambiar</button>
+  <button class="install-action" id="installBtn" type="button">Instalar app</button>
+
+  <section class="summary-overlay" id="summaryOverlay" aria-hidden="true">
+    <div class="summary-sheet" role="dialog" aria-modal="true" aria-labelledby="summaryTitle">
+      <div class="summary-head">
+        <h3 id="summaryTitle">Resumen para Cambiar</h3>
+        <div class="summary-actions">
+          <button class="summary-copy" id="copySummaryBtn" type="button">Copiar al portapapeles</button>
+          <button class="summary-close" id="closeSummaryBtn" type="button">Cerrar</button>
+        </div>
+      </div>
+      <div class="summary-content">
+        <div class="summary-block">
+          <header>Figuritas que me faltan</header>
+          <pre id="missingText">Cargando...</pre>
+        </div>
+        <div class="summary-block">
+          <header>Figuritas repetidas</header>
+          <pre id="repeatedText">Cargando...</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const stats = {
+      tengo: document.getElementById('stat-tengo'),
+      faltan: document.getElementById('stat-faltan'),
+      rep: document.getElementById('stat-rep'),
+    };
+
+    const summaryOverlay = document.getElementById('summaryOverlay');
+    const summaryBtn = document.getElementById('summaryBtn');
+    const installBtn = document.getElementById('installBtn');
+    const closeSummaryBtn = document.getElementById('closeSummaryBtn');
+    const copySummaryBtn = document.getElementById('copySummaryBtn');
+    const missingText = document.getElementById('missingText');
+    const repeatedText = document.getElementById('repeatedText');
+    const friendMissingInput = document.getElementById('friendMissingInput');
+    const friendRepeatedInput = document.getElementById('friendRepeatedInput');
+    const compareBtn = document.getElementById('compareBtn');
+    const shareSummaryBtn = document.getElementById('shareSummaryBtn');
+    const friendResults = document.getElementById('friendResults');
+    let deferredInstallPrompt = null;
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/static/sw.js').catch(() => {
+          // Si falla el SW, la app sigue funcionando sin offline.
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (event) => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      installBtn.classList.add('visible');
+    });
+
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      installBtn.classList.remove('visible');
+    });
+
+    function parseCountryLines(text) {
+      const out = {};
+      const lines = text
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      lines.forEach((line) => {
+        const [left, right] = line.split(':');
+        if (!left || !right) return;
+        const code = left.trim().toUpperCase();
+        const numbers = right
+          .split(',')
+          .map((n) => Number(n.trim()))
+          .filter((n) => Number.isInteger(n) && n >= 1 && n <= 20);
+        if (numbers.length) {
+          out[code] = Array.from(new Set(numbers)).sort((a, b) => a - b);
+        }
+      });
+
+      return out;
+    }
+
+    function formatGroupLine(group) {
+      return `${group.codigo_pais}: ${group.numeros.join(', ')}`;
+    }
+
+    function formatMutualLine(group) {
+      return `${group.codigo_pais} -> recibes [${group.tu_recibes.join(', ')}], das [${group.tu_das.join(', ')}]`;
+    }
+
+    function getStickerCardFromControl(control) {
+      return control.closest('.sticker');
+    }
+
+    function parseSticker(card) {
+      return {
+        codigo: card.dataset.codigo,
+        numero: Number(card.dataset.numero),
+      };
+    }
+
+    async function patchSticker(codigo, numero, payload) {
+      const response = await fetch(`/api/sticker/${encodeURIComponent(codigo)}/${numero}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.error || 'No se pudo guardar el cambio');
+      }
+      return response.json();
+    }
+
+    function updateStats() {
+      let tengo = 0;
+      let faltan = 0;
+      let rep = 0;
+
+      document.querySelectorAll('.sticker').forEach((card) => {
+        const checked = card.querySelector('input[type="checkbox"]').checked;
+        const repeated = Number(card.querySelector('[data-field="repetidas"]').textContent || 0);
+        if (checked) {
+          tengo += 1;
+        } else {
+          faltan += 1;
+        }
+        rep += repeated;
+      });
+
+      stats.tengo.textContent = tengo;
+      stats.faltan.textContent = faltan;
+      stats.rep.textContent = rep;
+    }
+
+    async function refreshSummary() {
+      const response = await fetch('/api/resumen');
+      const data = await response.json();
+
+      const missingLines = data.missing_by_country.length
+        ? data.missing_by_country.map((country) => `${country.nombre} (${country.codigo_pais}): ${country.numeros.join(', ')}`).join('\n')
+        : 'No faltan figuritas.\n';
+
+      const repeatedLines = data.repeated_items.length
+        ? data.repeated_items.map((item) => `${item.codigo_pais} ${item.numero}: ${item.repetidas}`).join('\n')
+        : 'No hay repetidas registradas.\n';
+
+      missingText.textContent = missingLines;
+      repeatedText.textContent = repeatedLines;
+      return { missingLines, repeatedLines, summaryText: data.summary_text };
+    }
+
+    function openSummary() {
+      summaryOverlay.classList.add('open');
+      summaryOverlay.setAttribute('aria-hidden', 'false');
+      refreshSummary();
+    }
+
+    function closeSummary() {
+      summaryOverlay.classList.remove('open');
+      summaryOverlay.setAttribute('aria-hidden', 'true');
+    }
+
+    document.addEventListener('change', async (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+      if (!target.matches('input[type="checkbox"][data-field="la_tengo"]')) return;
+
+      const card = getStickerCardFromControl(target);
+      const { codigo, numero } = parseSticker(card);
+      target.disabled = true;
+      try {
+        await patchSticker(codigo, numero, { la_tengo: target.checked });
+        updateStats();
+        if (summaryOverlay.classList.contains('open')) {
+          await refreshSummary();
+        }
+      } catch (error) {
+        target.checked = !target.checked;
+        alert(error.message);
+      } finally {
+        target.disabled = false;
+      }
+    });
+
+    document.addEventListener('click', async (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.classList.contains('rep-plus') || target.classList.contains('rep-minus')) {
+        const card = getStickerCardFromControl(target);
+        const { codigo, numero } = parseSticker(card);
+        const valueNode = card.querySelector('[data-field="repetidas"]');
+        const currentValue = Number(valueNode.textContent || 0);
+        const nextValue = target.classList.contains('rep-plus')
+          ? currentValue + 1
+          : Math.max(0, currentValue - 1);
+
+        target.disabled = true;
+        try {
+          await patchSticker(codigo, numero, { repetidas: nextValue });
+          valueNode.textContent = String(nextValue);
+          updateStats();
+          if (summaryOverlay.classList.contains('open')) {
+            await refreshSummary();
+          }
+        } catch (error) {
+          alert(error.message);
+        } finally {
+          target.disabled = false;
+        }
+      }
+    });
+
+    summaryBtn.addEventListener('click', openSummary);
+    closeSummaryBtn.addEventListener('click', closeSummary);
+    summaryOverlay.addEventListener('click', (event) => {
+      if (event.target === summaryOverlay) {
+        closeSummary();
+      }
+    });
+
+    copySummaryBtn.addEventListener('click', async () => {
+      const { missingLines, repeatedLines } = await refreshSummary();
+      const text = [
+        'Figuritas que me faltan',
+        missingLines,
+        '',
+        'Figuritas repetidas',
+        repeatedLines,
+      ].join('\n');
+      await navigator.clipboard.writeText(text);
+      copySummaryBtn.textContent = 'Copiado';
+      setTimeout(() => { copySummaryBtn.textContent = 'Copiar al portapapeles'; }, 1400);
+    });
+
+    compareBtn.addEventListener('click', async () => {
+      const friendMissing = parseCountryLines(friendMissingInput.value);
+      const friendRepeated = parseCountryLines(friendRepeatedInput.value);
+
+      compareBtn.disabled = true;
+      try {
+        const response = await fetch('/api/compare', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            friend_missing: friendMissing,
+            friend_repeated: friendRepeated,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('No se pudo comparar con los datos del amigo');
+        }
+
+        const data = await response.json();
+        const lines = [];
+
+        lines.push('Lo que tu amigo puede darte:');
+        if (data.friend_can_give.length) {
+          data.friend_can_give.forEach((group) => lines.push(formatGroupLine(group)));
+        } else {
+          lines.push('Sin coincidencias por ahora.');
+        }
+
+        lines.push('');
+        lines.push('Lo que Simon puede darle:');
+        if (data.simon_can_give.length) {
+          data.simon_can_give.forEach((group) => lines.push(formatGroupLine(group)));
+        } else {
+          lines.push('Sin coincidencias por ahora.');
+        }
+
+        lines.push('');
+        lines.push('Sugerencias de intercambio mutuo:');
+        if (data.mutual_suggestions.length) {
+          data.mutual_suggestions.forEach((group) => lines.push(formatMutualLine(group)));
+        } else {
+          lines.push('No hay canjes mutuos claros aun.');
+        }
+
+        friendResults.textContent = lines.join('\n');
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        compareBtn.disabled = false;
+      }
+    });
+
+    shareSummaryBtn.addEventListener('click', async () => {
+      const { summaryText } = await refreshSummary();
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Resumen de figuritas de Simon',
+            text: summaryText,
+          });
+          return;
+        } catch (error) {
+          if (error && error.name === 'AbortError') {
+            return;
+          }
+        }
+      }
+
+      await navigator.clipboard.writeText(summaryText);
+      shareSummaryBtn.textContent = 'Resumen copiado';
+      setTimeout(() => { shareSummaryBtn.textContent = 'Compartir mi resumen'; }, 1400);
+    });
+
+    installBtn.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) {
+        alert('Si no aparece el instalador, abre el menu del navegador y elige "Agregar a pantalla de inicio".');
+        return;
+      }
+
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      if (choice.outcome === 'accepted') {
+        installBtn.classList.remove('visible');
+      }
+      deferredInstallPrompt = null;
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && summaryOverlay.classList.contains('open')) {
+        closeSummary();
+      }
+    });
+
+    updateStats();
+  </script>
+</body>
+</html>

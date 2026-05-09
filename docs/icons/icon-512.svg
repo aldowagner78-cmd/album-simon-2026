@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Album Simon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a3d79"/>
+      <stop offset="100%" stop-color="#1f5ea9"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" fill="url(#bg)"/>
+  <rect x="60" y="60" width="392" height="392" rx="76" fill="#ffffff" fill-opacity="0.94"/>
+  <text x="256" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="84" font-weight="800" fill="#0a3d79">SIMON</text>
+  <text x="256" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="70" font-weight="800" fill="#74acdf">FIGUS</text>
+  <circle cx="256" cy="354" r="34" fill="#f6b40e"/>
+  <text x="256" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="800" fill="#0a3d79">2026</text>
+</svg>
