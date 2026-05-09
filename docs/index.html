@@ -239,6 +239,33 @@
     /* CONFETTI */
     .confetti { position: fixed; pointer-events: none; z-index: 100; width: 8px; height: 14px; opacity: 0; }
 
+    /* TOAST */
+    .toast { position: fixed; bottom: 86px; left: 50%; transform: translate(-50%, 30px); z-index: 200;
+      background: rgba(15, 30, 60, 0.95); color: #fff; padding: 11px 18px; border-radius: 14px;
+      font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.88rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.18);
+      opacity: 0; transition: opacity 0.25s, transform 0.25s; pointer-events: none; max-width: 92vw; text-align: center;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .toast.ok { background: linear-gradient(135deg, #19b36b, #128c52); }
+    .toast.warn { background: linear-gradient(135deg, #f6b40e, #d99a00); color: #1a1a1a; }
+
+    /* UNDO floating button */
+    .undo-fab { position: fixed; bottom: 86px; right: 14px; min-height: 48px; padding: 0 14px; border-radius: 999px;
+      background: linear-gradient(135deg, #ff5d8f, #c33a6a); color: #fff; font-family: Montserrat, sans-serif; font-weight: 800;
+      box-shadow: 0 12px 24px rgba(195,58,106,0.5); z-index: 41; display: none; align-items: center; gap: 6px; font-size: 0.92rem;
+    }
+    .undo-fab.show { display: inline-flex; }
+    .undo-fab .undo-count { background: rgba(255,255,255,0.28); border-radius: 999px; padding: 1px 7px; font-size: 0.78rem; }
+
+    /* Version + actualizar en hero */
+    .updaterow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .vers { font-family: Montserrat, sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.7); letter-spacing: 0.4px; }
+    .vers b { color: #ffd45f; }
+    .upd-btn { min-height: 36px; padding: 0 12px; border-radius: 11px; background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.24); font-size: 0.78rem; }
+    .upd-btn.has-update { background: linear-gradient(135deg, #ff5d8f, #c33a6a); animation: pulse 1.4s ease-in-out infinite; border-color: rgba(255,255,255,0.4); }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,93,143,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,93,143,0); } }
+
     @media (min-width: 600px) {
       .stickers { grid-template-columns: repeat(3, 1fr); }
     }
@@ -268,6 +295,10 @@
         <div class="stat rep"><strong id="sRep">0</strong><span>Repetidas</span></div>
       </div>
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="updaterow">
+        <span class="vers">App <b id="versBadge">…</b> <span id="updStatus" style="opacity:0.7"></span></span>
+        <button class="upd-btn" id="updBtn">🔄 Actualizar</button>
+      </div>
       <div class="tools">
         <textarea id="friendMissing" placeholder="✏️ Faltantes del amigo. Ej: ARG: 1,2,3"></textarea>
         <textarea id="friendRepeated" placeholder="✏️ Repetidas del amigo. Ej: BRA: 4,10"></textarea>
@@ -301,6 +332,7 @@
 
   <button class="fab" id="summaryBtn">⚡ Resumen</button>
   <button class="install" id="installBtn">📲 Instalar</button>
+  <button class="undo-fab" id="undoBtn" title="Deshacer último cambio">↶ Deshacer <span class="undo-count" id="undoCount">0</span></button>
 
   <section class="overlay" id="overlay" aria-hidden="true">
     <div class="sheet" role="dialog" aria-modal="true">
@@ -326,6 +358,7 @@
   </section>
 
   <script>
+    const APP_VERSION = "2026.05.09.2";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -397,9 +430,61 @@
       restoreBtn: document.getElementById("restoreBtn"),
       restoreFile: document.getElementById("restoreFile"),
       installBtn: document.getElementById("installBtn"),
+      undoBtn: document.getElementById("undoBtn"),
+      undoCount: document.getElementById("undoCount"),
+      versBadge: document.getElementById("versBadge"),
+      updBtn: document.getElementById("updBtn"),
+      updStatus: document.getElementById("updStatus"),
     };
     let deferredPrompt = null;
     const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+
+    // ===== TOAST =====
+    const toast = (msg, kind = "") => {
+      const t = document.createElement("div");
+      t.className = "toast " + kind;
+      t.textContent = msg;
+      document.body.appendChild(t);
+      requestAnimationFrame(() => t.classList.add("show"));
+      setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2400);
+    };
+
+    // ===== UNDO HISTORY =====
+    // Cada entry guarda un snapshot completo del estado antes del cambio + label.
+    const history = [];
+    const HISTORY_MAX = 40;
+    const snapshot = () => {
+      const o = {};
+      Object.keys(state).forEach(k => { o[k] = { la_tengo: state[k].la_tengo, repetidas: state[k].repetidas }; });
+      return o;
+    };
+    const pushHistory = (label) => {
+      history.push({ snap: snapshot(), label });
+      if (history.length > HISTORY_MAX) history.shift();
+      updateUndoBtn();
+    };
+    const undo = () => {
+      if (!history.length) return;
+      const last = history.pop();
+      Object.keys(state).forEach(k => {
+        if (last.snap[k]) {
+          state[k].la_tengo = last.snap[k].la_tengo;
+          state[k].repetidas = last.snap[k].repetidas;
+        }
+      });
+      save();
+      renderCountries();
+      renderReplist();
+      stats();
+      updateUndoBtn();
+      if (els.overlay.classList.contains("open")) refreshSummary();
+      toast("↶ Deshecho: " + last.label, "warn");
+    };
+    const updateUndoBtn = () => {
+      if (!els.undoBtn) return;
+      els.undoBtn.classList.toggle("show", history.length > 0);
+      els.undoCount.textContent = String(history.length);
+    };
 
     const flagHTML = (c) => {
       const iso = FLAGS[c];
@@ -686,6 +771,7 @@
       const card = t.closest(".sticker");
       if (!card) return;
       const c = card.dataset.code, n = Number(card.dataset.num);
+      pushHistory(`${LABELS[c]||c} #${n} ${t.checked ? "marcada" : "desmarcada"}`);
       state[key(c, n)].la_tengo = t.checked;
       card.classList.toggle("have", t.checked);
       if (t.checked) {
@@ -706,6 +792,8 @@
       const c = card.dataset.code, n = Number(card.dataset.num), k = key(c, n);
       const curr = Number(state[k].repetidas || 0);
       const next = t.classList.contains("plus") ? curr + 1 : Math.max(0, curr - 1);
+      if (next === curr) return;
+      pushHistory(`${LABELS[c]||c} #${n} repetidas ${curr}→${next}`);
       state[k].repetidas = next;
       const node = card.querySelector(".rep-value");
       node.textContent = String(next);
@@ -716,7 +804,7 @@
       if (els.overlay.classList.contains("open")) refreshSummary();
     });
 
-    // EVENTOS - replist (tap = sumar, doble tap o long press = restar)
+    // EVENTOS - replist (tap = +1, doble tap = -1)
     let lastTap = { btn: null, time: 0 };
     els.replist.addEventListener("click", (event) => {
       const t = event.target.closest(".repnum");
@@ -725,15 +813,16 @@
       const c = row.dataset.code, n = Number(t.dataset.num);
       const k = key(c, n);
       const now = Date.now();
-      // doble tap rápido: restar
       const isDouble = lastTap.btn === t && (now - lastTap.time) < 350;
       lastTap = { btn: t, time: now };
       const curr = Number(state[k].repetidas || 0);
       let next = curr + 1;
       if (isDouble) next = Math.max(0, curr - 1);
+      if (next === curr && state[k].la_tengo) return;
+      const willMarkHave = next > 0 && !state[k].la_tengo;
+      pushHistory(`${LABELS[c]||c} #${n} ${isDouble ? "-1 repetida" : "+1 repetida"}`);
       state[k].repetidas = next;
-      // si tiene repetidas, también la marca como "la tengo"
-      if (next > 0 && !state[k].la_tengo) state[k].la_tengo = true;
+      if (willMarkHave) state[k].la_tengo = true;
       updateRepRowCell(c, n);
       syncStickerCard(c, n);
       save();
@@ -810,6 +899,7 @@
         try {
           const p = JSON.parse(String(reader.result || "{}"));
           if (!p || typeof p !== "object") throw new Error("bad");
+          pushHistory("Restaurar backup");
           Object.keys(state).forEach(k => {
             if (p[k]) {
               state[k].la_tengo = Boolean(p[k].la_tengo);
@@ -820,8 +910,8 @@
           renderCountries();
           renderReplist();
           stats();
-          alert("Backup importado.");
-        } catch { alert("No se pudo importar."); }
+          toast("Backup importado", "ok");
+        } catch { toast("No se pudo importar", "warn"); }
       };
       reader.readAsText(file, "utf-8");
     });
@@ -865,9 +955,63 @@
       }).catch(() => {});
     }
 
+    // ===== AUTO-UPDATE: chequea version.json y si cambia, recarga =====
+    els.versBadge.textContent = APP_VERSION;
+    let updateAvailable = false;
+    const markUpdateAvailable = (remote) => {
+      if (updateAvailable) return;
+      updateAvailable = true;
+      els.updBtn.classList.add("has-update");
+      els.updBtn.textContent = "🔔 Nueva version";
+      els.updStatus.textContent = `· nueva: ${remote}`;
+      toast("⚡ Hay una version nueva. Tocá Actualizar.", "warn");
+    };
+    const checkVersion = async () => {
+      try {
+        const r = await fetch("./version.json?t=" + Date.now(), { cache: "no-store" });
+        if (!r.ok) return;
+        const v = await r.json();
+        if (v.version && v.version !== APP_VERSION) markUpdateAvailable(v.version);
+      } catch {}
+    };
+    const hardRefresh = async () => {
+      els.updBtn.disabled = true;
+      els.updBtn.textContent = "Actualizando…";
+      try {
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.unregister()));
+        }
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      } catch {}
+      // bust cache navegador con un parámetro nuevo
+      const u = new URL(window.location.href);
+      u.searchParams.set("v", String(Date.now()));
+      window.location.replace(u.toString());
+    };
+    els.updBtn.addEventListener("click", hardRefresh);
+    // chequeo al cargar y cada vez que la app vuelve al frente
+    checkVersion();
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) checkVersion(); });
+    window.addEventListener("focus", checkVersion);
+    setInterval(checkVersion, 60000);
+
+    // ===== UNDO: botón + Ctrl+Z =====
+    els.undoBtn.addEventListener("click", undo);
+    document.addEventListener("keydown", (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        undo();
+      }
+    });
+
     renderCountries();
     renderReplist();
     stats();
+    updateUndoBtn();
   </script>
 </body>
 </html>
