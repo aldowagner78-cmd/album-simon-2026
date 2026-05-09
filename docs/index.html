@@ -105,7 +105,7 @@
     .repflag { width: 56px; height: 38px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.08); display: grid; place-items: center; background: linear-gradient(135deg, var(--c1), var(--c2)); color: #fff; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 0.78rem; }
     .repflag img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .repnums { display: flex; flex-wrap: wrap; gap: 3px; }
-    .repnum { min-width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; transition: transform 0.1s; padding: 0 4px; }
+    .repnum { min-width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.1s; padding: 0 4px; }
     .repnum:active { transform: scale(0.92); }
     .repnum.have { background: linear-gradient(180deg, #e6f7ee, #c4ecd5); color: #16834a; border-color: rgba(25,179,107,0.3); }
     .repnum.rep { background: linear-gradient(180deg, #fff1c8, #ffd97a); color: #7b4f00; border-color: rgba(246,180,14,0.5); box-shadow: 0 2px 6px rgba(246,180,14,0.3); }
@@ -390,7 +390,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.6";
+    const APP_VERSION = "2026.05.09.7";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -888,54 +888,42 @@
     });
 
     // EVENTOS - replist
-    // Flujo: rojo (falta) → 1er tap → verde (tengo) → 2do tap → dorado rep×1 → tap → rep×2...
-    // Mantener presionado (longpress) → resetear a "no tengo"
-    let longPressActive = false;
-    let pressTimer2 = null;
-    els.replist.addEventListener("pointerdown", (event) => {
-      const t = event.target.closest(".repnum");
-      if (!t) return;
-      longPressActive = false;
-      pressTimer2 = setTimeout(() => {
-        longPressActive = true;
-        const row = t.closest(".reprow");
-        if (!row) return;
-        const c = row.dataset.code, n = Number(t.dataset.num);
-        const k = key(c, n);
-        if (!state[k].la_tengo && state[k].repetidas === 0) return;
-        pushHistory(`${LABELS[c]||c} #${n} quitada`);
-        state[k].la_tengo = false;
-        state[k].repetidas = 0;
-        updateRepRowCell(c, n);
-        syncStickerCard(c, n);
-        save(); stats(); refreshHeader();
-        if (els.overlay.classList.contains("open")) refreshSummary();
-        toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
-        try { navigator.vibrate && navigator.vibrate(80); } catch {}
-      }, 600);
-    });
-    const cancelPress = () => { clearTimeout(pressTimer2); pressTimer2 = null; };
-    els.replist.addEventListener("pointerup", cancelPress);
-    els.replist.addEventListener("pointercancel", cancelPress);
-    els.replist.addEventListener("click", (event) => {
-      if (longPressActive) { longPressActive = false; return; } // fue longpress, ignorar click
-      const t = event.target.closest(".repnum");
-      if (!t) return;
-      const row = t.closest(".reprow");
+    // Flujo: rojo → tap → verde (tengo) → tap → dorado (repetida) → mantener → quitar
+    let repLongActive = false;
+    let repPressTimer = null;
+    let repTouchChip = null;
+    let repTouchStartY = 0;
+
+    const doRepLongPress = (chipEl) => {
+      repLongActive = true;
+      const row = chipEl.closest(".reprow");
       if (!row) return;
-      const c = row.dataset.code, n = Number(t.dataset.num);
-      const k = key(c, n);
+      const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
+      if (!state[k].la_tengo && state[k].repetidas === 0) return;
+      pushHistory(`${LABELS[c]||c} #${n} quitada`);
+      state[k].la_tengo = false;
+      state[k].repetidas = 0;
+      updateRepRowCell(c, n);
+      syncStickerCard(c, n);
+      save(); stats(); refreshHeader();
+      if (els.overlay.classList.contains("open")) refreshSummary();
+      toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
+      try { navigator.vibrate && navigator.vibrate(80); } catch {}
+    };
+
+    const doRepTap = (chipEl) => {
+      if (repLongActive) { repLongActive = false; return; }
+      const row = chipEl.closest(".reprow");
+      if (!row) return;
+      const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
       const s = state[k];
       if (!s.la_tengo) {
-        // rojo → marcar como tengo (verde)
         pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
-        s.la_tengo = true;
-        s.repetidas = 0;
+        s.la_tengo = true; s.repetidas = 0;
         try { navigator.vibrate && navigator.vibrate(40); } catch {}
-        const rect = t.getBoundingClientRect();
+        const rect = chipEl.getBoundingClientRect();
         fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
       } else {
-        // verde o dorado → sumar repetida
         pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
         s.repetidas = Number(s.repetidas || 0) + 1;
         try { navigator.vibrate && navigator.vibrate([30, 20, 30]); } catch {}
@@ -944,6 +932,62 @@
       syncStickerCard(c, n);
       save(); stats(); refreshHeader();
       if (els.overlay.classList.contains("open")) refreshSummary();
+    };
+
+    // Touch events (móvil) — más confiables que pointer/click en iOS/Android
+    els.replist.addEventListener("touchstart", (ev) => {
+      const t = ev.target.closest(".repnum");
+      if (!t) return;
+      repTouchChip = t;
+      repTouchStartY = ev.touches[0].clientY;
+      repLongActive = false;
+      clearTimeout(repPressTimer);
+      repPressTimer = setTimeout(() => doRepLongPress(t), 600);
+    }, { passive: true });
+
+    els.replist.addEventListener("touchmove", (ev) => {
+      if (!repTouchChip) return;
+      if (Math.abs(ev.touches[0].clientY - repTouchStartY) > 8) {
+        // el usuario está scrolleando, cancelar el tap
+        clearTimeout(repPressTimer); repPressTimer = null;
+        repTouchChip = null;
+      }
+    }, { passive: true });
+
+    els.replist.addEventListener("touchend", (ev) => {
+      clearTimeout(repPressTimer); repPressTimer = null;
+      const chip = repTouchChip; repTouchChip = null;
+      if (chip) doRepTap(chip);
+    }, { passive: true });
+
+    els.replist.addEventListener("touchcancel", () => {
+      clearTimeout(repPressTimer); repPressTimer = null;
+      repTouchChip = null; repLongActive = false;
+    });
+
+    // Mouse/pointer events (desktop, solo si no fue touch)
+    els.replist.addEventListener("pointerdown", (ev) => {
+      if (ev.pointerType === "touch") return;
+      const t = ev.target.closest(".repnum");
+      if (!t) return;
+      repLongActive = false;
+      clearTimeout(repPressTimer);
+      repPressTimer = setTimeout(() => doRepLongPress(t), 600);
+    });
+    els.replist.addEventListener("pointerup", (ev) => {
+      if (ev.pointerType === "touch") return;
+      clearTimeout(repPressTimer); repPressTimer = null;
+    });
+    els.replist.addEventListener("pointercancel", (ev) => {
+      if (ev.pointerType === "touch") return;
+      clearTimeout(repPressTimer); repPressTimer = null;
+    });
+    els.replist.addEventListener("click", (ev) => {
+      if (ev.pointerType === "touch") return; // ya fue manejado por touchend
+      if (repTouchChip !== null) return;       // fallback extra
+      const t = ev.target.closest(".repnum");
+      if (!t) return;
+      doRepTap(t);
     });
 
     // FAB resumen
