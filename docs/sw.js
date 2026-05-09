@@ -1,4 +1,5 @@
-const CACHE_NAME = "album-simon-pages-v1";
+// Bump esta version cada vez que se publiquen cambios clave para forzar refresco en el celular.
+const CACHE_NAME = "album-simon-pages-v5";
 const ASSETS = [
   "./",
   "./index.html",
@@ -14,23 +15,55 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
+self.addEventListener("message", (event) => {
+  if (event.data === "SKIP_WAITING") self.skipWaiting();
+});
+
+const isHTML = (req) =>
+  req.mode === "navigate" ||
+  req.destination === "document" ||
+  (req.headers.get("accept") || "").includes("text/html");
+
+const isAppCode = (url) => /\/(index\.html|sw\.js|manifest\.webmanifest)$/.test(url.pathname);
+
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
-  event.respondWith(
-    caches.match(event.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request)
-        .then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-          return response;
+  const req = event.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+
+  // Network-first para HTML y archivos clave: siempre intentar version nueva.
+  if (isHTML(req) || isAppCode(url)) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
+          return res;
         })
-        .catch(() => caches.match("./index.html"));
+        .catch(() => caches.match(req).then((c) => c || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  // Cache-first para imagenes / iconos / fuentes (cambian poco).
+  event.respondWith(
+    caches.match(req).then((cached) => {
+      if (cached) return cached;
+      return fetch(req)
+        .then((res) => {
+          if (res && res.status === 200 && (res.type === "basic" || res.type === "cors")) {
+            const clone = res.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(req, clone));
+          }
+          return res;
+        })
+        .catch(() => cached);
     })
   );
 });

@@ -843,7 +843,26 @@
     });
 
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./sw.js").catch(() => {});
+      navigator.serviceWorker.register("./sw.js").then((reg) => {
+        // Buscar updates al volver a la app
+        try { reg.update(); } catch {}
+        const activate = (worker) => {
+          if (!worker) return;
+          worker.addEventListener("statechange", () => {
+            if (worker.state === "installed" && navigator.serviceWorker.controller) {
+              worker.postMessage("SKIP_WAITING");
+            }
+          });
+        };
+        activate(reg.installing);
+        reg.addEventListener("updatefound", () => activate(reg.installing));
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+      }).catch(() => {});
     }
 
     renderCountries();
