@@ -70,10 +70,10 @@
     .stats { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
     .stat { border-radius: 16px; padding: 10px 10px 8px; background: rgba(255,255,255,0.14);
       border: 1px solid rgba(255,255,255,0.22); text-align: center; backdrop-filter: blur(2px);
-      transition: transform 0.25s; }
+      transition: transform 0.25s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
     .stat:hover { transform: translateY(-2px); }
     .stat strong { display: block; font-size: 1.6rem; font-family: Montserrat, sans-serif; font-weight: 900; line-height: 1; }
-    .stat span { font-size: 0.74rem; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.6px; }
+    .stat span { font-size: 0.74rem; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.6px; line-height: 1; }
     .stat.tengo strong { color: #88e6b1; }
     .stat.faltan strong { color: #ffd45f; }
     .stat.rep strong { color: #ffb1c8; }
@@ -376,7 +376,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.10";
+    const APP_VERSION = "2026.05.09.11";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
