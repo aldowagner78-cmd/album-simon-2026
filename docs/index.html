@@ -98,24 +98,18 @@
     .reprow { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 8px; padding: 6px; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
     .repflag { width: 56px; height: 38px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.16); border: 1px solid rgba(0,0,0,0.08); display: grid; place-items: center; background: linear-gradient(135deg, var(--c1), var(--c2)); color: #fff; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 0.78rem; }
     .repflag img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .repnums { display: flex; flex-wrap: wrap; gap: 3px; }
-    .repnum { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.1s; position: relative; overflow: visible; flex-shrink: 0; }
-    .repnum .rbadge { position: absolute; top: -6px; left: -6px; min-width: 15px; height: 15px; border-radius: 999px; background: linear-gradient(135deg, #f6b40e, #d99a00); color: #5a3a00; font-size: 0.58rem; font-weight: 900; display: grid; place-items: center; padding: 0 3px; line-height: 1; box-shadow: 0 1px 4px rgba(0,0,0,0.35); pointer-events: none; z-index: 2; border: 1.5px solid #fff; }
-    .repnum:active { transform: scale(0.92); }
-    .repnum.have { background: linear-gradient(180deg, #e6f7ee, #c4ecd5); color: #16834a; border-color: rgba(25,179,107,0.3); width: auto; min-width: 70px; display: flex; align-items: stretch; overflow: hidden; padding: 0; }
-    .repnum.rep { background: linear-gradient(180deg, #fff1c8, #ffd97a); color: #7b4f00; border-color: rgba(246,180,14,0.5); box-shadow: 0 2px 6px rgba(246,180,14,0.3); width: auto; min-width: 70px; display: flex; align-items: stretch; overflow: hidden; padding: 0; }
-    .repnum.miss { background: #fdecec; color: #b73a3a; border-color: rgba(183,58,58,0.2); }
-    .repnum.deleting { background: linear-gradient(180deg, #ffecec, #ffb3b3) !important; color: #b73a3a !important; border-color: rgba(183,58,58,0.5) !important; transform: scale(1.18) !important; transition: all 0.12s !important; }
-    .rn-action { width: 20px; min-height: unset; height: 100%; display: grid; place-items: center; font-size: 0.9rem; font-weight: 900; background: rgba(0,0,0,0.09); border: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; padding: 0; flex-shrink: 0; border-radius: 0; font-family: Montserrat, sans-serif; transition: background 0.1s; }
-    .rn-action:active { background: rgba(0,0,0,0.22); }
-    .rn-action.minus { border-radius: 6px 0 0 6px; }
-    .rn-action.plus { border-radius: 0 6px 6px 0; }
-    .rn-num { flex: 1; display: grid; place-items: center; font-size: 0.72rem; font-weight: 700; position: relative; padding: 0 2px; min-width: 22px; }
+    .repnums { display: flex; flex-wrap: wrap; gap: 6px; }
+    /* chip-wrap: número + botones debajo */
+    .chip-wrap { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .repnum { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; font-size: 0.78rem; font-family: Montserrat, sans-serif; font-weight: 800; position: relative; user-select: none; transition: transform 0.1s; flex-shrink: 0; }
+    .repnum .rbadge { position: absolute; top: -7px; left: -7px; min-width: 16px; height: 16px; border-radius: 999px; background: linear-gradient(135deg, #f6b40e, #d99a00); color: #5a3a00; font-size: 0.6rem; font-weight: 900; display: grid; place-items: center; padding: 0 3px; line-height: 1; box-shadow: 0 1px 4px rgba(0,0,0,0.35); pointer-events: none; z-index: 2; border: 1.5px solid #fff; }
+    .repnum.miss { background: #fdecec; color: #b73a3a; border: 1.5px solid rgba(183,58,58,0.3); }
+    .repnum.have { background: linear-gradient(180deg, #d6f0e1, #a9deba); color: #0e6638; border: 1.5px solid rgba(25,179,107,0.4); box-shadow: 0 2px 6px rgba(25,179,107,0.2); }
+    .repnum.rep { background: linear-gradient(180deg, #d6f0e1, #a9deba); color: #0e6638; border: 1.5px solid rgba(25,179,107,0.4); box-shadow: 0 2px 6px rgba(25,179,107,0.2); }
+    .chip-actions { display: flex; gap: 2px; }
+    .rn-action { width: 16px; height: 16px; min-height: unset; border-radius: 4px; font-size: 0.75rem; font-weight: 900; background: rgba(10,61,121,0.13); color: #0a3d79; border: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; display: grid; place-items: center; padding: 0; font-family: Montserrat, sans-serif; transition: background 0.1s; }
+    .rn-action:active { background: rgba(10,61,121,0.3); transform: scale(0.9); }
     .reptotal { font-family: Montserrat, sans-serif; font-weight: 800; color: #fff; font-size: 0.76rem; min-width: 44px; text-align: center; padding: 4px 8px; border-radius: 10px; background: linear-gradient(135deg, #19b36b, #0e7a45); white-space: nowrap; box-shadow: 0 2px 6px rgba(14,122,69,0.3); }
-
-    .legend { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 12px 12px; font-size: 0.74rem; color: #4a5d7e; }
-    .legend span { display: inline-flex; align-items: center; gap: 4px; }
-    .legend i { display: inline-block; width: 14px; height: 14px; border-radius: 4px; }
 
     /* COUNTRIES */
     .countries { margin-top: 14px; display: grid; gap: 12px; }
@@ -335,14 +329,8 @@
     <section class="repbox">
       <div class="repbox-head">
         <h3>📋 Marcá tus figuritas aquí</h3>
-        <p><b>1er toque</b> = ✅ La tengo &nbsp;·&nbsp; <b>2do toque</b> = 🔁 Repetida &nbsp;·&nbsp; <b>Manten presionado</b> = ❌ Quitar</p>
       </div>
       <div class="replist" id="replist"></div>
-      <div class="legend">
-        <span><i style="background:#fdecec;border:1px solid rgba(183,58,58,0.2)"></i>❌ Me falta</span>
-        <span><i style="background:linear-gradient(180deg, #e6f7ee, #c4ecd5);border:1px solid rgba(25,179,107,0.3)"></i>✅ La tengo</span>
-        <span><i style="background:linear-gradient(180deg, #fff1c8, #ffd97a);border:1px solid rgba(246,180,14,0.5)"></i>🔁 Repetida (xN)</span>
-      </div>
     </section>
 
     <section class="countries" id="countries"></section>
@@ -376,7 +364,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.11";
+    const APP_VERSION = "2026.05.09.12";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -579,13 +567,15 @@
     const chipHTML = (c, n) => {
       const s = state[key(c, n)];
       const r = Number(s.repetidas || 0);
-      if (!s.la_tengo) {
-        return `<button type="button" class="repnum miss" data-num="${n}" aria-label="numero ${n}">${n}</button>`;
-      } else if (r === 0) {
-        return `<div class="repnum have" data-num="${n}"><button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="quitar ${n}">−</button><span class="rn-num">${n}</span><button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="repetida ${n}">+</button></div>`;
-      } else {
-        return `<div class="repnum rep" data-num="${n}"><button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="menos rep ${n}">−</button><span class="rn-num">${n}<span class="rbadge">${r}</span></span><button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="mas rep ${n}">+</button></div>`;
-      }
+      const cls = !s.la_tengo ? 'miss' : (r > 0 ? 'rep' : 'have');
+      const badge = (s.la_tengo && r > 0) ? `<span class="rbadge">${r + 1}</span>` : '';
+      return `<div class="chip-wrap" data-num="${n}">
+        <div class="repnum ${cls}">${n}${badge}</div>
+        <div class="chip-actions">
+          <button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="quitar ${n}">−</button>
+          <button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="agregar ${n}">+</button>
+        </div>
+      </div>`;
     };
 
     const renderReplist = () => {
@@ -617,7 +607,7 @@
     const updateRepRowCell = (c, n) => {
       const row = els.replist.querySelector(`.reprow[data-code="${c}"]`);
       if (!row) return;
-      const existing = row.querySelector(`.repnum[data-num="${n}"]`);
+      const existing = row.querySelector(`.chip-wrap[data-num="${n}"]`);
       if (existing) {
         const tmp = document.createElement("div");
         tmp.innerHTML = chipHTML(c, n);
@@ -859,141 +849,41 @@
       if (els.overlay.classList.contains("open")) refreshSummary();
     });
 
-    // EVENTOS - replist
-    // Flujo: rojo → tap → verde (tengo) → tap → dorado (repetida) → mantener → quitar
-    let repLongActive = false;
-    let repPressTimer = null;
-    let repTouchChip = null;
-    let repTouchStartY = 0;
-
-    const doRepLongPress = (chipEl) => {
-      repLongActive = true;
-      const row = chipEl.closest(".reprow");
+    // EVENTOS - replist: solo botones +/−
+    els.replist.addEventListener("click", (ev) => {
+      const actionBtn = ev.target.closest(".rn-action");
+      if (!actionBtn) return;
+      const row = actionBtn.closest(".reprow");
       if (!row) return;
-      const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
-      if (!state[k].la_tengo && Number(state[k].repetidas) === 0) return;
-      // Mostrar ícono 🗑️ antes de borrar
-      chipEl.innerHTML = "🗑️";
-      chipEl.classList.remove("have", "rep");
-      chipEl.classList.add("deleting");
-      try { navigator.vibrate && navigator.vibrate(80); } catch {}
-      setTimeout(() => {
-        pushHistory(`${LABELS[c]||c} #${n} quitada`);
-        state[k].la_tengo = false;
-        state[k].repetidas = 0;
-        updateRepRowCell(c, n);
-        syncStickerCard(c, n);
-        save(); stats(); refreshHeader();
-        if (els.overlay.classList.contains("open")) refreshSummary();
-        toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
-      }, 350);
-    };
-
-    const doRepTap = (chipEl) => {
-      if (repLongActive) { repLongActive = false; return; }
-      const row = chipEl.closest(".reprow");
-      if (!row) return;
-      const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
+      const c = row.dataset.code, n = Number(actionBtn.dataset.num), k = key(c, n);
       const s = state[k];
-      if (s.la_tengo) return; // have/rep usan botones +/−
-      pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
-      s.la_tengo = true; s.repetidas = 0;
-      try { navigator.vibrate && navigator.vibrate(40); } catch {}
-      const rect = chipEl.getBoundingClientRect();
-      fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
+      const action = actionBtn.dataset.action;
+      if (action === "plus") {
+        if (!s.la_tengo) {
+          pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+          s.la_tengo = true; s.repetidas = 0;
+          try { navigator.vibrate && navigator.vibrate(40); } catch {}
+          const wrap = actionBtn.closest(".chip-wrap");
+          const rect = wrap ? wrap.getBoundingClientRect() : { left: 0, top: 0, width: 0, height: 0 };
+          fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
+        } else {
+          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+          s.repetidas = Number(s.repetidas || 0) + 1;
+        }
+      } else if (action === "minus") {
+        if (!s.la_tengo) return;
+        if (Number(s.repetidas) > 0) {
+          pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
+          s.repetidas = Number(s.repetidas) - 1;
+        } else {
+          pushHistory(`${LABELS[c]||c} #${n} quitada`);
+          s.la_tengo = false; s.repetidas = 0;
+        }
+      }
       updateRepRowCell(c, n);
       syncStickerCard(c, n);
       save(); stats(); refreshHeader();
       if (els.overlay.classList.contains("open")) refreshSummary();
-    };
-
-    // Touch events (móvil) — más confiables que pointer/click en iOS/Android
-    els.replist.addEventListener("touchstart", (ev) => {
-      if (ev.target.closest(".rn-action")) return; // botones +/− manejan sus propios clicks
-      const t = ev.target.closest(".repnum");
-      if (!t) return;
-      repTouchChip = t;
-      repTouchStartY = ev.touches[0].clientY;
-      repLongActive = false;
-      clearTimeout(repPressTimer);
-      repPressTimer = setTimeout(() => doRepLongPress(t), 600);
-    }, { passive: true });
-
-    els.replist.addEventListener("touchmove", (ev) => {
-      if (!repTouchChip) return;
-      if (Math.abs(ev.touches[0].clientY - repTouchStartY) > 8) {
-        // el usuario está scrolleando, cancelar el tap
-        clearTimeout(repPressTimer); repPressTimer = null;
-        repTouchChip = null;
-      }
-    }, { passive: true });
-
-    els.replist.addEventListener("touchend", (ev) => {
-      clearTimeout(repPressTimer); repPressTimer = null;
-      const chip = repTouchChip; repTouchChip = null;
-      if (chip && chip.classList.contains("miss")) doRepTap(chip);
-    }, { passive: true });
-
-    els.replist.addEventListener("touchcancel", () => {
-      clearTimeout(repPressTimer); repPressTimer = null;
-      repTouchChip = null; repLongActive = false;
-    });
-
-    // Mouse/pointer events (desktop, solo si no fue touch)
-    els.replist.addEventListener("pointerdown", (ev) => {
-      if (ev.pointerType === "touch") return;
-      if (ev.target.closest(".rn-action")) return; // manejado por click
-      const t = ev.target.closest(".repnum");
-      if (!t) return;
-      repLongActive = false;
-      clearTimeout(repPressTimer);
-      repPressTimer = setTimeout(() => doRepLongPress(t), 600);
-    });
-    els.replist.addEventListener("pointerup", (ev) => {
-      if (ev.pointerType === "touch") return;
-      clearTimeout(repPressTimer); repPressTimer = null;
-    });
-    els.replist.addEventListener("pointercancel", (ev) => {
-      if (ev.pointerType === "touch") return;
-      clearTimeout(repPressTimer); repPressTimer = null;
-    });
-    els.replist.addEventListener("click", (ev) => {
-      // Botones +/− dentro de chips have/rep
-      const actionBtn = ev.target.closest(".rn-action");
-      if (actionBtn) {
-        const chip = actionBtn.closest(".repnum");
-        if (!chip) return;
-        const row = chip.closest(".reprow");
-        if (!row) return;
-        const c = row.dataset.code, n = Number(chip.dataset.num), k = key(c, n);
-        const s = state[k];
-        const action = actionBtn.dataset.action;
-        if (action === "minus") {
-          if (!s.la_tengo) return;
-          if (Number(s.repetidas) > 0) {
-            pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
-            s.repetidas = Number(s.repetidas) - 1;
-          } else {
-            pushHistory(`${LABELS[c]||c} #${n} quitada`);
-            s.la_tengo = false; s.repetidas = 0;
-          }
-        } else if (action === "plus") {
-          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
-          if (!s.la_tengo) s.la_tengo = true;
-          s.repetidas = Number(s.repetidas || 0) + 1;
-        }
-        updateRepRowCell(c, n);
-        syncStickerCard(c, n);
-        save(); stats(); refreshHeader();
-        if (els.overlay.classList.contains("open")) refreshSummary();
-        return;
-      }
-      // Click desktop en chips miss
-      if (ev.pointerType === "touch") return;
-      if (repTouchChip !== null) return;
-      const t = ev.target.closest(".repnum.miss");
-      if (!t) return;
-      doRepTap(t);
     });
 
     // FAB resumen
