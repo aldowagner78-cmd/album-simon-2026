@@ -84,6 +84,8 @@
     .stat.rep strong { color: #ffb1c8; }
     .progress { margin-top: 12px; height: 12px; border-radius: 999px; background: rgba(0,0,0,0.28); overflow: hidden; border: 1px solid rgba(255,255,255,0.18); }
     .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #19b36b, #88e6b1, #f6b40e); transition: width 0.4s; box-shadow: 0 0 14px rgba(246,180,14,0.5); }
+    .progress-labels { display: flex; justify-content: space-between; margin-top: 4px; font-family: Montserrat, sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.7); font-weight: 700; }
+    #progressPct { color: #ffd45f; font-weight: 900; font-size: 0.78rem; }
 
     .tools { margin-top: 14px; display: grid; gap: 8px; }
     .tools textarea { width: 100%; min-height: 64px; border-radius: 13px; border: 1px solid rgba(255,255,255,0.24);
@@ -108,10 +110,16 @@
     .repnum { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; font-size: 0.74rem; font-family: Montserrat, sans-serif; font-weight: 700; background: #f0f4fb; color: #6c7e9c; border: 1px solid rgba(10,61,121,0.1); cursor: pointer; user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.1s; position: relative; overflow: visible; flex-shrink: 0; }
     .repnum .rbadge { position: absolute; top: -6px; left: -6px; min-width: 15px; height: 15px; border-radius: 999px; background: linear-gradient(135deg, #f6b40e, #d99a00); color: #5a3a00; font-size: 0.58rem; font-weight: 900; display: grid; place-items: center; padding: 0 3px; line-height: 1; box-shadow: 0 1px 4px rgba(0,0,0,0.35); pointer-events: none; z-index: 2; border: 1.5px solid #fff; }
     .repnum:active { transform: scale(0.92); }
-    .repnum.have { background: linear-gradient(180deg, #e6f7ee, #c4ecd5); color: #16834a; border-color: rgba(25,179,107,0.3); }
-    .repnum.rep { background: linear-gradient(180deg, #fff1c8, #ffd97a); color: #7b4f00; border-color: rgba(246,180,14,0.5); box-shadow: 0 2px 6px rgba(246,180,14,0.3); }
+    .repnum.have { background: linear-gradient(180deg, #e6f7ee, #c4ecd5); color: #16834a; border-color: rgba(25,179,107,0.3); width: auto; min-width: 70px; display: flex; align-items: stretch; overflow: hidden; padding: 0; }
+    .repnum.rep { background: linear-gradient(180deg, #fff1c8, #ffd97a); color: #7b4f00; border-color: rgba(246,180,14,0.5); box-shadow: 0 2px 6px rgba(246,180,14,0.3); width: auto; min-width: 70px; display: flex; align-items: stretch; overflow: hidden; padding: 0; }
     .repnum.miss { background: #fdecec; color: #b73a3a; border-color: rgba(183,58,58,0.2); }
-    .reptotal { font-family: Montserrat, sans-serif; font-weight: 800; color: #0a3d79; font-size: 0.85rem; min-width: 32px; text-align: center; padding: 6px 8px; border-radius: 10px; background: linear-gradient(135deg, #eef4fe, #dde8f7); }
+    .repnum.deleting { background: linear-gradient(180deg, #ffecec, #ffb3b3) !important; color: #b73a3a !important; border-color: rgba(183,58,58,0.5) !important; transform: scale(1.18) !important; transition: all 0.12s !important; }
+    .rn-action { width: 20px; min-height: unset; height: 100%; display: grid; place-items: center; font-size: 0.9rem; font-weight: 900; background: rgba(0,0,0,0.09); border: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; padding: 0; flex-shrink: 0; border-radius: 0; font-family: Montserrat, sans-serif; transition: background 0.1s; }
+    .rn-action:active { background: rgba(0,0,0,0.22); }
+    .rn-action.minus { border-radius: 6px 0 0 6px; }
+    .rn-action.plus { border-radius: 0 6px 6px 0; }
+    .rn-num { flex: 1; display: grid; place-items: center; font-size: 0.72rem; font-weight: 700; position: relative; padding: 0 2px; min-width: 22px; }
+    .reptotal { font-family: Montserrat, sans-serif; font-weight: 800; color: #fff; font-size: 0.76rem; min-width: 44px; text-align: center; padding: 4px 8px; border-radius: 10px; background: linear-gradient(135deg, #19b36b, #0e7a45); white-space: nowrap; box-shadow: 0 2px 6px rgba(14,122,69,0.3); }
 
     .legend { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 12px 12px; font-size: 0.74rem; color: #4a5d7e; }
     .legend span { display: inline-flex; align-items: center; gap: 4px; }
@@ -274,13 +282,13 @@
     .toast.ok { background: linear-gradient(135deg, #19b36b, #128c52); }
     .toast.warn { background: linear-gradient(135deg, #f6b40e, #d99a00); color: #1a1a1a; }
 
-    /* UNDO floating button */
-    .undo-fab { position: fixed; bottom: 86px; right: 14px; min-height: 48px; padding: 0 14px; border-radius: 999px;
-      background: linear-gradient(135deg, #ff5d8f, #c33a6a); color: #fff; font-family: Montserrat, sans-serif; font-weight: 800;
-      box-shadow: 0 12px 24px rgba(195,58,106,0.5); z-index: 41; display: none; align-items: center; gap: 6px; font-size: 0.92rem;
+    /* UNDO - discreto, pequeño */
+    .undo-fab { position: fixed; bottom: 76px; right: 10px; height: 32px; min-height: 32px; padding: 0 11px; border-radius: 999px;
+      background: rgba(8, 22, 50, 0.86); color: rgba(255,255,255,0.88); font-family: Montserrat, sans-serif; font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 41; display: none; align-items: center; gap: 5px; font-size: 0.76rem; backdrop-filter: blur(6px);
     }
     .undo-fab.show { display: inline-flex; }
-    .undo-fab .undo-count { background: rgba(255,255,255,0.28); border-radius: 999px; padding: 1px 7px; font-size: 0.78rem; }
+    .undo-fab .undo-count { background: rgba(255,255,255,0.2); border-radius: 999px; padding: 1px 6px; font-size: 0.7rem; }
 
     /* Version + actualizar en hero */
     .updaterow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
@@ -319,6 +327,7 @@
         <div class="stat rep"><strong id="sRep">0</strong><span>🔁 Repetidas</span></div>
       </div>
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-labels"><span>0%</span><span id="progressPct">0%</span><span>100%</span></div>
       <div class="updaterow">
         <span class="vers">App <b id="versBadge">…</b> <span id="updStatus" style="opacity:0.7"></span></span>
         <button class="upd-btn" id="updBtn">🔄 Actualizar</button>
@@ -331,9 +340,6 @@
           <button class="btn-soft" id="shareBtn">📤 Compartir</button>
           <button class="btn-soft" id="waBtn">💬 WhatsApp</button>
           <button class="btn-main" id="importPreloadBtn">📥 Cargar figus de Simón</button>
-          <button class="btn-soft" id="backupBtn">💾 Backup</button>
-          <button class="btn-soft" id="restoreBtn">📂 Restaurar</button>
-          <input id="restoreFile" type="file" accept="application/json" style="display:none">
         </div>
         <div class="friend-result" id="friendResult">Pegá los datos de un amigo para sugerencias de cambio.</div>
       </div>
@@ -391,7 +397,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.8";
+    const APP_VERSION = "2026.05.09.9";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -460,9 +466,6 @@
       friendRepeated: document.getElementById("friendRepeated"),
       friendResult: document.getElementById("friendResult"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
-      backupBtn: document.getElementById("backupBtn"),
-      restoreBtn: document.getElementById("restoreBtn"),
-      restoreFile: document.getElementById("restoreFile"),
       installBtn: document.getElementById("installBtn"),
       undoBtn: document.getElementById("undoBtn"),
       undoCount: document.getElementById("undoCount"),
@@ -599,6 +602,18 @@
       });
     };
 
+    const chipHTML = (c, n) => {
+      const s = state[key(c, n)];
+      const r = Number(s.repetidas || 0);
+      if (!s.la_tengo) {
+        return `<button type="button" class="repnum miss" data-num="${n}" aria-label="numero ${n}">${n}</button>`;
+      } else if (r === 0) {
+        return `<div class="repnum have" data-num="${n}"><button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="quitar ${n}">−</button><span class="rn-num">${n}</span><button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="repetida ${n}">+</button></div>`;
+      } else {
+        return `<div class="repnum rep" data-num="${n}"><button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="menos rep ${n}">−</button><span class="rn-num">${n}<span class="rbadge">${r}</span></span><button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="mas rep ${n}">+</button></div>`;
+      }
+    };
+
     const renderReplist = () => {
       els.replist.innerHTML = "";
       COUNTRIES.forEach(c => {
@@ -608,17 +623,11 @@
         row.dataset.code = c;
         row.style.setProperty("--c1", c1);
         row.style.setProperty("--c2", c2);
-        let total = 0;
+        let have = 0;
         let nums = "";
         for (let n = 1; n <= 20; n++) {
-          const s = state[key(c, n)];
-          const r = Number(s.repetidas || 0);
-          total += r;
-          let cls = "miss";
-          let inner = String(n);
-          if (r > 0) { cls = "rep"; inner = `${n}<span class="rbadge">${r}</span>`; }
-          else if (s.la_tengo) cls = "have";
-          nums += `<button type="button" class="repnum ${cls}" data-num="${n}" aria-label="numero ${n}">${inner}</button>`;
+          if (state[key(c, n)].la_tengo) have++;
+          nums += chipHTML(c, n);
         }
         row.innerHTML = `
           <div class="repflag">${flagHTML(c)}</div>
@@ -626,7 +635,7 @@
             <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.85rem;color:#0a3d79;margin-bottom:4px">${LABELS[c] || c}</div>
             <div class="repnums">${nums}</div>
           </div>
-          <div class="reptotal" data-total>${total}</div>`;
+          <div class="reptotal" data-total>${have}/20</div>`;
         els.replist.appendChild(row);
       });
     };
@@ -634,19 +643,16 @@
     const updateRepRowCell = (c, n) => {
       const row = els.replist.querySelector(`.reprow[data-code="${c}"]`);
       if (!row) return;
-      const btn = row.querySelector(`.repnum[data-num="${n}"]`);
-      if (btn) {
-        const s = state[key(c, n)];
-        const r = Number(s.repetidas || 0);
-        btn.classList.remove("miss", "have", "rep");
-        if (r > 0) { btn.classList.add("rep"); btn.innerHTML = `${n}<span class="rbadge">${r}</span>`; }
-        else if (s.la_tengo) { btn.classList.add("have"); btn.innerHTML = String(n); }
-        else { btn.classList.add("miss"); btn.innerHTML = String(n); }
+      const existing = row.querySelector(`.repnum[data-num="${n}"]`);
+      if (existing) {
+        const tmp = document.createElement("div");
+        tmp.innerHTML = chipHTML(c, n);
+        existing.replaceWith(tmp.firstElementChild);
       }
-      let total = 0;
-      for (let i = 1; i <= 20; i++) total += Number(state[key(c, i)].repetidas || 0);
+      let have = 0;
+      for (let i = 1; i <= 20; i++) if (state[key(c, i)].la_tengo) have++;
       const cell = row.querySelector("[data-total]");
-      if (cell) cell.textContent = String(total);
+      if (cell) cell.textContent = `${have}/20`;
     };
 
     const refreshHeader = () => {
@@ -669,6 +675,8 @@
       els.sRep.textContent = String(rep);
       const total = COUNTRIES.length * 20;
       els.progressFill.style.width = `${(tengo/total)*100}%`;
+      const pctEl = document.getElementById("progressPct");
+      if (pctEl) pctEl.textContent = Math.round((tengo/total)*100) + "%";
       els.tHaveN.textContent = String(tengo);
       els.tMissN.textContent = String(faltan);
       renderActiveList();
@@ -889,16 +897,22 @@
       const row = chipEl.closest(".reprow");
       if (!row) return;
       const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
-      if (!state[k].la_tengo && state[k].repetidas === 0) return;
-      pushHistory(`${LABELS[c]||c} #${n} quitada`);
-      state[k].la_tengo = false;
-      state[k].repetidas = 0;
-      updateRepRowCell(c, n);
-      syncStickerCard(c, n);
-      save(); stats(); refreshHeader();
-      if (els.overlay.classList.contains("open")) refreshSummary();
-      toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
+      if (!state[k].la_tengo && Number(state[k].repetidas) === 0) return;
+      // Mostrar ícono 🗑️ antes de borrar
+      chipEl.innerHTML = "🗑️";
+      chipEl.classList.remove("have", "rep");
+      chipEl.classList.add("deleting");
       try { navigator.vibrate && navigator.vibrate(80); } catch {}
+      setTimeout(() => {
+        pushHistory(`${LABELS[c]||c} #${n} quitada`);
+        state[k].la_tengo = false;
+        state[k].repetidas = 0;
+        updateRepRowCell(c, n);
+        syncStickerCard(c, n);
+        save(); stats(); refreshHeader();
+        if (els.overlay.classList.contains("open")) refreshSummary();
+        toast(`❌ ${LABELS[c]||c} #${n} quitada`, "warn");
+      }, 350);
     };
 
     const doRepTap = (chipEl) => {
@@ -907,17 +921,12 @@
       if (!row) return;
       const c = row.dataset.code, n = Number(chipEl.dataset.num), k = key(c, n);
       const s = state[k];
-      if (!s.la_tengo) {
-        pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
-        s.la_tengo = true; s.repetidas = 0;
-        try { navigator.vibrate && navigator.vibrate(40); } catch {}
-        const rect = chipEl.getBoundingClientRect();
-        fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
-      } else {
-        pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
-        s.repetidas = Number(s.repetidas || 0) + 1;
-        try { navigator.vibrate && navigator.vibrate([30, 20, 30]); } catch {}
-      }
+      if (s.la_tengo) return; // have/rep usan botones +/−
+      pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+      s.la_tengo = true; s.repetidas = 0;
+      try { navigator.vibrate && navigator.vibrate(40); } catch {}
+      const rect = chipEl.getBoundingClientRect();
+      fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
       updateRepRowCell(c, n);
       syncStickerCard(c, n);
       save(); stats(); refreshHeader();
@@ -926,6 +935,7 @@
 
     // Touch events (móvil) — más confiables que pointer/click en iOS/Android
     els.replist.addEventListener("touchstart", (ev) => {
+      if (ev.target.closest(".rn-action")) return; // botones +/− manejan sus propios clicks
       const t = ev.target.closest(".repnum");
       if (!t) return;
       repTouchChip = t;
@@ -947,7 +957,7 @@
     els.replist.addEventListener("touchend", (ev) => {
       clearTimeout(repPressTimer); repPressTimer = null;
       const chip = repTouchChip; repTouchChip = null;
-      if (chip) doRepTap(chip);
+      if (chip && chip.classList.contains("miss")) doRepTap(chip);
     }, { passive: true });
 
     els.replist.addEventListener("touchcancel", () => {
@@ -958,6 +968,7 @@
     // Mouse/pointer events (desktop, solo si no fue touch)
     els.replist.addEventListener("pointerdown", (ev) => {
       if (ev.pointerType === "touch") return;
+      if (ev.target.closest(".rn-action")) return; // manejado por click
       const t = ev.target.closest(".repnum");
       if (!t) return;
       repLongActive = false;
@@ -973,9 +984,40 @@
       clearTimeout(repPressTimer); repPressTimer = null;
     });
     els.replist.addEventListener("click", (ev) => {
-      if (ev.pointerType === "touch") return; // ya fue manejado por touchend
-      if (repTouchChip !== null) return;       // fallback extra
-      const t = ev.target.closest(".repnum");
+      // Botones +/− dentro de chips have/rep
+      const actionBtn = ev.target.closest(".rn-action");
+      if (actionBtn) {
+        const chip = actionBtn.closest(".repnum");
+        if (!chip) return;
+        const row = chip.closest(".reprow");
+        if (!row) return;
+        const c = row.dataset.code, n = Number(chip.dataset.num), k = key(c, n);
+        const s = state[k];
+        const action = actionBtn.dataset.action;
+        if (action === "minus") {
+          if (!s.la_tengo) return;
+          if (Number(s.repetidas) > 0) {
+            pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
+            s.repetidas = Number(s.repetidas) - 1;
+          } else {
+            pushHistory(`${LABELS[c]||c} #${n} quitada`);
+            s.la_tengo = false; s.repetidas = 0;
+          }
+        } else if (action === "plus") {
+          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+          if (!s.la_tengo) s.la_tengo = true;
+          s.repetidas = Number(s.repetidas || 0) + 1;
+        }
+        updateRepRowCell(c, n);
+        syncStickerCard(c, n);
+        save(); stats(); refreshHeader();
+        if (els.overlay.classList.contains("open")) refreshSummary();
+        return;
+      }
+      // Click desktop en chips miss
+      if (ev.pointerType === "touch") return;
+      if (repTouchChip !== null) return;
+      const t = ev.target.closest(".repnum.miss");
       if (!t) return;
       doRepTap(t);
     });
@@ -1052,40 +1094,7 @@
         toast(count + " figus cargadas ✅", "ok");
       } catch { toast("No se pudo cargar los datos", "warn"); }
     });
-    els.backupBtn.addEventListener("click", () => {
-      const blob = new Blob([JSON.stringify(state)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "album_simon_backup.json";
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-    els.restoreBtn.addEventListener("click", () => els.restoreFile.click());
-    els.restoreFile.addEventListener("change", () => {
-      const file = els.restoreFile.files?.[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          const p = JSON.parse(String(reader.result || "{}"));
-          if (!p || typeof p !== "object") throw new Error("bad");
-          pushHistory("Restaurar backup");
-          Object.keys(state).forEach(k => {
-            if (p[k]) {
-              state[k].la_tengo = Boolean(p[k].la_tengo);
-              state[k].repetidas = Math.max(0, Number(p[k].repetidas || 0));
-            }
-          });
-          save();
-          renderCountries();
-          renderReplist();
-          stats();
-          toast("Backup importado", "ok");
-        } catch { toast("No se pudo importar", "warn"); }
-      };
-      reader.readAsText(file, "utf-8");
-    });
+    // Backup/Restore eliminados
 
     window.addEventListener("beforeinstallprompt", (event) => {
       event.preventDefault();
