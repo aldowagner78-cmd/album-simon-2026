@@ -56,21 +56,16 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-    .hero::after {
-      content: "⚽"; position: absolute; right: -22px; bottom: -28px;
-      font-size: 160px; opacity: 0.10; transform: rotate(-12deg);
-      animation: spinBall 14s linear infinite;
-    }
-    @keyframes spinBall { to { transform: rotate(348deg); } }
-    .hero-title { display: flex; align-items: center; gap: 10px; }
+    .hero-title { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
     .hero-title h1 {
       margin: 0; font-family: Bangers, Montserrat, sans-serif; letter-spacing: 1px;
-      font-size: clamp(1.6rem, 6vw, 2.8rem); line-height: 1;
+      font-size: clamp(2rem, 7vw, 3.2rem); line-height: 1;
       text-shadow: 0 3px 0 rgba(0,0,0,0.2), 0 0 18px rgba(246,180,14,0.4);
     }
-    .trophy { font-size: clamp(1.6rem, 6vw, 2.6rem); animation: bob 2.2s ease-in-out infinite; }
-    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-6deg);} 50% { transform: translateY(-6px) rotate(6deg);} }
-    .hero p { margin: 6px 0 0; color: rgba(255,255,255,0.88); font-size: 0.95rem; }
+    .hero-badge { font-family: Montserrat, sans-serif; font-size: 0.78rem; font-weight: 800;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.28); color: rgba(255,255,255,0.9);
+      padding: 5px 13px; border-radius: 999px; letter-spacing: 0.4px; white-space: nowrap;
+    }
 
     .stats { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
     .stat { border-radius: 16px; padding: 10px 10px 8px; background: rgba(255,255,255,0.14);
@@ -87,15 +82,12 @@
     .progress-labels { display: flex; justify-content: space-between; margin-top: 4px; font-family: Montserrat, sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.7); font-weight: 700; }
     #progressPct { color: #ffd45f; font-weight: 900; font-size: 0.78rem; }
 
-    .tools { margin-top: 14px; display: grid; gap: 8px; }
-    .tools textarea { width: 100%; min-height: 64px; border-radius: 13px; border: 1px solid rgba(255,255,255,0.24);
-      background: rgba(3, 18, 43, 0.5); color: #fff; padding: 10px; font: inherit; font-size: 0.9rem; }
-    .btn-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .hero-actions { margin-top: 14px; }
+    .btn-wa { width: 100%; background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; font-size: 1rem; min-height: 52px; border-radius: 16px; box-shadow: 0 6px 18px rgba(37,211,102,0.35); letter-spacing: 0.2px; }
     button { min-height: 44px; border: 0; border-radius: 14px; font-family: Montserrat, sans-serif; font-weight: 800; cursor: pointer; transition: transform 0.12s; font-size: 0.86rem; }
     button:active { transform: scale(0.96); }
     .btn-main { background: linear-gradient(135deg, #f6b40e, #ffd45f); color: #13264a; box-shadow: 0 6px 14px rgba(246,180,14,0.35); }
     .btn-soft { background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.22); }
-    .friend-result { white-space: pre-wrap; border-radius: 14px; background: rgba(5, 23, 52, 0.5); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.93); padding: 10px; font-size: 0.86rem; line-height: 1.42; }
 
     /* GRILLA REPETIDAS COMPACTA - sin scroll horizontal */
     .repbox { margin-top: 14px; border-radius: 22px; background: linear-gradient(180deg, #ffffff, #eef4fc); box-shadow: 0 12px 26px rgba(7, 18, 40, 0.16); border: 1px solid rgba(255,255,255,0.7); overflow: hidden; }
@@ -287,15 +279,13 @@
       background: rgba(8, 22, 50, 0.86); color: rgba(255,255,255,0.88); font-family: Montserrat, sans-serif; font-weight: 700;
       border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 41; display: none; align-items: center; gap: 5px; font-size: 0.76rem; backdrop-filter: blur(6px);
     }
-    .undo-fab.show { display: inline-flex; }
     .undo-fab .undo-count { background: rgba(255,255,255,0.2); border-radius: 999px; padding: 1px 6px; font-size: 0.7rem; }
 
     /* Version + actualizar en hero */
-    .updaterow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-    .vers { font-family: Montserrat, sans-serif; font-size: 0.72rem; color: rgba(255,255,255,0.7); letter-spacing: 0.4px; }
-    .vers b { color: #ffd45f; }
-    .upd-btn { min-height: 36px; padding: 0 12px; border-radius: 11px; background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.24); font-size: 0.78rem; }
-    .upd-btn.has-update { background: linear-gradient(135deg, #ff5d8f, #c33a6a); animation: pulse 1.4s ease-in-out infinite; border-color: rgba(255,255,255,0.4); }
+    .vers { font-family: Montserrat, sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.45); letter-spacing: 0.4px; display: block; margin-top: 10px; text-align: right; }
+    .vers b { color: rgba(255,255,255,0.6); }
+    .upd-btn { display: none; min-height: 38px; padding: 0 14px; border-radius: 12px; background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.24); font-size: 0.82rem; margin-top: 8px; width: 100%; }
+    .upd-btn.has-update { display: block; background: linear-gradient(135deg, #ff5d8f, #c33a6a); animation: pulse 1.4s ease-in-out infinite; border-color: rgba(255,255,255,0.4); }
     @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,93,143,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,93,143,0); } }
 
     @media (min-width: 600px) {
@@ -303,7 +293,6 @@
     }
     @media (min-width: 820px) {
       .stickers { grid-template-columns: repeat(4, 1fr); }
-      .btn-row { grid-template-columns: repeat(5, 1fr); }
       .sheet-body { grid-template-columns: 1fr 1fr; }
       .reprow { grid-template-columns: 80px 1fr auto; }
       .repflag { width: 72px; height: 48px; }
@@ -317,38 +306,28 @@
   <main class="shell">
     <section class="hero">
       <div class="hero-title">
-        <span class="trophy">🏆</span>
         <h1>ALBUM DE SIMÓN</h1>
+        <span class="hero-badge">⚽ Mundial 2026</span>
       </div>
-      <p>Mundial 2026 · Marca tus figus, anota repetidas y cambia con tus amigos.</p>
       <div class="stats">
-        <div class="stat tengo"><strong id="sTengo">0</strong><span>✅ Las tengo</span></div>
-        <div class="stat faltan"><strong id="sFaltan">0</strong><span>❌ Me faltan</span></div>
-        <div class="stat rep"><strong id="sRep">0</strong><span>🔁 Repetidas</span></div>
+        <div class="stat tengo"><strong id="sTengo">0</strong><span>Las tengo</span></div>
+        <div class="stat faltan"><strong id="sFaltan">0</strong><span>Me faltan</span></div>
+        <div class="stat rep"><strong id="sRep">0</strong><span>Repetidas</span></div>
       </div>
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-labels"><span>0%</span><span id="progressPct">0%</span><span>100%</span></div>
-      <div class="updaterow">
-        <span class="vers">App <b id="versBadge">…</b> <span id="updStatus" style="opacity:0.7"></span></span>
-        <button class="upd-btn" id="updBtn">🔄 Actualizar</button>
+      <div class="hero-actions">
+        <button class="btn-wa" id="waBtn">💬 Compartir por WhatsApp</button>
+        <button class="upd-btn" id="updBtn">🔔 Hay una versión nueva — Actualizar</button>
       </div>
-      <div class="tools">
-        <textarea id="friendMissing" placeholder="✏️ Faltantes del amigo. Ej: ARG: 1,2,3"></textarea>
-        <textarea id="friendRepeated" placeholder="✏️ Repetidas del amigo. Ej: BRA: 4,10"></textarea>
-        <div class="btn-row">
-          <button class="btn-main" id="compareBtn">🔁 Comparar</button>
-          <button class="btn-soft" id="shareBtn">📤 Compartir</button>
-          <button class="btn-soft" id="waBtn">💬 WhatsApp</button>
-          <button class="btn-main" id="importPreloadBtn">📥 Cargar figus de Simón</button>
-        </div>
-        <div class="friend-result" id="friendResult">Pegá los datos de un amigo para sugerencias de cambio.</div>
-      </div>
+      <span class="vers">v<b id="versBadge">…</b><span id="updStatus"></span></span>
+      <button id="importPreloadBtn" style="display:none">📥 Cargar figus</button>
     </section>
 
     <section class="listbox">
       <div class="listtabs" id="listTabs">
-        <button class="tt-have" data-tab="have" id="tabHave">✅ Las que tengo (<span id="tHaveN">0</span>)</button>
-        <button class="tt-miss off" data-tab="miss" id="tabMiss">❌ Me faltan (<span id="tMissN">0</span>)</button>
+        <button class="tt-have" data-tab="have" id="tabHave">Las que tengo (<span id="tHaveN">0</span>)</button>
+        <button class="tt-miss off" data-tab="miss" id="tabMiss">Me faltan (<span id="tMissN">0</span>)</button>
       </div>
       <div class="listcontent" id="listContent"></div>
     </section>
@@ -397,7 +376,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.9";
+    const APP_VERSION = "2026.05.09.10";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -459,12 +438,7 @@
       closeBtn: document.getElementById("closeBtn"),
       missingOut: document.getElementById("missingOut"),
       repeatedOut: document.getElementById("repeatedOut"),
-      compareBtn: document.getElementById("compareBtn"),
-      shareBtn: document.getElementById("shareBtn"),
       waBtn: document.getElementById("waBtn"),
-      friendMissing: document.getElementById("friendMissing"),
-      friendRepeated: document.getElementById("friendRepeated"),
-      friendResult: document.getElementById("friendResult"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
       installBtn: document.getElementById("installBtn"),
       undoBtn: document.getElementById("undoBtn"),
@@ -1053,24 +1027,9 @@
         window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
       }
     });
-    els.shareBtn.addEventListener("click", async () => {
-      const t = summary();
-      if (navigator.share) {
-        try { await navigator.share({ title: "Resumen figuritas", text: t }); return; }
-        catch (err) { if (err?.name === "AbortError") return; }
-      }
-      await navigator.clipboard.writeText(t);
-      els.shareBtn.textContent = "✓ Copiado";
-      setTimeout(() => els.shareBtn.textContent = "📤 Compartir", 1200);
-    });
     els.waBtn.addEventListener("click", () => {
       const t = summary();
       window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
-    });
-    els.compareBtn.addEventListener("click", () => {
-      const fm = parse(els.friendMissing.value);
-      const fr = parse(els.friendRepeated.value);
-      els.friendResult.textContent = compare(fm, fr);
     });
     els.importPreloadBtn.addEventListener("click", async () => {
       try {
