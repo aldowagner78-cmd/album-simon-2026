@@ -142,61 +142,55 @@
     }
     details[open] .chev { transform: rotate(180deg); }
 
-    /* STICKERS - estilo trading card */
+    /* STICKERS - cards sin imagen, bandera + rol */
     .stickers { padding: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .sticker { position: relative; border-radius: 18px; padding: 8px;
+    .sticker { position: relative; border-radius: 18px; overflow: hidden;
       background: linear-gradient(160deg, #ffffff, #e9eef8 65%, #d8e2f3);
-      border: 1px solid rgba(10,61,121,0.18);
+      border: 1.5px solid rgba(10,61,121,0.14);
       box-shadow: 0 8px 18px rgba(8, 17, 37, 0.14);
-      display: grid; gap: 7px;
+      display: flex; flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
-      overflow: hidden;
-    }
-    .sticker::before {
-      content: ""; position: absolute; inset: 0; border-radius: 18px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.45), transparent 40%);
-      pointer-events: none;
     }
     .sticker:hover { transform: translateY(-3px); box-shadow: 0 14px 24px rgba(8, 17, 37, 0.22); }
-    .sticker.have { border-color: rgba(25,179,107,0.55);
+    .sticker.have { border-color: rgba(25,179,107,0.5);
       background: linear-gradient(160deg, #f3fbf6, #d6f0e1 70%, #a9deba);
       box-shadow: 0 8px 18px rgba(25,179,107,0.25);
     }
-    .sticker.have::after {
-      content: "✓"; position: absolute; top: -10px; right: -10px;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: linear-gradient(135deg, #19b36b, #88e6b1);
-      color: #fff; display: grid; place-items: center;
-      font-weight: 900; font-size: 1.1rem;
-      box-shadow: 0 4px 10px rgba(25,179,107,0.5);
-      animation: pop 0.4s ease-out;
+    .sticker-band { height: 72px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 12px; background: linear-gradient(135deg, var(--c1), var(--c2));
+      position: relative; flex-shrink: 0;
     }
-    @keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.2); } 100% { transform: scale(1); } }
-    .art { position: relative; border-radius: 14px; min-height: 96px; display: grid; place-items: center;
-      background: linear-gradient(135deg, var(--c1), var(--c2));
-      overflow: hidden;
-      box-shadow: inset 0 2px 0 rgba(255,255,255,0.25), inset 0 -2px 8px rgba(0,0,0,0.18);
-    }
-    .art::before {
+    .sticker-band::before {
       content: ""; position: absolute; inset: 0;
-      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.12) 0 10px, rgba(255,255,255,0) 10px 22px);
-      mix-blend-mode: overlay;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.09) 0 8px, rgba(255,255,255,0) 8px 18px);
+      mix-blend-mode: overlay; pointer-events: none;
     }
-    .art-flag { width: 70%; max-width: 130px; aspect-ratio: 3/2; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.45); border: 2px solid rgba(255,255,255,0.6); object-fit: cover; position: relative; z-index: 1; }
-    .art-code { position: absolute; bottom: 6px; right: 8px; color: rgba(255,255,255,0.95); font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.78rem; letter-spacing: 1.2px; text-shadow: 0 2px 4px rgba(0,0,0,0.4); z-index: 2; }
-    .thumb { width: 100%; min-height: 96px; max-height: 130px; object-fit: cover; border-radius: 14px; border: 2px solid rgba(255,255,255,0.6); display: block; background: #f2f6fd; box-shadow: inset 0 -3px 10px rgba(0,0,0,0.18); position: relative; z-index: 1; }
-    .thumb.hide { display: none; }
-    .sticker.has-thumb .art { display: none; }
-
-    .sticker-top { display: flex; align-items: center; justify-content: space-between; padding: 0 2px; position: relative; z-index: 1; }
-    .num { font-family: Bangers, Montserrat, sans-serif; font-size: 1.7rem; color: #0a3d79; line-height: 1; letter-spacing: 1px; text-shadow: 1px 1px 0 rgba(255,255,255,0.7); }
-    .chip { min-width: 50px; text-align: center; border-radius: 999px; padding: 4px 9px; font-size: 0.7rem; font-weight: 800; color: #7a5500; background: linear-gradient(135deg, #ffd97a, #f6b40e); box-shadow: 0 3px 8px rgba(246,180,14,0.4); }
-
-    .check { display: flex; align-items: center; gap: 8px; border-radius: 13px; border: 1px solid var(--line); background: rgba(255,255,255,0.7); padding: 7px 9px; font-size: 0.86rem; font-weight: 700; color: #0a3d79; cursor: pointer; position: relative; z-index: 1; }
+    .sticker-flag-img { width: 54px; height: 36px; border-radius: 6px; object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.7); box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+      position: relative; z-index: 1; display: block;
+    }
+    .sticker-flag-emoji { font-size: 2.4rem; position: relative; z-index: 1; line-height: 1; }
+    .sticker-n { font-family: Bangers, sans-serif; font-size: 2.4rem; color: rgba(255,255,255,0.95);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5); line-height: 1; position: relative; z-index: 1; letter-spacing: 1px;
+    }
+    .sticker-mark { position: absolute; top: 7px; right: 7px; width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #19b36b, #88e6b1); color: #fff;
+      display: grid; place-items: center; font-size: 0.82rem; font-weight: 900;
+      opacity: 0; transition: opacity 0.25s; box-shadow: 0 3px 8px rgba(25,179,107,0.5);
+      z-index: 3; pointer-events: none;
+    }
+    .sticker.have .sticker-mark { opacity: 1; }
+    .sticker-role { padding: 6px 10px 4px; font-family: Montserrat, sans-serif; font-size: 0.68rem;
+      font-weight: 800; color: #4a5d7e; text-align: center; text-transform: uppercase;
+      letter-spacing: 0.6px; flex-grow: 1; display: flex; align-items: center; justify-content: center;
+    }
+    .check { display: flex; align-items: center; gap: 8px; margin: 0 8px 4px; border-radius: 13px;
+      border: 1px solid var(--line); background: rgba(255,255,255,0.7); padding: 7px 9px;
+      font-size: 0.86rem; font-weight: 700; color: #0a3d79; cursor: pointer;
+    }
     .check input { width: 22px; height: 22px; accent-color: #19b36b; cursor: pointer; }
     .sticker.have .check { background: linear-gradient(135deg, #d6f0e1, #b9e4c9); color: #0e7a45; border-color: rgba(25,179,107,0.35); }
-
-    .rep { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; position: relative; z-index: 1; }
+    .rep { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 0 8px 8px; }
     .rep button { min-height: 38px; background: linear-gradient(180deg, #f2f5fa, #d9e2f1); color: #0a3d79; font-size: 1.2rem; font-weight: 900; border-radius: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
     .rep button.minus { background: linear-gradient(180deg, #ffe8e8, #ffc6c6); color: #b73a3a; }
     .rep button.plus { background: linear-gradient(180deg, #fff3c8, #ffd97a); color: #7b4f00; }
@@ -364,7 +358,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.09.12";
+    const APP_VERSION = "2026.05.09.13";
     const STORAGE_KEY = "album_simon_2026_v4";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -535,16 +529,26 @@
           card.dataset.num = String(n);
           card.style.setProperty("--c1", c1);
           card.style.setProperty("--c2", c2);
-          const flagInArt = FLAGS[c]
-            ? `<img class="art-flag" src="${flagUrl(c, 160)}" srcset="${flagSrcset(c)}" alt="${c}" loading="lazy">`
-            : `<div style="font-size:3.4rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,0.4));position:relative;z-index:1">${SPECIAL_EMOJI[c] || "⚽"}</div>`;
+          const sRole = (()=>{
+            if (n===1) return "Escudo";
+            if (n===2||n===3) return "Presentación";
+            if (n===4||n===5) return "Arquero";
+            if (n<=9) return "Defensa";
+            if (n<=12) return "Mediocampista";
+            if (n===13) return "Plantel";
+            if (n<=16) return "Volante";
+            return "Delantero";
+          })();
+          const flagInBand = FLAGS[c]
+            ? `<img class="sticker-flag-img" src="${flagUrl(c, 80)}" alt="${c}" loading="lazy">`
+            : `<span class="sticker-flag-emoji">${SPECIAL_EMOJI[c] || "⚽"}</span>`;
           card.innerHTML = `
-            <div class="art">${flagInArt}<div class="art-code">${c}</div></div>
-            <img class="thumb" src="./img/stickers/${c}-${n}.jpg" loading="lazy" alt="${c}-${n}">
-            <div class="sticker-top">
-              <div class="num">${n}</div>
-              <span class="chip">${c}</span>
+            <div class="sticker-band">
+              ${flagInBand}
+              <div class="sticker-n">${n}</div>
             </div>
+            <div class="sticker-mark">✓</div>
+            <div class="sticker-role">${sRole}</div>
             <label class="check">
               <input type="checkbox" ${s.la_tengo ? "checked" : ""}>
               <span>La tengo</span>
@@ -554,9 +558,6 @@
               <div class="rep-value${s.repetidas > 0 ? " has" : ""}">${s.repetidas}</div>
               <button type="button" class="plus" aria-label="mas">+</button>
             </div>`;
-          const img = card.querySelector(".thumb");
-          img.onerror = () => img.classList.add("hide");
-          img.onload = () => card.classList.add("has-thumb");
           stickers.appendChild(card);
         }
         details.appendChild(stickers);
