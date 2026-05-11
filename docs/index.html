@@ -190,10 +190,9 @@
     .sticker-body.player::after { content: ""; position: absolute; inset: 0;
       background: rgba(10,40,90,0.45); z-index: 1;
     }
-    /* Imagen real para escudo y foto equipo */
-    .sticker-body-img { width: 100%; height: 100%; object-fit: contain; display: block; }
-    .sticker-body.shield .sticker-body-img { object-fit: contain; padding: 6px; }
-    .sticker-body.photo .sticker-body-img { object-fit: cover; }
+    /* Imagen bandera sticker #1 */
+    .sticker-body-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sticker-body.shield .sticker-body-img.flag-full { object-fit: cover; padding: 0; border-radius: 0; }
     .sticker-player-name { position: relative; z-index: 2;
       font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
       color: #fff; text-align: center; line-height: 1.25; text-transform: uppercase;
@@ -1649,11 +1648,7 @@
           const sClub = pd && pd.c ? pd.c : "";
           const sPhys = sHt && sWt ? sHt + " · " + sWt : (sHt || sWt);
           const sPos = pd && pd.p ? pd.p : "";
-          const bgUrl = sType === "L"
-            ? `img/stickers/${c}-1.jpg`
-            : sType === "F"
-              ? `img/stickers/${c}-13.jpg`
-              : (FLAGS[c] ? flagUrl(c, 320) : "");
+          const bgUrl = FLAGS[c] ? flagUrl(c, 320) : "";
           const bodyClass = sType === "L" ? "shield" : sType === "F" ? "photo" : "player";
           card.innerHTML = `
             <div class="sticker-header">
@@ -1664,10 +1659,10 @@
             </div>
             <div class="sticker-mark">✓</div>
             <div class="sticker-body ${bodyClass}">
-              ${sType === "J"
+              ${sType === "J" || sType === "F"
                 ? `<div class="sticker-body-bg" style="background-image:url('${bgUrl}')"></div>
-                   ${sName ? `<div class="sticker-player-name">${sName}</div>` : ""}`
-                : `<img class="sticker-body-img" src="${bgUrl}" alt="${sType === "L" ? "escudo" : "equipo"}" loading="lazy">`}
+                   ${sType === "J" && sName ? `<div class="sticker-player-name">${sName}</div>` : ""}`
+                : bgUrl ? `<img class="sticker-body-img flag-full" src="${bgUrl}" alt="bandera" loading="lazy">` : ""}
             </div>
             <div class="sticker-bio">
               ${sPos ? `<div class="bio-row pos"><span class="icon">⚽</span><span class="bio-text">${sPos}</span></div>` : ""}
