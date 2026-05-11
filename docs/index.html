@@ -417,6 +417,12 @@
       font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.95rem;
       box-shadow: 0 8px 22px rgba(246,180,14,0.35); cursor: pointer; border: 0;
     }
+    .sheet-wa .btn-sync-share { min-height: 54px; padding: 0 14px; border-radius: 16px;
+      background: linear-gradient(135deg, #0a3d79, #1f5ea9); color: #fff;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.92rem;
+      box-shadow: 0 8px 22px rgba(10,61,121,0.35); cursor: pointer; border: 0;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -474,7 +480,8 @@
       <pre id="repeatedOut" style="display:none"></pre>
       <div class="sheet-wa">
         <button class="btn-wa-share" id="waShareBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Compartir faltantes</button>
-          <button class="btn-copy-share" id="copyBtn">📋 Copiar</button>
+        <button class="btn-copy-share" id="copyBtn">📋 Copiar</button>
+        <button class="btn-sync-share" id="syncLinkBtn">🔗 Link</button>
       </div>
     </div>
   </section>
@@ -1630,6 +1637,7 @@
       tabFaltan: document.getElementById("tabFaltan"),
       cntCambiar: document.getElementById("cntCambiar"),
       cntFaltan: document.getElementById("cntFaltan"),
+      syncLinkBtn: document.getElementById("syncLinkBtn"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
       installBtn: document.getElementById("installBtn"),
       undoBtn: document.getElementById("undoBtn"),
@@ -1957,6 +1965,66 @@
       m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
       return lines.join("\n");
     };
+
+    const encodeSyncPayload = () => {
+      const payload = { v: 1, h: [], r: [] };
+      Object.keys(state).forEach(k => {
+        const s = state[k];
+        if (s.la_tengo) payload.h.push(k);
+        const q = Number(s.repetidas || 0);
+        if (q > 0) payload.r.push([k, q]);
+      });
+      return btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+    };
+    const decodeSyncPayload = (raw) => {
+      const json = decodeURIComponent(escape(atob(raw)));
+      const p = JSON.parse(json);
+      if (!p || p.v !== 1 || !Array.isArray(p.h) || !Array.isArray(p.r)) throw new Error("bad");
+      return p;
+    };
+    const applySyncPayload = (payload) => {
+      Object.keys(state).forEach(k => {
+        state[k].la_tengo = false;
+        state[k].repetidas = 0;
+      });
+      payload.h.forEach(k => {
+        if (!state[k]) return;
+        state[k].la_tengo = true;
+      });
+      payload.r.forEach(entry => {
+        if (!Array.isArray(entry) || entry.length !== 2) return;
+        const [k, qRaw] = entry;
+        if (!state[k]) return;
+        const q = Math.max(0, Number(qRaw || 0));
+        if (q > 0) {
+          state[k].la_tengo = true;
+          state[k].repetidas = q;
+        }
+      });
+      save();
+      renderCountries();
+      renderReplist();
+      stats();
+      if (els.overlay.classList.contains("open")) refreshSummary();
+    };
+    const applySyncFromHash = () => {
+      const hash = window.location.hash || "";
+      if (!hash.startsWith("#sync=")) return;
+      const raw = hash.slice(6);
+      try {
+        const payload = decodeSyncPayload(raw);
+        const ok = window.confirm("¿Cargar progreso desde este link de sincronización? Reemplaza el progreso actual de este dispositivo.");
+        if (!ok) return;
+        applySyncPayload(payload);
+        history.length = 0;
+        updateUndoBtn();
+        toast("Progreso sincronizado ✅", "ok");
+      } catch {
+        toast("Link de sincronización inválido", "warn");
+      } finally {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    };
     const refreshSummary = () => {
       const m = getMissing(), r = getRep();
       els.missingOut.textContent = m.length ? m.map(g => `${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`).join("\n") : "No faltan figuritas.";
@@ -2225,6 +2293,16 @@
         window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
       }
     });
+    els.syncLinkBtn.addEventListener("click", async () => {
+      const url = `${window.location.origin}${window.location.pathname}${window.location.search}#sync=${encodeSyncPayload()}`;
+      try {
+        await navigator.clipboard.writeText(url);
+        els.syncLinkBtn.textContent = "✓ Link copiado";
+        setTimeout(() => els.syncLinkBtn.textContent = "🔗 Link", 1400);
+      } catch {
+        window.prompt("Copiá este link para sincronizar en otro dispositivo:", url);
+      }
+    });
     els.importPreloadBtn.addEventListener("click", async () => {
       try {
         const res = await fetch("preload.json?t=" + Date.now());
@@ -2351,6 +2429,7 @@
     renderReplist();
     stats();
     updateUndoBtn();
+    applySyncFromHash();
 
     // Auto-cargar las figus de Simón si no tiene ninguna marcada
     const anyOwned = Object.values(state).some(s => s.la_tengo);
