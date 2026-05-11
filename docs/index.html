@@ -170,16 +170,16 @@
     .stickers { padding: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .sticker { position: relative; border-radius: 18px; overflow: hidden;
       background: linear-gradient(160deg, #ffffff, #e9eef8 65%, #d8e2f3);
-      border: 1.5px solid rgba(10,61,121,0.14);
-      box-shadow: 0 8px 18px rgba(8, 17, 37, 0.14);
+      border: 2.5px solid #e53e3e;
+      box-shadow: 0 8px 18px rgba(229,62,62,0.18);
       display: flex; flex-direction: column;
       height: 268px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
     .sticker:hover { transform: translateY(-3px); box-shadow: 0 14px 24px rgba(8, 17, 37, 0.22); }
-    .sticker.have { border-color: rgba(25,179,107,0.5);
+    .sticker.have { border-color: #19b36b;
       background: linear-gradient(160deg, #f3fbf6, #d6f0e1 70%, #a9deba);
-      box-shadow: 0 8px 18px rgba(25,179,107,0.25);
+      box-shadow: 0 8px 18px rgba(25,179,107,0.3);
     }
     /* NUEVO DISEÑO CARDS */
     .sticker-header { display: flex; align-items: center; gap: 7px; padding: 7px 8px 6px;
@@ -192,13 +192,14 @@
     .sticker-num { font-family: Bangers, sans-serif; font-size: 1.9rem; color: #fff;
       text-shadow: 0 2px 5px rgba(0,0,0,0.5); line-height: 1; letter-spacing: 1px;
     }
-    .sticker-mark { position: absolute; top: 7px; right: 7px; width: 22px; height: 22px; border-radius: 50%;
-      background: linear-gradient(135deg, #19b36b, #88e6b1); color: #fff;
-      display: grid; place-items: center; font-size: 0.82rem; font-weight: 900;
-      opacity: 0; transition: opacity 0.25s; box-shadow: 0 3px 8px rgba(25,179,107,0.5);
+    .sticker-mark { position: absolute; top: 7px; right: 7px; width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, #19b36b, #0e7a45); color: #fff;
+      display: grid; place-items: center; font-size: 1rem; font-weight: 900;
+      opacity: 0; transform: scale(0.5); transition: opacity 0.25s, transform 0.25s;
+      box-shadow: 0 3px 10px rgba(25,179,107,0.6), 0 0 0 2px #fff;
       z-index: 3; pointer-events: none;
     }
-    .sticker.have .sticker-mark { opacity: 1; }
+    .sticker.have .sticker-mark { opacity: 1; transform: scale(1); }
     .sticker-body { position: relative; width: 100%; height: 104px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
     }
@@ -322,6 +323,100 @@
     @media (min-width: 1100px) {
       .stickers { grid-template-columns: repeat(5, 1fr); }
     }
+
+    /* ===== OVERLAY: tabs + grilla resumen + WA flotante ===== */
+    .sum-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0;
+      background: linear-gradient(180deg, #eef4fc, #dde6f5);
+      border-bottom: 1px solid var(--line);
+    }
+    .sum-tab { min-height: 50px; border: 0; cursor: pointer; font-family: Montserrat, sans-serif;
+      font-weight: 800; font-size: 0.9rem; color: #5f7089; background: transparent;
+      transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;
+      border-bottom: 3px solid transparent;
+    }
+    .sum-tab .tab-count { background: rgba(10,61,121,0.12); color: #0a3d79; border-radius: 999px;
+      padding: 2px 9px; font-size: 0.78rem; font-weight: 900;
+    }
+    .sum-tab.active { color: #0a3d79; background: #fff; border-bottom-color: #f6b40e; }
+    .sum-tab.active[data-tab="cambiar"] { border-bottom-color: #f6b40e; }
+    .sum-tab.active[data-tab="cambiar"] .tab-count { background: linear-gradient(135deg,#f6b40e,#d99a00); color: #fff; }
+    .sum-tab.active[data-tab="faltan"] { border-bottom-color: #e53e3e; }
+    .sum-tab.active[data-tab="faltan"] .tab-count { background: linear-gradient(135deg,#e53e3e,#b73a3a); color: #fff; }
+
+    .sum-content { padding: 12px 12px 100px; background: linear-gradient(180deg, #fff, #f6f9fd); }
+    .sum-empty { text-align: center; padding: 40px 16px; color: #7a8aa8;
+      font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.95rem;
+    }
+    .sum-empty .icon { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+
+    .sum-country { margin-bottom: 12px; border-radius: 14px; overflow: hidden;
+      background: #fff; border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(7,18,40,0.08);
+    }
+    .sum-country-head { display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+      background: linear-gradient(90deg, rgba(116,172,223,0.18), rgba(246,180,14,0.14));
+    }
+    .sum-country-head .sc-flag { width: 38px; height: 26px; border-radius: 5px; overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); border: 1.5px solid rgba(255,255,255,0.7);
+      flex-shrink: 0; background: linear-gradient(135deg, var(--c1), var(--c2));
+      display: grid; place-items: center; color: #fff; font-family: Montserrat, sans-serif;
+      font-weight: 800; font-size: 0.68rem;
+    }
+    .sum-country-head .sc-flag img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sum-country-head h4 { margin: 0; font-family: Montserrat, sans-serif; font-size: 0.92rem;
+      color: #0a3d79; font-weight: 800; flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sum-country-head .sc-total { background: linear-gradient(135deg,#0a3d79,#1f5ea9);
+      color: #fff; padding: 3px 10px; border-radius: 999px;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .sum-chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      gap: 8px; padding: 10px;
+    }
+    .sum-chip { position: relative; aspect-ratio: 1; border-radius: 11px;
+      display: grid; place-items: center;
+      font-family: Bangers, Montserrat, sans-serif; font-size: 1.3rem; font-weight: 900;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12); transition: transform 0.15s;
+    }
+    .sum-chip.miss { background: linear-gradient(160deg, #fff5f5, #fdd6d6);
+      color: #b73a3a; border: 2px solid rgba(229,62,62,0.55);
+    }
+    .sum-chip.rep { background: linear-gradient(160deg, #fffaef, #ffe5a8);
+      color: #7a4e00; border: 2px solid rgba(246,180,14,0.7);
+    }
+    .sum-chip .chip-badge { position: absolute; top: -7px; left: 50%; transform: translateX(-50%);
+      padding: 2px 7px; border-radius: 999px;
+      font-family: Montserrat, sans-serif; font-size: 0.56rem; font-weight: 900;
+      letter-spacing: 0.6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      border: 1.5px solid #fff;
+      white-space: nowrap;
+    }
+    .sum-chip.miss .chip-badge { background: linear-gradient(135deg,#e53e3e,#9b2929); color: #fff; }
+    .sum-chip.rep .chip-badge { background: linear-gradient(135deg,#f6b40e,#c27d00); color: #fff; }
+
+    /* WA flotante DENTRO del overlay */
+    .sheet-wa { position: sticky; bottom: 0; left: 0; right: 0;
+      padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,0.95) 30%, #fff);
+      display: flex; gap: 8px; z-index: 5;
+    }
+    .sheet-wa .btn-wa-share { flex: 1; min-height: 54px; border-radius: 16px;
+      background: linear-gradient(135deg, #25d366, #128c7e); color: #fff;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.95rem;
+      box-shadow: 0 8px 22px rgba(37,211,102,0.45);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      cursor: pointer; border: 0;
+    }
+    .sheet-wa .btn-wa-share svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .sheet-wa .btn-copy-share { min-height: 54px; padding: 0 16px; border-radius: 16px;
+      background: linear-gradient(135deg, #f6b40e, #d99a00); color: #16284d;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.95rem;
+      box-shadow: 0 8px 22px rgba(246,180,14,0.35); cursor: pointer; border: 0;
+    }
   </style>
 </head>
 <body>
@@ -339,8 +434,7 @@
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-labels"><span>0%</span><span id="progressPct">0%</span><span>100%</span></div>
       <div class="hero-actions">
-        <button class="btn-wa" id="waBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Compartir faltantes por WhatsApp</button>
-        <button class="btn-summary" id="summaryBtn">⚡ Resumen</button>
+        <button class="btn-summary" id="summaryBtn" style="grid-column:1/-1;width:100%;">⚡ Ver resumen de figuritas</button>
         <button class="upd-btn" id="updBtn">🔔 Hay una versión nueva — Actualizar</button>
       </div>
       <span class="vers">v<b id="versBadge">…</b><span id="updStatus"></span></span>
@@ -365,28 +459,28 @@
   <section class="overlay" id="overlay" aria-hidden="true">
     <div class="sheet" role="dialog" aria-modal="true">
       <div class="sheet-head">
-        <h3>📋 Resumen para cambiar</h3>
+        <h3>📋 Resumen del álbum</h3>
         <div class="sheet-actions">
-          <button class="copy" id="copyBtn">Copiar</button>
-          <button class="wa-share" id="waShareBtn" style="background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;min-height:40px;border-radius:11px;padding:0 14px;font-family:Montserrat,sans-serif;font-weight:800;font-size:0.86rem;">💬 WhatsApp</button>
-          <button class="close" id="closeBtn">Cerrar</button>
+          <button class="close" id="closeBtn">✕ Cerrar</button>
         </div>
       </div>
-      <div class="sheet-body">
-        <div class="box">
-          <header>❌ Me faltan</header>
-          <pre id="missingOut"></pre>
-        </div>
-        <div class="box">
-          <header>🔁 Repetidas</header>
-          <pre id="repeatedOut"></pre>
-        </div>
+      <div class="sum-tabs">
+        <button class="sum-tab active" data-tab="cambiar" id="tabCambiar">🔁 Para cambiar <span class="tab-count" id="cntCambiar">0</span></button>
+        <button class="sum-tab" data-tab="faltan" id="tabFaltan">❌ Me faltan <span class="tab-count" id="cntFaltan">0</span></button>
+      </div>
+      <div class="sum-content" id="sumCambiar"></div>
+      <div class="sum-content" id="sumFaltan" style="display:none"></div>
+      <pre id="missingOut" style="display:none"></pre>
+      <pre id="repeatedOut" style="display:none"></pre>
+      <div class="sheet-wa">
+        <button class="btn-wa-share" id="waShareBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Compartir faltantes</button>
+          <button class="btn-copy-share" id="copyBtn">📋 Copiar</button>
       </div>
     </div>
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.11.01";
+    const APP_VERSION = "2026.05.11.02";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -1530,7 +1624,12 @@
       closeBtn: document.getElementById("closeBtn"),
       missingOut: document.getElementById("missingOut"),
       repeatedOut: document.getElementById("repeatedOut"),
-      waBtn: document.getElementById("waBtn"),
+      sumCambiar: document.getElementById("sumCambiar"),
+      sumFaltan: document.getElementById("sumFaltan"),
+      tabCambiar: document.getElementById("tabCambiar"),
+      tabFaltan: document.getElementById("tabFaltan"),
+      cntCambiar: document.getElementById("cntCambiar"),
+      cntFaltan: document.getElementById("cntFaltan"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
       installBtn: document.getElementById("installBtn"),
       undoBtn: document.getElementById("undoBtn"),
@@ -1855,6 +1954,55 @@
       const m = getMissing(), r = getRep();
       els.missingOut.textContent = m.length ? m.map(g => `${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`).join("\n") : "No faltan figuritas.";
       els.repeatedOut.textContent = r.length ? r.join("\n") : "No hay repetidas.";
+      // Tab "Para cambiar" — solo países con repetidas
+      let cntCambiar = 0;
+      const cambiarHtml = [];
+      COUNTRIES.forEach(c => {
+        const items = [];
+        for (let n = 1; n <= 20; n++) {
+          const q = Number(state[key(c, n)].repetidas || 0);
+          if (q > 0) items.push({ n, q });
+        }
+        if (!items.length) return;
+        cntCambiar += items.length;
+        const chips = items.map(it =>
+          `<div class="sum-chip rep"><span class="chip-badge">REPE ×${it.q}</span>${it.n}</div>`
+        ).join("");
+        const totalCount = items.reduce((a, b) => a + b.q, 0);
+        cambiarHtml.push(
+          `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${totalCount} repe</span></div><div class="sum-chips">${chips}</div></div>`
+        );
+      });
+      // Tab "Me faltan" — solo países con faltantes
+      let cntFaltan = 0;
+      const faltanHtml = [];
+      COUNTRIES.forEach(c => {
+        const items = [];
+        for (let n = 1; n <= 20; n++) {
+          if (!state[key(c, n)].la_tengo) items.push(n);
+        }
+        if (!items.length) return;
+        cntFaltan += items.length;
+        const chips = items.map(n =>
+          `<div class="sum-chip miss"><span class="chip-badge">NOLA</span>${n}</div>`
+        ).join("");
+        faltanHtml.push(
+          `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${items.length} faltan</span></div><div class="sum-chips">${chips}</div></div>`
+        );
+      });
+      els.sumCambiar.innerHTML = cambiarHtml.length ? cambiarHtml.join("") :
+        `<div class="sum-empty"><span class="icon">🎉</span>¡No tenés repetidas todavía!<br><span style="font-weight:500;font-size:0.85rem;opacity:.7">Cuando marques figuritas duplicadas aparecerán acá.</span></div>`;
+      els.sumFaltan.innerHTML = faltanHtml.length ? faltanHtml.join("") :
+        `<div class="sum-empty"><span class="icon">🏆</span>¡Completaste el álbum!<br><span style="font-weight:500;font-size:0.85rem;opacity:.7">No te falta ninguna figurita.</span></div>`;
+      els.cntCambiar.textContent = String(cntCambiar);
+      els.cntFaltan.textContent = String(cntFaltan);
+    };
+    const switchSumTab = (which) => {
+      const cambiar = which === "cambiar";
+      els.tabCambiar.classList.toggle("active", cambiar);
+      els.tabFaltan.classList.toggle("active", !cambiar);
+      els.sumCambiar.style.display = cambiar ? "" : "none";
+      els.sumFaltan.style.display = cambiar ? "none" : "";
     };
     const parse = (text) => {
       const map = {};
@@ -2021,9 +2169,12 @@
     // FAB resumen
     els.summaryBtn.addEventListener("click", () => {
       refreshSummary();
+      switchSumTab("cambiar");
       els.overlay.classList.add("open");
       els.overlay.setAttribute("aria-hidden", "false");
     });
+    els.tabCambiar.addEventListener("click", () => switchSumTab("cambiar"));
+    els.tabFaltan.addEventListener("click", () => switchSumTab("faltan"));
     els.closeBtn.addEventListener("click", () => {
       els.overlay.classList.remove("open");
       els.overlay.setAttribute("aria-hidden", "true");
@@ -2048,10 +2199,6 @@
       } else {
         window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
       }
-    });
-    els.waBtn.addEventListener("click", () => {
-      const t = summary();
-      window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
     });
     els.importPreloadBtn.addEventListener("click", async () => {
       try {
