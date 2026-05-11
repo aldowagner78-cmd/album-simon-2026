@@ -1950,6 +1950,13 @@
       r.forEach(line => lines.push(line));
       return lines.join("\n");
     };
+    const missingSummary = () => {
+      const m = getMissing();
+      const lines = ["Me faltan figuritas del álbum 2026:"];
+      if (!m.length) lines.push("No faltan figuritas.");
+      m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
+      return lines.join("\n");
+    };
     const refreshSummary = () => {
       const m = getMissing(), r = getRep();
       els.missingOut.textContent = m.length ? m.map(g => `${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`).join("\n") : "No faltan figuritas.";
@@ -2115,14 +2122,32 @@
       const card = t.closest(".sticker");
       if (!card) return;
       const c = card.dataset.code, n = Number(card.dataset.num), k = key(c, n);
-      const curr = Number(state[k].repetidas || 0);
-      const next = t.classList.contains("plus") ? curr + 1 : Math.max(0, curr - 1);
-      if (next === curr) return;
-      pushHistory(`${LABELS[c]||c} #${n} repetidas ${curr}→${next}`);
-      state[k].repetidas = next;
-      const node = card.querySelector(".rep-value");
-      node.textContent = String(next);
-      node.classList.toggle("has", next > 0);
+      const s = state[k];
+      const isPlus = t.classList.contains("plus");
+      if (isPlus) {
+        if (!s.la_tengo) {
+          pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+          s.la_tengo = true;
+          s.repetidas = 0;
+          const r = card.getBoundingClientRect();
+          fireConfetti(r.left + r.width / 2, r.top + r.height / 2);
+        } else {
+          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+          s.repetidas = Number(s.repetidas || 0) + 1;
+        }
+      } else {
+        if (!s.la_tengo) return;
+        if (Number(s.repetidas || 0) > 0) {
+          pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
+          s.repetidas = Number(s.repetidas || 0) - 1;
+        } else {
+          pushHistory(`${LABELS[c]||c} #${n} quitada`);
+          s.la_tengo = false;
+          s.repetidas = 0;
+        }
+      }
+      syncStickerCard(c, n);
+      refreshHeader();
       updateRepRowCell(c, n);
       save();
       stats();
@@ -2188,10 +2213,10 @@
     els.copyBtn.addEventListener("click", async () => {
       await navigator.clipboard.writeText(summary());
       els.copyBtn.textContent = "✓ Copiado";
-      setTimeout(() => els.copyBtn.textContent = "Copiar", 1200);
+      setTimeout(() => els.copyBtn.textContent = "📋 Copiar", 1200);
     });
     document.getElementById("waShareBtn").addEventListener("click", () => {
-      const t = summary();
+      const t = missingSummary();
       if (navigator.share) {
         navigator.share({ title: "Mis figuritas - Mundial 2026", text: t }).catch(() => {
           window.open(`https://wa.me/?text=${encodeURIComponent(t)}`, "_blank");
