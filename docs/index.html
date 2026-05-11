@@ -332,13 +332,13 @@
       <button id="importPreloadBtn" style="display:none">📥 Cargar figus</button>
     </section>
 
-    <section class="listbox">
-      <div class="listtabs" id="listTabs">
-        <button class="tt-have" data-tab="have" id="tabHave">Las que tengo (<span id="tHaveN">0</span>)</button>
-        <button class="tt-miss off" data-tab="miss" id="tabMiss">Me faltan (<span id="tMissN">0</span>)</button>
+    <div style="display:none" aria-hidden="true">
+      <div id="listTabs">
+        <button id="tabHave" data-tab="have">Las que tengo (<span id="tHaveN">0</span>)</button>
+        <button id="tabMiss" data-tab="miss">Me faltan (<span id="tMissN">0</span>)</button>
       </div>
-      <div class="listcontent" id="listContent"></div>
-    </section>
+      <div id="listContent"></div>
+    </div>
 
     <div id="replist" style="display:none"></div>
     <section class="countries" id="countries"></section>
