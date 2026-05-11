@@ -188,8 +188,11 @@
     .sticker.have .sticker-mark { opacity: 1; }
     .sticker-info { padding: 3px 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1; gap: 1px; overflow: hidden; }
     .sticker-name { display: none; }
-    .sticker-photo { width: 100%; height: 90px; object-fit: cover; object-position: center 10%; display: block; background: #0a2a52; flex-shrink: 0; }
-    .sticker-photo-ph { width: 100%; height: 90px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; background: linear-gradient(180deg, #1565c0 0%, #0a2a52 100%); flex-shrink: 0; }
+    .sticker-photo { display: none; }
+    .sticker-photo-ph { display: none; }
+    .sticker-flag-big { width: 100%; height: 72px; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #e8f0fa 0%, #c8d8f0 100%); flex-shrink: 0; overflow: hidden; }
+    .sticker-flag-big img { height: 52px; width: auto; max-width: 90%; object-fit: contain; border-radius: 3px; box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
+    .sticker-flag-big span { font-size: 2.8rem; line-height: 1; }
     .sticker-bio { display: flex; flex-direction: column; align-items: center; gap: 0px; width: 100%; }
     .sticker-club { font-family: Montserrat, sans-serif; font-size: 0.58rem; font-weight: 700; color: #1a5fa8; text-align: center; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .sticker-dob { font-family: Montserrat, sans-serif; font-size: 0.56rem; font-weight: 500; color: #6b7a8d; text-align: center; }
@@ -372,9 +375,9 @@
     const APP_VERSION = "2026.05.11.01";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
-    const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
+    const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
     // Mapeo a códigos ISO de banderas (flagcdn.com)
-    const FLAGS = {MEX:"mx",RSA:"za",KOR:"kr",CZE:"cz",CAN:"ca",BIH:"ba",QAT:"qa",SUI:"ch",BRA:"br",MAR:"ma",HAI:"ht",SCO:"gb-sct",USA:"us",PAR:"py",AUS:"au",TUR:"tr",GER:"de",COW:"ci",CIV:"ci",ECU:"ec",NED:"nl",JPN:"jp",SWE:"se",TUN:"tn",BEL:"be",EGY:"eg",IRN:"ir",NZL:"nz",ESP:"es",CPV:"cv",KSA:"sa",URU:"uy",FRA:"fr",SEN:"sn",IRQ:"iq",NOR:"no",ARG:"ar",ALG:"dz",AUT:"at",JOR:"jo",POR:"pt",COD:"cd",UZB:"uz",COL:"co",ENG:"gb-eng",CRO:"hr",GHA:"gh",PAN:"pa"};
+    const FLAGS = {MEX:"mx",RSA:"za",KOR:"kr",CZE:"cz",CAN:"ca",BIH:"ba",QAT:"qa",SUI:"ch",BRA:"br",MAR:"ma",HAI:"ht",SCO:"gb-sct",USA:"us",PAR:"py",AUS:"au",TUR:"tr",GER:"de",COW:"cw",CIV:"ci",ECU:"ec",NED:"nl",JPN:"jp",SWE:"se",TUN:"tn",BEL:"be",EGY:"eg",IRN:"ir",NZL:"nz",ESP:"es",CPV:"cv",KSA:"sa",URU:"uy",FRA:"fr",SEN:"sn",IRQ:"iq",NOR:"no",ARG:"ar",ALG:"dz",AUT:"at",JOR:"jo",POR:"pt",COD:"cd",UZB:"uz",COL:"co",ENG:"gb-eng",CRO:"hr",GHA:"gh",PAN:"pa"};
     // Códigos especiales sin bandera (FWC=mundial, CC=Coca-Cola)
     const SPECIAL_EMOJI = {FWC:"🏆", CC:"⚽"};
 
@@ -1645,7 +1648,9 @@
               <div class="sticker-n">${n}</div>
             </div>
             <div class="sticker-mark">✓</div>
-            ${sType === "J" ? `<img class="sticker-photo" src="img/stickers/${c}-${n}.jpg" alt="${sName}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="sticker-photo-ph" style="display:none">⚽</div>` : `<div class="sticker-photo-ph">${sType === "L" ? "🛡️" : "📸"}</div>`}
+            <div class="sticker-flag-big">
+              ${FLAGS[c] ? `<img src="${flagUrl(c, 160)}" alt="${c}" loading="lazy">` : `<span>${SPECIAL_EMOJI[c] || "⚽"}</span>`}
+            </div>
             <div class="sticker-info">
               ${sName ? `<div class="sticker-name">${sName}</div>` : ""}
               ${sRole ? `<div class="sticker-role">${sRole}</div>` : ""}
