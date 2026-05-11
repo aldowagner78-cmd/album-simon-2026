@@ -101,7 +101,6 @@
     .btn-wa { flex: 3; min-width: 0; background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; font-size: 0.84rem; min-height: 50px; border-radius: 16px; box-shadow: 0 6px 18px rgba(37,211,102,0.35); letter-spacing: 0.1px; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 0 10px; }
     .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
     .btn-summary { flex: 2; min-width: 0; min-height: 50px; border-radius: 16px; background: linear-gradient(135deg, #f6b40e, #ffd45f); color: #132440; font-family: Montserrat, sans-serif; font-weight: 900; box-shadow: 0 6px 18px rgba(246,180,14,0.35); display: flex; align-items: center; justify-content: center; gap: 5px; font-size: 0.84rem; padding: 0 10px; }
-    .upd-btn { flex-basis: 100%; }
     button { min-height: 44px; border: 0; border-radius: 14px; font-family: Montserrat, sans-serif; font-weight: 800; cursor: pointer; transition: transform 0.12s; font-size: 0.86rem; }
     button:active { transform: scale(0.96); }
     .btn-main { background: linear-gradient(135deg, #f6b40e, #ffd45f); color: #13264a; box-shadow: 0 6px 14px rgba(246,180,14,0.35); }
@@ -169,7 +168,7 @@
     /* STICKERS - cards sin imagen, bandera + rol */
     .stickers { padding: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .sticker { position: relative; border-radius: 18px; overflow: hidden;
-      background: linear-gradient(160deg, #ffffff, #e9eef8 65%, #d8e2f3);
+      background: linear-gradient(160deg, #fff5f5, #fde4e4 65%, #f7c8c8);
       border: 2.5px solid #e53e3e;
       box-shadow: 0 8px 18px rgba(229,62,62,0.18);
       display: flex; flex-direction: column;
@@ -181,11 +180,18 @@
       background: linear-gradient(160deg, #f3fbf6, #d6f0e1 70%, #a9deba);
       box-shadow: 0 8px 18px rgba(25,179,107,0.3);
     }
+    .sticker.have.dup { border-color: #d99a00;
+      background: linear-gradient(160deg, #fffaef, #ffeec0 70%, #ffd76b);
+      box-shadow: 0 8px 18px rgba(246,180,14,0.35);
+    }
     /* NUEVO DISEÑO CARDS */
     .sticker-header { display: flex; align-items: center; gap: 7px; padding: 7px 8px 6px;
-      background: linear-gradient(135deg, #1565c0, #0a3d79);
+      background: linear-gradient(135deg, #e53e3e, #9b2929);
       border-bottom: 1.5px solid rgba(255,255,255,0.12); flex-shrink: 0;
+      transition: background 0.25s ease;
     }
+    .sticker.have .sticker-header { background: linear-gradient(135deg, #19b36b, #0e7a45); }
+    .sticker.have.dup .sticker-header { background: linear-gradient(135deg, #f6b40e, #c27d00); }
     .sticker-header img { width: 42px; height: 28px; border-radius: 5px; object-fit: cover;
       border: 1.5px solid rgba(255,255,255,0.7); box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
@@ -231,12 +237,17 @@
       flex-shrink: 0; margin-left: 2px; padding: 0 2px; line-height: 1;
     }
     .bio-empty { font-size: 0.58rem; color: #9aadc0; text-align: center; font-style: italic; }
+    .bio-title { font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
+      color: #0a3d79; text-align: center; line-height: 1.25; text-transform: uppercase;
+      padding: 6px 8px; letter-spacing: 0.5px; margin: auto 0;
+    }
     .rep { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 0 8px 8px; }
     .rep button { min-height: 38px; background: linear-gradient(180deg, #f2f5fa, #d9e2f1); color: #0a3d79; font-size: 1.2rem; font-weight: 900; border-radius: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
     .rep button.minus { background: linear-gradient(180deg, #ffe8e8, #ffc6c6); color: #b73a3a; }
     .rep button.plus { background: linear-gradient(180deg, #fff3c8, #ffd97a); color: #7b4f00; }
-    .rep-value { min-height: 38px; border-radius: 11px; display: grid; place-items: center; color: #fff; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 1.05rem; background: linear-gradient(180deg, #0a3d79, #1b5ea9); box-shadow: inset 0 2px 0 rgba(255,255,255,0.18); }
-    .rep-value.has { background: linear-gradient(180deg, #f6b40e, #d99a00); animation: glow 1.6s ease-in-out infinite; }
+    .rep-value { min-height: 38px; border-radius: 11px; display: grid; place-items: center; color: #fff; font-family: Montserrat, sans-serif; font-weight: 900; font-size: 1.05rem; background: linear-gradient(180deg, #e53e3e, #9b2929); box-shadow: inset 0 2px 0 rgba(255,255,255,0.18); transition: background 0.25s ease; }
+    .sticker.have .rep-value { background: linear-gradient(180deg, #19b36b, #0e7a45); }
+    .sticker.have.dup .rep-value { background: linear-gradient(180deg, #f6b40e, #d99a00); animation: glow 1.6s ease-in-out infinite; }
     @keyframes glow { 50% { box-shadow: 0 0 14px rgba(246,180,14,0.65); } }
 
     /* Botón instalar fijo */
@@ -307,8 +318,7 @@
     /* Version + actualizar en hero */
     .vers { display: none; }
     .vers b { color: rgba(255,255,255,0.6); }
-    .upd-btn { display: none; min-height: 38px; padding: 0 14px; border-radius: 12px; background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.24); font-size: 0.82rem; margin-top: 8px; width: 100%; }
-    .upd-btn.has-update { display: block; background: linear-gradient(135deg, #ff5d8f, #c33a6a); animation: pulse 1.4s ease-in-out infinite; border-color: rgba(255,255,255,0.4); }
+
     @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,93,143,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,93,143,0); } }
 
     @media (min-width: 600px) {
@@ -445,7 +455,6 @@
       <div class="progress-labels"><span>0%</span><span id="progressPct">0%</span><span>100%</span></div>
       <div class="hero-actions">
         <button class="btn-summary" id="summaryBtn" style="grid-column:1/-1;width:100%;">⚡ Ver resumen de figuritas</button>
-        <button class="upd-btn" id="updBtn">🔔 Hay una versión nueva — Actualizar</button>
       </div>
       <span class="vers">v<b id="versBadge">…</b><span id="updStatus"></span></span>
       <button id="importPreloadBtn" style="display:none">📥 Cargar figus</button>
@@ -493,7 +502,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.11.03";
+    const APP_VERSION = "2026.05.11.06";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -1652,8 +1661,6 @@
       undoBtn: document.getElementById("undoBtn"),
       undoCount: document.getElementById("undoCount"),
       versBadge: document.getElementById("versBadge"),
-      updBtn: document.getElementById("updBtn"),
-      updStatus: document.getElementById("updStatus"),
       listTabs: document.getElementById("listTabs"),
       listContent: document.getElementById("listContent"),
       tHaveN: document.getElementById("tHaveN"),
@@ -1750,7 +1757,9 @@
         for (let n = 1; n <= 20; n++) {
           const k = key(c, n), s = state[k];
           const card = document.createElement("article");
-          card.className = "sticker" + (s.la_tengo ? " have" : "");
+          const hasIt = s.la_tengo;
+          const reps = Number(s.repetidas || 0);
+          card.className = "sticker" + (hasIt ? " have" : "") + (hasIt && reps > 0 ? " dup" : "");
           card.dataset.code = c;
           card.dataset.num = String(n);
           card.style.setProperty("--c1", c1);
@@ -1794,6 +1803,8 @@
                 : bgUrl ? `<img class="sticker-body-img flag-full" src="${bgUrl}" alt="bandera" loading="lazy">` : ""}
             </div>
             <div class="sticker-bio">
+              ${sType === "L" ? `<div class="bio-title">ESCUDO</div>` : ""}
+              ${sType === "F" ? `<div class="bio-title">EQUIPO</div>` : ""}
               ${sPos ? `<div class="bio-row pos"><span class="icon">⚽</span><span class="bio-text">${sPos}</span></div>` : ""}
               ${sDob ? `<div class="bio-row"><span class="icon">🗓</span><span class="bio-text">${sDob}</span>${sAge !== null ? `<span class="age-badge">${sAge}</span>` : ""}</div>` : ""}
               ${sPhys ? `<div class="bio-row"><span class="icon">📏</span><span class="bio-text">${sPhys}</span></div>` : ""}
@@ -1802,7 +1813,7 @@
             </div>
             <div class="rep">
               <button type="button" class="minus" aria-label="menos">−</button>
-              <div class="rep-value${s.repetidas > 0 ? " has" : ""}">${s.repetidas}</div>
+              <div class="rep-value">${(hasIt ? 1 : 0) + reps}</div>
               <button type="button" class="plus" aria-label="mas">+</button>
             </div>`;
           stickers.appendChild(card);
@@ -2168,14 +2179,14 @@
       const card = els.countries.querySelector(`.sticker[data-code="${c}"][data-num="${n}"]`);
       if (!card) return;
       const s = state[key(c, n)];
+      const reps = Number(s.repetidas || 0);
+      const total = (s.la_tengo ? 1 : 0) + reps;
       const node = card.querySelector(".rep-value");
-      if (node) {
-        node.textContent = String(s.repetidas);
-        node.classList.toggle("has", s.repetidas > 0);
-      }
+      if (node) node.textContent = String(total);
       const cb = card.querySelector('input[type="checkbox"]');
       if (cb) cb.checked = s.la_tengo;
       card.classList.toggle("have", s.la_tengo);
+      card.classList.toggle("dup", s.la_tengo && reps > 0);
     };
 
     // Confetti al marcar "la tengo"
@@ -2403,49 +2414,8 @@
       }).catch(() => {});
     }
 
-    // ===== AUTO-UPDATE: chequea version.json y si cambia, recarga =====
+    // ===== VERSION BADGE =====
     els.versBadge.textContent = APP_VERSION;
-    let updateAvailable = false;
-    const markUpdateAvailable = (remote) => {
-      if (updateAvailable) return;
-      updateAvailable = true;
-      els.updBtn.classList.add("has-update");
-      els.updBtn.textContent = "🔔 Nueva version";
-      els.updStatus.textContent = `· nueva: ${remote}`;
-      toast("⚡ Hay una version nueva. Tocá Actualizar.", "warn");
-    };
-    const checkVersion = async () => {
-      try {
-        const r = await fetch("./version.json?t=" + Date.now(), { cache: "no-store" });
-        if (!r.ok) return;
-        const v = await r.json();
-        if (v.version && v.version !== APP_VERSION) markUpdateAvailable(v.version);
-      } catch {}
-    };
-    const hardRefresh = async () => {
-      els.updBtn.disabled = true;
-      els.updBtn.textContent = "Actualizando…";
-      try {
-        if ("serviceWorker" in navigator) {
-          const regs = await navigator.serviceWorker.getRegistrations();
-          await Promise.all(regs.map(r => r.unregister()));
-        }
-        if ("caches" in window) {
-          const keys = await caches.keys();
-          await Promise.all(keys.map(k => caches.delete(k)));
-        }
-      } catch {}
-      // bust cache navegador con un parámetro nuevo
-      const u = new URL(window.location.href);
-      u.searchParams.set("v", String(Date.now()));
-      window.location.replace(u.toString());
-    };
-    els.updBtn.addEventListener("click", hardRefresh);
-    // chequeo al cargar y cada vez que la app vuelve al frente
-    checkVersion();
-    document.addEventListener("visibilitychange", () => { if (!document.hidden) checkVersion(); });
-    window.addEventListener("focus", checkVersion);
-    setInterval(checkVersion, 60000);
 
     // ===== UNDO: botón + Ctrl+Z =====
     els.undoBtn.addEventListener("click", undo);
