@@ -1,0 +1,162 @@
+Tengo un álbum de figuritas del Mundial 2026. Necesito que busques los datos de los siguientes jugadores de fútbol.
+
+Para cada jugador necesito exactamente estos 4 datos (vigentes al 11 de mayo de 2026):
+- Fecha de nacimiento (formato YYYY-MM-DD)
+- Altura en centímetros (solo el número entero)
+- Club actual (nombre real del club, sin corchetes ni wikisyntax)
+- Posición en español: Portero / Defensa / Centrocampista / Delantero
+
+FORMATO DE RESPUESTA — una línea por jugador, EXACTAMENTE así, sin encabezados ni explicaciones:
+PAIS|NUM|NOMBRE|YYYY-MM-DD|altura_cm|Club Actual|Posicion
+
+Reglas:
+- Si no encontrás un dato específico, poné ? en ese campo.
+- NO omitas ningún jugador de la lista.
+- No agregues texto extra, solo las líneas con los datos.
+- Los nombres de clubes van en su idioma original (ej: "Manchester City", "Real Madrid", "Bayern München").
+
+LISTA DE JUGADORES (141 jugadores):
+PAIS|NUM|NOMBRE
+ALG|12|Nabil Bentalab
+ALG|14|Farés Chaibi
+ALG|20|Mohammed Amoura
+ARG|2|Emiliano Martinez
+AUS|9|Lewis Miller
+AUS|18|Kusini Vengi
+AUS|20|Mohamed Touré
+BIH|3|Amer Dedic
+BIH|6|Nihad Mujakic
+BIH|12|Ivan Basic
+BRA|3|Bento
+BRA|4|Marquinhos
+BRA|7|Danilo
+BRA|8|Wesley
+BRA|12|Luiz Henrique
+BRA|16|João Pedro
+BRA|20|Estévão
+CAN|2|Dayne St.Clair
+CAN|6|Riche Larvea
+CIV|12|Ibrahim Sangare
+COL|6|Daniel Munoz
+COL|17|Jon Arias
+COL|18|Jhon Cordova
+COL|20|Luis Diaz
+COW|12|Ibrahim Sangare
+CPV|4|Pico
+CPV|5|Diney
+CPV|8|Joao Paulo
+CPV|10|Kevin Pina
+CPV|20|Bebe
+CZE|3|Jindrich Stanek
+CZE|4|Ladislav Krejci
+CZE|16|Vasil Kusej
+CZE|18|Vaclav Cerny
+ECU|10|Alan Franco
+ECU|14|John Veboah
+ECU|19|Kevin Rodriguez
+EGY|4|Mohamed Hamdy
+EGY|14|Mohamed Lasheen
+EGY|18|Mostafa Mohamed
+EGY|19|Trezeguet
+ENG|15|Anthony Gordon
+ESP|10|Rodri
+ESP|17|Nico Williams
+GHA|7|Gideon Mensah
+GHA|9|Abdul Issahaku Fatawu
+GHA|17|Andrew Ayew
+HAI|15|Derrick Etienne Jr
+IRN|11|Saeed Ezatolahi
+IRQ|4|Hussein Ali
+IRQ|5|Akam Hashem
+IRQ|11|Ibrahim Bavesh
+JOR|7|Saleem Obaid
+JOR|9|Ibrahim Saadeh
+JPN|19|Koki Ogawa
+KOR|2|Hyeon-woo Jo
+KOR|3|Seung-Gyu Kim
+KOR|4|Min-jae Kim
+KOR|5|Yu-min Cho
+KOR|6|Young-woo Seol
+KOR|7|Han-beom Lee
+KOR|8|Tae-seok Lee
+KOR|9|Myung-jae Lee
+KOR|10|Jae-sung Lee
+KOR|11|In-beom Hwang
+KOR|14|Seung-ho Paik
+KOR|16|Dongg-yeong Lee
+KOR|17|Gue-sung Cho
+KOR|20|Hyeon-Gyu Oh
+KSA|2|Nawaf Alaqidi
+KSA|5|Nawaf Bouwashl
+KSA|6|Jihad Thakri
+KSA|8|Hassan Altambakti
+KSA|9|Musab Aljuwayr
+KSA|10|Ziyad Aljohani
+KSA|11|Abdullah Alkhaibari
+KSA|12|Nasser Aldawsari
+KSA|14|Saleh Abu Alshamat
+KSA|15|Marwan Alsahafi
+KSA|16|Salem Aldawsari
+KSA|18|Feras Akbrikan
+MAR|3|Munir El Kajoui
+MAR|7|Roman Saiss
+MAR|8|Jawad El Yamio
+MEX|3|Johan Vasquez
+MEX|4|Jorge Sánchez
+MEX|9|Carlos Rodriguez
+MEX|12|Marcel Ruiz
+MEX|18|Alexis Vega
+MEX|20|Cesar Huerta
+NOR|4|Leo Ostigård
+NZL|2|Max Crocombe Payne
+NZL|6|Tim Payne
+NZL|10|Joe Bell
+NZL|17|Chris Wood
+PAN|5|Andres Andrade
+PAN|7|Eric Davis
+PAN|8|Jose Cordoba
+PAN|10|Cristian Martinez
+PAN|16|Ismael Díaz
+PAN|17|Jose Fajardo
+PAN|19|Jose Luiz Rodriguez
+PAN|20|Alberto Quintero
+PAR|2|Roberto Fernandez
+PAR|10|Diego Gomez
+PAR|12|Andres Cubas
+PAR|14|Matias Galarza Fonda
+PAR|15|Julio Enciso
+PAR|18|Ramon Sosa
+PAR|19|Angel Romero
+POR|7|Nuno Mendes
+POR|10|Bruno Fernandes
+POR|12|Vitinha
+QAT|3|Sultan Albrake
+QAT|4|Lucas Mendes
+QAT|7|Pedro Miguel
+QAT|9|Mohamed Al-Mannai
+QAT|18|Akram Hassan Afif
+RSA|11|Teboho Mokoena
+RSA|14|Bathasi Aubaas
+SCO|3|Jack Hendry
+SEN|5|Abdoulaye Seck
+SEN|14|Lamine Camara
+SEN|19|Nicolas Jackson
+SUI|5|Ricardo Rodriguez
+SWE|5|Emil Holm
+SWE|7|Gustaf Lagerbielke
+SWE|9|Hugo Larsson
+TUN|7|Ali Abdi
+TUR|18|Baris Alper Yilmaz
+URU|6|Sebastian Caceres
+URU|7|Mathias Olivera
+URU|14|Manuel Ugarte
+URU|16|Maxi Araujo
+USA|2|Math Freese
+USA|3|Chris Richards
+USA|5|Mark McKenzie
+USA|8|Tyler Adams
+USA|10|Weston McKenny
+USA|11|Christian Roldan
+UZB|3|Farrukh Savfiev
+
+Respuesta esperada: 141 líneas, una por jugador, formato PAIS|NUM|NOMBRE|YYYY-MM-DD|altura_cm|Club|Posicion

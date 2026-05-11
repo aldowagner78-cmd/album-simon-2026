@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview Nueva Figurita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@500;700;900&display=swap">
+<style>
+  body { background: #0a2a52; display: flex; gap: 16px; flex-wrap: wrap; padding: 30px; justify-content: center; align-items: flex-start; font-family: Montserrat, sans-serif; }
+
+  /* ── CARD ── */
+  .sticker {
+    width: 150px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #ffffff, #e9eef8 65%, #d8e2f3);
+    border: 1.5px solid rgba(10,61,121,0.14);
+    box-shadow: 0 8px 20px rgba(8,17,37,0.22);
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .sticker.have {
+    border-color: rgba(25,179,107,0.6);
+    background: linear-gradient(160deg, #f3fbf6, #d6f0e1 70%, #a9deba);
+    box-shadow: 0 8px 20px rgba(25,179,107,0.28);
+  }
+
+  /* ── MARK ✓ ── */
+  .sticker-mark {
+    position: absolute; top: 7px; right: 7px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: linear-gradient(135deg, #19b36b, #88e6b1); color: #fff;
+    display: grid; place-items: center; font-size: 0.82rem; font-weight: 900;
+    box-shadow: 0 3px 8px rgba(25,179,107,0.5);
+    opacity: 0; transition: opacity 0.25s; z-index: 3;
+  }
+  .sticker.have .sticker-mark { opacity: 1; }
+
+  /* ── HEADER: bandera + número ── */
+  .sticker-header {
+    display: flex; align-items: center; gap: 7px;
+    padding: 7px 8px 6px;
+    background: linear-gradient(135deg, #1565c0, #0a3d79);
+    border-bottom: 1.5px solid rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+  .sticker-header img {
+    width: 42px; height: 28px; border-radius: 5px; object-fit: cover;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+  }
+  .sticker-num {
+    font-family: Bangers, sans-serif; font-size: 1.9rem; color: #fff;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5); line-height: 1; letter-spacing: 1px;
+  }
+
+  /* ── NOMBRE sobre fondo de bandera ── */
+  .sticker-body {
+    position: relative;
+    width: 100%; height: 72px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; overflow: hidden;
+  }
+  /* Fondo: bandera del país muy tenue */
+  .sticker-body-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    filter: blur(2px) saturate(0.5) brightness(1.1);
+    transform: scale(1.08);
+  }
+  /* Overlay semitransparente para contraste del texto */
+  .sticker-body::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(10, 40, 90, 0.45);
+    z-index: 1;
+  }
+  .sticker-player-name {
+    position: relative; z-index: 2;
+    font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
+    color: #fff; text-align: center; line-height: 1.25;
+    text-transform: uppercase; letter-spacing: 0.3px;
+    padding: 0 8px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.8), 0 0 14px rgba(0,0,0,0.5);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  /* Tipo escudo / foto equipo */
+  .sticker-type-label {
+    position: relative; z-index: 2;
+    font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.7rem;
+    color: #fff; text-align: center; letter-spacing: 0.5px; text-transform: uppercase;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+    opacity: 0.9;
+  }
+
+  /* ── BIO ── */
+  .sticker-bio {
+    padding: 6px 8px 8px;
+    display: flex; flex-direction: column; gap: 3px;
+    flex-grow: 1;
+  }
+  .bio-row {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 0.58rem; font-weight: 600; color: #2a4a70;
+    line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .bio-row .icon { font-size: 0.65rem; flex-shrink: 0; }
+  .bio-row.pos { font-weight: 800; color: #1565c0; font-size: 0.62rem; }
+  .bio-empty { font-size: 0.58rem; color: #9aadc0; text-align: center; font-style: italic; }
+
+  /* ── BOTÓN REP ── */
+  .sticker-rep {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px;
+    margin: 0 7px 7px;
+  }
+  .rep-btn { min-height: 30px; border-radius: 9px; font-size: 1rem; font-weight: 900; cursor: pointer; border: none; }
+  .rep-btn.minus { background: linear-gradient(180deg,#ffe8e8,#ffc6c6); color: #b73a3a; }
+  .rep-val { min-height: 30px; border-radius: 9px; display: grid; place-items: center; color: #fff; font-weight: 900; font-size: 0.9rem; background: linear-gradient(180deg,#0a3d79,#1b5ea9); }
+  .rep-val.has { background: linear-gradient(180deg,#f6b40e,#d99a00); }
+  .rep-btn.plus { background: linear-gradient(180deg,#fff3c8,#ffd97a); color: #7b4f00; }
+
+  h3 { color: #fff; width: 100%; margin: 0 0 4px; font-size: 0.75rem; opacity: 0.7; text-align: center; }
+</style>
+</head>
+<body>
+
+<div>
+  <h3>Jugador — sin marcar</h3>
+  <div class="sticker">
+    <div class="sticker-mark">✓</div>
+    <!-- Header: bandera + número -->
+    <div class="sticker-header">
+      <img src="https://flagcdn.com/w80/ar.png" alt="ARG">
+      <span class="sticker-num">10</span>
+    </div>
+    <!-- Nombre sobre fondo de bandera -->
+    <div class="sticker-body">
+      <div class="sticker-body-bg" style="background-image:url('https://flagcdn.com/w320/ar.png')"></div>
+      <div class="sticker-player-name">Lionel Andrés Messi</div>
+    </div>
+    <!-- Bio -->
+    <div class="sticker-bio">
+      <div class="bio-row pos"><span class="icon">⚽</span> Delantero</div>
+      <div class="bio-row"><span class="icon">🗓</span> 24/06/1987</div>
+      <div class="bio-row"><span class="icon">📏</span> 170 cm · 72 kg</div>
+      <div class="bio-row"><span class="icon">🏟</span> Inter Miami CF</div>
+    </div>
+    <!-- Repetidas -->
+    <div class="sticker-rep">
+      <button class="rep-btn minus">−</button>
+      <div class="rep-val">0</div>
+      <button class="rep-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3>Jugador — marcada ✓</h3>
+  <div class="sticker have">
+    <div class="sticker-mark">✓</div>
+    <div class="sticker-header">
+      <img src="https://flagcdn.com/w80/ar.png" alt="ARG">
+      <span class="sticker-num">10</span>
+    </div>
+    <div class="sticker-body">
+      <div class="sticker-body-bg" style="background-image:url('https://flagcdn.com/w320/ar.png')"></div>
+      <div class="sticker-player-name">Lionel Andrés Messi</div>
+    </div>
+    <div class="sticker-bio">
+      <div class="bio-row pos"><span class="icon">⚽</span> Delantero</div>
+      <div class="bio-row"><span class="icon">🗓</span> 24/06/1987</div>
+      <div class="bio-row"><span class="icon">📏</span> 170 cm · 72 kg</div>
+      <div class="bio-row"><span class="icon">🏟</span> Inter Miami CF</div>
+    </div>
+    <div class="sticker-rep">
+      <button class="rep-btn minus">−</button>
+      <div class="rep-val has">2</div>
+      <button class="rep-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3>Nombre largo (2 líneas)</h3>
+  <div class="sticker">
+    <div class="sticker-mark">✓</div>
+    <div class="sticker-header">
+      <img src="https://flagcdn.com/w80/pt.png" alt="POR">
+      <span class="sticker-num">7</span>
+    </div>
+    <div class="sticker-body">
+      <div class="sticker-body-bg" style="background-image:url('https://flagcdn.com/w320/pt.png')"></div>
+      <div class="sticker-player-name">Cristiano Ronaldo dos Santos Aveiro</div>
+    </div>
+    <div class="sticker-bio">
+      <div class="bio-row pos"><span class="icon">⚽</span> Delantero</div>
+      <div class="bio-row"><span class="icon">🗓</span> 05/02/1985</div>
+      <div class="bio-row"><span class="icon">📏</span> 187 cm · 83 kg</div>
+      <div class="bio-row"><span class="icon">🏟</span> Al Nassr FC</div>
+    </div>
+    <div class="sticker-rep">
+      <button class="rep-btn minus">−</button>
+      <div class="rep-val">0</div>
+      <button class="rep-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3>Escudo (num 1)</h3>
+  <div class="sticker">
+    <div class="sticker-mark">✓</div>
+    <div class="sticker-header">
+      <img src="https://flagcdn.com/w80/br.png" alt="BRA">
+      <span class="sticker-num">1</span>
+    </div>
+    <div class="sticker-body">
+      <div class="sticker-body-bg" style="background-image:url('https://flagcdn.com/w320/br.png')"></div>
+      <div class="sticker-type-label">🛡️ Escudo</div>
+    </div>
+    <div class="sticker-bio">
+      <div class="bio-empty">—</div>
+    </div>
+    <div class="sticker-rep">
+      <button class="rep-btn minus">−</button>
+      <div class="rep-val">0</div>
+      <button class="rep-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3>Sin datos aún</h3>
+  <div class="sticker">
+    <div class="sticker-mark">✓</div>
+    <div class="sticker-header">
+      <img src="https://flagcdn.com/w80/gb-eng.png" alt="ENG">
+      <span class="sticker-num">4</span>
+    </div>
+    <div class="sticker-body">
+      <div class="sticker-body-bg" style="background-image:url('https://flagcdn.com/w320/gb-eng.png')"></div>
+      <div class="sticker-player-name">Declan Rice</div>
+    </div>
+    <div class="sticker-bio">
+      <div class="bio-empty">Sin datos</div>
+    </div>
+    <div class="sticker-rep">
+      <button class="rep-btn minus">−</button>
+      <div class="rep-val">0</div>
+      <button class="rep-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

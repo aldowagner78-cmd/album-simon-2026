@@ -1,0 +1,4016 @@
+{
+  "FWC": {
+    "1": {
+      "name": "Official Emblem",
+      "type": "fwc special · foil"
+    },
+    "2": {
+      "name": "Official Emblem",
+      "type": "fwc special · foil"
+    },
+    "3": {
+      "name": "Official Mascots",
+      "type": "fwc special · foil"
+    },
+    "4": {
+      "name": "Official Slogan",
+      "type": "fwc special · foil"
+    },
+    "5": {
+      "name": "Official Ball",
+      "type": "fwc special · foil"
+    },
+    "6": {
+      "name": "Canada - Host Countries & Cities",
+      "type": "fwc special · foil"
+    },
+    "7": {
+      "name": "Mexico - Host Countries & Cities",
+      "type": "fwc special · foil"
+    },
+    "8": {
+      "name": "USA - Host Countries & Cities",
+      "type": "fwc special · foil"
+    },
+    "9": {
+      "name": "Italy 1934 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "10": {
+      "name": "Uruguay 1950 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "11": {
+      "name": "West Germany 1954 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "12": {
+      "name": "Brazil 1962 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "13": {
+      "name": "West Germany 1974 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "14": {
+      "name": "Argentina 1986 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "15": {
+      "name": "Brazil 1994 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "16": {
+      "name": "Brazil 2002 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "17": {
+      "name": "Italy 2006 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "18": {
+      "name": "Germany 2014 - World Cup History",
+      "type": "fwc special · foil"
+    },
+    "19": {
+      "name": "Argentina 2022 - World Cup History",
+      "type": "fwc special · foil"
+    }
+  },
+  "ALG": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Alexis Guendouz",
+      "type": "player"
+    },
+    "3": {
+      "name": "Ramy Bensebaini",
+      "type": "player"
+    },
+    "4": {
+      "name": "Youcef Atal",
+      "type": "player"
+    },
+    "5": {
+      "name": "Rayan Aït-Nouri",
+      "type": "player"
+    },
+    "6": {
+      "name": "Mohamed Amine Tougai",
+      "type": "player"
+    },
+    "7": {
+      "name": "Aïssa Mandi",
+      "type": "player"
+    },
+    "8": {
+      "name": "Ismael Bennacer",
+      "type": "player"
+    },
+    "9": {
+      "name": "Houssem Aquar",
+      "type": "player"
+    },
+    "10": {
+      "name": "Hicham Boudaoui",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ramiz Zerrouki",
+      "type": "player"
+    },
+    "12": {
+      "name": "Nabil Bentalab",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Farés Chaibi",
+      "type": "player"
+    },
+    "15": {
+      "name": "Riyad Mahrez",
+      "type": "player"
+    },
+    "16": {
+      "name": "Said Benrahma",
+      "type": "player"
+    },
+    "17": {
+      "name": "Anis Hadj Moussa",
+      "type": "player"
+    },
+    "18": {
+      "name": "Amine Gouiri",
+      "type": "player"
+    },
+    "19": {
+      "name": "Baghdad Bounedjah",
+      "type": "player"
+    },
+    "20": {
+      "name": "Mohammed Amoura",
+      "type": "player"
+    }
+  },
+  "ARG": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Emiliano Martinez",
+      "type": "player"
+    },
+    "3": {
+      "name": "Nahuel Molina",
+      "type": "player"
+    },
+    "4": {
+      "name": "Cristian Romero",
+      "type": "player"
+    },
+    "5": {
+      "name": "Nicolas Otamendi",
+      "type": "player"
+    },
+    "6": {
+      "name": "Nicolas Tagliafico",
+      "type": "player"
+    },
+    "7": {
+      "name": "Leonardo Balerdi",
+      "type": "player"
+    },
+    "8": {
+      "name": "Enzo Fernandez",
+      "type": "player"
+    },
+    "9": {
+      "name": "Alexis Mac Allister",
+      "type": "player"
+    },
+    "10": {
+      "name": "Rodrigo De Paul",
+      "type": "player"
+    },
+    "11": {
+      "name": "Exequiel Palacios",
+      "type": "player"
+    },
+    "12": {
+      "name": "Leandro Paredes",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Nico Paz",
+      "type": "player"
+    },
+    "15": {
+      "name": "Franco Mastantuono",
+      "type": "player"
+    },
+    "16": {
+      "name": "Nico Gonzalez",
+      "type": "player"
+    },
+    "17": {
+      "name": "Lionel Messi",
+      "type": "player"
+    },
+    "18": {
+      "name": "Lautaro Martinez",
+      "type": "player"
+    },
+    "19": {
+      "name": "Julian Alvarez",
+      "type": "player"
+    },
+    "20": {
+      "name": "Giuliano Simeone",
+      "type": "player"
+    }
+  },
+  "AUS": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Mathew Ryan",
+      "type": "player"
+    },
+    "3": {
+      "name": "Joe Gauci",
+      "type": "player"
+    },
+    "4": {
+      "name": "Harry Souttar",
+      "type": "player"
+    },
+    "5": {
+      "name": "Alessandro Circati",
+      "type": "player"
+    },
+    "6": {
+      "name": "Jordan Bos",
+      "type": "player"
+    },
+    "7": {
+      "name": "Aziz Behich",
+      "type": "player"
+    },
+    "8": {
+      "name": "Cameron Burgess",
+      "type": "player"
+    },
+    "9": {
+      "name": "Lewis Miller",
+      "type": "player"
+    },
+    "10": {
+      "name": "Milos Degenek",
+      "type": "player"
+    },
+    "11": {
+      "name": "Jackson Irvine",
+      "type": "player"
+    },
+    "12": {
+      "name": "Riley McGree",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Aiden O'Neill",
+      "type": "player"
+    },
+    "15": {
+      "name": "Connor Metcalfe",
+      "type": "player"
+    },
+    "16": {
+      "name": "Patrick Yazbek",
+      "type": "player"
+    },
+    "17": {
+      "name": "Craig Goodwin",
+      "type": "player"
+    },
+    "18": {
+      "name": "Kusini Vengi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Nestory Irankunda",
+      "type": "player"
+    },
+    "20": {
+      "name": "Mohamed Touré",
+      "type": "player"
+    }
+  },
+  "AUT": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Alexander Schlager",
+      "type": "player"
+    },
+    "3": {
+      "name": "Patrick Pentz",
+      "type": "player"
+    },
+    "4": {
+      "name": "David Alaba",
+      "type": "player"
+    },
+    "5": {
+      "name": "Kevin Danso",
+      "type": "player"
+    },
+    "6": {
+      "name": "Philipp Lienhart",
+      "type": "player"
+    },
+    "7": {
+      "name": "Stefan Posch",
+      "type": "player"
+    },
+    "8": {
+      "name": "Phillipp Mwene",
+      "type": "player"
+    },
+    "9": {
+      "name": "Alexander Prass",
+      "type": "player"
+    },
+    "10": {
+      "name": "Xaver Schlager",
+      "type": "player"
+    },
+    "11": {
+      "name": "Marcel Sabitzer",
+      "type": "player"
+    },
+    "12": {
+      "name": "Konrad Laimer",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Florian Grillitsch",
+      "type": "player"
+    },
+    "15": {
+      "name": "Nicolas Seiwald",
+      "type": "player"
+    },
+    "16": {
+      "name": "Romano Schmid",
+      "type": "player"
+    },
+    "17": {
+      "name": "Patrick Wimmer",
+      "type": "player"
+    },
+    "18": {
+      "name": "Christoph Baumgartner",
+      "type": "player"
+    },
+    "19": {
+      "name": "Michael Gregoritsch",
+      "type": "player"
+    },
+    "20": {
+      "name": "Marko Arnautović",
+      "type": "player"
+    }
+  },
+  "BEL": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Thibaut Courtois",
+      "type": "player"
+    },
+    "3": {
+      "name": "Arthur Theate",
+      "type": "player"
+    },
+    "4": {
+      "name": "Timothy Castagne",
+      "type": "player"
+    },
+    "5": {
+      "name": "Zeno Debast",
+      "type": "player"
+    },
+    "6": {
+      "name": "Brandon Mechele",
+      "type": "player"
+    },
+    "7": {
+      "name": "Maxim De Cuyper",
+      "type": "player"
+    },
+    "8": {
+      "name": "Thomas Meunier",
+      "type": "player"
+    },
+    "9": {
+      "name": "Youri Tielemans",
+      "type": "player"
+    },
+    "10": {
+      "name": "Amadou Onana",
+      "type": "player"
+    },
+    "11": {
+      "name": "Nicolas Raskin",
+      "type": "player"
+    },
+    "12": {
+      "name": "Alexis Saelemaekers",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Hans Vanaken",
+      "type": "player"
+    },
+    "15": {
+      "name": "Kevin De Bruyne",
+      "type": "player"
+    },
+    "16": {
+      "name": "Jérémy Doku",
+      "type": "player"
+    },
+    "17": {
+      "name": "Charles De Ketelaere",
+      "type": "player"
+    },
+    "18": {
+      "name": "Leandro Trossard",
+      "type": "player"
+    },
+    "19": {
+      "name": "Loïs Openda",
+      "type": "player"
+    },
+    "20": {
+      "name": "Romelu Lukaku",
+      "type": "player"
+    }
+  },
+  "BIH": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Nikola Vasilj",
+      "type": "player"
+    },
+    "3": {
+      "name": "Amer Dedic",
+      "type": "player"
+    },
+    "4": {
+      "name": "Sead Kolasinac",
+      "type": "player"
+    },
+    "5": {
+      "name": "Tarik Muharemovic",
+      "type": "player"
+    },
+    "6": {
+      "name": "Nihad Mujakic",
+      "type": "player"
+    },
+    "7": {
+      "name": "Nikola Katic",
+      "type": "player"
+    },
+    "8": {
+      "name": "Amir Hadziahmetovic",
+      "type": "player"
+    },
+    "9": {
+      "name": "Benjamin Tahirovic",
+      "type": "player"
+    },
+    "10": {
+      "name": "Armin Gigovic",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ivan Sunjic",
+      "type": "player"
+    },
+    "12": {
+      "name": "Ivan Basic",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Dzenis Burnic",
+      "type": "player"
+    },
+    "15": {
+      "name": "Esmir Bajraktarevic",
+      "type": "player"
+    },
+    "16": {
+      "name": "Amar Memic",
+      "type": "player"
+    },
+    "17": {
+      "name": "Ermedin Demirovic",
+      "type": "player"
+    },
+    "18": {
+      "name": "Edin Dzeko",
+      "type": "player"
+    },
+    "19": {
+      "name": "Samed Bazdar",
+      "type": "player"
+    },
+    "20": {
+      "name": "Haris Tabakovic",
+      "type": "player"
+    }
+  },
+  "BRA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Alisson",
+      "type": "player"
+    },
+    "3": {
+      "name": "Bento",
+      "type": "player"
+    },
+    "4": {
+      "name": "Marquinhos",
+      "type": "player"
+    },
+    "5": {
+      "name": "Éder Militão",
+      "type": "player"
+    },
+    "6": {
+      "name": "Gabriel Magalhães",
+      "type": "player"
+    },
+    "7": {
+      "name": "Danilo",
+      "type": "player"
+    },
+    "8": {
+      "name": "Wesley",
+      "type": "player"
+    },
+    "9": {
+      "name": "Lucas Paquetá",
+      "type": "player"
+    },
+    "10": {
+      "name": "Casemiro",
+      "type": "player"
+    },
+    "11": {
+      "name": "Bruno Guimarães",
+      "type": "player"
+    },
+    "12": {
+      "name": "Luiz Henrique",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Vinicius Júnior",
+      "type": "player"
+    },
+    "15": {
+      "name": "Rodrygo",
+      "type": "player"
+    },
+    "16": {
+      "name": "João Pedro",
+      "type": "player"
+    },
+    "17": {
+      "name": "Matheus Cunha",
+      "type": "player"
+    },
+    "18": {
+      "name": "Gabriel Martinelli",
+      "type": "player"
+    },
+    "19": {
+      "name": "Raphinha",
+      "type": "player"
+    },
+    "20": {
+      "name": "Estévão",
+      "type": "player"
+    }
+  },
+  "CAN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Dayne St.Clair",
+      "type": "player"
+    },
+    "3": {
+      "name": "Alphonso Davies",
+      "type": "player"
+    },
+    "4": {
+      "name": "Alistair Johnston",
+      "type": "player"
+    },
+    "5": {
+      "name": "Samuel Adekugbe",
+      "type": "player"
+    },
+    "6": {
+      "name": "Riche Larvea",
+      "type": "player"
+    },
+    "7": {
+      "name": "Derek Cornelius",
+      "type": "player"
+    },
+    "8": {
+      "name": "Moïse Bombito",
+      "type": "player"
+    },
+    "9": {
+      "name": "Kamal Miller",
+      "type": "player"
+    },
+    "10": {
+      "name": "Stephen Eustáquio",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ismaël Koné",
+      "type": "player"
+    },
+    "12": {
+      "name": "Jonathan Osorio",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Jacob Shaffelburg",
+      "type": "player"
+    },
+    "15": {
+      "name": "Mathieu Choinière",
+      "type": "player"
+    },
+    "16": {
+      "name": "Niko Sigur",
+      "type": "player"
+    },
+    "17": {
+      "name": "Tajon Buchanan",
+      "type": "player"
+    },
+    "18": {
+      "name": "Liam Millar",
+      "type": "player"
+    },
+    "19": {
+      "name": "Cyle Larin",
+      "type": "player"
+    },
+    "20": {
+      "name": "Jonathan David",
+      "type": "player"
+    }
+  },
+  "CIV": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Yahia Fofana",
+      "type": "player"
+    },
+    "3": {
+      "name": "Ghislain Konan",
+      "type": "player"
+    },
+    "4": {
+      "name": "Wilfried Singo",
+      "type": "player"
+    },
+    "5": {
+      "name": "Odilon Kossounou",
+      "type": "player"
+    },
+    "6": {
+      "name": "Evan Ndicka",
+      "type": "player"
+    },
+    "7": {
+      "name": "Willy Boly",
+      "type": "player"
+    },
+    "8": {
+      "name": "Emmanuel Agbadou",
+      "type": "player"
+    },
+    "9": {
+      "name": "Ousmane Diomande",
+      "type": "player"
+    },
+    "10": {
+      "name": "Franck Kessie",
+      "type": "player"
+    },
+    "11": {
+      "name": "Seko Fofana",
+      "type": "player"
+    },
+    "12": {
+      "name": "Ibrahim Sangare",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Jean-Philippe Gbamin",
+      "type": "player"
+    },
+    "15": {
+      "name": "Amad Diallo",
+      "type": "player"
+    },
+    "16": {
+      "name": "Sébastien Haller",
+      "type": "player"
+    },
+    "17": {
+      "name": "Simon Adingra",
+      "type": "player"
+    },
+    "18": {
+      "name": "Yan Diomande",
+      "type": "player"
+    },
+    "19": {
+      "name": "Evann Guessand",
+      "type": "player"
+    },
+    "20": {
+      "name": "Oumar Diakite",
+      "type": "player"
+    }
+  },
+  "COD": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Lionel Mpasi",
+      "type": "player"
+    },
+    "3": {
+      "name": "Aaron Wan-Bissaka",
+      "type": "player"
+    },
+    "4": {
+      "name": "Axel Tuanzebe",
+      "type": "player"
+    },
+    "5": {
+      "name": "Arthur Masuaku",
+      "type": "player"
+    },
+    "6": {
+      "name": "Chancel Mbemba",
+      "type": "player"
+    },
+    "7": {
+      "name": "Joris Kayembe",
+      "type": "player"
+    },
+    "8": {
+      "name": "Charles Pickel",
+      "type": "player"
+    },
+    "9": {
+      "name": "Ngal'ayel Mukau",
+      "type": "player"
+    },
+    "10": {
+      "name": "Edo Kayembe",
+      "type": "player"
+    },
+    "11": {
+      "name": "Samuel Moutoussamy",
+      "type": "player"
+    },
+    "12": {
+      "name": "Noah Sadiki",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Théo Bongonda",
+      "type": "player"
+    },
+    "15": {
+      "name": "Meschak Elia",
+      "type": "player"
+    },
+    "16": {
+      "name": "Yoane Wissa",
+      "type": "player"
+    },
+    "17": {
+      "name": "Brian Cipenga",
+      "type": "player"
+    },
+    "18": {
+      "name": "Fiston Mayele",
+      "type": "player"
+    },
+    "19": {
+      "name": "Cédric Bakambu",
+      "type": "player"
+    },
+    "20": {
+      "name": "Nathanaël Mbuku",
+      "type": "player"
+    }
+  },
+  "COL": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Camilo Vargas",
+      "type": "player"
+    },
+    "3": {
+      "name": "David Ospina",
+      "type": "player"
+    },
+    "4": {
+      "name": "Dávinson Sánchez",
+      "type": "player"
+    },
+    "5": {
+      "name": "Yerry Mina",
+      "type": "player"
+    },
+    "6": {
+      "name": "Daniel Munoz",
+      "type": "player"
+    },
+    "7": {
+      "name": "Johan Mojica",
+      "type": "player"
+    },
+    "8": {
+      "name": "Jhon Lucumí",
+      "type": "player"
+    },
+    "9": {
+      "name": "Santiago Arias",
+      "type": "player"
+    },
+    "10": {
+      "name": "Jefferson Lerma",
+      "type": "player"
+    },
+    "11": {
+      "name": "Kevin Castaño",
+      "type": "player"
+    },
+    "12": {
+      "name": "Richard Rios",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "James Rodriguez",
+      "type": "player"
+    },
+    "15": {
+      "name": "Juan Fernando Quintero",
+      "type": "player"
+    },
+    "16": {
+      "name": "Jorge Carrascal",
+      "type": "player"
+    },
+    "17": {
+      "name": "Jon Arias",
+      "type": "player"
+    },
+    "18": {
+      "name": "Jhon Cordova",
+      "type": "player"
+    },
+    "19": {
+      "name": "Luis Suarez",
+      "type": "player"
+    },
+    "20": {
+      "name": "Luis Diaz",
+      "type": "player"
+    }
+  },
+  "CPV": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Vozinha",
+      "type": "player"
+    },
+    "3": {
+      "name": "Logan Costa",
+      "type": "player"
+    },
+    "4": {
+      "name": "Pico",
+      "type": "player"
+    },
+    "5": {
+      "name": "Diney",
+      "type": "player"
+    },
+    "6": {
+      "name": "Steven Moreira",
+      "type": "player"
+    },
+    "7": {
+      "name": "Wagner Pina",
+      "type": "player"
+    },
+    "8": {
+      "name": "Joao Paulo",
+      "type": "player"
+    },
+    "9": {
+      "name": "Yannick Semedo",
+      "type": "player"
+    },
+    "10": {
+      "name": "Kevin Pina",
+      "type": "player"
+    },
+    "11": {
+      "name": "Patrick Andrade",
+      "type": "player"
+    },
+    "12": {
+      "name": "Jamiro Monteiro",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Deroy Duarte",
+      "type": "player"
+    },
+    "15": {
+      "name": "Garry Rodrigues",
+      "type": "player"
+    },
+    "16": {
+      "name": "Jovane Cabral",
+      "type": "player"
+    },
+    "17": {
+      "name": "Ryan Mendes",
+      "type": "player"
+    },
+    "18": {
+      "name": "Dailon Livramento",
+      "type": "player"
+    },
+    "19": {
+      "name": "Willy Semedo",
+      "type": "player"
+    },
+    "20": {
+      "name": "Bebe",
+      "type": "player"
+    }
+  },
+  "CRO": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Dominik Livaković",
+      "type": "player"
+    },
+    "3": {
+      "name": "Duje Caleta-Car",
+      "type": "player"
+    },
+    "4": {
+      "name": "Josko Gvardiol",
+      "type": "player"
+    },
+    "5": {
+      "name": "Josip Stanišić",
+      "type": "player"
+    },
+    "6": {
+      "name": "Luka Vušković",
+      "type": "player"
+    },
+    "7": {
+      "name": "Josip Sutalo",
+      "type": "player"
+    },
+    "8": {
+      "name": "Kristijan Jakic",
+      "type": "player"
+    },
+    "9": {
+      "name": "Luka Modrić",
+      "type": "player"
+    },
+    "10": {
+      "name": "Mateo Kovacic",
+      "type": "player"
+    },
+    "11": {
+      "name": "Martin Baturina",
+      "type": "player"
+    },
+    "12": {
+      "name": "Lovro Majer",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Mario Pasalic",
+      "type": "player"
+    },
+    "15": {
+      "name": "Petar Sucic",
+      "type": "player"
+    },
+    "16": {
+      "name": "Ivan Perišić",
+      "type": "player"
+    },
+    "17": {
+      "name": "Marco Pasalic",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ante Budimir",
+      "type": "player"
+    },
+    "19": {
+      "name": "Andrej Kramarić",
+      "type": "player"
+    },
+    "20": {
+      "name": "Franjo Ivanovic",
+      "type": "player"
+    }
+  },
+  "CUW": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Eloy Room",
+      "type": "player"
+    },
+    "3": {
+      "name": "Armando Obispo",
+      "type": "player"
+    },
+    "4": {
+      "name": "Sherel Floranus",
+      "type": "player"
+    },
+    "5": {
+      "name": "Jurien Gaari",
+      "type": "player"
+    },
+    "6": {
+      "name": "Joshua Brenet",
+      "type": "player"
+    },
+    "7": {
+      "name": "Roshon Van Eijma",
+      "type": "player"
+    },
+    "8": {
+      "name": "Shurandy Sambo",
+      "type": "player"
+    },
+    "9": {
+      "name": "Livano Comenencia",
+      "type": "player"
+    },
+    "10": {
+      "name": "Godfried Roemeratoe",
+      "type": "player"
+    },
+    "11": {
+      "name": "Juninho Bacuna",
+      "type": "player"
+    },
+    "12": {
+      "name": "Leandro Bacuna",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Tahith Chong",
+      "type": "player"
+    },
+    "15": {
+      "name": "Kenji Gorre",
+      "type": "player"
+    },
+    "16": {
+      "name": "Jearl Margaritha",
+      "type": "player"
+    },
+    "17": {
+      "name": "Jurgen Locadia",
+      "type": "player"
+    },
+    "18": {
+      "name": "Jeremy Antonisse",
+      "type": "player"
+    },
+    "19": {
+      "name": "Gervane Kastaneer",
+      "type": "player"
+    },
+    "20": {
+      "name": "Sontje Hansen",
+      "type": "player"
+    }
+  },
+  "CZE": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Matej Kovar",
+      "type": "player"
+    },
+    "3": {
+      "name": "Jindrich Stanek",
+      "type": "player"
+    },
+    "4": {
+      "name": "Ladislav Krejci",
+      "type": "player"
+    },
+    "5": {
+      "name": "Vladimir Coufal",
+      "type": "player"
+    },
+    "6": {
+      "name": "Jaroslav Zeleny",
+      "type": "player"
+    },
+    "7": {
+      "name": "Tomas Holes",
+      "type": "player"
+    },
+    "8": {
+      "name": "David Zima",
+      "type": "player"
+    },
+    "9": {
+      "name": "Michal Sadilek",
+      "type": "player"
+    },
+    "10": {
+      "name": "Lukas Provod",
+      "type": "player"
+    },
+    "11": {
+      "name": "Lukas Cerv",
+      "type": "player"
+    },
+    "12": {
+      "name": "Tomas Soucek",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Pavel Sulc",
+      "type": "player"
+    },
+    "15": {
+      "name": "Matej Vydra",
+      "type": "player"
+    },
+    "16": {
+      "name": "Vasil Kusej",
+      "type": "player"
+    },
+    "17": {
+      "name": "Tomas Chory",
+      "type": "player"
+    },
+    "18": {
+      "name": "Vaclav Cerny",
+      "type": "player"
+    },
+    "19": {
+      "name": "Adam Hlozek",
+      "type": "player"
+    },
+    "20": {
+      "name": "Patrik Schick",
+      "type": "player"
+    }
+  },
+  "ECU": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Hernán Galíndez",
+      "type": "player"
+    },
+    "3": {
+      "name": "Gonzalo Valle",
+      "type": "player"
+    },
+    "4": {
+      "name": "Piero Hincapié",
+      "type": "player"
+    },
+    "5": {
+      "name": "Pervis Estupiñán",
+      "type": "player"
+    },
+    "6": {
+      "name": "Willian Pacho",
+      "type": "player"
+    },
+    "7": {
+      "name": "Ángelo Preciado",
+      "type": "player"
+    },
+    "8": {
+      "name": "Joel Ordóñez",
+      "type": "player"
+    },
+    "9": {
+      "name": "Moises Caicedo",
+      "type": "player"
+    },
+    "10": {
+      "name": "Alan Franco",
+      "type": "player"
+    },
+    "11": {
+      "name": "Kendry Paez",
+      "type": "player"
+    },
+    "12": {
+      "name": "Pedro Vite",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "John Veboah",
+      "type": "player"
+    },
+    "15": {
+      "name": "Leonardo Campana",
+      "type": "player"
+    },
+    "16": {
+      "name": "Gonzalo Plata",
+      "type": "player"
+    },
+    "17": {
+      "name": "Nilson Angulo",
+      "type": "player"
+    },
+    "18": {
+      "name": "Alan Minda",
+      "type": "player"
+    },
+    "19": {
+      "name": "Kevin Rodriguez",
+      "type": "player"
+    },
+    "20": {
+      "name": "Enner Valencia",
+      "type": "player"
+    }
+  },
+  "EGY": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Mohamed El Shenawy",
+      "type": "player"
+    },
+    "3": {
+      "name": "Mohamed Hany",
+      "type": "player"
+    },
+    "4": {
+      "name": "Mohamed Hamdy",
+      "type": "player"
+    },
+    "5": {
+      "name": "Yasser Ibrahim",
+      "type": "player"
+    },
+    "6": {
+      "name": "Khaled Sobhi",
+      "type": "player"
+    },
+    "7": {
+      "name": "Ramy Rabia",
+      "type": "player"
+    },
+    "8": {
+      "name": "Hossam Abdelmaguid",
+      "type": "player"
+    },
+    "9": {
+      "name": "Ahmed Fatouh",
+      "type": "player"
+    },
+    "10": {
+      "name": "Marwan Attia",
+      "type": "player"
+    },
+    "11": {
+      "name": "Zizo",
+      "type": "player"
+    },
+    "12": {
+      "name": "Hamdy Fathy",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Mohamed Lasheen",
+      "type": "player"
+    },
+    "15": {
+      "name": "Emam Ashour",
+      "type": "player"
+    },
+    "16": {
+      "name": "Osama Faisal",
+      "type": "player"
+    },
+    "17": {
+      "name": "Mohamed Salah",
+      "type": "player"
+    },
+    "18": {
+      "name": "Mostafa Mohamed",
+      "type": "player"
+    },
+    "19": {
+      "name": "Trezeguet",
+      "type": "player"
+    },
+    "20": {
+      "name": "Omar Marmoush",
+      "type": "player"
+    }
+  },
+  "ENG": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Jordan Pickford",
+      "type": "player"
+    },
+    "3": {
+      "name": "John Stones",
+      "type": "player"
+    },
+    "4": {
+      "name": "Marc Guéhi",
+      "type": "player"
+    },
+    "5": {
+      "name": "Ezri Konsa",
+      "type": "player"
+    },
+    "6": {
+      "name": "Trent Alexander-Arnold",
+      "type": "player"
+    },
+    "7": {
+      "name": "Reece James",
+      "type": "player"
+    },
+    "8": {
+      "name": "Dan Burn",
+      "type": "player"
+    },
+    "9": {
+      "name": "Jordan Henderson",
+      "type": "player"
+    },
+    "10": {
+      "name": "Declan Rice",
+      "type": "player"
+    },
+    "11": {
+      "name": "Jude Bellingham",
+      "type": "player"
+    },
+    "12": {
+      "name": "Cole Palmer",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Morgan Rogers",
+      "type": "player"
+    },
+    "15": {
+      "name": "Anthony Gordon",
+      "type": "player"
+    },
+    "16": {
+      "name": "Phil Foden",
+      "type": "player"
+    },
+    "17": {
+      "name": "Bukayo Saka",
+      "type": "player"
+    },
+    "18": {
+      "name": "Harry Kane",
+      "type": "player"
+    },
+    "19": {
+      "name": "Marcus Rashford",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ollie Watkins",
+      "type": "player"
+    }
+  },
+  "ESP": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Unai Simon",
+      "type": "player"
+    },
+    "3": {
+      "name": "Robin Le Normand",
+      "type": "player"
+    },
+    "4": {
+      "name": "Aymeric Laporte",
+      "type": "player"
+    },
+    "5": {
+      "name": "Dean Huijsen",
+      "type": "player"
+    },
+    "6": {
+      "name": "Pedro Porro",
+      "type": "player"
+    },
+    "7": {
+      "name": "Dani Carvajal",
+      "type": "player"
+    },
+    "8": {
+      "name": "Marc Cucurella",
+      "type": "player"
+    },
+    "9": {
+      "name": "Martín Zubimendi",
+      "type": "player"
+    },
+    "10": {
+      "name": "Rodri",
+      "type": "player"
+    },
+    "11": {
+      "name": "Pedri",
+      "type": "player"
+    },
+    "12": {
+      "name": "Fabian Ruiz",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Mikel Merino",
+      "type": "player"
+    },
+    "15": {
+      "name": "Lamine Yamal",
+      "type": "player"
+    },
+    "16": {
+      "name": "Dani Olmo",
+      "type": "player"
+    },
+    "17": {
+      "name": "Nico Williams",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ferran Torres",
+      "type": "player"
+    },
+    "19": {
+      "name": "Álvaro Morata",
+      "type": "player"
+    },
+    "20": {
+      "name": "Mikel Oyarzabal",
+      "type": "player"
+    }
+  },
+  "FRA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Mike Maignan",
+      "type": "player"
+    },
+    "3": {
+      "name": "Theo Hernandez",
+      "type": "player"
+    },
+    "4": {
+      "name": "William Saliba",
+      "type": "player"
+    },
+    "5": {
+      "name": "Jules Kounde",
+      "type": "player"
+    },
+    "6": {
+      "name": "Ibrahima Konate",
+      "type": "player"
+    },
+    "7": {
+      "name": "Dayot Upamecano",
+      "type": "player"
+    },
+    "8": {
+      "name": "Lucas Digne",
+      "type": "player"
+    },
+    "9": {
+      "name": "Aurélien Tchouaméni",
+      "type": "player"
+    },
+    "10": {
+      "name": "Eduardo Camavinga",
+      "type": "player"
+    },
+    "11": {
+      "name": "Manu Kone",
+      "type": "player"
+    },
+    "12": {
+      "name": "Adrien Rabiot",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Michael Olise",
+      "type": "player"
+    },
+    "15": {
+      "name": "Ousmane Dembele",
+      "type": "player"
+    },
+    "16": {
+      "name": "Bradley Barcola",
+      "type": "player"
+    },
+    "17": {
+      "name": "Désiré Doué",
+      "type": "player"
+    },
+    "18": {
+      "name": "Kingsley Coman",
+      "type": "player"
+    },
+    "19": {
+      "name": "Hugo Ekitike",
+      "type": "player"
+    },
+    "20": {
+      "name": "Kylian Mbappe",
+      "type": "player"
+    }
+  },
+  "GER": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Marc-André ter Stegen",
+      "type": "player"
+    },
+    "3": {
+      "name": "Jonathan Tah",
+      "type": "player"
+    },
+    "4": {
+      "name": "David Raum",
+      "type": "player"
+    },
+    "5": {
+      "name": "Nico Schlotterbeck",
+      "type": "player"
+    },
+    "6": {
+      "name": "Antonio Rüdiger",
+      "type": "player"
+    },
+    "7": {
+      "name": "Waldemar Anton",
+      "type": "player"
+    },
+    "8": {
+      "name": "Ridle Baku",
+      "type": "player"
+    },
+    "9": {
+      "name": "Maximilian Mittelstadt",
+      "type": "player"
+    },
+    "10": {
+      "name": "Joshua Kimmich",
+      "type": "player"
+    },
+    "11": {
+      "name": "Florian Wirtz",
+      "type": "player"
+    },
+    "12": {
+      "name": "Felix Nmecha",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Leon Goretzka",
+      "type": "player"
+    },
+    "15": {
+      "name": "Jamal Musiala",
+      "type": "player"
+    },
+    "16": {
+      "name": "Serge Gnabry",
+      "type": "player"
+    },
+    "17": {
+      "name": "Kai Havertz",
+      "type": "player"
+    },
+    "18": {
+      "name": "Leroy Sane",
+      "type": "player"
+    },
+    "19": {
+      "name": "Karim Adeyemi",
+      "type": "player"
+    },
+    "20": {
+      "name": "Nick Woltemade",
+      "type": "player"
+    }
+  },
+  "GHA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Lawrence Ati Zigi",
+      "type": "player"
+    },
+    "3": {
+      "name": "Tariq Lamptey",
+      "type": "player"
+    },
+    "4": {
+      "name": "Mohammed Salisu",
+      "type": "player"
+    },
+    "5": {
+      "name": "Alidu Seidu",
+      "type": "player"
+    },
+    "6": {
+      "name": "Alexander Djiku",
+      "type": "player"
+    },
+    "7": {
+      "name": "Gideon Mensah",
+      "type": "player"
+    },
+    "8": {
+      "name": "Caleb Yirenkyi",
+      "type": "player"
+    },
+    "9": {
+      "name": "Abdul Issahaku Fatawu",
+      "type": "player"
+    },
+    "10": {
+      "name": "Thomas Partey",
+      "type": "player"
+    },
+    "11": {
+      "name": "Salis Abdul Samed",
+      "type": "player"
+    },
+    "12": {
+      "name": "Kamaldeen Sulemana",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Mohammed Kudus",
+      "type": "player"
+    },
+    "15": {
+      "name": "Inaki Williams",
+      "type": "player"
+    },
+    "16": {
+      "name": "Jordan Ayew",
+      "type": "player"
+    },
+    "17": {
+      "name": "Andrew Ayew",
+      "type": "player"
+    },
+    "18": {
+      "name": "Joseph Paintsil",
+      "type": "player"
+    },
+    "19": {
+      "name": "Osman Bukari",
+      "type": "player"
+    },
+    "20": {
+      "name": "Antoine Semenyo",
+      "type": "player"
+    }
+  },
+  "HAI": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Johny Placide",
+      "type": "player"
+    },
+    "3": {
+      "name": "Carlens Arcus",
+      "type": "player"
+    },
+    "4": {
+      "name": "Martin Expérience",
+      "type": "player"
+    },
+    "5": {
+      "name": "Jean-Kevin Duverne",
+      "type": "player"
+    },
+    "6": {
+      "name": "Ricardo Adé",
+      "type": "player"
+    },
+    "7": {
+      "name": "Duke Lacroix",
+      "type": "player"
+    },
+    "8": {
+      "name": "Garven Metusala",
+      "type": "player"
+    },
+    "9": {
+      "name": "Hannes Delcroix",
+      "type": "player"
+    },
+    "10": {
+      "name": "Leverton Pierre",
+      "type": "player"
+    },
+    "11": {
+      "name": "Danley Jean Jacques",
+      "type": "player"
+    },
+    "12": {
+      "name": "Jean-Ricner Bellegarde",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Christopher Attys",
+      "type": "player"
+    },
+    "15": {
+      "name": "Derrick Etienne Jr",
+      "type": "player"
+    },
+    "16": {
+      "name": "Josue Casimir",
+      "type": "player"
+    },
+    "17": {
+      "name": "Ruben Providence",
+      "type": "player"
+    },
+    "18": {
+      "name": "Duckens Nazon",
+      "type": "player"
+    },
+    "19": {
+      "name": "Louicius Deedson",
+      "type": "player"
+    },
+    "20": {
+      "name": "Frantzdy Pierrot",
+      "type": "player"
+    }
+  },
+  "IRN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Alireza Beiranvand",
+      "type": "player"
+    },
+    "3": {
+      "name": "Morteza Pouraliganji",
+      "type": "player"
+    },
+    "4": {
+      "name": "Ehsan Hajsafi",
+      "type": "player"
+    },
+    "5": {
+      "name": "Milad Mohammadi",
+      "type": "player"
+    },
+    "6": {
+      "name": "Shojae Khalilzadeh",
+      "type": "player"
+    },
+    "7": {
+      "name": "Ramin Rezaeian",
+      "type": "player"
+    },
+    "8": {
+      "name": "Hossein Kanaani",
+      "type": "player"
+    },
+    "9": {
+      "name": "Sadegh Moharrami",
+      "type": "player"
+    },
+    "10": {
+      "name": "Saleh Hardani",
+      "type": "player"
+    },
+    "11": {
+      "name": "Saeed Ezatolahi",
+      "type": "player"
+    },
+    "12": {
+      "name": "Saman Ghoddos",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Omid Noorafkan",
+      "type": "player"
+    },
+    "15": {
+      "name": "Roozbeh Cheshmi",
+      "type": "player"
+    },
+    "16": {
+      "name": "Mohammad Mohebi",
+      "type": "player"
+    },
+    "17": {
+      "name": "Sardar Azmoun",
+      "type": "player"
+    },
+    "18": {
+      "name": "Mehdi Taremi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Alireza Jahanbakhsh",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ali Gholizadeh",
+      "type": "player"
+    }
+  },
+  "IRQ": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Jalal Hassan",
+      "type": "player"
+    },
+    "3": {
+      "name": "Rebin Sulaka",
+      "type": "player"
+    },
+    "4": {
+      "name": "Hussein Ali",
+      "type": "player"
+    },
+    "5": {
+      "name": "Akam Hashem",
+      "type": "player"
+    },
+    "6": {
+      "name": "Merchas Doski",
+      "type": "player"
+    },
+    "7": {
+      "name": "Zaid Tahseen",
+      "type": "player"
+    },
+    "8": {
+      "name": "Manaf Younis",
+      "type": "player"
+    },
+    "9": {
+      "name": "Zidane Iqbal",
+      "type": "player"
+    },
+    "10": {
+      "name": "Amir Al-Ammari",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ibrahim Bavesh",
+      "type": "player"
+    },
+    "12": {
+      "name": "Ali Jasim",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Youssef Amyn",
+      "type": "player"
+    },
+    "15": {
+      "name": "Aimar Sher",
+      "type": "player"
+    },
+    "16": {
+      "name": "Marko Farji",
+      "type": "player"
+    },
+    "17": {
+      "name": "Osama Rashid",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ali Al-Hamadi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Aymen Hussein",
+      "type": "player"
+    },
+    "20": {
+      "name": "Mohanad Ali",
+      "type": "player"
+    }
+  },
+  "JOR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Yazeed Abulaila",
+      "type": "player"
+    },
+    "3": {
+      "name": "Ihsan Haddad",
+      "type": "player"
+    },
+    "4": {
+      "name": "Mohammad Abu Hashish",
+      "type": "player"
+    },
+    "5": {
+      "name": "Yazan Al-Arab",
+      "type": "player"
+    },
+    "6": {
+      "name": "Abdallah Nasib",
+      "type": "player"
+    },
+    "7": {
+      "name": "Saleem Obaid",
+      "type": "player"
+    },
+    "8": {
+      "name": "Mohammad Abualnadi",
+      "type": "player"
+    },
+    "9": {
+      "name": "Ibrahim Saadeh",
+      "type": "player"
+    },
+    "10": {
+      "name": "Nizar Al-Rashdan",
+      "type": "player"
+    },
+    "11": {
+      "name": "Noor Al-Rawabdeh",
+      "type": "player"
+    },
+    "12": {
+      "name": "Mohannad Abu Taha",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Amer Jamous",
+      "type": "player"
+    },
+    "15": {
+      "name": "Musa Al-Taamari",
+      "type": "player"
+    },
+    "16": {
+      "name": "Yazan Al-Naimat",
+      "type": "player"
+    },
+    "17": {
+      "name": "Mahmoud Al-Mardi",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ali Olwan",
+      "type": "player"
+    },
+    "19": {
+      "name": "Mohammad Abu Zrayq",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ibrahim Sabra",
+      "type": "player"
+    }
+  },
+  "JPN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Zion Suzuki",
+      "type": "player"
+    },
+    "3": {
+      "name": "Henry Heroki Mochizuki",
+      "type": "player"
+    },
+    "4": {
+      "name": "Ayumu Seko",
+      "type": "player"
+    },
+    "5": {
+      "name": "Junnosuke Suzuki",
+      "type": "player"
+    },
+    "6": {
+      "name": "Shogo Taniguchi",
+      "type": "player"
+    },
+    "7": {
+      "name": "Tsuyoshi Watanabe",
+      "type": "player"
+    },
+    "8": {
+      "name": "Kaishu Sano",
+      "type": "player"
+    },
+    "9": {
+      "name": "Yuki Soma",
+      "type": "player"
+    },
+    "10": {
+      "name": "Ao Tanaka",
+      "type": "player"
+    },
+    "11": {
+      "name": "Daichi Kamada",
+      "type": "player"
+    },
+    "12": {
+      "name": "Takefusa Kubo",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Ritsu Doan",
+      "type": "player"
+    },
+    "15": {
+      "name": "Keito Nakamura",
+      "type": "player"
+    },
+    "16": {
+      "name": "Takumi Minamino",
+      "type": "player"
+    },
+    "17": {
+      "name": "Shuto Machino",
+      "type": "player"
+    },
+    "18": {
+      "name": "Junya Ito",
+      "type": "player"
+    },
+    "19": {
+      "name": "Koki Ogawa",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ayase Ueda",
+      "type": "player"
+    }
+  },
+  "KOR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Hyeon-woo Jo",
+      "type": "player"
+    },
+    "3": {
+      "name": "Seung-Gyu Kim",
+      "type": "player"
+    },
+    "4": {
+      "name": "Min-jae Kim",
+      "type": "player"
+    },
+    "5": {
+      "name": "Yu-min Cho",
+      "type": "player"
+    },
+    "6": {
+      "name": "Young-woo Seol",
+      "type": "player"
+    },
+    "7": {
+      "name": "Han-beom Lee",
+      "type": "player"
+    },
+    "8": {
+      "name": "Tae-seok Lee",
+      "type": "player"
+    },
+    "9": {
+      "name": "Myung-jae Lee",
+      "type": "player"
+    },
+    "10": {
+      "name": "Jae-sung Lee",
+      "type": "player"
+    },
+    "11": {
+      "name": "In-beom Hwang",
+      "type": "player"
+    },
+    "12": {
+      "name": "Kang-in Lee",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Seung-ho Paik",
+      "type": "player"
+    },
+    "15": {
+      "name": "Jens Castrop",
+      "type": "player"
+    },
+    "16": {
+      "name": "Dongg-yeong Lee",
+      "type": "player"
+    },
+    "17": {
+      "name": "Gue-sung Cho",
+      "type": "player"
+    },
+    "18": {
+      "name": "Heung-min Son",
+      "type": "player"
+    },
+    "19": {
+      "name": "Hee-chan Hwang",
+      "type": "player"
+    },
+    "20": {
+      "name": "Hyeon-Gyu Oh",
+      "type": "player"
+    }
+  },
+  "KSA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Nawaf Alaqidi",
+      "type": "player"
+    },
+    "3": {
+      "name": "Abdulrahman Al-Sanbi",
+      "type": "player"
+    },
+    "4": {
+      "name": "Saud Abdulhamid",
+      "type": "player"
+    },
+    "5": {
+      "name": "Nawaf Bouwashl",
+      "type": "player"
+    },
+    "6": {
+      "name": "Jihad Thakri",
+      "type": "player"
+    },
+    "7": {
+      "name": "Moteb Al-Harbi",
+      "type": "player"
+    },
+    "8": {
+      "name": "Hassan Altambakti",
+      "type": "player"
+    },
+    "9": {
+      "name": "Musab Aljuwayr",
+      "type": "player"
+    },
+    "10": {
+      "name": "Ziyad Aljohani",
+      "type": "player"
+    },
+    "11": {
+      "name": "Abdullah Alkhaibari",
+      "type": "player"
+    },
+    "12": {
+      "name": "Nasser Aldawsari",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Saleh Abu Alshamat",
+      "type": "player"
+    },
+    "15": {
+      "name": "Marwan Alsahafi",
+      "type": "player"
+    },
+    "16": {
+      "name": "Salem Aldawsari",
+      "type": "player"
+    },
+    "17": {
+      "name": "Abdulrahman Al-Aboud",
+      "type": "player"
+    },
+    "18": {
+      "name": "Feras Akbrikan",
+      "type": "player"
+    },
+    "19": {
+      "name": "Saleh Alshehri",
+      "type": "player"
+    },
+    "20": {
+      "name": "Abdullah Al-Hamdan",
+      "type": "player"
+    }
+  },
+  "MAR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Yassine Bounou",
+      "type": "player"
+    },
+    "3": {
+      "name": "Munir El Kajoui",
+      "type": "player"
+    },
+    "4": {
+      "name": "Achraf Hakimi",
+      "type": "player"
+    },
+    "5": {
+      "name": "Noussair Mazraoui",
+      "type": "player"
+    },
+    "6": {
+      "name": "Nayef Aguerd",
+      "type": "player"
+    },
+    "7": {
+      "name": "Roman Saiss",
+      "type": "player"
+    },
+    "8": {
+      "name": "Jawad El Yamio",
+      "type": "player"
+    },
+    "9": {
+      "name": "Adam Masina",
+      "type": "player"
+    },
+    "10": {
+      "name": "Sofyan Amrabat",
+      "type": "player"
+    },
+    "11": {
+      "name": "Azzedine Ounahi",
+      "type": "player"
+    },
+    "12": {
+      "name": "Eliesse Ben Seghir",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Bilal El Khannouss",
+      "type": "player"
+    },
+    "15": {
+      "name": "Ismael Saibari",
+      "type": "player"
+    },
+    "16": {
+      "name": "Youssef En-Nesyri",
+      "type": "player"
+    },
+    "17": {
+      "name": "Abde Ezzalzouli",
+      "type": "player"
+    },
+    "18": {
+      "name": "Soufiane Rahimi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Brahim Diaz",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ayoub El Kaabi",
+      "type": "player"
+    }
+  },
+  "MEX": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Luis Malagón",
+      "type": "player"
+    },
+    "3": {
+      "name": "Johan Vasquez",
+      "type": "player"
+    },
+    "4": {
+      "name": "Jorge Sánchez",
+      "type": "player"
+    },
+    "5": {
+      "name": "Cesar Montes",
+      "type": "player"
+    },
+    "6": {
+      "name": "Jesus Gallardo",
+      "type": "player"
+    },
+    "7": {
+      "name": "Israel Reyes",
+      "type": "player"
+    },
+    "8": {
+      "name": "Diego Lainez",
+      "type": "player"
+    },
+    "9": {
+      "name": "Carlos Rodriguez",
+      "type": "player"
+    },
+    "10": {
+      "name": "Edson Alvarez",
+      "type": "player"
+    },
+    "11": {
+      "name": "Orbelin Pineda",
+      "type": "player"
+    },
+    "12": {
+      "name": "Marcel Ruiz",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Érick Sánchez",
+      "type": "player"
+    },
+    "15": {
+      "name": "Hirving Lozano",
+      "type": "player"
+    },
+    "16": {
+      "name": "Santiago Giménez",
+      "type": "player"
+    },
+    "17": {
+      "name": "Raúl Jiménez",
+      "type": "player"
+    },
+    "18": {
+      "name": "Alexis Vega",
+      "type": "player"
+    },
+    "19": {
+      "name": "Roberto Alvarado",
+      "type": "player"
+    },
+    "20": {
+      "name": "Cesar Huerta",
+      "type": "player"
+    }
+  },
+  "NED": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Bart Verbruggen",
+      "type": "player"
+    },
+    "3": {
+      "name": "Virgil van Dijk",
+      "type": "player"
+    },
+    "4": {
+      "name": "Micky van de Ven",
+      "type": "player"
+    },
+    "5": {
+      "name": "Jurrien Timber",
+      "type": "player"
+    },
+    "6": {
+      "name": "Denzel Dumfries",
+      "type": "player"
+    },
+    "7": {
+      "name": "Nathan Aké",
+      "type": "player"
+    },
+    "8": {
+      "name": "Jeremie Frimpong",
+      "type": "player"
+    },
+    "9": {
+      "name": "Jan Paul van Hecke",
+      "type": "player"
+    },
+    "10": {
+      "name": "Tijjani Reijnders",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ryan Gravenberch",
+      "type": "player"
+    },
+    "12": {
+      "name": "Teun Koopmeiners",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Frenkie de Jong",
+      "type": "player"
+    },
+    "15": {
+      "name": "Xavi Simons",
+      "type": "player"
+    },
+    "16": {
+      "name": "Justin Kluivert",
+      "type": "player"
+    },
+    "17": {
+      "name": "Memphis Depay",
+      "type": "player"
+    },
+    "18": {
+      "name": "Donyell Malen",
+      "type": "player"
+    },
+    "19": {
+      "name": "Wout Weghorst",
+      "type": "player"
+    },
+    "20": {
+      "name": "Cody Gakpo",
+      "type": "player"
+    }
+  },
+  "NOR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Orjan Nyland",
+      "type": "player"
+    },
+    "3": {
+      "name": "Julian Ryerson",
+      "type": "player"
+    },
+    "4": {
+      "name": "Leo Ostigård",
+      "type": "player"
+    },
+    "5": {
+      "name": "Kristoffer Vassbakk Ajer",
+      "type": "player"
+    },
+    "6": {
+      "name": "Marcus Holmgren Pedersen",
+      "type": "player"
+    },
+    "7": {
+      "name": "David Møller Wolfe",
+      "type": "player"
+    },
+    "8": {
+      "name": "Torbjørn Heggem",
+      "type": "player"
+    },
+    "9": {
+      "name": "Morten Thorsby",
+      "type": "player"
+    },
+    "10": {
+      "name": "Martin Ødegaard",
+      "type": "player"
+    },
+    "11": {
+      "name": "Sander Berge",
+      "type": "player"
+    },
+    "12": {
+      "name": "Andreas Schjelderup",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Patrick Berg",
+      "type": "player"
+    },
+    "15": {
+      "name": "Erling Haaland",
+      "type": "player"
+    },
+    "16": {
+      "name": "Alexander Sørloth",
+      "type": "player"
+    },
+    "17": {
+      "name": "Aron Dønnum",
+      "type": "player"
+    },
+    "18": {
+      "name": "Jorgen Strand Larsen",
+      "type": "player"
+    },
+    "19": {
+      "name": "Antonio Nusa",
+      "type": "player"
+    },
+    "20": {
+      "name": "Oscar Bobb",
+      "type": "player"
+    }
+  },
+  "NZL": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Max Crocombe Payne",
+      "type": "player"
+    },
+    "3": {
+      "name": "Alex Paulsen",
+      "type": "player"
+    },
+    "4": {
+      "name": "Michael Boxall",
+      "type": "player"
+    },
+    "5": {
+      "name": "Liberato Cacace",
+      "type": "player"
+    },
+    "6": {
+      "name": "Tim Payne",
+      "type": "player"
+    },
+    "7": {
+      "name": "Tyler Bindon",
+      "type": "player"
+    },
+    "8": {
+      "name": "Francis de Vries",
+      "type": "player"
+    },
+    "9": {
+      "name": "Finn Surman",
+      "type": "player"
+    },
+    "10": {
+      "name": "Joe Bell",
+      "type": "player"
+    },
+    "11": {
+      "name": "Sarpreet Singh",
+      "type": "player"
+    },
+    "12": {
+      "name": "Ryan Thomas",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Matthew Garbett",
+      "type": "player"
+    },
+    "15": {
+      "name": "Marko Stamenić",
+      "type": "player"
+    },
+    "16": {
+      "name": "Ben Old",
+      "type": "player"
+    },
+    "17": {
+      "name": "Chris Wood",
+      "type": "player"
+    },
+    "18": {
+      "name": "Elijah Just",
+      "type": "player"
+    },
+    "19": {
+      "name": "Callum McCowatt",
+      "type": "player"
+    },
+    "20": {
+      "name": "Kosta Barbarouses",
+      "type": "player"
+    }
+  },
+  "PAN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Orlando Mosquera",
+      "type": "player"
+    },
+    "3": {
+      "name": "Luis Mejia",
+      "type": "player"
+    },
+    "4": {
+      "name": "Fidel Escobar",
+      "type": "player"
+    },
+    "5": {
+      "name": "Andres Andrade",
+      "type": "player"
+    },
+    "6": {
+      "name": "Michael Amir Murillo",
+      "type": "player"
+    },
+    "7": {
+      "name": "Eric Davis",
+      "type": "player"
+    },
+    "8": {
+      "name": "Jose Cordoba",
+      "type": "player"
+    },
+    "9": {
+      "name": "Cesar Blackman",
+      "type": "player"
+    },
+    "10": {
+      "name": "Cristian Martinez",
+      "type": "player"
+    },
+    "11": {
+      "name": "Aníbal Godoy",
+      "type": "player"
+    },
+    "12": {
+      "name": "Adalberto Carrasquilla",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Édgar Bárcenas",
+      "type": "player"
+    },
+    "15": {
+      "name": "Carlos Harvey",
+      "type": "player"
+    },
+    "16": {
+      "name": "Ismael Díaz",
+      "type": "player"
+    },
+    "17": {
+      "name": "Jose Fajardo",
+      "type": "player"
+    },
+    "18": {
+      "name": "Cecilio Waterman",
+      "type": "player"
+    },
+    "19": {
+      "name": "Jose Luiz Rodriguez",
+      "type": "player"
+    },
+    "20": {
+      "name": "Alberto Quintero",
+      "type": "player"
+    }
+  },
+  "PAR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Roberto Fernandez",
+      "type": "player"
+    },
+    "3": {
+      "name": "Orlando Gill",
+      "type": "player"
+    },
+    "4": {
+      "name": "Gustavo Gomez",
+      "type": "player"
+    },
+    "5": {
+      "name": "Fabián Balbuena",
+      "type": "player"
+    },
+    "6": {
+      "name": "Juan José Cáceres",
+      "type": "player"
+    },
+    "7": {
+      "name": "Omar Alderete",
+      "type": "player"
+    },
+    "8": {
+      "name": "Junior Alonso",
+      "type": "player"
+    },
+    "9": {
+      "name": "Mathías Villasanti",
+      "type": "player"
+    },
+    "10": {
+      "name": "Diego Gomez",
+      "type": "player"
+    },
+    "11": {
+      "name": "Damián Bobadilla",
+      "type": "player"
+    },
+    "12": {
+      "name": "Andres Cubas",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Matias Galarza Fonda",
+      "type": "player"
+    },
+    "15": {
+      "name": "Julio Enciso",
+      "type": "player"
+    },
+    "16": {
+      "name": "Alejandro Romero Gamarra",
+      "type": "player"
+    },
+    "17": {
+      "name": "Miguel Almirón",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ramon Sosa",
+      "type": "player"
+    },
+    "19": {
+      "name": "Angel Romero",
+      "type": "player"
+    },
+    "20": {
+      "name": "Antonio Sanabria",
+      "type": "player"
+    }
+  },
+  "POR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Diogo Costa",
+      "type": "player"
+    },
+    "3": {
+      "name": "Jose Sa",
+      "type": "player"
+    },
+    "4": {
+      "name": "Ruben Dias",
+      "type": "player"
+    },
+    "5": {
+      "name": "João Cancelo",
+      "type": "player"
+    },
+    "6": {
+      "name": "Diogo Dalot",
+      "type": "player"
+    },
+    "7": {
+      "name": "Nuno Mendes",
+      "type": "player"
+    },
+    "8": {
+      "name": "Gonçalo Inácio",
+      "type": "player"
+    },
+    "9": {
+      "name": "Bernardo Silva",
+      "type": "player"
+    },
+    "10": {
+      "name": "Bruno Fernandes",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ruben Neves",
+      "type": "player"
+    },
+    "12": {
+      "name": "Vitinha",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "João Neves",
+      "type": "player"
+    },
+    "15": {
+      "name": "Cristiano Ronaldo",
+      "type": "player"
+    },
+    "16": {
+      "name": "Francisco Trincao",
+      "type": "player"
+    },
+    "17": {
+      "name": "João Felix",
+      "type": "player"
+    },
+    "18": {
+      "name": "Gonçalo Ramos",
+      "type": "player"
+    },
+    "19": {
+      "name": "Pedro Neto",
+      "type": "player"
+    },
+    "20": {
+      "name": "Rafael Leão",
+      "type": "player"
+    }
+  },
+  "QAT": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Meshaal Barsham",
+      "type": "player"
+    },
+    "3": {
+      "name": "Sultan Albrake",
+      "type": "player"
+    },
+    "4": {
+      "name": "Lucas Mendes",
+      "type": "player"
+    },
+    "5": {
+      "name": "Homam Ahmed",
+      "type": "player"
+    },
+    "6": {
+      "name": "Boualem Khoukhi",
+      "type": "player"
+    },
+    "7": {
+      "name": "Pedro Miguel",
+      "type": "player"
+    },
+    "8": {
+      "name": "Tarek Salman",
+      "type": "player"
+    },
+    "9": {
+      "name": "Mohamed Al-Mannai",
+      "type": "player"
+    },
+    "10": {
+      "name": "Karim Boudiaf",
+      "type": "player"
+    },
+    "11": {
+      "name": "Assim Madibo",
+      "type": "player"
+    },
+    "12": {
+      "name": "Ahmed Fatehi",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Mohammed Waad",
+      "type": "player"
+    },
+    "15": {
+      "name": "Abdulaziz Hatem",
+      "type": "player"
+    },
+    "16": {
+      "name": "Hassan Al-Haydos",
+      "type": "player"
+    },
+    "17": {
+      "name": "Edmilson Junior",
+      "type": "player"
+    },
+    "18": {
+      "name": "Akram Hassan Afif",
+      "type": "player"
+    },
+    "19": {
+      "name": "Ahmed Al Ganehi",
+      "type": "player"
+    },
+    "20": {
+      "name": "Almoez Ali",
+      "type": "player"
+    }
+  },
+  "RSA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Ronwen Williams",
+      "type": "player"
+    },
+    "3": {
+      "name": "Sipho Chaine",
+      "type": "player"
+    },
+    "4": {
+      "name": "Aubrey Modiba",
+      "type": "player"
+    },
+    "5": {
+      "name": "Samukele Kabini",
+      "type": "player"
+    },
+    "6": {
+      "name": "Mbekezeli Mbokazi",
+      "type": "player"
+    },
+    "7": {
+      "name": "Khulumani Ndamane",
+      "type": "player"
+    },
+    "8": {
+      "name": "Siyabonga Ngezana",
+      "type": "player"
+    },
+    "9": {
+      "name": "Khuliso Mudau",
+      "type": "player"
+    },
+    "10": {
+      "name": "Nkosinathi Sibisi",
+      "type": "player"
+    },
+    "11": {
+      "name": "Teboho Mokoena",
+      "type": "player"
+    },
+    "12": {
+      "name": "Thalente Mbatha",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Bathasi Aubaas",
+      "type": "player"
+    },
+    "15": {
+      "name": "Yaya Sithole",
+      "type": "player"
+    },
+    "16": {
+      "name": "Sipho Mbule",
+      "type": "player"
+    },
+    "17": {
+      "name": "Lyle Foster",
+      "type": "player"
+    },
+    "18": {
+      "name": "Iqraam Rayners",
+      "type": "player"
+    },
+    "19": {
+      "name": "Mohau Nkota",
+      "type": "player"
+    },
+    "20": {
+      "name": "Oswin Appollis",
+      "type": "player"
+    }
+  },
+  "SCO": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Angus Gunn",
+      "type": "player"
+    },
+    "3": {
+      "name": "Jack Hendry",
+      "type": "player"
+    },
+    "4": {
+      "name": "Kieran Tierney",
+      "type": "player"
+    },
+    "5": {
+      "name": "Aaron Hickey",
+      "type": "player"
+    },
+    "6": {
+      "name": "Andrew Robertson",
+      "type": "player"
+    },
+    "7": {
+      "name": "Scott McKenna",
+      "type": "player"
+    },
+    "8": {
+      "name": "John Souttar",
+      "type": "player"
+    },
+    "9": {
+      "name": "Anthony Ralston",
+      "type": "player"
+    },
+    "10": {
+      "name": "Grant Hanley",
+      "type": "player"
+    },
+    "11": {
+      "name": "Scott McTominay",
+      "type": "player"
+    },
+    "12": {
+      "name": "Billy Gilmour",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Lewis Ferguson",
+      "type": "player"
+    },
+    "15": {
+      "name": "Ryan Christie",
+      "type": "player"
+    },
+    "16": {
+      "name": "Kenny McLean",
+      "type": "player"
+    },
+    "17": {
+      "name": "John McGinn",
+      "type": "player"
+    },
+    "18": {
+      "name": "Lyndon Dykes",
+      "type": "player"
+    },
+    "19": {
+      "name": "Che Adams",
+      "type": "player"
+    },
+    "20": {
+      "name": "Ben Gannon-Doak",
+      "type": "player"
+    }
+  },
+  "SEN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Edouard Mendy",
+      "type": "player"
+    },
+    "3": {
+      "name": "Yehvann Diouf",
+      "type": "player"
+    },
+    "4": {
+      "name": "Moussa Niakhaté",
+      "type": "player"
+    },
+    "5": {
+      "name": "Abdoulaye Seck",
+      "type": "player"
+    },
+    "6": {
+      "name": "Ismail Jakobs",
+      "type": "player"
+    },
+    "7": {
+      "name": "El Hadji Malick Diouf",
+      "type": "player"
+    },
+    "8": {
+      "name": "Kalidou Koulibaly",
+      "type": "player"
+    },
+    "9": {
+      "name": "Idrissa Gana Gueye",
+      "type": "player"
+    },
+    "10": {
+      "name": "Pape Matar Sarr",
+      "type": "player"
+    },
+    "11": {
+      "name": "Pape Gueye",
+      "type": "player"
+    },
+    "12": {
+      "name": "Habib Diarra",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Lamine Camara",
+      "type": "player"
+    },
+    "15": {
+      "name": "Sadio Mane",
+      "type": "player"
+    },
+    "16": {
+      "name": "Ismaïla Sarr",
+      "type": "player"
+    },
+    "17": {
+      "name": "Boulaye Dia",
+      "type": "player"
+    },
+    "18": {
+      "name": "Iliman Ndiaye",
+      "type": "player"
+    },
+    "19": {
+      "name": "Nicolas Jackson",
+      "type": "player"
+    },
+    "20": {
+      "name": "Krepin Diatta",
+      "type": "player"
+    }
+  },
+  "SUI": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Gregor Kobel",
+      "type": "player"
+    },
+    "3": {
+      "name": "Yvon Mvogo",
+      "type": "player"
+    },
+    "4": {
+      "name": "Manuel Akanji",
+      "type": "player"
+    },
+    "5": {
+      "name": "Ricardo Rodriguez",
+      "type": "player"
+    },
+    "6": {
+      "name": "Nico Elvedi",
+      "type": "player"
+    },
+    "7": {
+      "name": "Aurèle Amenda",
+      "type": "player"
+    },
+    "8": {
+      "name": "Silvan Widmer",
+      "type": "player"
+    },
+    "9": {
+      "name": "Granit Xhaka",
+      "type": "player"
+    },
+    "10": {
+      "name": "Denis Zakaria",
+      "type": "player"
+    },
+    "11": {
+      "name": "Remo Freuler",
+      "type": "player"
+    },
+    "12": {
+      "name": "Fabian Rieder",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Ardon Jashari",
+      "type": "player"
+    },
+    "15": {
+      "name": "Johan Manzambi",
+      "type": "player"
+    },
+    "16": {
+      "name": "Michel Aebischer",
+      "type": "player"
+    },
+    "17": {
+      "name": "Breel Embolo",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ruben Vargas",
+      "type": "player"
+    },
+    "19": {
+      "name": "Dan Ndoye",
+      "type": "player"
+    },
+    "20": {
+      "name": "Zeki Amdouni",
+      "type": "player"
+    }
+  },
+  "SWE": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Victor Johansson",
+      "type": "player"
+    },
+    "3": {
+      "name": "Isak Hien",
+      "type": "player"
+    },
+    "4": {
+      "name": "Gabriel Gudmundsson",
+      "type": "player"
+    },
+    "5": {
+      "name": "Emil Holm",
+      "type": "player"
+    },
+    "6": {
+      "name": "Victor Nilsson Lindelöf",
+      "type": "player"
+    },
+    "7": {
+      "name": "Gustaf Lagerbielke",
+      "type": "player"
+    },
+    "8": {
+      "name": "Lucas Bergvall",
+      "type": "player"
+    },
+    "9": {
+      "name": "Hugo Larsson",
+      "type": "player"
+    },
+    "10": {
+      "name": "Jesper Karlström",
+      "type": "player"
+    },
+    "11": {
+      "name": "Yasin Ayari",
+      "type": "player"
+    },
+    "12": {
+      "name": "Mattias Svanberg",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Daniel Svensson",
+      "type": "player"
+    },
+    "15": {
+      "name": "Ken Sema",
+      "type": "player"
+    },
+    "16": {
+      "name": "Roony Bardghji",
+      "type": "player"
+    },
+    "17": {
+      "name": "Dejan Kulusevski",
+      "type": "player"
+    },
+    "18": {
+      "name": "Anthony Elanga",
+      "type": "player"
+    },
+    "19": {
+      "name": "Alexander Isak",
+      "type": "player"
+    },
+    "20": {
+      "name": "Viktor Gyökeres",
+      "type": "player"
+    }
+  },
+  "TUN": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Bechir Ben Said",
+      "type": "player"
+    },
+    "3": {
+      "name": "Aymen Dahmen",
+      "type": "player"
+    },
+    "4": {
+      "name": "Yan Valery",
+      "type": "player"
+    },
+    "5": {
+      "name": "Montassar Talbi",
+      "type": "player"
+    },
+    "6": {
+      "name": "Yassine Meriah",
+      "type": "player"
+    },
+    "7": {
+      "name": "Ali Abdi",
+      "type": "player"
+    },
+    "8": {
+      "name": "Dylan Bronn",
+      "type": "player"
+    },
+    "9": {
+      "name": "Ellyes Skhiri",
+      "type": "player"
+    },
+    "10": {
+      "name": "Aissa Laidouni",
+      "type": "player"
+    },
+    "11": {
+      "name": "Ferjani Sassi",
+      "type": "player"
+    },
+    "12": {
+      "name": "Mohamed Ali Ben Romdhane",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Hannibal Mejbri",
+      "type": "player"
+    },
+    "15": {
+      "name": "Elias Achouri",
+      "type": "player"
+    },
+    "16": {
+      "name": "Elias Saad",
+      "type": "player"
+    },
+    "17": {
+      "name": "Hazem Mastouri",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ismael Gharbi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Sayfallah Ltaief",
+      "type": "player"
+    },
+    "20": {
+      "name": "Naim Sliti",
+      "type": "player"
+    }
+  },
+  "TUR": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Ugurcan Cakir",
+      "type": "player"
+    },
+    "3": {
+      "name": "Mert Muldur",
+      "type": "player"
+    },
+    "4": {
+      "name": "Zeki Celik",
+      "type": "player"
+    },
+    "5": {
+      "name": "Abdulkerim Bardakci",
+      "type": "player"
+    },
+    "6": {
+      "name": "Caglar Soyuncu",
+      "type": "player"
+    },
+    "7": {
+      "name": "Merih Demiral",
+      "type": "player"
+    },
+    "8": {
+      "name": "Ferdi Kadioglu",
+      "type": "player"
+    },
+    "9": {
+      "name": "Kaan Ayhan",
+      "type": "player"
+    },
+    "10": {
+      "name": "Ismail Yuksek",
+      "type": "player"
+    },
+    "11": {
+      "name": "Hakan Calhanoglu",
+      "type": "player"
+    },
+    "12": {
+      "name": "Orkun Kokcu",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Arda Guler",
+      "type": "player"
+    },
+    "15": {
+      "name": "Irfan Can Kahveci",
+      "type": "player"
+    },
+    "16": {
+      "name": "Yunus Akgun",
+      "type": "player"
+    },
+    "17": {
+      "name": "Can Uzun",
+      "type": "player"
+    },
+    "18": {
+      "name": "Baris Alper Yilmaz",
+      "type": "player"
+    },
+    "19": {
+      "name": "Kerem Akturkoglu",
+      "type": "player"
+    },
+    "20": {
+      "name": "Kenan Yildiz",
+      "type": "player"
+    }
+  },
+  "URU": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Sergio Rochet",
+      "type": "player"
+    },
+    "3": {
+      "name": "Santiago Mele",
+      "type": "player"
+    },
+    "4": {
+      "name": "Ronald Araujo",
+      "type": "player"
+    },
+    "5": {
+      "name": "José María Giménez",
+      "type": "player"
+    },
+    "6": {
+      "name": "Sebastian Caceres",
+      "type": "player"
+    },
+    "7": {
+      "name": "Mathias Olivera",
+      "type": "player"
+    },
+    "8": {
+      "name": "Guillermo Varela",
+      "type": "player"
+    },
+    "9": {
+      "name": "Nahitan Nandez",
+      "type": "player"
+    },
+    "10": {
+      "name": "Federico Valverde",
+      "type": "player"
+    },
+    "11": {
+      "name": "Giorgian De Arrascaeta",
+      "type": "player"
+    },
+    "12": {
+      "name": "Rodrigo Bentancur",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Manuel Ugarte",
+      "type": "player"
+    },
+    "15": {
+      "name": "Nicolás de la Cruz",
+      "type": "player"
+    },
+    "16": {
+      "name": "Maxi Araujo",
+      "type": "player"
+    },
+    "17": {
+      "name": "Darwin Núñez",
+      "type": "player"
+    },
+    "18": {
+      "name": "Federico Viñas",
+      "type": "player"
+    },
+    "19": {
+      "name": "Rodrigo Aguirre",
+      "type": "player"
+    },
+    "20": {
+      "name": "Facundo Pellistri",
+      "type": "player"
+    }
+  },
+  "USA": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Math Freese",
+      "type": "player"
+    },
+    "3": {
+      "name": "Chris Richards",
+      "type": "player"
+    },
+    "4": {
+      "name": "Tim Ream",
+      "type": "player"
+    },
+    "5": {
+      "name": "Mark McKenzie",
+      "type": "player"
+    },
+    "6": {
+      "name": "Alex Freeman",
+      "type": "player"
+    },
+    "7": {
+      "name": "Antonee Robinson",
+      "type": "player"
+    },
+    "8": {
+      "name": "Tyler Adams",
+      "type": "player"
+    },
+    "9": {
+      "name": "Tanner Tessmann",
+      "type": "player"
+    },
+    "10": {
+      "name": "Weston McKenny",
+      "type": "player"
+    },
+    "11": {
+      "name": "Christian Roldan",
+      "type": "player"
+    },
+    "12": {
+      "name": "Timothy Weah",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Diego Luna",
+      "type": "player"
+    },
+    "15": {
+      "name": "Malik Tillman",
+      "type": "player"
+    },
+    "16": {
+      "name": "Christian Pulisic",
+      "type": "player"
+    },
+    "17": {
+      "name": "Brenden Aaronson",
+      "type": "player"
+    },
+    "18": {
+      "name": "Ricardo Pepi",
+      "type": "player"
+    },
+    "19": {
+      "name": "Haji Wright",
+      "type": "player"
+    },
+    "20": {
+      "name": "Folarin Balogun",
+      "type": "player"
+    }
+  },
+  "UZB": {
+    "1": {
+      "name": "Team Logo",
+      "type": "team logo · foil"
+    },
+    "2": {
+      "name": "Utkir Yusupov",
+      "type": "player"
+    },
+    "3": {
+      "name": "Farrukh Savfiev",
+      "type": "player"
+    },
+    "4": {
+      "name": "Sherzod Nasrullaev",
+      "type": "player"
+    },
+    "5": {
+      "name": "Umar Eshmurodov",
+      "type": "player"
+    },
+    "6": {
+      "name": "Husniddin Aliqulov",
+      "type": "player"
+    },
+    "7": {
+      "name": "Rustamjon Ashurmatov",
+      "type": "player"
+    },
+    "8": {
+      "name": "Khojiakbar Alijonov",
+      "type": "player"
+    },
+    "9": {
+      "name": "Abdukodir Khusanov",
+      "type": "player"
+    },
+    "10": {
+      "name": "Odiljon Hamrobekov",
+      "type": "player"
+    },
+    "11": {
+      "name": "Otabek Shukurov",
+      "type": "player"
+    },
+    "12": {
+      "name": "Jamshid Iskanderov",
+      "type": "player"
+    },
+    "13": {
+      "name": "Team Photo",
+      "type": "team photo"
+    },
+    "14": {
+      "name": "Azizbek Turgunboev",
+      "type": "player"
+    },
+    "15": {
+      "name": "Khojimat Erkinov",
+      "type": "player"
+    },
+    "16": {
+      "name": "Eldor Shomurodov",
+      "type": "player"
+    },
+    "17": {
+      "name": "Oston Urunov",
+      "type": "player"
+    },
+    "18": {
+      "name": "Jaloliddin Masharipov",
+      "type": "player"
+    },
+    "19": {
+      "name": "Igor Sergeev",
+      "type": "player"
+    },
+    "20": {
+      "name": "Abbosbek Fayzullaev",
+      "type": "player"
+    }
+  }
+}

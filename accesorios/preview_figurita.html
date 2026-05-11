@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview Figurita</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  body { background: #1a1a2e; display: flex; flex-wrap: wrap; gap: 24px; padding: 32px; justify-content: center; align-items: flex-start; font-family: Montserrat, sans-serif; }
+  h2 { color: #fff; width: 100%; text-align: center; margin-bottom: 8px; font-size: 1rem; font-weight: 700; }
+
+  /* === FIGURITA BASE === */
+  .sticker {
+    width: 90px;
+    height: 165px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform .15s;
+  }
+  .sticker:hover { transform: scale(1.05); }
+
+  /* Banda superior: bandera + nombre + número */
+  .sticker-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 5px 3px;
+    background: linear-gradient(90deg, #0a2a52 60%, #1a5fa8);
+    min-height: 30px;
+    gap: 3px;
+  }
+  .sticker-flag-img { height: 13px; width: 19px; flex-shrink: 0; object-fit: cover; border-radius: 2px; border: 1px solid rgba(255,255,255,0.3); }
+  .sticker-band-name { font-size: 0.46rem; font-weight: 900; color: #fff; text-align: center; flex: 1; overflow: hidden; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .sticker-n { font-size: 0.68rem; font-weight: 900; color: #ffd700; letter-spacing: 0.3px; flex-shrink: 0; }
+
+  /* FOTO del jugador */
+  .sticker-photo {
+    width: 100%;
+    height: 68px;
+    object-fit: cover;
+    object-position: center 10%;
+    display: block;
+    background: #0a2a52;
+  }
+  .sticker-photo-placeholder {
+    width: 100%;
+    height: 68px;
+    background: linear-gradient(180deg, #1565c0 0%, #0a2a52 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  /* Info inferior */
+  .sticker-info {
+    padding: 2px 4px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+    gap: 0px;
+    background: linear-gradient(180deg, #fff 0%, #eef4ff 100%);
+  }
+  .sticker-name { display: none; }
+  .sticker-bio { display: flex; flex-direction: column; align-items: center; gap: 0px; width: 100%; }
+  .sticker-club { font-size: 0.44rem; font-weight: 700; color: #1a5fa8; text-align: center; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sticker-dob { font-size: 0.43rem; font-weight: 500; color: #6b7a8d; text-align: center; }
+  .sticker-ht { font-size: 0.43rem; font-weight: 600; color: #3d6b9e; text-align: center; }
+
+  /* checkbox "la tengo" */
+  .check-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a2a52;
+    padding: 3px 4px;
+    gap: 4px;
+  }
+  .check-bar input { width: 11px; height: 11px; accent-color: #ffd700; cursor: pointer; }
+  .check-bar span { font-size: 0.48rem; font-weight: 700; color: #fff; letter-spacing: 0.3px; }
+
+  /* estado "la tengo" */
+  .sticker.have { outline: 2px solid #ffd700; }
+  .sticker.have .sticker-info { background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%); }
+  .sticker.have .sticker-name { color: #1b5e20; }
+
+  /* separador de columnas */
+  .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .label { color: #aaa; font-size: 0.75rem; text-align: center; }
+</style>
+</head>
+<body>
+
+<h2>🃏 Preview Figuritas — Album Simón Mundial 2026</h2>
+
+<!-- VERSIÓN SIN FOTO (actual) -->
+<div class="col">
+  <div class="label">Sin foto (actual)</div>
+  <article class="sticker">
+    <div class="sticker-band">
+      <img class="sticker-flag-img" src="https://flagcdn.com/w40/ar.png" alt="ARG">
+      <div class="sticker-band-name">Lionel Messi</div>
+      <div class="sticker-n">17</div>
+    </div>
+    <div class="sticker-photo-placeholder">⚽</div>
+    <div class="sticker-info">
+      <div class="sticker-name">Lionel Messi</div>
+      <div class="sticker-bio">
+        <div class="sticker-club">🏟 Inter Miami</div>
+        <div class="sticker-dob">🗓 24/06/1987</div>
+        <div class="sticker-ht">📏 170 cm · 72 kg</div>
+      </div>
+    </div>
+    <div class="check-bar">
+      <input type="checkbox"><span>La tengo</span>
+    </div>
+  </article>
+</div>
+
+<!-- VERSIÓN CON FOTO (propuesta) -->
+<div class="col">
+  <div class="label">Con foto (propuesta)</div>
+  <article class="sticker">
+    <div class="sticker-band">
+      <img class="sticker-flag-img" src="https://flagcdn.com/w40/ar.png" alt="ARG">
+      <div class="sticker-band-name">Lionel Messi</div>
+      <div class="sticker-n">17</div>
+    </div>
+    <img class="sticker-photo" src="img/stickers/ARG-2.jpg" alt="Messi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="sticker-photo-placeholder" style="display:none">⚽</div>
+    <div class="sticker-info">
+      <div class="sticker-name">Lionel Messi</div>
+      <div class="sticker-bio">
+        <div class="sticker-club">🏟 Inter Miami</div>
+        <div class="sticker-dob">🗓 24/06/1987</div>
+        <div class="sticker-ht">📏 170 cm · 72 kg</div>
+      </div>
+    </div>
+    <div class="check-bar">
+      <input type="checkbox"><span>La tengo</span>
+    </div>
+  </article>
+</div>
+
+<!-- VERSIÓN "LA TENGO" -->
+<div class="col">
+  <div class="label">Estado "la tengo"</div>
+  <article class="sticker have">
+    <div class="sticker-band">
+      <img class="sticker-flag-img" src="https://flagcdn.com/w40/ar.png" alt="ARG">
+      <div class="sticker-band-name">Lionel Messi</div>
+      <div class="sticker-n">17</div>
+    </div>
+    <img class="sticker-photo" src="img/stickers/ARG-2.jpg" alt="Messi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="sticker-photo-placeholder" style="display:none">⚽</div>
+    <div class="sticker-info">
+      <div class="sticker-name">Lionel Messi</div>
+      <div class="sticker-bio">
+        <div class="sticker-club">🏟 Inter Miami</div>
+        <div class="sticker-dob">🗓 24/06/1987</div>
+        <div class="sticker-ht">📏 170 cm · 72 kg</div>
+      </div>
+    </div>
+    <div class="check-bar">
+      <input type="checkbox" checked><span>La tengo</span>
+    </div>
+  </article>
+</div>
+
+<!-- TARJETA ESCUDO (tipo L) -->
+<div class="col">
+  <div class="label">Escudo (tipo L)</div>
+  <article class="sticker">
+    <div class="sticker-band">
+      <img class="sticker-flag-img" src="https://flagcdn.com/w40/ar.png" alt="ARG">
+      <div class="sticker-n">1</div>
+    </div>
+    <div class="sticker-photo-placeholder" style="font-size:2rem">🇦🇷</div>
+    <div class="sticker-info">
+      <div class="sticker-name">Argentina</div>
+      <div class="sticker-bio">
+        <div class="sticker-club" style="font-size:0.58rem;color:#666;">Escudo Dorado</div>
+      </div>
+    </div>
+    <div class="check-bar">
+      <input type="checkbox"><span>La tengo</span>
+    </div>
+  </article>
+</div>
+
+</body>
+</html>

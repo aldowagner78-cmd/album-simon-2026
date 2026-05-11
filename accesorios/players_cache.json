@@ -1,0 +1,3523 @@
+{
+  "Alexis Guendouz": {
+    "dob": "1996-01-26",
+    "club": "MC Alger"
+  },
+  "Ramy Bensebaini": {
+    "dob": "1995-04-16",
+    "height": "187",
+    "club": "Borussia Dortmund"
+  },
+  "Youcef Atal": {
+    "dob": "1996-05-17",
+    "height": "176",
+    "club": "[[Al Sadd SC"
+  },
+  "Rayan Aït-Nouri": {
+    "dob": "2001-06-06",
+    "height": "180",
+    "club": "[[Manchester City F.C."
+  },
+  "Mohamed Amine Tougai": {
+    "dob": "2000-01-22",
+    "height": "191",
+    "club": "[[Espérance Sportive de Tunis"
+  },
+  "Aïssa Mandi": {
+    "dob": "1991-10-22",
+    "height": "184",
+    "club": "[[Lille OSC"
+  },
+  "Hicham Boudaoui": {
+    "dob": "1999-09-23",
+    "height": "175",
+    "club": "[[OGC Nice"
+  },
+  "Ramiz Zerrouki": {
+    "dob": "1998-05-26",
+    "height": "183",
+    "club": "[[FC Twente"
+  },
+  "Riyad Mahrez": {
+    "dob": "1991-02-21",
+    "height": "179",
+    "club": "[[Al-Ahli Saudi FC"
+  },
+  "Anis Hadj Moussa": {
+    "dob": "2002-02-11",
+    "height": "176",
+    "club": "Feyenoord"
+  },
+  "Amine Gouiri": {
+    "dob": "2000-02-16",
+    "height": "181",
+    "club": "[[Olympique de Marseille"
+  },
+  "Baghdad Bounedjah": {
+    "dob": "1991-11-24",
+    "height": "185",
+    "club": "[[Al-Shamal SC"
+  },
+  "Nahuel Molina": {
+    "dob": "1998-04-06",
+    "height": "175",
+    "club": "Atlético Madrid"
+  },
+  "Nico Paz": {
+    "dob": "2004-01-09",
+    "height": "177",
+    "weight": "72",
+    "club": "Como"
+  },
+  "Franco Mastantuono": {
+    "dob": "2007-03-14",
+    "height": "180",
+    "weight": "75",
+    "club": "Real Madrid"
+  },
+  "Nico Gonzalez": {
+    "dob": "1997-12-06",
+    "height": "182",
+    "weight": "79",
+    "club": "Barcelona"
+  },
+  "Giuliano Simeone": {
+    "dob": "1999-07-07",
+    "height": "186",
+    "weight": "78",
+    "club": "Atlético Madrid"
+  },
+  "Marko Arnautović": {
+    "dob": "1989-04-19",
+    "height": "192",
+    "club": "Red Star Belgrade"
+  },
+  "Thibaut Courtois": {
+    "dob": "1992-05-11",
+    "height": "200",
+    "club": "[[Real Madrid CF"
+  },
+  "Arthur Theate": {
+    "dob": "2000-05-25",
+    "height": "185",
+    "club": "Eintracht Frankfurt"
+  },
+  "Timothy Castagne": {
+    "dob": "1995-12-05",
+    "height": "185",
+    "club": "[[Fulham F.C."
+  },
+  "Zeno Debast": {
+    "dob": "2003-10-24",
+    "height": "191",
+    "club": "Sporting CP"
+  },
+  "Brandon Mechele": {
+    "dob": "1993-01-28",
+    "height": "190",
+    "club": "[[Club Brugge KV"
+  },
+  "Maxim De Cuyper": {
+    "dob": "2000-12-22",
+    "height": "182",
+    "club": "[[Brighton & Hove Albion F.C."
+  },
+  "Thomas Meunier": {
+    "dob": "1991-09-12",
+    "height": "191",
+    "club": "[[Lille OSC"
+  },
+  "Youri Tielemans": {
+    "dob": "1997-05-07",
+    "height": "176",
+    "club": "Aston Villa"
+  },
+  "Amadou Onana": {
+    "dob": "2001-08-16",
+    "height": "195",
+    "club": "[[Aston Villa F.C."
+  },
+  "Derek Cornelius": {
+    "dob": "1997-11-25",
+    "height": "187",
+    "club": "[[Rangers F.C."
+  },
+  "Moïse Bombito": {
+    "dob": "2000-03-30",
+    "height": "191",
+    "club": "[[OGC Nice"
+  },
+  "Kamal Miller": {
+    "dob": "1997-05-16",
+    "club": "Portland Timbers"
+  },
+  "Stephen Eustáquio": {
+    "dob": "1996-12-21",
+    "height": "178",
+    "club": "Los Angeles FC"
+  },
+  "Ismaël Koné": {
+    "dob": "2002-06-16",
+    "club": "[[US Sassuolo Calcio"
+  },
+  "Jonathan Osorio": {
+    "dob": "1992-06-12",
+    "club": "Toronto FC"
+  },
+  "Jacob Shaffelburg": {
+    "dob": "1999-11-26",
+    "height": "178",
+    "club": "Los Angeles FC"
+  },
+  "Mathieu Choinière": {
+    "dob": "1999-02-07",
+    "height": "175",
+    "club": "Los Angeles FC"
+  },
+  "Niko Sigur": {
+    "dob": "2003-09-09",
+    "height": "180",
+    "club": "[[HNK Hajduk Split"
+  },
+  "Dominik Livaković": {
+    "dob": "1995-01-09",
+    "height": "188",
+    "club": "[[GNK Dinamo Zagreb"
+  },
+  "Duje Caleta-Car": {
+    "dob": "1996-09-17",
+    "height": "193",
+    "club": "Real Sociedad"
+  },
+  "Josko Gvardiol": {
+    "dob": "2002-01-23",
+    "height": "185",
+    "club": "[[Manchester City F.C."
+  },
+  "Josip Stanišić": {
+    "dob": "2000-04-02",
+    "height": "186",
+    "club": "[[FC Bayern Munich"
+  },
+  "Luka Vušković": {
+    "dob": "2007-02-24",
+    "height": "193",
+    "club": "Hamburger SV"
+  },
+  "Josip Sutalo": {
+    "dob": "2000-02-28",
+    "height": "185",
+    "club": "[[AFC Ajax"
+  },
+  "Kristijan Jakic": {
+    "dob": "1997-05-14",
+    "height": "181",
+    "club": "FC Augsburg"
+  },
+  "Luka Modrić": {
+    "dob": "1985-09-09",
+    "height": "172",
+    "club": "AC Milan"
+  },
+  "Mateo Kovacic": {
+    "dob": "1994-05-06",
+    "height": "177",
+    "club": "[[Manchester City F.C."
+  },
+  "Martin Baturina": {
+    "dob": "2003-02-16",
+    "height": "172",
+    "club": "[[Como 1907"
+  },
+  "Zizo": {
+    "dob": "1986-01-01"
+  },
+  "Hamdy Fathy": {
+    "dob": "1994-09-29",
+    "height": "183",
+    "club": "[[Al-Wakrah SC"
+  },
+  "Emam Ashour": {
+    "dob": "1998-02-20",
+    "height": "180",
+    "club": "[[Al Ahly SC"
+  },
+  "Osama Faisal": {
+    "dob": "2001-01-01",
+    "height": "180",
+    "club": "National Bank of Egypt SC"
+  },
+  "Mohamed Salah": {
+    "dob": "1992-06-15",
+    "height": "175",
+    "club": "[[Liverpool F.C."
+  },
+  "Omar Marmoush": {
+    "dob": "1999-02-07",
+    "height": "180",
+    "club": "[[Manchester City F.C."
+  },
+  "Jordan Pickford": {
+    "dob": "1994-03-07",
+    "club": "[[Everton F.C."
+  },
+  "Ismael Bennacer": {
+    "dob": "1997-12-01",
+    "height": "175",
+    "club": "GNK Dinamo Zagreb"
+  },
+  "Houssem Aquar": {
+    "dob": "1998-06-30",
+    "height": "175",
+    "club": "Al-Ittihad Club (Jeddah)"
+  },
+  "Said Benrahma": {
+    "dob": "1995-08-10",
+    "height": "172",
+    "club": "Neom SC"
+  },
+  "Cristian Romero": {
+    "dob": "1998-04-27",
+    "height": "185",
+    "club": "Tottenham Hotspur F.C."
+  },
+  "Nicolas Otamendi": {
+    "dob": "1988-02-12",
+    "height": "183",
+    "club": "S.L. Benfica"
+  },
+  "Nicolas Tagliafico": {
+    "dob": "1992-08-31",
+    "height": "170",
+    "club": "Olympique Lyonnais"
+  },
+  "Florian Grillitsch": {
+    "dob": "1995-08-07",
+    "height": "187",
+    "club": "SC Braga"
+  },
+  "Nicolas Seiwald": {
+    "dob": "2001-05-04",
+    "height": "180",
+    "club": "RB Leipzig"
+  },
+  "Romano Schmid": {
+    "dob": "2000-01-27",
+    "height": "168",
+    "club": "SV Werder Bremen"
+  },
+  "Patrick Wimmer": {
+    "dob": "2001-05-30",
+    "height": "182",
+    "club": "VfL Wolfsburg"
+  },
+  "Christoph Baumgartner": {
+    "dob": "1999-08-01",
+    "height": "180",
+    "club": "RB Leipzig"
+  },
+  "Michael Gregoritsch": {
+    "dob": "1994-04-18",
+    "height": "193",
+    "club": "FC Augsburg (on loan from Brøndby IF)"
+  },
+  "Nicolas Raskin": {
+    "dob": "2001-02-23",
+    "height": "179",
+    "club": "Rangers F.C."
+  },
+  "Alexis Saelemaekers": {
+    "dob": "1999-06-27",
+    "height": "180",
+    "club": "AC Milan"
+  },
+  "Hans Vanaken": {
+    "dob": "1992-08-24",
+    "height": "195",
+    "club": "Club Brugge KV"
+  },
+  "Kevin De Bruyne": {
+    "dob": "1991-06-28",
+    "height": "181",
+    "club": "SSC Napoli"
+  },
+  "Leonardo Balerdi": {
+    "dob": "1999-01-26",
+    "height": "187",
+    "club": "Marseille"
+  },
+  "Enzo Fernandez": {
+    "dob": "2001-01-17",
+    "height": "178",
+    "club": "Chelsea"
+  },
+  "Alexis Mac Allister": {
+    "dob": "1998-12-24",
+    "height": "176",
+    "club": "Liverpool"
+  },
+  "Rodrigo De Paul": {
+    "dob": "1994-05-24",
+    "height": "180",
+    "club": "Inter Miami"
+  },
+  "Exequiel Palacios": {
+    "dob": "1998-10-05",
+    "height": "177",
+    "club": "Bayer Leverkusen"
+  },
+  "Leandro Paredes": {
+    "dob": "1994-06-29",
+    "height": "180",
+    "club": "Boca Juniors"
+  },
+  "Lionel Messi": {
+    "dob": "1987-06-24",
+    "height": "170",
+    "club": "Inter Miami"
+  },
+  "Lautaro Martinez": {
+    "dob": "1997-08-22",
+    "height": "174",
+    "club": "Inter Milan"
+  },
+  "Julian Alvarez": {
+    "dob": "2000-01-31",
+    "height": "173",
+    "club": "Atlético Madrid"
+  },
+  "Mathew Ryan": {
+    "dob": "1992-04-08",
+    "height": "184",
+    "club": "Levante"
+  },
+  "Joe Gauci": {
+    "dob": "2000-07-04",
+    "height": "194",
+    "club": "Aston Villa"
+  },
+  "Harry Souttar": {
+    "dob": "1998-10-22",
+    "height": "198",
+    "club": "Leicester City"
+  },
+  "Alessandro Circati": {
+    "dob": "2003-10-10",
+    "club": "Parma"
+  },
+  "Jordan Bos": {
+    "dob": "2002-10-29",
+    "club": "Feyenoord"
+  },
+  "Aziz Behich": {
+    "dob": "1990-12-16",
+    "height": "170",
+    "club": "Melbourne City"
+  },
+  "Cameron Burgess": {
+    "dob": "1995-10-21",
+    "height": "194",
+    "club": "Swansea City"
+  },
+  "Milos Degenek": {
+    "dob": "1994-04-28",
+    "height": "187",
+    "club": "APOEL"
+  },
+  "Jackson Irvine": {
+    "dob": "1993-03-07",
+    "height": "189",
+    "club": "FC St. Pauli"
+  },
+  "Riley McGree": {
+    "dob": "1998-11-02",
+    "height": "178",
+    "club": "Middlesbrough"
+  },
+  "Aiden O'Neill": {
+    "dob": "1998-07-04",
+    "club": "New York City FC"
+  },
+  "Connor Metcalfe": {
+    "dob": "1999-11-05",
+    "height": "183",
+    "club": "FC St. Pauli"
+  },
+  "Patrick Yazbek": {
+    "dob": "2002-04-05",
+    "height": "185",
+    "club": "Nashville SC"
+  },
+  "Craig Goodwin": {
+    "dob": "1991-12-16",
+    "height": "183",
+    "club": "Adelaide United FC"
+  },
+  "Nestory Irankunda": {
+    "dob": "2006-02-09",
+    "club": "Watford"
+  },
+  "Alexander Schlager": {
+    "dob": "1996-02-01",
+    "height": "184",
+    "club": "Red Bull Salzburg"
+  },
+  "Patrick Pentz": {
+    "dob": "1997-01-02",
+    "height": "183",
+    "club": "Brøndby"
+  },
+  "David Alaba": {
+    "dob": "1992-06-24",
+    "height": "180",
+    "club": "Real Madrid"
+  },
+  "Kevin Danso": {
+    "dob": "1998-09-19",
+    "height": "190",
+    "club": "Tottenham Hotspur"
+  },
+  "Philipp Lienhart": {
+    "dob": "1996-07-11",
+    "height": "189",
+    "club": "SC Freiburg"
+  },
+  "Stefan Posch": {
+    "dob": "1997-05-14",
+    "height": "190",
+    "club": "Mainz 05"
+  },
+  "Phillipp Mwene": {
+    "dob": "1994-01-29",
+    "height": "170",
+    "club": "Mainz 05"
+  },
+  "Alexander Prass": {
+    "dob": "2001-05-26",
+    "height": "180",
+    "club": "TSG Hoffenheim"
+  },
+  "Xaver Schlager": {
+    "dob": "1997-09-28",
+    "height": "174",
+    "club": "RB Leipzig"
+  },
+  "Marcel Sabitzer": {
+    "dob": "1994-03-17",
+    "height": "178",
+    "club": "Borussia Dortmund"
+  },
+  "Konrad Laimer": {
+    "dob": "1997-05-27",
+    "height": "180",
+    "club": "Bayern Munich"
+  },
+  "Jérémy Doku": {
+    "dob": "2002-05-27",
+    "height": "173",
+    "club": "Manchester City"
+  },
+  "Charles De Ketelaere": {
+    "dob": "2001-03-10",
+    "height": "193",
+    "club": "Atalanta"
+  },
+  "Leandro Trossard": {
+    "dob": "1994-12-04",
+    "height": "172",
+    "club": "Arsenal"
+  },
+  "Loïs Openda": {
+    "dob": "2000-02-16",
+    "height": "175",
+    "club": "Juventus"
+  },
+  "Romelu Lukaku": {
+    "dob": "1993-05-13",
+    "height": "191",
+    "club": "Napoli"
+  },
+  "Nikola Vasilj": {
+    "dob": "1995-12-02",
+    "height": "193",
+    "club": "FC St. Pauli"
+  },
+  "Sead Kolasinac": {
+    "dob": "1993-06-20",
+    "height": "183",
+    "club": "Atalanta"
+  },
+  "Tarik Muharemovic": {
+    "dob": "2003-02-28",
+    "height": "187",
+    "club": "Sassuolo"
+  },
+  "Nikola Katic": {
+    "dob": "1986-06-01"
+  },
+  "Amir Hadziahmetovic": {
+    "dob": "1997-03-08",
+    "height": "179",
+    "club": "Hull City"
+  },
+  "Benjamin Tahirovic": {
+    "dob": "2003-03-03",
+    "height": "191",
+    "club": "Brøndby"
+  },
+  "Armin Gigovic": {
+    "dob": "2002-04-06",
+    "height": "187",
+    "club": "Young Boys"
+  },
+  "Ivan Sunjic": {
+    "dob": "1996-10-09",
+    "height": "184",
+    "club": "Pafos"
+  },
+  "Dzenis Burnic": {
+    "dob": "1998-05-22",
+    "height": "181",
+    "club": "Karlsruher SC"
+  },
+  "Esmir Bajraktarevic": {
+    "dob": "2005-03-10",
+    "height": "175",
+    "club": "PSV"
+  },
+  "Amar Memic": {
+    "dob": "2001-01-20",
+    "height": "176",
+    "club": "Viktoria Plzeň"
+  },
+  "Ermedin Demirovic": {
+    "dob": "1998-03-25",
+    "height": "185",
+    "club": "VfB Stuttgart"
+  },
+  "Edin Dzeko": {
+    "dob": "1986-03-17",
+    "height": "193",
+    "club": "Schalke 04"
+  },
+  "Samed Bazdar": {
+    "dob": "2004-01-31",
+    "height": "186",
+    "club": "Jagiellonia Białystok"
+  },
+  "Haris Tabakovic": {
+    "dob": "1994-06-20",
+    "height": "196",
+    "club": "Borussia Mönchengladbach"
+  },
+  "Alisson": {
+    "dob": "1992-10-02",
+    "height": "193",
+    "club": "Liverpool"
+  },
+  "Éder Militão": {
+    "dob": "1998-01-18",
+    "height": "186",
+    "club": "Real Madrid"
+  },
+  "Gabriel Magalhães": {
+    "dob": "1997-12-19",
+    "height": "190",
+    "club": "Arsenal"
+  },
+  "Lucas Paquetá": {
+    "dob": "1997-08-27",
+    "height": "180",
+    "club": "Flamengo"
+  },
+  "Casemiro": {
+    "dob": "1992-02-23",
+    "height": "185",
+    "club": "Manchester United"
+  },
+  "Bruno Guimarães": {
+    "dob": "1997-11-16",
+    "height": "182",
+    "club": "Newcastle United"
+  },
+  "Vinicius Júnior": {
+    "dob": "2000-07-12",
+    "height": "176",
+    "club": "Real Madrid"
+  },
+  "Rodrygo": {
+    "dob": "2001-01-09",
+    "height": "174",
+    "club": "Real Madrid"
+  },
+  "Matheus Cunha": {
+    "dob": "1999-05-27",
+    "height": "183",
+    "club": "Manchester United"
+  },
+  "Gabriel Martinelli": {
+    "dob": "2001-06-18",
+    "height": "178",
+    "club": "Arsenal"
+  },
+  "Raphinha": {
+    "dob": "1996-12-14",
+    "height": "176",
+    "club": "Barcelona"
+  },
+  "Alphonso Davies": {
+    "dob": "2000-11-02",
+    "height": "185",
+    "club": "Bayern Munich"
+  },
+  "Alistair Johnston": {
+    "dob": "1998-10-08",
+    "height": "180",
+    "club": "Celtic"
+  },
+  "Samuel Adekugbe": {
+    "dob": "1995-01-16",
+    "height": "178",
+    "club": "Vancouver Whitecaps FC"
+  },
+  "Tajon Buchanan": {
+    "dob": "1999-02-08",
+    "height": "183",
+    "club": "Villarreal"
+  },
+  "Liam Millar": {
+    "dob": "1999-09-27",
+    "height": "176",
+    "club": "Hull City"
+  },
+  "Cyle Larin": {
+    "dob": "1995-04-17",
+    "height": "188",
+    "club": "Southampton"
+  },
+  "Jonathan David": {
+    "dob": "2000-01-14",
+    "height": "178",
+    "club": "Juventus"
+  },
+  "Yahia Fofana": {
+    "dob": "2000-08-21",
+    "height": "194",
+    "club": "Çaykur Rizespor"
+  },
+  "Ghislain Konan": {
+    "dob": "1995-12-27",
+    "height": "178",
+    "club": "Gil Vicente"
+  },
+  "Wilfried Singo": {
+    "dob": "2000-12-25",
+    "height": "190",
+    "club": "Galatasaray"
+  },
+  "Odilon Kossounou": {
+    "dob": "2001-01-04",
+    "height": "191",
+    "club": "Atalanta"
+  },
+  "Evan Ndicka": {
+    "dob": "1999-08-20",
+    "height": "192",
+    "club": "Roma"
+  },
+  "Willy Boly": {
+    "dob": "1991-02-03",
+    "height": "195",
+    "club": "Nottingham Forest"
+  },
+  "Emmanuel Agbadou": {
+    "dob": "1997-06-17",
+    "height": "192",
+    "club": "Beşiktaş"
+  },
+  "Ousmane Diomande": {
+    "dob": "2003-12-04",
+    "club": "Sporting CP"
+  },
+  "Franck Kessie": {
+    "dob": "1996-12-19",
+    "height": "183",
+    "club": "Al-Ahli"
+  },
+  "Seko Fofana": {
+    "dob": "1995-05-07",
+    "height": "185",
+    "club": "Porto"
+  },
+  "Jean-Philippe Gbamin": {
+    "dob": "1995-09-25",
+    "height": "186",
+    "club": "Metz"
+  },
+  "Amad Diallo": {
+    "dob": "2002-07-11",
+    "height": "173",
+    "club": "Manchester United"
+  },
+  "Sébastien Haller": {
+    "dob": "1994-06-22",
+    "height": "190",
+    "club": "Utrecht"
+  },
+  "Simon Adingra": {
+    "dob": "2002-01-01",
+    "height": "175",
+    "club": "Monaco"
+  },
+  "Yan Diomande": {
+    "dob": "2006-11-14",
+    "height": "182",
+    "club": "RB Leipzig"
+  },
+  "Evann Guessand": {
+    "dob": "2001-07-01",
+    "height": "185",
+    "club": "Crystal Palace"
+  },
+  "Oumar Diakite": {
+    "dob": "2003-12-20",
+    "height": "182",
+    "club": "Cercle Brugge"
+  },
+  "Lionel Mpasi": {
+    "dob": "1994-08-01",
+    "height": "182",
+    "club": "Le Havre"
+  },
+  "Aaron Wan-Bissaka": {
+    "dob": "1997-11-26",
+    "club": "West Ham United"
+  },
+  "Axel Tuanzebe": {
+    "dob": "1997-11-14",
+    "height": "185",
+    "club": "Burnley"
+  },
+  "Arthur Masuaku": {
+    "dob": "1993-11-07",
+    "height": "179",
+    "club": "Lens"
+  },
+  "Chancel Mbemba": {
+    "dob": "1994-08-08",
+    "height": "182",
+    "club": "Lille"
+  },
+  "Joris Kayembe": {
+    "dob": "1994-08-08",
+    "height": "180",
+    "club": "Genk"
+  },
+  "Charles Pickel": {
+    "dob": "1997-05-15",
+    "height": "185",
+    "club": "Espanyol"
+  },
+  "Ngal'ayel Mukau": {
+    "dob": "2004-11-03",
+    "height": "188",
+    "club": "Lille"
+  },
+  "Edo Kayembe": {
+    "dob": "1998-06-03",
+    "height": "183",
+    "club": "Watford"
+  },
+  "Samuel Moutoussamy": {
+    "dob": "1996-08-12",
+    "height": "176",
+    "club": "Atromitos"
+  },
+  "Noah Sadiki": {
+    "dob": "2004-12-17",
+    "height": "173",
+    "club": "Sunderland"
+  },
+  "Théo Bongonda": {
+    "dob": "1995-11-20",
+    "height": "177",
+    "club": "Spartak Moscow"
+  },
+  "Meschak Elia": {
+    "dob": "1997-08-06",
+    "height": "173",
+    "club": "Alanyaspor"
+  },
+  "Yoane Wissa": {
+    "dob": "1996-09-03",
+    "height": "176",
+    "club": "Newcastle United"
+  },
+  "Brian Cipenga": {
+    "dob": "1998-03-11",
+    "height": "172",
+    "club": "Castellón"
+  },
+  "Fiston Mayele": {
+    "dob": "1994-06-28",
+    "height": "180",
+    "club": "Pyramids"
+  },
+  "Cédric Bakambu": {
+    "dob": "1991-04-11",
+    "height": "182",
+    "club": "Betis"
+  },
+  "Nathanaël Mbuku": {
+    "dob": "2002-03-16",
+    "height": "170",
+    "club": "Montpellier"
+  },
+  "Camilo Vargas": {
+    "dob": "1989-03-09",
+    "height": "190",
+    "club": "Atlas"
+  },
+  "David Ospina": {
+    "dob": "1988-08-31",
+    "height": "183",
+    "club": "Atlético Nacional"
+  },
+  "Dávinson Sánchez": {
+    "dob": "1996-06-12",
+    "height": "187",
+    "club": "Galatasaray"
+  },
+  "Yerry Mina": {
+    "dob": "1994-09-23",
+    "height": "195",
+    "club": "Cagliari"
+  },
+  "Johan Mojica": {
+    "dob": "1992-08-21",
+    "height": "185",
+    "club": "Mallorca"
+  },
+  "Jhon Lucumí": {
+    "dob": "1998-06-26",
+    "club": "Bologna"
+  },
+  "Santiago Arias": {
+    "dob": "1992-01-13",
+    "height": "178",
+    "club": "Independiente"
+  },
+  "Jefferson Lerma": {
+    "dob": "1994-10-25",
+    "height": "179",
+    "club": "Crystal Palace"
+  },
+  "Kevin Castaño": {
+    "dob": "2000-09-29",
+    "height": "177",
+    "club": "River Plate"
+  },
+  "Richard Rios": {
+    "dob": "2000-06-02",
+    "height": "185",
+    "club": "Benfica"
+  },
+  "James Rodriguez": {
+    "dob": "1991-07-12",
+    "height": "181",
+    "club": "Minnesota United"
+  },
+  "Juan Fernando Quintero": {
+    "dob": "1993-01-18",
+    "height": "168",
+    "club": "River Plate"
+  },
+  "Jorge Carrascal": {
+    "dob": "1998-05-25",
+    "height": "180",
+    "club": "Flamengo"
+  },
+  "Luis Suarez": {
+    "dob": "1987-01-24",
+    "height": "182",
+    "club": "Inter Miami"
+  },
+  "Vozinha": {
+    "dob": "1986-06-03",
+    "height": "189",
+    "club": "Chaves"
+  },
+  "Logan Costa": {
+    "dob": "2001-04-01",
+    "height": "190",
+    "club": "Villarreal"
+  },
+  "Steven Moreira": {
+    "dob": "1994-08-13",
+    "height": "176",
+    "club": "Columbus Crew"
+  },
+  "Wagner Pina": {
+    "dob": "2002-11-03",
+    "height": "180",
+    "club": "Trabzonspor"
+  },
+  "Yannick Semedo": {
+    "dob": "1995-12-29",
+    "height": "171",
+    "club": "Farense"
+  },
+  "Patrick Andrade": {
+    "dob": "1993-02-09",
+    "club": "Araz-Naxçıvan"
+  },
+  "Jamiro Monteiro": {
+    "dob": "1993-11-23",
+    "height": "170",
+    "club": "PEC Zwolle"
+  },
+  "Deroy Duarte": {
+    "dob": "1999-07-04",
+    "height": "177",
+    "club": "Ludogorets Razgrad"
+  },
+  "Garry Rodrigues": {
+    "dob": "1990-11-27",
+    "height": "172",
+    "club": "Apollon Limassol"
+  },
+  "Jovane Cabral": {
+    "dob": "1998-06-14",
+    "height": "176",
+    "club": "Estrela Amadora"
+  },
+  "Ryan Mendes": {
+    "dob": "1990-01-08",
+    "height": "178",
+    "club": "Iğdır"
+  },
+  "Dailon Livramento": {
+    "dob": "2001-05-04",
+    "height": "185",
+    "club": "Casa Pia"
+  },
+  "Willy Semedo": {
+    "dob": "1994-04-27",
+    "height": "185",
+    "club": "Omonia"
+  },
+  "Lovro Majer": {
+    "dob": "1998-01-17",
+    "height": "178",
+    "club": "VfL Wolfsburg"
+  },
+  "Mario Pasalic": {
+    "dob": "1995-02-09",
+    "height": "188",
+    "club": "Atalanta"
+  },
+  "Petar Sucic": {
+    "dob": "2003-10-25",
+    "height": "183",
+    "club": "Inter Milan"
+  },
+  "Ivan Perišić": {
+    "dob": "1989-02-02",
+    "height": "186",
+    "club": "PSV"
+  },
+  "Marco Pasalic": {
+    "dob": "2000-09-14",
+    "height": "177",
+    "club": "Orlando City"
+  },
+  "Ante Budimir": {
+    "dob": "1991-07-22",
+    "height": "190",
+    "club": "Osasuna"
+  },
+  "Andrej Kramarić": {
+    "dob": "1991-06-19",
+    "height": "177",
+    "club": "TSG Hoffenheim"
+  },
+  "Franjo Ivanovic": {
+    "dob": "2003-10-01",
+    "height": "185",
+    "club": "Benfica"
+  },
+  "Eloy Room": {
+    "dob": "1989-02-06",
+    "height": "190",
+    "club": "Miami FC"
+  },
+  "Armando Obispo": {
+    "dob": "1999-03-05",
+    "height": "185",
+    "club": "PSV"
+  },
+  "Sherel Floranus": {
+    "dob": "1998-08-23",
+    "height": "185",
+    "club": "PEC Zwolle"
+  },
+  "Jurien Gaari": {
+    "dob": "1993-12-23",
+    "height": "180",
+    "club": "Abha"
+  },
+  "Joshua Brenet": {
+    "dob": "1994-03-20",
+    "height": "181",
+    "club": "Kayserispor"
+  },
+  "Shurandy Sambo": {
+    "dob": "2001-08-19",
+    "height": "174",
+    "club": "Sparta Rotterdam"
+  },
+  "Livano Comenencia": {
+    "dob": "2004-02-03",
+    "club": "Zürich"
+  },
+  "Godfried Roemeratoe": {
+    "dob": "1999-08-19",
+    "height": "178",
+    "club": "RKC Waalwijk"
+  },
+  "Juninho Bacuna": {
+    "dob": "1997-08-07",
+    "height": "178",
+    "club": "Volendam"
+  },
+  "Leandro Bacuna": {
+    "dob": "1991-08-21",
+    "club": "Iğdır FK"
+  },
+  "Tahith Chong": {
+    "dob": "1999-12-04",
+    "height": "185",
+    "club": "Sheffield United"
+  },
+  "Kenji Gorre": {
+    "dob": "1994-09-29",
+    "height": "178",
+    "club": "Maccabi Haifa"
+  },
+  "Jearl Margaritha": {
+    "dob": "2000-04-10",
+    "height": "181",
+    "club": "Beveren"
+  },
+  "Jurgen Locadia": {
+    "dob": "1993-11-07",
+    "height": "185",
+    "club": "Miami FC"
+  },
+  "Jeremy Antonisse": {
+    "dob": "2002-03-29",
+    "height": "184",
+    "club": "A.E. Kifisia"
+  },
+  "Gervane Kastaneer": {
+    "dob": "1996-06-09",
+    "height": "185",
+    "club": "Terengganu"
+  },
+  "Sontje Hansen": {
+    "dob": "2002-05-18",
+    "height": "173",
+    "club": "Middlesbrough"
+  },
+  "Matej Kovar": {
+    "dob": "2000-05-17",
+    "height": "196",
+    "club": "PSV"
+  },
+  "Vladimir Coufal": {
+    "dob": "1992-08-22",
+    "height": "174",
+    "club": "TSG Hoffenheim"
+  },
+  "Jaroslav Zeleny": {
+    "dob": "1992-08-20",
+    "height": "190",
+    "club": "Sparta Prague"
+  },
+  "Tomas Holes": {
+    "dob": "1993-03-31",
+    "height": "180",
+    "club": "Slavia Prague"
+  },
+  "David Zima": {
+    "dob": "2000-11-08",
+    "height": "190",
+    "club": "Slavia Prague"
+  },
+  "Michal Sadilek": {
+    "dob": "1999-05-31",
+    "height": "169",
+    "club": "Slavia Prague"
+  },
+  "Lukas Provod": {
+    "dob": "1996-10-23",
+    "height": "189",
+    "club": "Slavia Prague"
+  },
+  "Lukas Cerv": {
+    "dob": "2001-04-10",
+    "height": "182",
+    "club": "Viktoria Plzeň"
+  },
+  "Tomas Soucek": {
+    "dob": "1995-02-27",
+    "height": "192",
+    "club": "West Ham United"
+  },
+  "Pavel Sulc": {
+    "dob": "2000-12-29",
+    "height": "177",
+    "club": "Lyon"
+  },
+  "Matej Vydra": {
+    "dob": "1992-05-01",
+    "height": "180",
+    "club": "Viktoria Plzeň"
+  },
+  "Tomas Chory": {
+    "dob": "1995-01-26",
+    "height": "199",
+    "club": "Slavia Prague"
+  },
+  "Adam Hlozek": {
+    "dob": "2002-07-25",
+    "height": "188",
+    "club": "TSG Hoffenheim"
+  },
+  "Patrik Schick": {
+    "dob": "1996-01-24",
+    "height": "191",
+    "club": "Bayer Leverkusen"
+  },
+  "Hernán Galíndez": {
+    "dob": "1987-03-30",
+    "height": "189",
+    "club": "Huracán"
+  },
+  "Gonzalo Valle": {
+    "dob": "1996-02-28",
+    "club": "L.D.U. Quito"
+  },
+  "Piero Hincapié": {
+    "dob": "2002-01-09",
+    "height": "184",
+    "club": "Arsenal"
+  },
+  "Pervis Estupiñán": {
+    "dob": "1998-01-21",
+    "height": "175",
+    "club": "AC Milan"
+  },
+  "Willian Pacho": {
+    "dob": "2001-10-16",
+    "height": "188",
+    "club": "Paris Saint-Germain"
+  },
+  "Ángelo Preciado": {
+    "dob": "1998-02-18",
+    "height": "174",
+    "club": "Atlético Mineiro"
+  },
+  "Joel Ordóñez": {
+    "dob": "2004-04-21",
+    "height": "188",
+    "club": "Club Brugge"
+  },
+  "Moises Caicedo": {
+    "dob": "2001-11-02",
+    "height": "178",
+    "club": "Chelsea"
+  },
+  "Kendry Paez": {
+    "dob": "2007-05-04",
+    "height": "178",
+    "club": "River Plate"
+  },
+  "Pedro Vite": {
+    "dob": "2002-03-09",
+    "height": "168",
+    "club": "UNAM"
+  },
+  "Leonardo Campana": {
+    "dob": "2000-07-24",
+    "height": "187",
+    "club": "New England Revolution"
+  },
+  "Gonzalo Plata": {
+    "dob": "2000-11-01",
+    "height": "178",
+    "club": "Flamengo"
+  },
+  "Nilson Angulo": {
+    "dob": "2003-06-19",
+    "height": "184",
+    "club": "Sunderland"
+  },
+  "Alan Minda": {
+    "dob": "2003-05-14",
+    "height": "171",
+    "club": "Atlético Mineiro"
+  },
+  "Enner Valencia": {
+    "dob": "1989-11-04",
+    "club": "Pachuca"
+  },
+  "Mohamed El Shenawy": {
+    "dob": "1988-12-18",
+    "height": "191",
+    "club": "Al Ahly"
+  },
+  "Mohamed Hany": {
+    "dob": "1996-02-02",
+    "height": "175",
+    "club": "Al Ahly"
+  },
+  "Yasser Ibrahim": {
+    "dob": "1993-02-10",
+    "height": "185",
+    "club": "Al Ahly"
+  },
+  "Khaled Sobhi": {
+    "dob": "1995-05-03",
+    "height": "187",
+    "club": "Al Masry"
+  },
+  "Ramy Rabia": {
+    "dob": "1993-05-20",
+    "height": "183",
+    "club": "Al Ain"
+  },
+  "Hossam Abdelmaguid": {
+    "dob": "2001-04-30",
+    "height": "193",
+    "club": "Zamalek"
+  },
+  "Ahmed Fatouh": {
+    "dob": "1998-03-22",
+    "height": "178",
+    "club": "Zamalek"
+  },
+  "Marwan Attia": {
+    "dob": "1998-08-01",
+    "height": "176",
+    "club": "Al Ahly"
+  },
+  "John Stones": {
+    "dob": "1994-05-28",
+    "club": "Manchester City"
+  },
+  "Marc Guéhi": {
+    "dob": "2000-07-13",
+    "club": "Manchester City"
+  },
+  "Ezri Konsa": {
+    "dob": "1997-10-23",
+    "club": "Aston Villa"
+  },
+  "Trent Alexander-Arnold": {
+    "dob": "1998-10-07",
+    "club": "Real Madrid"
+  },
+  "Reece James": {
+    "dob": "1999-12-08",
+    "club": "Chelsea"
+  },
+  "Dan Burn": {
+    "dob": "1992-05-09",
+    "club": "Newcastle United"
+  },
+  "Jordan Henderson": {
+    "dob": "1990-06-17",
+    "club": "Brentford"
+  },
+  "Declan Rice": {
+    "dob": "1999-01-14",
+    "club": "Arsenal"
+  },
+  "Jude Bellingham": {
+    "dob": "2003-06-29",
+    "club": "Real Madrid"
+  },
+  "Cole Palmer": {
+    "dob": "2002-05-06",
+    "club": "Chelsea"
+  },
+  "Morgan Rogers": {
+    "dob": "2002-07-26",
+    "club": "Aston Villa"
+  },
+  "Phil Foden": {
+    "dob": "2000-05-28",
+    "club": "Manchester City"
+  },
+  "Bukayo Saka": {
+    "dob": "2001-09-05",
+    "club": "Arsenal"
+  },
+  "Harry Kane": {
+    "dob": "1993-07-28",
+    "club": "Bayern Munich"
+  },
+  "Marcus Rashford": {
+    "dob": "1997-10-31",
+    "club": "Barcelona"
+  },
+  "Ollie Watkins": {
+    "dob": "1995-12-30",
+    "club": "Aston Villa"
+  },
+  "Unai Simon": {
+    "dob": "1997-06-11",
+    "height": "190",
+    "club": "Athletic Bilbao"
+  },
+  "Robin Le Normand": {
+    "dob": "1996-11-11",
+    "height": "187",
+    "club": "Atlético Madrid"
+  },
+  "Aymeric Laporte": {
+    "dob": "1994-05-27",
+    "height": "191",
+    "club": "Athletic Bilbao"
+  },
+  "Dean Huijsen": {
+    "dob": "2005-04-14",
+    "height": "196",
+    "club": "Real Madrid"
+  },
+  "Pedro Porro": {
+    "dob": "1999-09-13",
+    "height": "173",
+    "club": "Tottenham Hotspur"
+  },
+  "Dani Carvajal": {
+    "dob": "1992-01-11",
+    "height": "173",
+    "club": "Real Madrid"
+  },
+  "Marc Cucurella": {
+    "dob": "1998-07-22",
+    "height": "174",
+    "club": "Chelsea"
+  },
+  "Martín Zubimendi": {
+    "dob": "1999-02-02",
+    "height": "181",
+    "club": "Arsenal"
+  },
+  "Pedri": {
+    "dob": "2002-11-25",
+    "height": "174",
+    "club": "Barcelona"
+  },
+  "Fabian Ruiz": {
+    "dob": "1996-04-03",
+    "height": "189",
+    "club": "Paris Saint-Germain"
+  },
+  "Mikel Merino": {
+    "dob": "1996-06-22",
+    "height": "189",
+    "club": "Arsenal"
+  },
+  "Lamine Yamal": {
+    "dob": "2007-07-13",
+    "height": "179",
+    "club": "Barcelona"
+  },
+  "Dani Olmo": {
+    "dob": "1998-05-07",
+    "height": "182",
+    "club": "Barcelona"
+  },
+  "Ferran Torres": {
+    "dob": "2000-02-29",
+    "height": "182",
+    "club": "Barcelona"
+  },
+  "Álvaro Morata": {
+    "dob": "1992-10-23",
+    "height": "190",
+    "club": "Como"
+  },
+  "Mikel Oyarzabal": {
+    "dob": "1997-04-21",
+    "height": "181",
+    "club": "Real Sociedad"
+  },
+  "Mike Maignan": {
+    "dob": "1995-07-03",
+    "height": "191",
+    "club": "AC Milan"
+  },
+  "Theo Hernandez": {
+    "dob": "1997-10-06",
+    "height": "184",
+    "club": "Al Hilal"
+  },
+  "William Saliba": {
+    "dob": "2001-03-24",
+    "height": "192",
+    "club": "Arsenal"
+  },
+  "Jules Kounde": {
+    "dob": "1998-11-12",
+    "height": "181",
+    "club": "Barcelona"
+  },
+  "Ibrahima Konate": {
+    "dob": "1999-05-25",
+    "height": "194",
+    "club": "Liverpool"
+  },
+  "Dayot Upamecano": {
+    "dob": "1998-10-27",
+    "height": "186",
+    "club": "Bayern Munich"
+  },
+  "Lucas Digne": {
+    "dob": "1993-07-20",
+    "height": "178",
+    "club": "Aston Villa"
+  },
+  "Aurélien Tchouaméni": {
+    "dob": "2000-01-27",
+    "height": "188",
+    "club": "Real Madrid"
+  },
+  "Eduardo Camavinga": {
+    "dob": "2002-11-10",
+    "height": "185",
+    "club": "Real Madrid"
+  },
+  "Manu Kone": {
+    "dob": "2001-05-17",
+    "height": "185",
+    "club": "Roma"
+  },
+  "Adrien Rabiot": {
+    "dob": "1995-04-03",
+    "height": "191",
+    "club": "AC Milan"
+  },
+  "Michael Olise": {
+    "dob": "2001-12-12",
+    "height": "180",
+    "club": "Bayern Munich"
+  },
+  "Ousmane Dembele": {
+    "dob": "1997-05-15",
+    "height": "178",
+    "club": "Paris Saint-Germain"
+  },
+  "Bradley Barcola": {
+    "dob": "2002-09-02",
+    "height": "182",
+    "club": "Paris Saint-Germain"
+  },
+  "Désiré Doué": {
+    "dob": "2005-06-03",
+    "height": "181",
+    "club": "Paris Saint-Germain"
+  },
+  "Kingsley Coman": {
+    "dob": "1996-06-13",
+    "height": "181",
+    "club": "Al-Nassr"
+  },
+  "Hugo Ekitike": {
+    "dob": "2002-06-20",
+    "height": "190",
+    "club": "Liverpool"
+  },
+  "Kylian Mbappe": {
+    "dob": "1998-12-20",
+    "height": "180",
+    "club": "Real Madrid"
+  },
+  "Marc-André ter Stegen": {
+    "dob": "1992-04-30",
+    "height": "187",
+    "club": "Girona"
+  },
+  "Jonathan Tah": {
+    "dob": "1996-02-11",
+    "height": "195",
+    "club": "Bayern Munich"
+  },
+  "David Raum": {
+    "dob": "1998-04-22",
+    "height": "181",
+    "club": "RB Leipzig"
+  },
+  "Nico Schlotterbeck": {
+    "dob": "1999-12-01",
+    "height": "191",
+    "club": "Borussia Dortmund"
+  },
+  "Antonio Rüdiger": {
+    "dob": "1993-03-03",
+    "height": "190",
+    "club": "Real Madrid"
+  },
+  "Waldemar Anton": {
+    "dob": "1996-07-20",
+    "height": "189",
+    "club": "Borussia Dortmund"
+  },
+  "Ridle Baku": {
+    "dob": "1998-04-08",
+    "height": "176",
+    "club": "RB Leipzig"
+  },
+  "Maximilian Mittelstadt": {
+    "dob": "1997-03-18",
+    "height": "180",
+    "club": "VfB Stuttgart"
+  },
+  "Joshua Kimmich": {
+    "dob": "1995-02-08",
+    "height": "177",
+    "club": "Bayern Munich"
+  },
+  "Florian Wirtz": {
+    "dob": "2003-05-03",
+    "height": "176",
+    "club": "Liverpool"
+  },
+  "Felix Nmecha": {
+    "dob": "2000-10-10",
+    "height": "190",
+    "club": "Borussia Dortmund"
+  },
+  "Leon Goretzka": {
+    "dob": "1995-02-06",
+    "height": "189",
+    "club": "Bayern Munich"
+  },
+  "Jamal Musiala": {
+    "dob": "2003-02-26",
+    "height": "186",
+    "club": "Bayern Munich"
+  },
+  "Serge Gnabry": {
+    "dob": "1995-07-14",
+    "height": "176",
+    "club": "Bayern Munich"
+  },
+  "Kai Havertz": {
+    "dob": "1999-06-11",
+    "height": "193",
+    "club": "Arsenal"
+  },
+  "Leroy Sane": {
+    "dob": "1996-01-11",
+    "height": "183",
+    "club": "Galatasaray"
+  },
+  "Karim Adeyemi": {
+    "dob": "2002-01-18",
+    "height": "180",
+    "club": "Borussia Dortmund"
+  },
+  "Nick Woltemade": {
+    "dob": "2002-02-14",
+    "height": "198",
+    "club": "Newcastle United"
+  },
+  "Lawrence Ati Zigi": {
+    "dob": "1996-11-29",
+    "height": "188",
+    "club": "St. Gallen"
+  },
+  "Tariq Lamptey": {
+    "dob": "2000-09-30",
+    "height": "163",
+    "club": "Fiorentina"
+  },
+  "Mohammed Salisu": {
+    "dob": "1999-04-17",
+    "height": "191",
+    "club": "Monaco"
+  },
+  "Alidu Seidu": {
+    "dob": "2000-06-04",
+    "height": "173",
+    "club": "Rennes"
+  },
+  "Alexander Djiku": {
+    "dob": "1994-08-09",
+    "height": "182",
+    "club": "Spartak Moscow"
+  },
+  "Caleb Yirenkyi": {
+    "dob": "2006-01-15",
+    "height": "182",
+    "club": "Nordsjælland"
+  },
+  "Thomas Partey": {
+    "dob": "1993-06-13",
+    "height": "185",
+    "club": "Villarreal"
+  },
+  "Kamaldeen Sulemana": {
+    "dob": "2002-02-15",
+    "height": "174",
+    "club": "Atalanta"
+  },
+  "Mohammed Kudus": {
+    "dob": "2000-08-02",
+    "height": "175",
+    "club": "Tottenham Hotspur"
+  },
+  "Inaki Williams": {
+    "dob": "1994-06-15",
+    "height": "186",
+    "club": "Athletic Bilbao"
+  },
+  "Jordan Ayew": {
+    "dob": "1991-09-11",
+    "height": "182",
+    "club": "Leicester City"
+  },
+  "Joseph Paintsil": {
+    "dob": "1998-02-01",
+    "height": "170",
+    "club": "LA Galaxy"
+  },
+  "Osman Bukari": {
+    "dob": "1998-12-13",
+    "height": "170",
+    "club": "Widzew Łódź"
+  },
+  "Antoine Semenyo": {
+    "dob": "2000-01-07",
+    "height": "185",
+    "club": "Manchester City"
+  },
+  "Johny Placide": {
+    "dob": "1988-01-29",
+    "height": "181",
+    "club": "Bastia"
+  },
+  "Carlens Arcus": {
+    "dob": "1996-06-28",
+    "height": "180",
+    "club": "Angers"
+  },
+  "Martin Expérience": {
+    "dob": "1999-03-09",
+    "height": "178",
+    "club": "Nancy"
+  },
+  "Jean-Kevin Duverne": {
+    "dob": "1997-07-12",
+    "height": "186",
+    "club": "Gent"
+  },
+  "Ricardo Adé": {
+    "dob": "1990-05-21",
+    "club": "L.D.U. Quito"
+  },
+  "Duke Lacroix": {
+    "dob": "1993-10-14",
+    "club": "Colorado Springs Switchbacks"
+  },
+  "Garven Metusala": {
+    "dob": "1999-12-31",
+    "height": "185",
+    "club": "Colorado Springs Switchbacks"
+  },
+  "Hannes Delcroix": {
+    "dob": "1999-02-28",
+    "height": "185",
+    "club": "Lugano"
+  },
+  "Leverton Pierre": {
+    "dob": "1998-03-09",
+    "height": "181",
+    "club": "Vizela"
+  },
+  "Danley Jean Jacques": {
+    "dob": "2000-05-20",
+    "height": "182",
+    "club": "Philadelphia Union"
+  },
+  "Jean-Ricner Bellegarde": {
+    "dob": "1998-06-27",
+    "club": "Wolverhampton Wanderers"
+  },
+  "Christopher Attys": {
+    "dob": "2001-03-13",
+    "height": "186",
+    "club": "Triestina"
+  },
+  "Josue Casimir": {
+    "dob": "2001-09-24",
+    "height": "178",
+    "club": "Auxerre"
+  },
+  "Ruben Providence": {
+    "dob": "2001-07-07",
+    "height": "178",
+    "club": "Almere City"
+  },
+  "Duckens Nazon": {
+    "dob": "1994-04-07",
+    "height": "181",
+    "club": "Esteghlal"
+  },
+  "Louicius Deedson": {
+    "dob": "2001-02-11",
+    "height": "178",
+    "club": "FC Dallas"
+  },
+  "Frantzdy Pierrot": {
+    "dob": "1995-03-29",
+    "height": "194",
+    "club": "Çaykur Rizespor"
+  },
+  "Alireza Beiranvand": {
+    "dob": "1992-09-21",
+    "height": "195",
+    "club": "Tractor"
+  },
+  "Morteza Pouraliganji": {
+    "dob": "1992-04-19",
+    "height": "185",
+    "club": "Persepolis"
+  },
+  "Ehsan Hajsafi": {
+    "dob": "1990-02-25",
+    "height": "176",
+    "club": "Sepahan"
+  },
+  "Milad Mohammadi": {
+    "dob": "1993-09-29",
+    "height": "175",
+    "club": "Persepolis"
+  },
+  "Shojae Khalilzadeh": {
+    "dob": "1989-05-14",
+    "height": "182",
+    "club": "Tractor"
+  },
+  "Ramin Rezaeian": {
+    "dob": "1990-03-21",
+    "height": "184",
+    "club": "Foolad (Loan from Esteghlal)"
+  },
+  "Hossein Kanaani": {
+    "dob": "1994-03-23",
+    "height": "188",
+    "club": "Persepolis"
+  },
+  "Sadegh Moharrami": {
+    "dob": "1996-03-01",
+    "height": "174",
+    "club": "Tractor"
+  },
+  "Saleh Hardani": {
+    "dob": "1998-12-26",
+    "club": "Esteghlal"
+  },
+  "Saman Ghoddos": {
+    "dob": "1993-09-06",
+    "height": "176",
+    "club": "Kalba"
+  },
+  "Omid Noorafkan": {
+    "dob": "1997-04-09",
+    "height": "184",
+    "club": "Sepahan"
+  },
+  "Roozbeh Cheshmi": {
+    "dob": "1993-07-24",
+    "height": "192",
+    "club": "Esteghlal"
+  },
+  "Mohammad Mohebi": {
+    "dob": "1998-12-20",
+    "height": "185",
+    "club": "Rostov"
+  },
+  "Sardar Azmoun": {
+    "dob": "1995-01-01",
+    "height": "186",
+    "club": "Shabab Al Ahli"
+  },
+  "Mehdi Taremi": {
+    "dob": "1992-07-18",
+    "height": "187",
+    "club": "Olympiacos"
+  },
+  "Alireza Jahanbakhsh": {
+    "dob": "1993-08-11",
+    "height": "180",
+    "club": "Dender EH"
+  },
+  "Ali Gholizadeh": {
+    "dob": "1996-03-10",
+    "height": "176",
+    "club": "Lech Poznań"
+  },
+  "Jalal Hassan": {
+    "dob": "1991-05-18",
+    "height": "188",
+    "club": "Al-Zawraa"
+  },
+  "Rebin Sulaka": {
+    "dob": "1992-04-12",
+    "height": "192",
+    "club": "Port"
+  },
+  "Merchas Doski": {
+    "dob": "1999-12-07",
+    "height": "173",
+    "club": "Viktoria Plzeň"
+  },
+  "Zaid Tahseen": {
+    "dob": "2001-01-29",
+    "height": "193",
+    "club": "Pakhtakor"
+  },
+  "Manaf Younis": {
+    "dob": "1996-11-16",
+    "height": "190",
+    "club": "Al-Shorta"
+  },
+  "Zidane Iqbal": {
+    "dob": "2003-04-27",
+    "height": "181",
+    "club": "Utrecht"
+  },
+  "Amir Al-Ammari": {
+    "dob": "1997-07-27",
+    "height": "184",
+    "club": "Cracovia"
+  },
+  "Ali Jasim": {
+    "dob": "2004-01-20",
+    "height": "178",
+    "club": "Al-Najma"
+  },
+  "Youssef Amyn": {
+    "dob": "2003-08-21",
+    "height": "172",
+    "club": "AEK Larnaca"
+  },
+  "Aimar Sher": {
+    "dob": "2002-12-20",
+    "height": "175",
+    "club": "Sarpsborg 08"
+  },
+  "Marko Farji": {
+    "dob": "2004-03-16",
+    "club": "Venezia"
+  },
+  "Osama Rashid": {
+    "dob": "1992-01-17",
+    "height": "180",
+    "club": "Erbil SC"
+  },
+  "Ali Al-Hamadi": {
+    "dob": "2002-03-01",
+    "height": "184",
+    "club": "Ipswich Town"
+  },
+  "Aymen Hussein": {
+    "dob": "1996-03-22",
+    "height": "189",
+    "club": "Al-Karma"
+  },
+  "Mohanad Ali": {
+    "dob": "2000-06-20",
+    "height": "183",
+    "club": "Dibba"
+  },
+  "Yazeed Abulaila": {
+    "dob": "1993-01-08",
+    "height": "188",
+    "club": "Al-Hussein"
+  },
+  "Ihsan Haddad": {
+    "dob": "1994-02-05",
+    "club": "Al-Hussein"
+  },
+  "Mohammad Abu Hashish": {
+    "dob": "1995-05-09",
+    "club": "Al-Karma"
+  },
+  "Yazan Al-Arab": {
+    "dob": "1996-01-31",
+    "height": "188",
+    "club": "FC Seoul"
+  },
+  "Abdallah Nasib": {
+    "dob": "1994-02-25",
+    "club": "Al-Zawraa"
+  },
+  "Mohammad Abualnadi": {
+    "dob": "2001-02-08",
+    "height": "186",
+    "club": "Selangor"
+  },
+  "Nizar Al-Rashdan": {
+    "dob": "1999-03-23",
+    "club": "Qatar"
+  },
+  "Noor Al-Rawabdeh": {
+    "dob": "1997-02-24",
+    "height": "179",
+    "club": "Selangor"
+  },
+  "Mohannad Abu Taha": {
+    "dob": "2003-02-02",
+    "height": "176",
+    "club": "Al-Quwa Al-Jawiya"
+  },
+  "Amer Jamous": {
+    "dob": "2002-07-03",
+    "height": "177",
+    "club": "Al-Zawraa"
+  },
+  "Musa Al-Taamari": {
+    "dob": "1997-06-10",
+    "height": "178",
+    "club": "Rennes"
+  },
+  "Yazan Al-Naimat": {
+    "dob": "1999-06-04",
+    "height": "180",
+    "club": "Al-Arabi"
+  },
+  "Mahmoud Al-Mardi": {
+    "dob": "1993-10-06",
+    "club": "Al-Hussein"
+  },
+  "Ali Olwan": {
+    "dob": "2000-03-26",
+    "height": "184",
+    "club": "Al-Sailiya"
+  },
+  "Mohammad Abu Zrayq": {
+    "dob": "1997-12-30",
+    "height": "168",
+    "club": "Raja CA"
+  },
+  "Ibrahim Sabra": {
+    "dob": "2006-02-01",
+    "height": "183",
+    "club": "Lokomotiva Zagreb"
+  },
+  "Zion Suzuki": {
+    "dob": "2002-08-21",
+    "height": "190",
+    "club": "Parma"
+  },
+  "Henry Heroki Mochizuki": {
+    "dob": "2001-09-20",
+    "height": "192",
+    "club": "Machida Zelvia"
+  },
+  "Ayumu Seko": {
+    "dob": "2000-06-07",
+    "height": "185",
+    "club": "Le Havre"
+  },
+  "Junnosuke Suzuki": {
+    "dob": "2003-07-12",
+    "height": "185",
+    "club": "Copenhagen"
+  },
+  "Shogo Taniguchi": {
+    "dob": "1991-07-15",
+    "height": "183",
+    "club": "Sint-Truiden"
+  },
+  "Tsuyoshi Watanabe": {
+    "dob": "1997-02-05",
+    "club": "Feyenoord"
+  },
+  "Kaishu Sano": {
+    "dob": "2000-12-30",
+    "height": "176",
+    "club": "Mainz 05"
+  },
+  "Yuki Soma": {
+    "dob": "1997-02-25",
+    "height": "166",
+    "club": "Machida Zelvia"
+  },
+  "Ao Tanaka": {
+    "dob": "1998-09-10",
+    "height": "180",
+    "club": "Leeds United"
+  },
+  "Daichi Kamada": {
+    "dob": "1996-08-05",
+    "height": "184",
+    "club": "Crystal Palace"
+  },
+  "Takefusa Kubo": {
+    "dob": "2001-06-04",
+    "height": "173",
+    "club": "Real Sociedad"
+  },
+  "Ritsu Doan": {
+    "dob": "1998-06-16",
+    "height": "172",
+    "club": "Eintracht Frankfurt"
+  },
+  "Keito Nakamura": {
+    "dob": "2000-07-28",
+    "height": "180",
+    "club": "Reims"
+  },
+  "Takumi Minamino": {
+    "dob": "1995-01-16",
+    "height": "172",
+    "club": "Monaco"
+  },
+  "Shuto Machino": {
+    "dob": "1999-09-30",
+    "height": "185",
+    "club": "Borussia Mönchengladbach"
+  },
+  "Junya Ito": {
+    "dob": "1993-03-09",
+    "height": "176",
+    "club": "Genk"
+  },
+  "Ayase Ueda": {
+    "dob": "1998-08-28",
+    "height": "182",
+    "club": "Feyenoord"
+  },
+  "Kang-in Lee": {
+    "dob": "2001-02-19",
+    "height": "173",
+    "club": "Paris Saint-Germain"
+  },
+  "Jens Castrop": {
+    "dob": "2003-07-29",
+    "height": "177",
+    "club": "Borussia Mönchengladbach"
+  },
+  "Heung-min Son": {
+    "dob": "1992-07-08",
+    "height": "183",
+    "club": "Los Angeles FC"
+  },
+  "Hee-chan Hwang": {
+    "dob": "1996-01-26",
+    "height": "177",
+    "club": "Wolverhampton Wanderers"
+  },
+  "Abdulrahman Al-Sanbi": {
+    "dob": "2001-02-03",
+    "height": "181",
+    "club": "Al-Ahli"
+  },
+  "Saud Abdulhamid": {
+    "dob": "1999-07-18",
+    "height": "171",
+    "club": "Lens"
+  },
+  "Moteb Al-Harbi": {
+    "dob": "2000-02-20",
+    "height": "172",
+    "club": "Al-Hilal"
+  },
+  "Abdulrahman Al-Aboud": {
+    "dob": "1995-06-01",
+    "height": "174",
+    "club": "Al-Ittihad"
+  },
+  "Saleh Alshehri": {
+    "dob": "1993-11-01",
+    "height": "184",
+    "club": "Al-Ittihad"
+  },
+  "Abdullah Al-Hamdan": {
+    "dob": "1999-09-13",
+    "height": "184",
+    "club": "Al-Nassr"
+  },
+  "Yassine Bounou": {
+    "dob": "1991-04-05",
+    "height": "195",
+    "club": "Al Hilal"
+  },
+  "Achraf Hakimi": {
+    "dob": "1998-11-04",
+    "height": "181",
+    "club": "Paris Saint-Germain"
+  },
+  "Noussair Mazraoui": {
+    "dob": "1997-11-14",
+    "height": "183",
+    "club": "Manchester United"
+  },
+  "Nayef Aguerd": {
+    "dob": "1996-03-30",
+    "height": "190",
+    "club": "Marseille"
+  },
+  "Adam Masina": {
+    "dob": "1994-01-02",
+    "height": "189",
+    "club": "| clubnumber ="
+  },
+  "Sofyan Amrabat": {
+    "dob": "1996-08-21",
+    "height": "183",
+    "club": "Betis"
+  },
+  "Azzedine Ounahi": {
+    "dob": "2000-04-19",
+    "height": "182",
+    "club": "Girona"
+  },
+  "Eliesse Ben Seghir": {
+    "dob": "2005-02-16",
+    "height": "178",
+    "club": "Bayer Leverkusen"
+  },
+  "Bilal El Khannouss": {
+    "dob": "2004-05-10",
+    "height": "180",
+    "club": "VfB Stuttgart"
+  },
+  "Ismael Saibari": {
+    "dob": "2001-01-28",
+    "height": "185",
+    "club": "PSV Eindhoven"
+  },
+  "Youssef En-Nesyri": {
+    "dob": "1997-06-01",
+    "height": "188",
+    "club": "Al-Ittihad"
+  },
+  "Abde Ezzalzouli": {
+    "dob": "2001-12-17",
+    "height": "177",
+    "club": "Betis"
+  },
+  "Soufiane Rahimi": {
+    "dob": "1996-06-02",
+    "height": "183",
+    "club": "Al Ain"
+  },
+  "Brahim Diaz": {
+    "dob": "1999-08-03",
+    "height": "170",
+    "club": "Real Madrid"
+  },
+  "Ayoub El Kaabi": {
+    "dob": "1993-06-25",
+    "height": "182",
+    "club": "Olympiacos"
+  },
+  "Luis Malagón": {
+    "dob": "1997-03-02",
+    "height": "182",
+    "club": "América"
+  },
+  "Cesar Montes": {
+    "dob": "1997-02-24",
+    "height": "195",
+    "club": "Lokomotiv Moscow"
+  },
+  "Jesus Gallardo": {
+    "dob": "1994-08-15",
+    "height": "178",
+    "club": "Toluca"
+  },
+  "Israel Reyes": {
+    "dob": "2000-05-23",
+    "height": "180",
+    "club": "América"
+  },
+  "Diego Lainez": {
+    "dob": "2000-06-09",
+    "height": "168",
+    "club": "UANL"
+  },
+  "Edson Alvarez": {
+    "dob": "1997-10-24",
+    "height": "187",
+    "club": "Fenerbahçe"
+  },
+  "Orbelin Pineda": {
+    "dob": "1996-03-24",
+    "height": "169",
+    "club": "AEK Athens"
+  },
+  "Érick Sánchez": {
+    "dob": "1999-09-27",
+    "height": "167",
+    "club": "América"
+  },
+  "Hirving Lozano": {
+    "dob": "1995-07-30",
+    "height": "175",
+    "club": "San Diego FC"
+  },
+  "Santiago Giménez": {
+    "dob": "2001-04-18",
+    "height": "185",
+    "club": "AC Milan"
+  },
+  "Raúl Jiménez": {
+    "dob": "1991-05-05",
+    "height": "187",
+    "club": "Fulham"
+  },
+  "Roberto Alvarado": {
+    "dob": "1998-09-07",
+    "height": "176",
+    "club": "Guadalajara"
+  },
+  "Bart Verbruggen": {
+    "dob": "2002-08-18",
+    "height": "193",
+    "club": "Brighton & Hove Albion"
+  },
+  "Virgil van Dijk": {
+    "dob": "1991-07-08",
+    "height": "195",
+    "club": "Liverpool"
+  },
+  "Micky van de Ven": {
+    "dob": "2001-04-19",
+    "height": "193",
+    "club": "Tottenham Hotspur"
+  },
+  "Jurrien Timber": {
+    "dob": "2001-06-17",
+    "height": "179",
+    "club": "Arsenal"
+  },
+  "Denzel Dumfries": {
+    "dob": "1996-04-18",
+    "height": "188",
+    "club": "Inter Milan"
+  },
+  "Nathan Aké": {
+    "dob": "1995-02-18",
+    "height": "180",
+    "club": "Manchester City"
+  },
+  "Jeremie Frimpong": {
+    "dob": "2000-12-10",
+    "height": "171",
+    "club": "Liverpool"
+  },
+  "Jan Paul van Hecke": {
+    "dob": "2000-06-08",
+    "height": "189",
+    "club": "Brighton & Hove Albion"
+  },
+  "Tijjani Reijnders": {
+    "dob": "1998-07-29",
+    "height": "178",
+    "club": "Manchester City"
+  },
+  "Ryan Gravenberch": {
+    "dob": "2002-05-16",
+    "height": "190",
+    "club": "Liverpool"
+  },
+  "Teun Koopmeiners": {
+    "dob": "1998-02-28",
+    "height": "184",
+    "club": "Juventus"
+  },
+  "Frenkie de Jong": {
+    "dob": "1997-05-12",
+    "height": "182",
+    "club": "Barcelona"
+  },
+  "Xavi Simons": {
+    "dob": "2003-04-21",
+    "height": "179",
+    "club": "Tottenham Hotspur"
+  },
+  "Justin Kluivert": {
+    "dob": "1999-05-05",
+    "height": "171",
+    "club": "Bournemouth"
+  },
+  "Memphis Depay": {
+    "dob": "1994-02-13",
+    "height": "178",
+    "club": "Corinthians"
+  },
+  "Donyell Malen": {
+    "dob": "1999-01-19",
+    "height": "176",
+    "club": "Roma"
+  },
+  "Wout Weghorst": {
+    "dob": "1992-08-07",
+    "height": "197",
+    "club": "Ajax"
+  },
+  "Cody Gakpo": {
+    "dob": "1999-05-07",
+    "height": "193",
+    "club": "Liverpool"
+  },
+  "Orjan Nyland": {
+    "dob": "1990-09-10",
+    "height": "192",
+    "club": "Sevilla"
+  },
+  "Julian Ryerson": {
+    "dob": "1997-11-17",
+    "height": "183",
+    "club": "Borussia Dortmund"
+  },
+  "Kristoffer Vassbakk Ajer": {
+    "dob": "1998-04-17",
+    "height": "198",
+    "club": "Brentford"
+  },
+  "Marcus Holmgren Pedersen": {
+    "dob": "2000-07-16",
+    "height": "178",
+    "club": "Torino"
+  },
+  "David Møller Wolfe": {
+    "dob": "2002-04-23",
+    "height": "185",
+    "club": "Wolverhampton Wanderers"
+  },
+  "Torbjørn Heggem": {
+    "dob": "1999-01-12",
+    "club": "Bologna"
+  },
+  "Morten Thorsby": {
+    "dob": "1996-05-05",
+    "height": "188",
+    "club": "Cremonese"
+  },
+  "Martin Ødegaard": {
+    "dob": "1998-12-17",
+    "height": "178",
+    "club": "Arsenal"
+  },
+  "Sander Berge": {
+    "dob": "1998-02-14",
+    "height": "195",
+    "club": "Fulham"
+  },
+  "Andreas Schjelderup": {
+    "dob": "2004-06-01",
+    "height": "177",
+    "club": "Benfica"
+  },
+  "Patrick Berg": {
+    "dob": "1997-11-24",
+    "height": "178",
+    "club": "Bodø/Glimt"
+  },
+  "Erling Haaland": {
+    "dob": "2000-07-21",
+    "height": "195",
+    "club": "Manchester City"
+  },
+  "Alexander Sørloth": {
+    "dob": "1995-12-05",
+    "height": "195",
+    "club": "Atlético Madrid"
+  },
+  "Aron Dønnum": {
+    "dob": "1998-04-20",
+    "height": "179",
+    "club": "Toulouse"
+  },
+  "Jorgen Strand Larsen": {
+    "dob": "2000-02-06",
+    "height": "194",
+    "club": "Crystal Palace"
+  },
+  "Antonio Nusa": {
+    "dob": "2005-04-17",
+    "height": "183",
+    "club": "RB Leipzig"
+  },
+  "Oscar Bobb": {
+    "dob": "2003-07-12",
+    "height": "174",
+    "club": "Fulham"
+  },
+  "Alex Paulsen": {
+    "dob": "2002-07-04",
+    "height": "184",
+    "club": "Lechia Gdańsk"
+  },
+  "Michael Boxall": {
+    "dob": "1988-08-18",
+    "height": "188",
+    "club": "Minnesota United"
+  },
+  "Liberato Cacace": {
+    "dob": "2000-09-27",
+    "height": "183",
+    "club": "Wrexham"
+  },
+  "Tyler Bindon": {
+    "dob": "2005-01-27",
+    "height": "190",
+    "club": "Nottingham Forest"
+  },
+  "Francis de Vries": {
+    "dob": "1994-11-28",
+    "club": "Auckland FC"
+  },
+  "Finn Surman": {
+    "dob": "2003-09-23",
+    "height": "190",
+    "club": "Portland Timbers"
+  },
+  "Sarpreet Singh": {
+    "dob": "1999-02-20",
+    "height": "180",
+    "club": "Wellington Phoenix"
+  },
+  "Ryan Thomas": {
+    "dob": "1984-06-10"
+  },
+  "Matthew Garbett": {
+    "dob": "2002-04-13",
+    "height": "188",
+    "club": "Peterborough United"
+  },
+  "Marko Stamenić": {
+    "dob": "2002-02-19",
+    "height": "188",
+    "club": "Swansea City"
+  },
+  "Ben Old": {
+    "dob": "2002-08-13",
+    "height": "173",
+    "club": "Saint-Étienne"
+  },
+  "Elijah Just": {
+    "dob": "2000-05-01",
+    "height": "174",
+    "club": "Motherwell"
+  },
+  "Callum McCowatt": {
+    "dob": "1999-04-30",
+    "height": "179",
+    "club": "Silkeborg"
+  },
+  "Kosta Barbarouses": {
+    "dob": "1990-02-19",
+    "height": "171",
+    "club": "Western Sydney Wanderers"
+  },
+  "Orlando Mosquera": {
+    "dob": "1994-12-25",
+    "height": "191",
+    "club": "Al-Fayha"
+  },
+  "Luis Mejia": {
+    "dob": "1991-03-16",
+    "club": "Nacional"
+  },
+  "Fidel Escobar": {
+    "dob": "1995-01-09",
+    "height": "182",
+    "club": "Deportivo Saprissa"
+  },
+  "Michael Amir Murillo": {
+    "dob": "1996-02-11",
+    "height": "183",
+    "club": "Beşiktaş"
+  },
+  "Cesar Blackman": {
+    "dob": "1998-04-02",
+    "height": "174",
+    "club": "Slovan Bratislava"
+  },
+  "Aníbal Godoy": {
+    "dob": "1990-02-10",
+    "height": "183",
+    "club": "San Diego FC"
+  },
+  "Adalberto Carrasquilla": {
+    "dob": "1998-11-28",
+    "height": "170",
+    "club": "UNAM"
+  },
+  "Édgar Bárcenas": {
+    "dob": "1993-10-23",
+    "height": "175",
+    "club": "| clubnumber     ="
+  },
+  "Carlos Harvey": {
+    "dob": "2000-02-03",
+    "height": "185",
+    "club": "Minnesota United"
+  },
+  "Cecilio Waterman": {
+    "dob": "1991-04-13",
+    "height": "181",
+    "club": "Universidad de Concepción"
+  },
+  "Orlando Gill": {
+    "dob": "2000-06-11",
+    "height": "198",
+    "club": "San Lorenzo de Almagro"
+  },
+  "Gustavo Gomez": {
+    "dob": "1993-05-06",
+    "height": "185",
+    "club": "Palmeiras"
+  },
+  "Fabián Balbuena": {
+    "dob": "1991-08-23",
+    "height": "188",
+    "club": "Grêmio"
+  },
+  "Juan José Cáceres": {
+    "dob": "2000-06-01",
+    "height": "173",
+    "club": "Dynamo Moscow"
+  },
+  "Omar Alderete": {
+    "dob": "1996-12-26",
+    "height": "188",
+    "club": "Sunderland"
+  },
+  "Junior Alonso": {
+    "dob": "1993-02-09",
+    "height": "185",
+    "club": "Atlético Mineiro"
+  },
+  "Mathías Villasanti": {
+    "dob": "1997-01-24",
+    "height": "178",
+    "club": "Grêmio"
+  },
+  "Damián Bobadilla": {
+    "dob": "2001-07-11",
+    "height": "181",
+    "club": "São Paulo"
+  },
+  "Alejandro Romero Gamarra": {
+    "dob": "1995-01-11",
+    "height": "171",
+    "club": "Al Ain"
+  },
+  "Miguel Almirón": {
+    "dob": "1994-02-10",
+    "height": "174",
+    "club": "Atlanta United"
+  },
+  "Antonio Sanabria": {
+    "dob": "1996-03-04",
+    "height": "182",
+    "club": "Cremonese"
+  },
+  "Diogo Costa": {
+    "dob": "1999-09-19",
+    "height": "186",
+    "club": "Porto"
+  },
+  "Jose Sa": {
+    "dob": "1993-01-17",
+    "height": "192",
+    "club": "Wolverhampton Wanderers"
+  },
+  "Ruben Dias": {
+    "dob": "1997-05-14",
+    "height": "187",
+    "club": "Manchester City"
+  },
+  "João Cancelo": {
+    "dob": "1994-05-27",
+    "height": "182",
+    "club": "Barcelona"
+  },
+  "Diogo Dalot": {
+    "dob": "1999-03-18",
+    "height": "183",
+    "club": "Manchester United"
+  },
+  "Gonçalo Inácio": {
+    "dob": "2001-08-25",
+    "height": "185",
+    "club": "Sporting CP"
+  },
+  "Bernardo Silva": {
+    "dob": "1994-08-10",
+    "height": "173",
+    "club": "Manchester City"
+  },
+  "Ruben Neves": {
+    "dob": "1997-03-13",
+    "height": "180",
+    "club": "Al-Hilal"
+  },
+  "João Neves": {
+    "dob": "2004-09-27",
+    "height": "174",
+    "club": "Paris Saint-Germain"
+  },
+  "Cristiano Ronaldo": {
+    "dob": "1985-02-05",
+    "height": "187",
+    "club": "Al-Nassr"
+  },
+  "Francisco Trincao": {
+    "dob": "1999-12-29",
+    "height": "183",
+    "club": "Sporting CP"
+  },
+  "João Felix": {
+    "dob": "1999-11-10",
+    "height": "181",
+    "club": "Al-Nassr"
+  },
+  "Gonçalo Ramos": {
+    "dob": "2001-06-20",
+    "height": "185",
+    "club": "Paris Saint-Germain"
+  },
+  "Pedro Neto": {
+    "dob": "2000-03-09",
+    "height": "172",
+    "club": "Chelsea"
+  },
+  "Rafael Leão": {
+    "dob": "1999-06-10",
+    "height": "188",
+    "club": "Fc Barcelona"
+  },
+  "Meshaal Barsham": {
+    "dob": "1998-02-14",
+    "club": "Al Sadd"
+  },
+  "Homam Ahmed": {
+    "dob": "1999-08-25",
+    "height": "188",
+    "club": "Cultural Leonesa"
+  },
+  "Boualem Khoukhi": {
+    "dob": "1990-07-09",
+    "club": "Al Sadd"
+  },
+  "Tarek Salman": {
+    "dob": "1997-12-05",
+    "height": "179",
+    "club": "Al Sadd"
+  },
+  "Karim Boudiaf": {
+    "dob": "1990-09-16",
+    "height": "190",
+    "club": "Al-Duhail"
+  },
+  "Assim Madibo": {
+    "dob": "1996-10-22",
+    "height": "168",
+    "club": "Al-Wakrah"
+  },
+  "Ahmed Fatehi": {
+    "dob": "1993-01-25",
+    "club": "Al-Arabi"
+  },
+  "Mohammed Waad": {
+    "dob": "1999-09-18",
+    "height": "183",
+    "club": "Al-Shamal"
+  },
+  "Abdulaziz Hatem": {
+    "dob": "1990-10-28",
+    "height": "182",
+    "club": "Al Rayyan"
+  },
+  "Hassan Al-Haydos": {
+    "dob": "1990-12-11",
+    "height": "174",
+    "club": "Al-Sadd"
+  },
+  "Edmilson Junior": {
+    "dob": "1994-08-19",
+    "height": "182",
+    "club": "Al Duhail"
+  },
+  "Ahmed Al Ganehi": {
+    "dob": "2000-09-22",
+    "club": "Al-Gharafa"
+  },
+  "Almoez Ali": {
+    "dob": "1996-08-19",
+    "height": "180",
+    "club": "Al-Duhail"
+  },
+  "Ronwen Williams": {
+    "dob": "1992-01-21",
+    "height": "184",
+    "club": "Mamelodi Sundowns"
+  },
+  "Sipho Chaine": {
+    "dob": "1996-12-14",
+    "club": "Orlando Pirates"
+  },
+  "Aubrey Modiba": {
+    "dob": "1995-07-22",
+    "club": "Mamelodi Sundowns"
+  },
+  "Samukele Kabini": {
+    "dob": "2004-03-15",
+    "height": "181",
+    "club": "Molde"
+  },
+  "Mbekezeli Mbokazi": {
+    "dob": "2005-09-19",
+    "height": "177",
+    "club": "Chicago Fire"
+  },
+  "Khulumani Ndamane": {
+    "dob": "2004-02-05",
+    "height": "183",
+    "club": "Mamelodi Sundowns"
+  },
+  "Siyabonga Ngezana": {
+    "dob": "1997-07-15",
+    "height": "188",
+    "club": "FCSB"
+  },
+  "Khuliso Mudau": {
+    "dob": "1995-04-26",
+    "height": "181",
+    "club": "Mamelodi Sundowns"
+  },
+  "Nkosinathi Sibisi": {
+    "dob": "1995-09-22",
+    "height": "177",
+    "club": "Orlando Pirates"
+  },
+  "Thalente Mbatha": {
+    "dob": "2000-03-06",
+    "height": "164",
+    "club": "Orlando Pirates"
+  },
+  "Yaya Sithole": {
+    "dob": "1999-03-03",
+    "height": "186",
+    "club": "Tondela"
+  },
+  "Sipho Mbule": {
+    "dob": "1998-03-22",
+    "club": "Orlando Pirates"
+  },
+  "Lyle Foster": {
+    "dob": "2000-09-03",
+    "club": "Burnley"
+  },
+  "Iqraam Rayners": {
+    "dob": "1995-12-19",
+    "height": "176",
+    "club": "Mamelodi Sundowns"
+  },
+  "Mohau Nkota": {
+    "dob": "2004-11-09",
+    "height": "168",
+    "club": "Al-Ettifaq"
+  },
+  "Oswin Appollis": {
+    "dob": "2001-08-25",
+    "height": "171",
+    "club": "Orlando Pirates"
+  },
+  "Angus Gunn": {
+    "dob": "1996-01-22",
+    "club": "Nottingham Forest"
+  },
+  "Kieran Tierney": {
+    "dob": "1997-06-05",
+    "club": "Celtic"
+  },
+  "Aaron Hickey": {
+    "dob": "2002-06-10",
+    "club": "Brentford"
+  },
+  "Andrew Robertson": {
+    "dob": "1994-03-11",
+    "club": "Liverpool"
+  },
+  "Scott McKenna": {
+    "dob": "1996-11-12",
+    "club": "Dinamo Zagreb"
+  },
+  "John Souttar": {
+    "dob": "1996-09-25",
+    "club": "Rangers"
+  },
+  "Anthony Ralston": {
+    "dob": "1998-11-16",
+    "height": "183",
+    "club": "Celtic"
+  },
+  "Grant Hanley": {
+    "dob": "1991-11-20",
+    "club": "Hibernian"
+  },
+  "Scott McTominay": {
+    "dob": "1996-12-08",
+    "club": "Napoli"
+  },
+  "Billy Gilmour": {
+    "dob": "2001-06-11",
+    "club": "Napoli"
+  },
+  "Lewis Ferguson": {
+    "dob": "1999-08-24",
+    "club": "Bologna"
+  },
+  "Ryan Christie": {
+    "dob": "1995-02-22",
+    "club": "Bournemouth"
+  },
+  "Kenny McLean": {
+    "dob": "1992-01-08",
+    "club": "Norwich City"
+  },
+  "John McGinn": {
+    "dob": "1994-10-18",
+    "club": "Aston Villa"
+  },
+  "Lyndon Dykes": {
+    "dob": "1995-10-07",
+    "club": "Charlton Athletic"
+  },
+  "Che Adams": {
+    "dob": "1996-07-13",
+    "club": "Torino"
+  },
+  "Ben Gannon-Doak": {
+    "dob": "2005-11-11",
+    "club": "Bournemouth"
+  },
+  "Edouard Mendy": {
+    "dob": "1992-03-01",
+    "height": "194",
+    "club": "Al-Ahli"
+  },
+  "Yehvann Diouf": {
+    "dob": "1999-11-16",
+    "height": "188",
+    "club": "Nice"
+  },
+  "Moussa Niakhaté": {
+    "dob": "1996-03-08",
+    "height": "190",
+    "club": "Lyon"
+  },
+  "Ismail Jakobs": {
+    "dob": "1999-08-17",
+    "height": "184",
+    "club": "Galatasaray"
+  },
+  "El Hadji Malick Diouf": {
+    "dob": "2004-12-28",
+    "height": "183",
+    "club": "West Ham United"
+  },
+  "Kalidou Koulibaly": {
+    "dob": "1991-06-20",
+    "height": "186",
+    "club": "Al-Hilal"
+  },
+  "Idrissa Gana Gueye": {
+    "dob": "1989-09-26",
+    "height": "174",
+    "club": "Everton"
+  },
+  "Pape Matar Sarr": {
+    "dob": "2002-09-14",
+    "height": "185",
+    "club": "Tottenham Hotspur"
+  },
+  "Pape Gueye": {
+    "dob": "1999-01-24",
+    "height": "189",
+    "club": "Villarreal"
+  },
+  "Habib Diarra": {
+    "dob": "2004-01-03",
+    "height": "179",
+    "club": "Sunderland"
+  },
+  "Sadio Mane": {
+    "dob": "1992-04-10",
+    "height": "175",
+    "club": "Al-Nassr"
+  },
+  "Ismaïla Sarr": {
+    "dob": "1998-02-25",
+    "height": "185",
+    "club": "Crystal Palace"
+  },
+  "Boulaye Dia": {
+    "dob": "1996-11-16",
+    "height": "180",
+    "club": "Lazio"
+  },
+  "Iliman Ndiaye": {
+    "dob": "2000-03-06",
+    "height": "180",
+    "club": "Everton"
+  },
+  "Krepin Diatta": {
+    "dob": "1999-02-25",
+    "height": "175",
+    "club": "Monaco"
+  },
+  "Gregor Kobel": {
+    "dob": "1997-12-06",
+    "height": "195",
+    "club": "Borussia Dortmund"
+  },
+  "Yvon Mvogo": {
+    "dob": "1994-06-06",
+    "height": "187",
+    "club": "Lorient"
+  },
+  "Manuel Akanji": {
+    "dob": "1995-07-19",
+    "height": "188",
+    "club": "Inter Milan"
+  },
+  "Nico Elvedi": {
+    "dob": "1996-09-30",
+    "height": "187",
+    "club": "Borussia Mönchengladbach"
+  },
+  "Aurèle Amenda": {
+    "dob": "2003-07-31",
+    "height": "197",
+    "club": "Eintracht Frankfurt"
+  },
+  "Silvan Widmer": {
+    "dob": "1993-03-05",
+    "height": "183",
+    "club": "Mainz 05"
+  },
+  "Granit Xhaka": {
+    "dob": "1992-09-27",
+    "height": "186",
+    "club": "Sunderland"
+  },
+  "Denis Zakaria": {
+    "dob": "1996-11-20",
+    "height": "191",
+    "club": "Monaco"
+  },
+  "Remo Freuler": {
+    "dob": "1992-04-15",
+    "height": "181",
+    "club": "Bologna"
+  },
+  "Fabian Rieder": {
+    "dob": "2002-02-16",
+    "height": "181",
+    "club": "FC Augsburg"
+  },
+  "Ardon Jashari": {
+    "dob": "2002-07-30",
+    "height": "181",
+    "club": "AC Milan"
+  },
+  "Johan Manzambi": {
+    "dob": "2005-10-14",
+    "height": "182",
+    "club": "SC Freiburg"
+  },
+  "Michel Aebischer": {
+    "dob": "1997-01-06",
+    "height": "183",
+    "club": "Pisa"
+  },
+  "Breel Embolo": {
+    "dob": "1997-02-14",
+    "height": "187",
+    "club": "Rennes"
+  },
+  "Ruben Vargas": {
+    "dob": "1998-08-05",
+    "height": "177",
+    "club": "Sevilla"
+  },
+  "Dan Ndoye": {
+    "dob": "2000-10-25",
+    "height": "183",
+    "club": "Nottingham Forest"
+  },
+  "Zeki Amdouni": {
+    "dob": "2000-12-04",
+    "height": "185",
+    "club": "Burnley"
+  },
+  "Victor Johansson": {
+    "dob": "1998-09-13"
+  },
+  "Isak Hien": {
+    "dob": "1999-01-13",
+    "height": "191",
+    "club": "Atalanta"
+  },
+  "Gabriel Gudmundsson": {
+    "dob": "1999-04-29",
+    "height": "180",
+    "club": "Leeds United"
+  },
+  "Victor Nilsson Lindelöf": {
+    "dob": "1994-07-17",
+    "height": "187",
+    "club": "Aston Villa"
+  },
+  "Lucas Bergvall": {
+    "dob": "2006-02-02",
+    "height": "187",
+    "club": "Tottenham Hotspur"
+  },
+  "Jesper Karlström": {
+    "dob": "1995-06-21",
+    "height": "182",
+    "club": "Udinese"
+  },
+  "Yasin Ayari": {
+    "dob": "2003-10-06",
+    "height": "172",
+    "club": "Brighton & Hove Albion"
+  },
+  "Mattias Svanberg": {
+    "dob": "1999-01-05",
+    "height": "185",
+    "club": "VfL Wolfsburg"
+  },
+  "Daniel Svensson": {
+    "dob": "1977-11-20"
+  },
+  "Ken Sema": {
+    "dob": "1993-09-30",
+    "height": "180",
+    "club": "Pafos"
+  },
+  "Roony Bardghji": {
+    "dob": "2005-11-15",
+    "height": "173",
+    "club": "Barcelona"
+  },
+  "Dejan Kulusevski": {
+    "dob": "2000-04-25",
+    "height": "186",
+    "club": "Tottenham Hotspur"
+  },
+  "Anthony Elanga": {
+    "dob": "2002-04-27",
+    "height": "178",
+    "club": "Newcastle United"
+  },
+  "Alexander Isak": {
+    "dob": "1999-09-21",
+    "height": "192",
+    "club": "Liverpool"
+  },
+  "Viktor Gyökeres": {
+    "dob": "1998-06-04",
+    "height": "189",
+    "club": "Arsenal"
+  },
+  "Bechir Ben Said": {
+    "dob": "1992-11-29",
+    "height": "193",
+    "club": "Espérance de Tunis"
+  },
+  "Aymen Dahmen": {
+    "dob": "1997-01-28",
+    "height": "188",
+    "club": "CS Sfaxien"
+  },
+  "Yan Valery": {
+    "dob": "1999-02-22",
+    "height": "185",
+    "club": "Young Boys"
+  },
+  "Montassar Talbi": {
+    "dob": "1998-05-26",
+    "height": "190",
+    "club": "Lorient"
+  },
+  "Yassine Meriah": {
+    "dob": "1993-07-02",
+    "height": "188",
+    "club": "Espérance de Tunis"
+  },
+  "Dylan Bronn": {
+    "dob": "1995-06-19",
+    "height": "186",
+    "club": "Servette"
+  },
+  "Ellyes Skhiri": {
+    "dob": "1995-05-10",
+    "club": "Eintracht Frankfurt"
+  },
+  "Aissa Laidouni": {
+    "dob": "1996-12-13",
+    "height": "183",
+    "club": "Al-Wakrah"
+  },
+  "Ferjani Sassi": {
+    "dob": "1992-03-18",
+    "height": "186",
+    "club": "Al-Gharafa"
+  },
+  "Mohamed Ali Ben Romdhane": {
+    "dob": "1999-09-06",
+    "height": "180",
+    "club": "Al Ahly"
+  },
+  "Hannibal Mejbri": {
+    "dob": "2003-01-21",
+    "height": "184",
+    "club": "Burnley"
+  },
+  "Elias Achouri": {
+    "dob": "1999-02-10",
+    "height": "177",
+    "club": "Copenhagen"
+  },
+  "Elias Saad": {
+    "dob": "1999-12-27",
+    "height": "185",
+    "club": "Hannover 96"
+  },
+  "Hazem Mastouri": {
+    "dob": "1997-06-18",
+    "height": "191",
+    "club": "Dynamo Makhachkala"
+  },
+  "Ismael Gharbi": {
+    "dob": "2004-04-10",
+    "height": "173",
+    "club": "FC Augsburg"
+  },
+  "Sayfallah Ltaief": {
+    "dob": "2000-04-22",
+    "height": "178",
+    "club": "Greuther Fürth"
+  },
+  "Naim Sliti": {
+    "dob": "1992-07-27",
+    "height": "173",
+    "club": "Al Shamal"
+  },
+  "Ugurcan Cakir": {
+    "dob": "1996-04-05",
+    "height": "191",
+    "club": "Galatasaray"
+  },
+  "Mert Muldur": {
+    "dob": "1999-04-03",
+    "height": "188",
+    "club": "Fenerbahçe"
+  },
+  "Zeki Celik": {
+    "dob": "1997-02-17",
+    "height": "180",
+    "club": "Roma"
+  },
+  "Abdulkerim Bardakci": {
+    "dob": "1994-09-07",
+    "height": "185",
+    "club": "Galatasaray"
+  },
+  "Caglar Soyuncu": {
+    "dob": "1996-05-23",
+    "height": "185",
+    "club": "Fenerbahçe"
+  },
+  "Merih Demiral": {
+    "dob": "1998-03-05",
+    "height": "190",
+    "club": "Al-Ahli"
+  },
+  "Ferdi Kadioglu": {
+    "dob": "1999-10-07",
+    "height": "178",
+    "club": "Brighton & Hove Albion"
+  },
+  "Kaan Ayhan": {
+    "dob": "1994-11-10",
+    "height": "185",
+    "club": "Galatasaray"
+  },
+  "Ismail Yuksek": {
+    "dob": "1999-01-26",
+    "height": "183",
+    "club": "Fenerbahçe"
+  },
+  "Hakan Calhanoglu": {
+    "dob": "1994-02-08",
+    "height": "178",
+    "club": "Inter Milan"
+  },
+  "Orkun Kokcu": {
+    "dob": "2000-12-29",
+    "height": "175",
+    "club": "Beşiktaş"
+  },
+  "Arda Guler": {
+    "dob": "2005-02-25",
+    "height": "175",
+    "club": "Real Madrid"
+  },
+  "Irfan Can Kahveci": {
+    "dob": "1995-07-15",
+    "height": "176",
+    "club": "Kasımpaşa"
+  },
+  "Yunus Akgun": {
+    "dob": "2000-07-07",
+    "height": "173",
+    "club": "Galatasaray"
+  },
+  "Can Uzun": {
+    "dob": "2005-11-11",
+    "height": "186",
+    "club": "Eintracht Frankfurt"
+  },
+  "Kerem Akturkoglu": {
+    "dob": "1998-10-21",
+    "height": "173",
+    "club": "Fenerbahçe"
+  },
+  "Kenan Yildiz": {
+    "dob": "2005-05-04",
+    "height": "185",
+    "club": "Juventus"
+  },
+  "Sergio Rochet": {
+    "dob": "1993-03-23",
+    "height": "189",
+    "club": "Internacional"
+  },
+  "Santiago Mele": {
+    "dob": "1997-09-06",
+    "club": "Monterrey"
+  },
+  "Ronald Araujo": {
+    "dob": "1999-03-07",
+    "height": "191",
+    "club": "Barcelona"
+  },
+  "José María Giménez": {
+    "dob": "1995-01-20",
+    "height": "185",
+    "club": "Atlético Madrid"
+  },
+  "Guillermo Varela": {
+    "dob": "1993-03-24",
+    "height": "173",
+    "club": "Flamengo"
+  },
+  "Nahitan Nandez": {
+    "dob": "1995-12-28",
+    "height": "172",
+    "club": "Al-Qadsiah"
+  },
+  "Federico Valverde": {
+    "dob": "1998-07-22",
+    "height": "182",
+    "club": "Real Madrid"
+  },
+  "Giorgian De Arrascaeta": {
+    "dob": "1994-06-01",
+    "height": "174",
+    "club": "Flamengo"
+  },
+  "Rodrigo Bentancur": {
+    "dob": "1997-06-25",
+    "height": "187",
+    "club": "Tottenham Hotspur"
+  },
+  "Nicolás de la Cruz": {
+    "dob": "1997-06-01",
+    "height": "167",
+    "club": "Flamengo"
+  },
+  "Darwin Núñez": {
+    "dob": "1999-06-24",
+    "height": "187",
+    "club": "Al-Hilal"
+  },
+  "Federico Viñas": {
+    "dob": "1998-06-30",
+    "height": "181",
+    "club": "Oviedo"
+  },
+  "Rodrigo Aguirre": {
+    "dob": "1994-10-01",
+    "height": "186",
+    "club": "UANL"
+  },
+  "Facundo Pellistri": {
+    "dob": "2001-12-20",
+    "height": "175",
+    "club": "Panathinaikos"
+  },
+  "Tim Ream": {
+    "dob": "1987-10-05",
+    "club": "Charlotte FC"
+  },
+  "Alex Freeman": {
+    "dob": "2004-08-09",
+    "club": "Villarreal"
+  },
+  "Antonee Robinson": {
+    "dob": "1997-08-08",
+    "club": "Fulham"
+  },
+  "Tanner Tessmann": {
+    "dob": "2001-09-24",
+    "club": "Lyon"
+  },
+  "Timothy Weah": {
+    "dob": "2000-02-22",
+    "club": "Marseille"
+  },
+  "Diego Luna": {
+    "dob": "1979-12-29"
+  },
+  "Malik Tillman": {
+    "dob": "2002-05-28",
+    "club": "Bayer Leverkusen"
+  },
+  "Christian Pulisic": {
+    "dob": "1998-09-18",
+    "club": "AC Milan"
+  },
+  "Brenden Aaronson": {
+    "dob": "2000-10-22",
+    "club": "Leeds United"
+  },
+  "Ricardo Pepi": {
+    "dob": "2003-01-09",
+    "club": "PSV"
+  },
+  "Haji Wright": {
+    "dob": "1998-03-27",
+    "club": "Coventry City"
+  },
+  "Folarin Balogun": {
+    "dob": "2001-07-03",
+    "club": "Monaco"
+  },
+  "Utkir Yusupov": {
+    "dob": "1991-01-04",
+    "height": "185",
+    "club": "Navbahor"
+  },
+  "Sherzod Nasrullaev": {
+    "dob": "1998-07-23",
+    "club": "Nasaf"
+  },
+  "Umar Eshmurodov": {
+    "dob": "1992-11-30",
+    "height": "185",
+    "club": "Nasaf"
+  },
+  "Husniddin Aliqulov": {
+    "dob": "1999-04-04",
+    "height": "186",
+    "club": "Çaykur Rizespor"
+  },
+  "Rustamjon Ashurmatov": {
+    "dob": "1996-07-07",
+    "height": "186",
+    "club": "Esteghlal"
+  },
+  "Khojiakbar Alijonov": {
+    "dob": "1997-04-19",
+    "height": "180",
+    "club": "Pakhtakor"
+  },
+  "Abdukodir Khusanov": {
+    "dob": "2004-02-29",
+    "height": "186",
+    "club": "Manchester City"
+  },
+  "Odiljon Hamrobekov": {
+    "dob": "1996-02-13",
+    "height": "178",
+    "club": "Tractor S.C."
+  },
+  "Otabek Shukurov": {
+    "dob": "1996-06-22",
+    "height": "182",
+    "club": "Baniyas"
+  },
+  "Jamshid Iskanderov": {
+    "dob": "1993-10-16",
+    "club": "Neftchi Fergana"
+  },
+  "Azizbek Turgunboev": {
+    "dob": "1994-10-01",
+    "height": "173",
+    "club": "Andijon"
+  },
+  "Khojimat Erkinov": {
+    "dob": "2001-05-29",
+    "height": "174",
+    "club": "Pakhtakor"
+  },
+  "Eldor Shomurodov": {
+    "dob": "1995-06-29",
+    "height": "190",
+    "club": "İstanbul Başakşehir"
+  },
+  "Oston Urunov": {
+    "dob": "2000-12-19",
+    "height": "181",
+    "club": "Persepolis"
+  },
+  "Jaloliddin Masharipov": {
+    "dob": "1993-09-01",
+    "height": "173",
+    "club": "Esteghlal"
+  },
+  "Igor Sergeev": {
+    "dob": "1993-04-30",
+    "height": "185",
+    "club": "Persepolis"
+  },
+  "Abbosbek Fayzullaev": {
+    "dob": "2003-10-03",
+    "height": "167",
+    "club": "İstanbul Başakşehir"
+  },
+  "Salis Abdul Samed": {
+    "dob": "2000-03-26",
+    "height": "179",
+    "club": "Nice"
+  }
+}
