@@ -1,5 +1,5 @@
 // Bump esta version cada vez que se publiquen cambios clave para forzar refresco en el celular.
-const CACHE_NAME = "album-simon-pages-v23";
+const CACHE_NAME = "album-simon-pages-v24";
 const ASSETS = [
   "./",
   "./index.html",
