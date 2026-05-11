@@ -137,10 +137,16 @@
     .country-meta p { margin: 3px 0 0; color: #5f7089; font-size: 0.78rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
     .mini-progress { display: inline-block; width: 50px; height: 6px; border-radius: 999px; background: rgba(10,61,121,0.12); overflow: hidden; vertical-align: middle; }
     .mini-progress span { display: block; height: 100%; background: linear-gradient(90deg, #19b36b, #f6b40e); transition: width 0.4s; }
-    .chev { margin-left: auto; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
-      background: rgba(10,61,121,0.12); color: #0a3d79; transition: transform 0.25s; font-size: 1.1rem; flex-shrink: 0;
+    .chev { margin-left: auto; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+      background: linear-gradient(135deg, #1565c0, #0a3d79);
+      box-shadow: 0 4px 12px rgba(10,61,121,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s;
+      flex-shrink: 0;
     }
-    details[open] .chev { transform: rotate(180deg); }
+    .chev svg { width: 18px; height: 18px; stroke: #fff; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s cubic-bezier(.34,1.56,.64,1); }
+    details[open] .chev { background: linear-gradient(135deg, #19b36b, #0f7a47); box-shadow: 0 4px 12px rgba(25,179,107,0.4), inset 0 1px 0 rgba(255,255,255,0.2); transform: scale(1.08); }
+    details[open] .chev svg { transform: rotate(180deg); }
 
     /* STICKERS - cards sin imagen, bandera + rol */
     .stickers { padding: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -1605,7 +1611,7 @@
               <h2>${LABELS[c] || c}</h2>
               <p><span>${c}</span> · <span class="cprog">${have}/20</span> <span class="mini-progress"><span style="width:${(have/20)*100}%"></span></span></p>
             </div>
-            <div class="chev">⌄</div>
+            <div class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>`;
         details.appendChild(summary);
         const stickers = document.createElement("div");
