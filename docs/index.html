@@ -155,6 +155,7 @@
       border: 1.5px solid rgba(10,61,121,0.14);
       box-shadow: 0 8px 18px rgba(8, 17, 37, 0.14);
       display: flex; flex-direction: column;
+      height: 268px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .sticker:hover { transform: translateY(-3px); box-shadow: 0 14px 24px rgba(8, 17, 37, 0.22); }
@@ -180,7 +181,7 @@
       z-index: 3; pointer-events: none;
     }
     .sticker.have .sticker-mark { opacity: 1; }
-    .sticker-body { position: relative; width: 100%; min-height: 72px;
+    .sticker-body { position: relative; width: 100%; height: 104px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
     }
     /* Fondo borroso solo para jugadores */
@@ -198,7 +199,7 @@
       color: #fff; text-align: center; line-height: 1.25; text-transform: uppercase;
       padding: 6px 8px; text-shadow: 0 1px 6px rgba(0,0,0,0.8), 0 0 14px rgba(0,0,0,0.5);
     }
-    .sticker-bio { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 3px; flex-grow: 1; }
+    .sticker-bio { padding: 6px 8px 6px; display: flex; flex-direction: column; gap: 3px; flex: 1; overflow: hidden; }
     .bio-row { display: flex; align-items: center; gap: 4px; font-size: 0.58rem;
       font-weight: 600; color: #2a4a70; overflow: hidden;
     }
