@@ -370,7 +370,7 @@
 
   <script>
     const APP_VERSION = "2026.05.11.01";
-    const STORAGE_KEY = "album_simon_2026_v4";
+    const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","CC","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Costa de Marfil",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
     // Mapeo a códigos ISO de banderas (flagcdn.com)
@@ -2154,6 +2154,30 @@
     renderReplist();
     stats();
     updateUndoBtn();
+
+    // Auto-cargar las figus de Simón si no tiene ninguna marcada
+    const anyOwned = Object.values(state).some(s => s.la_tengo);
+    if (!anyOwned) {
+      fetch("preload.json?t=" + Date.now())
+        .then(r => r.ok ? r.json() : null)
+        .then(p => {
+          if (!p || typeof p !== "object") return;
+          let count = 0;
+          Object.keys(state).forEach(k => {
+            if (p[k] !== undefined) {
+              state[k].la_tengo = Boolean(p[k].la_tengo);
+              state[k].repetidas = Math.max(0, Number(p[k].repetidas || 0));
+              if (state[k].la_tengo) count++;
+            }
+          });
+          save();
+          renderCountries();
+          renderReplist();
+          stats();
+          toast(count + " figus de Simón cargadas ✅", "ok");
+        })
+        .catch(() => {});
+    }
   </script>
 </body>
 </html>
