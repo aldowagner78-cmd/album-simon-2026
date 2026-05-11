@@ -325,7 +325,7 @@
     }
 
     /* ===== OVERLAY: tabs + grilla resumen + WA flotante ===== */
-    .sum-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0;
+    .sum-tabs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; padding: 0;
       background: linear-gradient(180deg, #eef4fc, #dde6f5);
       border-bottom: 1px solid var(--line);
     }
@@ -342,6 +342,10 @@
     .sum-tab.active[data-tab="cambiar"] .tab-count { background: linear-gradient(135deg,#f6b40e,#d99a00); color: #fff; }
     .sum-tab.active[data-tab="faltan"] { border-bottom-color: #e53e3e; }
     .sum-tab.active[data-tab="faltan"] .tab-count { background: linear-gradient(135deg,#e53e3e,#b73a3a); color: #fff; }
+    .sum-tab.active[data-tab="todas"] { border-bottom-color: #19b36b; }
+    .sum-tab.active[data-tab="todas"] .tab-count { background: linear-gradient(135deg,#19b36b,#0e7a45); color: #fff; }
+    .sum-chip.have { background: linear-gradient(160deg,#f3fbf6,#c8efd8); color:#0e6e40; border: 2px solid rgba(25,179,107,0.6); }
+    .sum-chip.have .chip-badge { background: linear-gradient(135deg,#19b36b,#0e7a45); color:#fff; }
 
     .sum-content { padding: 12px 12px 100px; background: linear-gradient(180deg, #fff, #f6f9fd); }
     .sum-empty { text-align: center; padding: 40px 16px; color: #7a8aa8;
@@ -473,9 +477,11 @@
       <div class="sum-tabs">
         <button class="sum-tab active" data-tab="cambiar" id="tabCambiar">🔁 Para cambiar <span class="tab-count" id="cntCambiar">0</span></button>
         <button class="sum-tab" data-tab="faltan" id="tabFaltan">❌ Me faltan <span class="tab-count" id="cntFaltan">0</span></button>
+        <button class="sum-tab" data-tab="todas" id="tabTodas">📋 Todas <span class="tab-count" id="cntTodas">0</span></button>
       </div>
       <div class="sum-content" id="sumCambiar"></div>
       <div class="sum-content" id="sumFaltan" style="display:none"></div>
+      <div class="sum-content" id="sumTodas" style="display:none"></div>
       <pre id="missingOut" style="display:none"></pre>
       <pre id="repeatedOut" style="display:none"></pre>
       <div class="sheet-wa">
@@ -487,7 +493,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.11.02";
+    const APP_VERSION = "2026.05.11.03";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -1633,10 +1639,13 @@
       repeatedOut: document.getElementById("repeatedOut"),
       sumCambiar: document.getElementById("sumCambiar"),
       sumFaltan: document.getElementById("sumFaltan"),
+      sumTodas: document.getElementById("sumTodas"),
       tabCambiar: document.getElementById("tabCambiar"),
       tabFaltan: document.getElementById("tabFaltan"),
+      tabTodas: document.getElementById("tabTodas"),
       cntCambiar: document.getElementById("cntCambiar"),
       cntFaltan: document.getElementById("cntFaltan"),
+      cntTodas: document.getElementById("cntTodas"),
       syncLinkBtn: document.getElementById("syncLinkBtn"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
       installBtn: document.getElementById("installBtn"),
@@ -2071,13 +2080,40 @@
         `<div class="sum-empty"><span class="icon">🏆</span>¡Completaste el álbum!<br><span style="font-weight:500;font-size:0.85rem;opacity:.7">No te falta ninguna figurita.</span></div>`;
       els.cntCambiar.textContent = String(cntCambiar);
       els.cntFaltan.textContent = String(cntFaltan);
+
+      // Tab "Todas" — todas las figuritas por país con su estado real
+      let cntTodasLate = 0;
+      const todasHtml = [];
+      COUNTRIES.forEach(c => {
+        const chips = [];
+        for (let n = 1; n <= 20; n++) {
+          const s = state[key(c, n)];
+          const q = Number(s.repetidas || 0);
+          let cls, badge;
+          if (!s.la_tengo) {
+            cls = "miss"; badge = "NOLA";
+          } else if (q > 0) {
+            cls = "rep"; badge = `REPE ×${q}`;
+          } else {
+            cls = "have"; badge = "LATE";
+            cntTodasLate++;
+          }
+          chips.push(`<div class="sum-chip ${cls}"><span class="chip-badge">${badge}</span>${n}</div>`);
+        }
+        const haveCount = Array.from({length: 20}, (_, i) => state[key(c, i + 1)]).filter(s => s.la_tengo).length;
+        todasHtml.push(
+          `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${haveCount}/20</span></div><div class="sum-chips">${chips.join("")}</div></div>`
+        );
+      });
+      els.sumTodas.innerHTML = todasHtml.join("");
+      els.cntTodas.textContent = String(cntTodasLate);
     };
     const switchSumTab = (which) => {
-      const cambiar = which === "cambiar";
-      els.tabCambiar.classList.toggle("active", cambiar);
-      els.tabFaltan.classList.toggle("active", !cambiar);
-      els.sumCambiar.style.display = cambiar ? "" : "none";
-      els.sumFaltan.style.display = cambiar ? "none" : "";
+      ["cambiar", "faltan", "todas"].forEach(t => {
+        const capT = t.charAt(0).toUpperCase() + t.slice(1);
+        els[`tab${capT}`].classList.toggle("active", which === t);
+        els[`sum${capT}`].style.display = which === t ? "" : "none";
+      });
     };
     const parse = (text) => {
       const map = {};
@@ -2268,6 +2304,7 @@
     });
     els.tabCambiar.addEventListener("click", () => switchSumTab("cambiar"));
     els.tabFaltan.addEventListener("click", () => switchSumTab("faltan"));
+    els.tabTodas.addEventListener("click", () => switchSumTab("todas"));
     els.closeBtn.addEventListener("click", () => {
       els.overlay.classList.remove("open");
       els.overlay.setAttribute("aria-hidden", "true");
