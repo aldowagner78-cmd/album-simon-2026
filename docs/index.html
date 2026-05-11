@@ -162,28 +162,16 @@
       background: linear-gradient(160deg, #f3fbf6, #d6f0e1 70%, #a9deba);
       box-shadow: 0 8px 18px rgba(25,179,107,0.25);
     }
-    .sticker-band { height: 72px; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 10px; background: linear-gradient(135deg, var(--c1), var(--c2));
-      position: relative; flex-shrink: 0; gap: 6px;
+    /* NUEVO DISEÑO CARDS */
+    .sticker-header { display: flex; align-items: center; gap: 7px; padding: 7px 8px 6px;
+      background: linear-gradient(135deg, #1565c0, #0a3d79);
+      border-bottom: 1.5px solid rgba(255,255,255,0.12); flex-shrink: 0;
     }
-    .sticker-band::before {
-      content: ""; position: absolute; inset: 0;
-      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.09) 0 8px, rgba(255,255,255,0) 8px 18px);
-      mix-blend-mode: overlay; pointer-events: none;
+    .sticker-header img { width: 42px; height: 28px; border-radius: 5px; object-fit: cover;
+      border: 1.5px solid rgba(255,255,255,0.7); box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
-    .sticker-flag-img { width: 54px; height: 36px; border-radius: 6px; object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.7); box-shadow: 0 4px 12px rgba(0,0,0,0.45);
-      position: relative; z-index: 1; display: block; flex-shrink: 0;
-    }
-    .sticker-flag-emoji { font-size: 2.4rem; position: relative; z-index: 1; line-height: 1; flex-shrink: 0; }
-    .sticker-band-name { font-family: Montserrat, sans-serif; font-size: 0.62rem; font-weight: 900;
-      color: #fff; text-align: center; flex: 1; line-height: 1.2; text-transform: uppercase;
-      letter-spacing: 0.3px; position: relative; z-index: 1;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
-    .sticker-n { font-family: Bangers, sans-serif; font-size: 2.4rem; color: rgba(255,255,255,0.95);
-      text-shadow: 0 2px 6px rgba(0,0,0,0.5); line-height: 1; position: relative; z-index: 1; letter-spacing: 1px;
+    .sticker-num { font-family: Bangers, sans-serif; font-size: 1.9rem; color: #fff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5); line-height: 1; letter-spacing: 1px;
     }
     .sticker-mark { position: absolute; top: 7px; right: 7px; width: 22px; height: 22px; border-radius: 50%;
       background: linear-gradient(135deg, #19b36b, #88e6b1); color: #fff;
@@ -192,24 +180,37 @@
       z-index: 3; pointer-events: none;
     }
     .sticker.have .sticker-mark { opacity: 1; }
-    .sticker-info { padding: 3px 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1; gap: 1px; overflow: hidden; }
-    .sticker-name { display: none; }
-    .sticker-photo { display: none; }
-    .sticker-photo-ph { display: none; }
-    .sticker-flag-big { width: 100%; height: 72px; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #e8f0fa 0%, #c8d8f0 100%); flex-shrink: 0; overflow: hidden; }
-    .sticker-flag-big img { height: 52px; width: auto; max-width: 90%; object-fit: contain; border-radius: 3px; box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
-    .sticker-flag-big span { font-size: 2.8rem; line-height: 1; }
-    .sticker-bio { display: flex; flex-direction: column; align-items: center; gap: 0px; width: 100%; }
-    .sticker-club { font-family: Montserrat, sans-serif; font-size: 0.58rem; font-weight: 700; color: #1a5fa8; text-align: center; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .sticker-dob { font-family: Montserrat, sans-serif; font-size: 0.56rem; font-weight: 500; color: #6b7a8d; text-align: center; }
-    .sticker-ht { font-family: Montserrat, sans-serif; font-size: 0.56rem; font-weight: 600; color: #3d6b9e; text-align: center; }
-    .sticker-role { font-family: Montserrat, sans-serif; font-size: 0.60rem; font-weight: 700; color: #4a5d7e; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
-    .check { display: flex; align-items: center; gap: 8px; margin: 0 8px 4px; border-radius: 13px;
-      border: 1px solid var(--line); background: rgba(255,255,255,0.7); padding: 7px 9px;
-      font-size: 0.86rem; font-weight: 700; color: #0a3d79; cursor: pointer;
+    .sticker-body { position: relative; width: 100%; min-height: 72px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
     }
-    .check input { width: 22px; height: 22px; accent-color: #19b36b; cursor: pointer; }
-    .sticker.have .check { background: linear-gradient(135deg, #d6f0e1, #b9e4c9); color: #0e7a45; border-color: rgba(25,179,107,0.35); }
+    .sticker-body-bg { position: absolute; inset: 0; background-size: cover; background-position: center;
+      filter: blur(2px) saturate(0.5) brightness(1.1); transform: scale(1.08);
+    }
+    .sticker-body::after { content: ""; position: absolute; inset: 0;
+      background: rgba(10,40,90,0.45); z-index: 1;
+    }
+    .sticker-player-name { position: relative; z-index: 2;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
+      color: #fff; text-align: center; line-height: 1.25; text-transform: uppercase;
+      padding: 6px 8px; text-shadow: 0 1px 6px rgba(0,0,0,0.8), 0 0 14px rgba(0,0,0,0.5);
+    }
+    .sticker-type-label { position: relative; z-index: 2;
+      font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.7rem;
+      color: #fff; text-transform: uppercase; text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+    }
+    .sticker-bio { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 3px; flex-grow: 1; }
+    .bio-row { display: flex; align-items: center; gap: 4px; font-size: 0.58rem;
+      font-weight: 600; color: #2a4a70; overflow: hidden;
+    }
+    .bio-row .icon { font-size: 0.65rem; flex-shrink: 0; }
+    .bio-row.pos { font-weight: 800; color: #1565c0; font-size: 0.62rem; }
+    .bio-row .bio-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .age-badge { display: inline-flex; align-items: center; justify-content: center;
+      min-width: 16px; height: 16px; border-radius: 50%; font-size: 0.46rem; font-weight: 800;
+      background: rgba(21,101,192,0.13); color: #1565c0; border: 1px solid rgba(21,101,192,0.3);
+      flex-shrink: 0; margin-left: 2px; padding: 0 2px; line-height: 1;
+    }
+    .bio-empty { font-size: 0.58rem; color: #9aadc0; text-align: center; font-style: italic; }
     .rep { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 0 8px 8px; }
     .rep button { min-height: 38px; background: linear-gradient(180deg, #f2f5fa, #d9e2f1); color: #0a3d79; font-size: 1.2rem; font-weight: 900; border-radius: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
     .rep button.minus { background: linear-gradient(180deg, #ffe8e8, #ffc6c6); color: #b73a3a; }
@@ -1634,36 +1635,45 @@
             return "";
           })();
           const sDob = pd && pd.d ? pd.d.split("-").reverse().join("/") : "";
+          const sAge = pd && pd.d ? (() => {
+            const [y, m, d] = pd.d.split("-").map(Number);
+            const today = new Date();
+            let age = today.getFullYear() - y;
+            const monthDiff = today.getMonth() + 1 - m;
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < d)) age--;
+            return age;
+          })() : null;
           const sHt = pd && pd.h ? pd.h + " cm" : "";
           const sWt = pd && pd.w ? pd.w + " kg" : "";
           const sClub = pd && pd.c ? pd.c : "";
           const sPhys = sHt && sWt ? sHt + " · " + sWt : (sHt || sWt);
-          const flagInBand = FLAGS[c]
-            ? `<img class="sticker-flag-img" src="${flagUrl(c, 80)}" alt="${c}" loading="lazy">`
-            : `<span class="sticker-flag-emoji">${SPECIAL_EMOJI[c] || "⚽"}</span>`;
+          const sPos = pd && pd.p ? pd.p : "";
+          const bgUrl = sType === "L"
+            ? `img/stickers/${c}-1.jpg`
+            : sType === "F"
+              ? `img/stickers/${c}-13.jpg`
+              : (FLAGS[c] ? flagUrl(c, 320) : "");
           card.innerHTML = `
-            <div class="sticker-band">
-              ${flagInBand}
-              ${sType === "J" && sName ? `<div class="sticker-band-name">${sName}</div>` : ""}
-              <div class="sticker-n">${n}</div>
+            <div class="sticker-header">
+              ${FLAGS[c]
+                ? `<img src="${flagUrl(c, 80)}" alt="${c}" loading="lazy">`
+                : `<span style="font-size:1.4rem">${SPECIAL_EMOJI[c]||"⚽"}</span>`}
+              <span class="sticker-num">${n}</span>
             </div>
             <div class="sticker-mark">✓</div>
-            <div class="sticker-flag-big">
-              ${FLAGS[c] ? `<img src="${flagUrl(c, 160)}" alt="${c}" loading="lazy">` : `<span>${SPECIAL_EMOJI[c] || "⚽"}</span>`}
+            <div class="sticker-body">
+              <div class="sticker-body-bg" style="background-image:url('${bgUrl}')"></div>
+              ${sType === "J" && sName
+                ? `<div class="sticker-player-name">${sName}</div>`
+                : `<div class="sticker-type-label">${sType === "L" ? "🛡️ Escudo" : "📸 Equipo"}</div>`}
             </div>
-            <div class="sticker-info">
-              ${sName ? `<div class="sticker-name">${sName}</div>` : ""}
-              ${sRole ? `<div class="sticker-role">${sRole}</div>` : ""}
-              ${(sClub || sDob || sPhys) ? `<div class="sticker-bio">
-                ${sClub ? `<div class="sticker-club">🏟 ${sClub}</div>` : ""}
-                ${sDob ? `<div class="sticker-dob">🗓 ${sDob}</div>` : ""}
-                ${sPhys ? `<div class="sticker-ht">📏 ${sPhys}</div>` : ""}
-              </div>` : ""}
+            <div class="sticker-bio">
+              ${sPos ? `<div class="bio-row pos"><span class="icon">⚽</span><span class="bio-text">${sPos}</span></div>` : ""}
+              ${sDob ? `<div class="bio-row"><span class="icon">🗓</span><span class="bio-text">${sDob}</span>${sAge !== null ? `<span class="age-badge">${sAge}</span>` : ""}</div>` : ""}
+              ${sPhys ? `<div class="bio-row"><span class="icon">📏</span><span class="bio-text">${sPhys}</span></div>` : ""}
+              ${sClub ? `<div class="bio-row"><span class="icon">🏟</span><span class="bio-text">${sClub}</span></div>` : ""}
+              ${!sPos && !sDob && !sPhys && !sClub && sType === "J" ? `<div class="bio-empty">Sin datos</div>` : ""}
             </div>
-            <label class="check">
-              <input type="checkbox" ${s.la_tengo ? "checked" : ""}>
-              <span>La tengo</span>
-            </label>
             <div class="rep">
               <button type="button" class="minus" aria-label="menos">−</button>
               <div class="rep-value${s.repetidas > 0 ? " has" : ""}">${s.repetidas}</div>
