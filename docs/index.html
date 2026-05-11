@@ -183,20 +183,21 @@
     .sticker-body { position: relative; width: 100%; min-height: 72px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
     }
+    /* Fondo borroso solo para jugadores */
     .sticker-body-bg { position: absolute; inset: 0; background-size: cover; background-position: center;
       filter: blur(2px) saturate(0.5) brightness(1.1); transform: scale(1.08);
     }
-    .sticker-body::after { content: ""; position: absolute; inset: 0;
+    .sticker-body.player::after { content: ""; position: absolute; inset: 0;
       background: rgba(10,40,90,0.45); z-index: 1;
     }
+    /* Imagen real para escudo y foto equipo */
+    .sticker-body-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .sticker-body.shield .sticker-body-img { object-fit: contain; padding: 6px; }
+    .sticker-body.photo .sticker-body-img { object-fit: cover; }
     .sticker-player-name { position: relative; z-index: 2;
       font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
       color: #fff; text-align: center; line-height: 1.25; text-transform: uppercase;
       padding: 6px 8px; text-shadow: 0 1px 6px rgba(0,0,0,0.8), 0 0 14px rgba(0,0,0,0.5);
-    }
-    .sticker-type-label { position: relative; z-index: 2;
-      font-family: Montserrat, sans-serif; font-weight: 700; font-size: 0.7rem;
-      color: #fff; text-transform: uppercase; text-shadow: 0 1px 5px rgba(0,0,0,0.7);
     }
     .sticker-bio { padding: 6px 8px 8px; display: flex; flex-direction: column; gap: 3px; flex-grow: 1; }
     .bio-row { display: flex; align-items: center; gap: 4px; font-size: 0.58rem;
@@ -1653,6 +1654,7 @@
             : sType === "F"
               ? `img/stickers/${c}-13.jpg`
               : (FLAGS[c] ? flagUrl(c, 320) : "");
+          const bodyClass = sType === "L" ? "shield" : sType === "F" ? "photo" : "player";
           card.innerHTML = `
             <div class="sticker-header">
               ${FLAGS[c]
@@ -1661,11 +1663,11 @@
               <span class="sticker-num">${n}</span>
             </div>
             <div class="sticker-mark">✓</div>
-            <div class="sticker-body">
-              <div class="sticker-body-bg" style="background-image:url('${bgUrl}')"></div>
-              ${sType === "J" && sName
-                ? `<div class="sticker-player-name">${sName}</div>`
-                : `<div class="sticker-type-label">${sType === "L" ? "🛡️ Escudo" : "📸 Equipo"}</div>`}
+            <div class="sticker-body ${bodyClass}">
+              ${sType === "J"
+                ? `<div class="sticker-body-bg" style="background-image:url('${bgUrl}')"></div>
+                   ${sName ? `<div class="sticker-player-name">${sName}</div>` : ""}`
+                : `<img class="sticker-body-img" src="${bgUrl}" alt="${sType === "L" ? "escudo" : "equipo"}" loading="lazy">`}
             </div>
             <div class="sticker-bio">
               ${sPos ? `<div class="bio-row pos"><span class="icon">⚽</span><span class="bio-text">${sPos}</span></div>` : ""}
