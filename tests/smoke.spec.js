@@ -94,3 +94,11 @@ test("botón 'Compartir repetidas' existe", async ({ page }) => {
   await expect(page.locator("#waRepBtn")).toContainText("Compartir repetidas");
   await expect(page.locator("#waShareBtn")).toContainText("Compartir faltantes");
 });
+
+test("botones PDF faltantes y PDF repetidas existen", async ({ page }) => {
+  await page.locator("#summaryBtn").click();
+  await expect(page.locator("#pdfMissBtn")).toBeVisible();
+  await expect(page.locator("#pdfMissBtn")).toContainText("PDF faltantes");
+  await expect(page.locator("#pdfRepBtn")).toBeVisible();
+  await expect(page.locator("#pdfRepBtn")).toContainText("PDF repetidas");
+});
