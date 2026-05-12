@@ -87,3 +87,10 @@ test("CC tiene 14 figuritas, FWC tiene 19, total 993", async ({ page }) => {
   const total = await page.locator(".sticker").count();
   expect(total).toBe(993);
 });
+
+test("botón 'Compartir repetidas' existe", async ({ page }) => {
+  await page.locator("#summaryBtn").click();
+  await expect(page.locator("#waRepBtn")).toBeVisible();
+  await expect(page.locator("#waRepBtn")).toContainText("Compartir repetidas");
+  await expect(page.locator("#waShareBtn")).toContainText("Compartir faltantes");
+});
