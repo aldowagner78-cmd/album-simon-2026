@@ -52,11 +52,11 @@ test("header y contador cambian rojo→verde→amarillo con +/-", async ({ page 
   await expect(card).not.toHaveClass(/\bhave\b/);
 });
 
-test("tab 'Todas' muestra los chips correctos por país (FWC=19, CC=14, resto=20)", async ({ page }) => {
+test("tab 'Todas' muestra los chips correctos por país (FWC=20, CC=14, resto=20)", async ({ page }) => {
   await page.locator("#summaryBtn").click();
   await page.locator("#tabTodas").click();
   const fwcChips = await page.locator('#sumTodas .sum-country').nth(0).locator(".sum-chip").count();
-  expect(fwcChips).toBe(19);
+  expect(fwcChips).toBe(20);
   // Un país normal (segundo = MEX) debe tener 20
   const mexChips = await page.locator('#sumTodas .sum-country').nth(1).locator(".sum-chip").count();
   expect(mexChips).toBe(20);
@@ -76,16 +76,16 @@ test("ESCUDO/EQUIPO aparecen en bio de tarjetas tipo L y F", async ({ page }) =>
   expect(textos).toContain("EQUIPO");
 });
 
-test("CC tiene 14 figuritas, FWC tiene 19, total 993", async ({ page }) => {
+test("CC tiene 14 figuritas, FWC tiene 20, total 994", async ({ page }) => {
   await page.evaluate(() => {
     document.querySelectorAll("details").forEach(d => d.open = true);
   });
   const ccCount = await page.locator('.sticker[data-code="CC"]').count();
   const fwcCount = await page.locator('.sticker[data-code="FWC"]').count();
   expect(ccCount).toBe(14);
-  expect(fwcCount).toBe(19);
+  expect(fwcCount).toBe(20);
   const total = await page.locator(".sticker").count();
-  expect(total).toBe(993);
+  expect(total).toBe(994);
 });
 
 test("botón 'Compartir repetidas' existe", async ({ page }) => {
