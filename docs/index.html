@@ -502,7 +502,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.11.06";
+    const APP_VERSION = "2026.05.11.07";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -510,6 +510,10 @@
     const FLAGS = {MEX:"mx",RSA:"za",KOR:"kr",CZE:"cz",CAN:"ca",BIH:"ba",QAT:"qa",SUI:"ch",BRA:"br",MAR:"ma",HAI:"ht",SCO:"gb-sct",USA:"us",PAR:"py",AUS:"au",TUR:"tr",GER:"de",COW:"cw",CIV:"ci",ECU:"ec",NED:"nl",JPN:"jp",SWE:"se",TUN:"tn",BEL:"be",EGY:"eg",IRN:"ir",NZL:"nz",ESP:"es",CPV:"cv",KSA:"sa",URU:"uy",FRA:"fr",SEN:"sn",IRQ:"iq",NOR:"no",ARG:"ar",ALG:"dz",AUT:"at",JOR:"jo",POR:"pt",COD:"cd",UZB:"uz",COL:"co",ENG:"gb-eng",CRO:"hr",GHA:"gh",PAN:"pa"};
     // Códigos especiales sin bandera (FWC=mundial, CC=Coca-Cola)
     const SPECIAL_EMOJI = {FWC:"🏆", CC:"⚽"};
+    // Cantidad real de figuritas por país (default: 20)
+    const MAX_PER_COUNTRY = { CC: 14, FWC: 19 };
+    const maxFor = (c) => MAX_PER_COUNTRY[c] || 20;
+    const TOTAL_FIGUS = COUNTRIES.reduce((sum, c) => sum + maxFor(c), 0);
 
     // Datos de jugadores por país [nombre, posición] indexados por número de sticker (1-20)
     // 1=Escudo, 2=Presentación, 3=Presentación, 4-20=Jugadores
@@ -1615,7 +1619,7 @@
     const def = () => {
       const o = {};
       COUNTRIES.forEach(c => {
-        for (let n = 1; n <= 20; n++) o[key(c, n)] = { codigo_pais: c, numero: n, la_tengo: false, repetidas: 0 };
+        for (let n = 1; n <= maxFor(c); n++) o[key(c, n)] = { codigo_pais: c, numero: n, la_tengo: false, repetidas: 0 };
       });
       return o;
     };
@@ -1726,7 +1730,7 @@
 
     const countryProgress = (c) => {
       let have = 0;
-      for (let n = 1; n <= 20; n++) if (state[key(c, n)].la_tengo) have++;
+      for (let n = 1; n <= maxFor(c); n++) if (state[key(c, n)].la_tengo) have++;
       return have;
     };
 
@@ -1747,14 +1751,14 @@
             <div class="country-flag">${flagHTML(c)}</div>
             <div class="country-meta">
               <h2>${LABELS[c] || c}</h2>
-              <p><span>${c}</span> · <span class="cprog">${have}/20</span> <span class="mini-progress"><span style="width:${(have/20)*100}%"></span></span></p>
+              <p><span>${c}</span> · <span class="cprog">${have}/${maxFor(c)}</span> <span class="mini-progress"><span style="width:${(have/maxFor(c))*100}%"></span></span></p>
             </div>
             <div class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
           </div>`;
         details.appendChild(summary);
         const stickers = document.createElement("div");
         stickers.className = "stickers";
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           const k = key(c, n), s = state[k];
           const card = document.createElement("article");
           const hasIt = s.la_tengo;
@@ -1848,7 +1852,7 @@
         row.style.setProperty("--c2", c2);
         let have = 0;
         let nums = "";
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           if (state[key(c, n)].la_tengo) have++;
           nums += chipHTML(c, n);
         }
@@ -1858,7 +1862,7 @@
             <div style="font-family:Montserrat,sans-serif;font-weight:800;font-size:0.85rem;color:#0a3d79;margin-bottom:4px">${LABELS[c] || c}</div>
             <div class="repnums">${nums}</div>
           </div>
-          <div class="reptotal" data-total>${have}/20</div>`;
+          <div class="reptotal" data-total>${have}/${maxFor(c)}</div>`;
         els.replist.appendChild(row);
       });
     };
@@ -1875,7 +1879,7 @@
       let have = 0;
       for (let i = 1; i <= 20; i++) if (state[key(c, i)].la_tengo) have++;
       const cell = row.querySelector("[data-total]");
-      if (cell) cell.textContent = `${have}/20`;
+      if (cell) cell.textContent = `${have}/${maxFor(c)}`;
     };
 
     const refreshHeader = () => {
@@ -1885,18 +1889,25 @@
         const have = countryProgress(c);
         const cp = det.querySelector(".cprog");
         const bar = det.querySelector(".mini-progress span");
-        if (cp) cp.textContent = `${have}/20`;
-        if (bar) bar.style.width = `${(have/20)*100}%`;
+        if (cp) cp.textContent = `${have}/${maxFor(c)}`;
+        if (bar) bar.style.width = `${(have/maxFor(c))*100}%`;
       });
     };
 
     const stats = () => {
       let tengo = 0, faltan = 0, rep = 0;
-      Object.values(state).forEach(s => { s.la_tengo ? tengo++ : faltan++; rep += Number(s.repetidas || 0); });
+      COUNTRIES.forEach(c => {
+        for (let n = 1; n <= maxFor(c); n++) {
+          const s = state[key(c, n)];
+          if (!s) continue;
+          s.la_tengo ? tengo++ : faltan++;
+          rep += Number(s.repetidas || 0);
+        }
+      });
       els.sTengo.textContent = String(tengo);
       els.sFaltan.textContent = String(faltan);
       els.sRep.textContent = String(rep);
-      const total = COUNTRIES.length * 20;
+      const total = TOTAL_FIGUS;
       els.progressFill.style.width = `${(tengo/total)*100}%`;
       const pctEl = document.getElementById("progressPct");
       if (pctEl) pctEl.textContent = Math.round((tengo/total)*100) + "%";
@@ -1919,7 +1930,7 @@
       let totalShown = 0;
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           const s = state[key(c, n)];
           const has = !!s.la_tengo;
           if (want === "have" && has) items.push({ n, rep: Number(s.repetidas || 0) });
@@ -1950,7 +1961,7 @@
       const out = [];
       COUNTRIES.forEach(c => {
         const nums = [];
-        for (let n = 1; n <= 20; n++) if (!state[key(c, n)].la_tengo) nums.push(n);
+        for (let n = 1; n <= maxFor(c); n++) if (!state[key(c, n)].la_tengo) nums.push(n);
         if (nums.length) out.push({ codigo_pais: c, nombre: LABELS[c] || c, numeros: nums });
       });
       return out;
@@ -1959,7 +1970,7 @@
       const lines = [];
       COUNTRIES.forEach(c => {
         const parts = [];
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
           if (q > 0) parts.push(`${n}(x${q})`);
         }
@@ -2054,7 +2065,7 @@
       const cambiarHtml = [];
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
           if (q > 0) items.push({ n, q });
         }
@@ -2073,7 +2084,7 @@
       const faltanHtml = [];
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           if (!state[key(c, n)].la_tengo) items.push(n);
         }
         if (!items.length) return;
@@ -2097,7 +2108,8 @@
       const todasHtml = [];
       COUNTRIES.forEach(c => {
         const chips = [];
-        for (let n = 1; n <= 20; n++) {
+        const mf = maxFor(c);
+        for (let n = 1; n <= mf; n++) {
           const s = state[key(c, n)];
           const q = Number(s.repetidas || 0);
           let cls, badge;
@@ -2111,9 +2123,9 @@
           }
           chips.push(`<div class="sum-chip ${cls}"><span class="chip-badge">${badge}</span>${n}</div>`);
         }
-        const haveCount = Array.from({length: 20}, (_, i) => state[key(c, i + 1)]).filter(s => s.la_tengo).length;
+        const haveCount = Array.from({length: mf}, (_, i) => state[key(c, i + 1)]).filter(s => s && s.la_tengo).length;
         todasHtml.push(
-          `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${haveCount}/20</span></div><div class="sum-chips">${chips.join("")}</div></div>`
+          `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${haveCount}/${mf}</span></div><div class="sum-chips">${chips.join("")}</div></div>`
         );
       });
       els.sumTodas.innerHTML = todasHtml.join("");
@@ -2131,9 +2143,9 @@
       text.split("\n").map(x => x.trim()).filter(Boolean).forEach(line => {
         const parts = line.split(":");
         if (parts.length < 2) return;
-        const code = parts[0].trim().toUpperCase();
-        const nums = parts[1].split(",").map(n => Number(n.trim())).filter(n => Number.isInteger(n) && n >= 1 && n <= 20);
-        if (nums.length) map[code] = Array.from(new Set(nums));
+        const codeUp = parts[0].trim().toUpperCase();
+        const nums = parts[1].split(",").map(n => Number(n.trim())).filter(n => Number.isInteger(n) && n >= 1 && n <= maxFor(codeUp));
+        if (nums.length) map[codeUp] = Array.from(new Set(nums));
       });
       return map;
     };
@@ -2143,7 +2155,7 @@
       const ownRep = {};
       COUNTRIES.forEach(c => {
         const reps = [];
-        for (let n = 1; n <= 20; n++) {
+        for (let n = 1; n <= maxFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
           if (q > 0) reps.push(n);
         }
