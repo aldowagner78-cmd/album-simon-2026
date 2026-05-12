@@ -414,37 +414,37 @@
 
     /* WA flotante DENTRO del overlay */
     .sheet-wa { position: sticky; bottom: 0; left: 0; right: 0;
-      padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
       background: linear-gradient(180deg, transparent, rgba(255,255,255,0.95) 30%, #fff);
-      display: flex; gap: 8px; flex-wrap: wrap; z-index: 5;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; z-index: 5;
     }
-    .sheet-wa .btn-wa-share { flex: 1 1 calc(50% - 4px); min-height: 54px; border-radius: 16px;
+    .sheet-wa .btn-wa-share { width: 100%; min-height: 44px; border-radius: 14px;
       background: linear-gradient(135deg, #25d366, #128c7e); color: #fff;
-      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.95rem;
-      box-shadow: 0 8px 22px rgba(37,211,102,0.45);
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      cursor: pointer; border: 0;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
+      box-shadow: 0 6px 16px rgba(37,211,102,0.35);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      cursor: pointer; border: 0; padding: 0 10px; text-align: center;
     }
     .sheet-wa .btn-wa-share.rep {
       background: linear-gradient(135deg, #f6b40e, #d99a00); color: #16284d;
-      box-shadow: 0 8px 22px rgba(246,180,14,0.45);
+      box-shadow: 0 6px 16px rgba(246,180,14,0.35);
     }
-    .sheet-wa .btn-wa-share svg { width: 22px; height: 22px; flex-shrink: 0; }
-    .sheet-wa .btn-copy-share { min-height: 54px; padding: 0 16px; border-radius: 16px;
+    .sheet-wa .btn-wa-share svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .sheet-wa .btn-copy-share { width: 100%; min-height: 44px; padding: 0 10px; border-radius: 14px;
       background: linear-gradient(135deg, #f6b40e, #d99a00); color: #16284d;
-      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.95rem;
-      box-shadow: 0 8px 22px rgba(246,180,14,0.35); cursor: pointer; border: 0;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.82rem;
+      box-shadow: 0 6px 16px rgba(246,180,14,0.28); cursor: pointer; border: 0;
     }
-    .sheet-wa .btn-sync-share { min-height: 54px; padding: 0 14px; border-radius: 16px;
+    .sheet-wa .btn-sync-share { width: 100%; min-height: 44px; padding: 0 10px; border-radius: 14px;
       background: linear-gradient(135deg, #0a3d79, #1f5ea9); color: #fff;
-      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.92rem;
-      box-shadow: 0 8px 22px rgba(10,61,121,0.35); cursor: pointer; border: 0;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.8rem;
+      box-shadow: 0 6px 16px rgba(10,61,121,0.28); cursor: pointer; border: 0;
       white-space: nowrap;
     }
-    .sheet-wa .btn-pdf-share { min-height: 54px; padding: 0 14px; border-radius: 16px;
+    .sheet-wa .btn-pdf-share { width: 100%; min-height: 44px; padding: 0 10px; border-radius: 14px;
       background: linear-gradient(135deg, #b73a3a, #e53e3e); color: #fff;
-      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.92rem;
-      box-shadow: 0 8px 22px rgba(229,62,62,0.35); cursor: pointer; border: 0;
+      font-family: Montserrat, sans-serif; font-weight: 900; font-size: 0.8rem;
+      box-shadow: 0 6px 16px rgba(229,62,62,0.28); cursor: pointer; border: 0;
       white-space: nowrap;
     }
     .sheet-wa .btn-pdf-share.rep {
@@ -2395,15 +2395,27 @@
       }
     });
     const openPrintable = (titulo, subtitulo, groups, accent) => {
-      const totalNums = groups.reduce((s, g) => s + g.numeros.length, 0);
+      const totalNums = groups.reduce((s, g) => s + (g.items || g.numeros || []).reduce((n, item) => n + (typeof item === "object" ? Number(item.qty || item.cantidad || 0) : 1), 0), 0);
       const fecha = new Date().toLocaleDateString("es-AR", { day: "2-digit", month: "long", year: "numeric" });
       const rows = groups.length
-        ? groups.map(g => `
+        ? groups.map(g => {
+            const items = g.items || (g.numeros || []).map(n => n);
+            const cells = items.map(item => {
+              if (item && typeof item === "object") {
+                const numero = item.numero ?? item.n ?? item.valor ?? item.label;
+                const cantidad = item.qty ?? item.cantidad ?? 1;
+                return `<span class="chip rep"><span class="chip-num">${numero}</span><span class="chip-qty">x${cantidad}</span></span>`;
+              }
+              return `<span class="chip">${item}</span>`;
+            }).join("");
+            const cantidadTotal = items.reduce((sum, item) => sum + (item && typeof item === "object" ? Number(item.qty || item.cantidad || 0) : 1), 0);
+            return `
             <tr>
               <td class="pais">${g.nombre}<span class="cod">(${g.codigo_pais})</span></td>
-              <td class="nums">${g.numeros.map(n => `<span class="chip">${n}</span>`).join("")}</td>
-              <td class="cant">${g.numeros.length}</td>
-            </tr>`).join("")
+              <td class="nums">${cells}</td>
+              <td class="cant">${cantidadTotal}</td>
+            </tr>`;
+          }).join("")
         : `<tr><td colspan="3" class="vacio">No hay figuritas en esta lista.</td></tr>`;
       const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><title>${titulo} - Álbum Simón 2026</title>
         <style>
@@ -2423,6 +2435,9 @@
           td.pais .cod { display: block; font-weight: 500; color: #888; font-size: 0.78rem; }
           td.nums { line-height: 1.9; }
           .chip { display: inline-block; min-width: 28px; padding: 2px 7px; margin: 2px 4px 2px 0; border: 1.5px solid ${accent}; border-radius: 8px; text-align: center; font-weight: 700; font-size: 0.88rem; }
+          .chip.rep { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; min-width: 34px; padding: 3px 8px; }
+          .chip.rep .chip-num { line-height: 1; }
+          .chip.rep .chip-qty { line-height: 1; font-size: 0.7rem; font-weight: 800; color: ${accent}; }
           tr:nth-child(even) td { background: #fafbfd; }
           .vacio { text-align: center; padding: 30px; color: #888; font-style: italic; }
           .footer { margin-top: 16px; font-size: 0.72rem; color: #888; text-align: center; }
@@ -2454,11 +2469,12 @@
     const getRepGroups = () => {
       const groups = [];
       COUNTRIES.forEach(c => {
-        const nums = [];
+        const items = [];
         for (let n = 1; n <= maxFor(c); n++) {
-          if (Number(state[key(c, n)].repetidas || 0) > 0) nums.push(n);
+          const qty = Number(state[key(c, n)].repetidas || 0);
+          if (qty > 0) items.push({ numero: n, qty });
         }
-        if (nums.length) groups.push({ codigo_pais: c, nombre: LABELS[c] || c, numeros: nums });
+        if (items.length) groups.push({ codigo_pais: c, nombre: LABELS[c] || c, items });
       });
       return groups;
     };
