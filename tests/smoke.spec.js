@@ -84,6 +84,7 @@ test("CC tiene 14 figuritas, FWC tiene 20, total 994", async ({ page }) => {
   const fwcCount = await page.locator('.sticker[data-code="FWC"]').count();
   expect(ccCount).toBe(14);
   expect(fwcCount).toBe(20);
+  await expect(page.locator('.sticker[data-code="FWC"][data-num="0"] .sticker-num')).toHaveText("00");
   const total = await page.locator(".sticker").count();
   expect(total).toBe(994);
 });

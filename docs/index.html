@@ -520,7 +520,7 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.12.11";
+    const APP_VERSION = "2026.05.12.12";
     const STORAGE_KEY = "album_simon_2026_v5";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
@@ -530,10 +530,14 @@
     const SPECIAL_EMOJI = {FWC:"🏆", CC:"⚽"};
     // Cantidad real de figuritas por país (default: 20)
     const MAX_PER_COUNTRY = { CC: 14, FWC: 20 };
+    const MIN_PER_COUNTRY = { FWC: 0 };
+    const minFor = (c) => MIN_PER_COUNTRY[c] ?? 1;
     const maxFor = (c) => MAX_PER_COUNTRY[c] || 20;
+    const lastFor = (c) => minFor(c) + maxFor(c) - 1;
+    const formatStickerNum = (c, n) => (c === "FWC" && n === 0 ? "00" : String(n));
     const TOTAL_FIGUS = COUNTRIES.reduce((sum, c) => sum + maxFor(c), 0);
 
-    // Datos de jugadores por país [nombre, posición] indexados por número de sticker (1-20)
+    // Datos de jugadores por país [nombre, posición] indexados por número de sticker
     // 1=Escudo, 2=Presentación, 3=Presentación, 4-20=Jugadores
     const PLAYERS = {
       "ALG":{
@@ -1637,7 +1641,7 @@
     const def = () => {
       const o = {};
       COUNTRIES.forEach(c => {
-        for (let n = 1; n <= maxFor(c); n++) o[key(c, n)] = { codigo_pais: c, numero: n, la_tengo: false, repetidas: 0 };
+        for (let n = minFor(c); n <= lastFor(c); n++) o[key(c, n)] = { codigo_pais: c, numero: n, la_tengo: false, repetidas: 0 };
       });
       return o;
     };
@@ -1748,7 +1752,7 @@
 
     const countryProgress = (c) => {
       let have = 0;
-      for (let n = 1; n <= maxFor(c); n++) if (state[key(c, n)].la_tengo) have++;
+      for (let n = minFor(c); n <= lastFor(c); n++) if (state[key(c, n)].la_tengo) have++;
       return have;
     };
 
@@ -1776,7 +1780,7 @@
         details.appendChild(summary);
         const stickers = document.createElement("div");
         stickers.className = "stickers";
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const k = key(c, n), s = state[k];
           const card = document.createElement("article");
           const hasIt = s.la_tengo;
@@ -1815,7 +1819,7 @@
               ${FLAGS[c]
                 ? `<img src="${flagUrl(c, 80)}" alt="${c}" loading="lazy">`
                 : `<span style="font-size:1.4rem">${SPECIAL_EMOJI[c]||"⚽"}</span>`}
-              <span class="sticker-num">${n}</span>
+              <span class="sticker-num">${formatStickerNum(c, n)}</span>
             </div>
             <div class="sticker-mark">✓</div>
             <div class="sticker-body ${bodyClass}">
@@ -1851,10 +1855,10 @@
       const cls = !s.la_tengo ? 'miss' : (r > 0 ? 'rep' : 'have');
       const badge = (s.la_tengo && r > 0) ? `<span class="rbadge">${r + 1}</span>` : '';
       return `<div class="chip-wrap" data-num="${n}">
-        <div class="repnum ${cls}">${n}${badge}</div>
+        <div class="repnum ${cls}">${formatStickerNum(c, n)}${badge}</div>
         <div class="chip-actions">
-          <button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="quitar ${n}">−</button>
-          <button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="agregar ${n}">+</button>
+          <button class="rn-action minus" data-num="${n}" data-action="minus" aria-label="quitar ${formatStickerNum(c, n)}">−</button>
+          <button class="rn-action plus" data-num="${n}" data-action="plus" aria-label="agregar ${formatStickerNum(c, n)}">+</button>
         </div>
       </div>`;
     };
@@ -1870,7 +1874,7 @@
         row.style.setProperty("--c2", c2);
         let have = 0;
         let nums = "";
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           if (state[key(c, n)].la_tengo) have++;
           nums += chipHTML(c, n);
         }
@@ -1895,7 +1899,7 @@
         existing.replaceWith(tmp.firstElementChild);
       }
       let have = 0;
-      for (let i = 1; i <= 20; i++) if (state[key(c, i)].la_tengo) have++;
+      for (let i = minFor(c); i <= lastFor(c); i++) if (state[key(c, i)].la_tengo) have++;
       const cell = row.querySelector("[data-total]");
       if (cell) cell.textContent = `${have}/${maxFor(c)}`;
     };
@@ -1915,7 +1919,7 @@
     const stats = () => {
       let tengo = 0, faltan = 0, rep = 0;
       COUNTRIES.forEach(c => {
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const s = state[key(c, n)];
           if (!s) continue;
           s.la_tengo ? tengo++ : faltan++;
@@ -1948,7 +1952,7 @@
       let totalShown = 0;
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const s = state[key(c, n)];
           const has = !!s.la_tengo;
           if (want === "have" && has) items.push({ n, rep: Number(s.repetidas || 0) });
@@ -1961,9 +1965,9 @@
         const thumbs = items.map(({ n, rep }) => {
           const repBadge = rep > 0 ? `<span class="badge-rep">x${rep}</span>` : "";
           if (want === "have") {
-            return `<div class="lthumb ${cls}"><img src="./img/stickers/${c}-${n}.jpg" loading="lazy" onerror="this.style.display='none'" alt="${c}-${n}"><span class="ln">${n}</span>${repBadge}</div>`;
+            return `<div class="lthumb ${cls}"><img src="./img/stickers/${c}-${n}.jpg" loading="lazy" onerror="this.style.display='none'" alt="${c}-${n}"><span class="ln">${formatStickerNum(c, n)}</span>${repBadge}</div>`;
           }
-          return `<div class="lthumb miss"><span class="ln">${n}</span></div>`;
+          return `<div class="lthumb miss"><span class="ln">${formatStickerNum(c, n)}</span></div>`;
         }).join("");
         html += `<div class="listcountry"><h4>${flagImg}<span>${LABELS[c] || c}</span><span class="ccount">${items.length}</span></h4><div class="lthumbs">${thumbs}</div></div>`;
       });
@@ -1979,7 +1983,7 @@
       const out = [];
       COUNTRIES.forEach(c => {
         const nums = [];
-        for (let n = 1; n <= maxFor(c); n++) if (!state[key(c, n)].la_tengo) nums.push(n);
+        for (let n = minFor(c); n <= lastFor(c); n++) if (!state[key(c, n)].la_tengo) nums.push(n);
         if (nums.length) out.push({ codigo_pais: c, nombre: LABELS[c] || c, numeros: nums });
       });
       return out;
@@ -1988,9 +1992,9 @@
       const lines = [];
       COUNTRIES.forEach(c => {
         const parts = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
-          if (q > 0) parts.push(`${n}(x${q})`);
+          if (q > 0) parts.push(`${formatStickerNum(c, n)}(x${q})`);
         }
         if (parts.length) lines.push(`${c}: ${parts.join(", ")}`);
       });
@@ -2000,7 +2004,7 @@
       const m = getMissing(), r = getRep();
       const lines = ["Me faltan"];
       if (!m.length) lines.push("No faltan figuritas.");
-      m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
+      m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.map(n => formatStickerNum(g.codigo_pais, n)).join(", ")}`));
       lines.push("");
       lines.push("Repetidas");
       if (!r.length) lines.push("No hay repetidas.");
@@ -2011,21 +2015,21 @@
       const m = getMissing();
       const lines = ["Me faltan figuritas del álbum 2026:"];
       if (!m.length) lines.push("No faltan figuritas.");
-      m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
+      m.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.map(n => formatStickerNum(g.codigo_pais, n)).join(", ")}`));
       return lines.join("\n");
     };
     const repeatedSummary = () => {
       const groups = [];
       COUNTRIES.forEach(c => {
         const nums = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           if (Number(state[key(c, n)].repetidas || 0) > 0) nums.push(n);
         }
         if (nums.length) groups.push({ codigo_pais: c, nombre: LABELS[c] || c, numeros: nums });
       });
       const lines = ["Tengo repetidas para cambiar del álbum 2026:"];
       if (!groups.length) lines.push("No tengo repetidas.");
-      groups.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`));
+      groups.forEach(g => lines.push(`${g.nombre} (${g.codigo_pais}): ${g.numeros.map(n => formatStickerNum(g.codigo_pais, n)).join(", ")}`));
       return lines.join("\n");
     };
 
@@ -2090,21 +2094,21 @@
     };
     const refreshSummary = () => {
       const m = getMissing(), r = getRep();
-      els.missingOut.textContent = m.length ? m.map(g => `${g.nombre} (${g.codigo_pais}): ${g.numeros.join(", ")}`).join("\n") : "No faltan figuritas.";
+      els.missingOut.textContent = m.length ? m.map(g => `${g.nombre} (${g.codigo_pais}): ${g.numeros.map(n => formatStickerNum(g.codigo_pais, n)).join(", ")}`).join("\n") : "No faltan figuritas.";
       els.repeatedOut.textContent = r.length ? r.join("\n") : "No hay repetidas.";
       // Tab "Para cambiar" — solo países con repetidas
       let cntCambiar = 0;
       const cambiarHtml = [];
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
           if (q > 0) items.push({ n, q });
         }
         if (!items.length) return;
         cntCambiar += items.length;
         const chips = items.map(it =>
-          `<div class="sum-chip rep"><span class="chip-badge">REPE ×${it.q}</span>${it.n}</div>`
+          `<div class="sum-chip rep"><span class="chip-badge">REPE ×${it.q}</span>${formatStickerNum(c, it.n)}</div>`
         ).join("");
         const totalCount = items.reduce((a, b) => a + b.q, 0);
         cambiarHtml.push(
@@ -2116,13 +2120,13 @@
       const faltanHtml = [];
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           if (!state[key(c, n)].la_tengo) items.push(n);
         }
         if (!items.length) return;
         cntFaltan += items.length;
         const chips = items.map(n =>
-          `<div class="sum-chip miss"><span class="chip-badge">NOLA</span>${n}</div>`
+          `<div class="sum-chip miss"><span class="chip-badge">NOLA</span>${formatStickerNum(c, n)}</div>`
         ).join("");
         faltanHtml.push(
           `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${items.length} faltan</span></div><div class="sum-chips">${chips}</div></div>`
@@ -2141,7 +2145,7 @@
       COUNTRIES.forEach(c => {
         const chips = [];
         const mf = maxFor(c);
-        for (let n = 1; n <= mf; n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const s = state[key(c, n)];
           const q = Number(s.repetidas || 0);
           let cls, badge;
@@ -2153,9 +2157,12 @@
             cls = "have"; badge = "LATE";
             cntTodasLate++;
           }
-          chips.push(`<div class="sum-chip ${cls}"><span class="chip-badge">${badge}</span>${n}</div>`);
+          chips.push(`<div class="sum-chip ${cls}"><span class="chip-badge">${badge}</span>${formatStickerNum(c, n)}</div>`);
         }
-        const haveCount = Array.from({length: mf}, (_, i) => state[key(c, i + 1)]).filter(s => s && s.la_tengo).length;
+        let haveCount = 0;
+        for (let i = minFor(c); i <= lastFor(c); i++) {
+          if (state[key(c, i)] && state[key(c, i)].la_tengo) haveCount++;
+        }
         todasHtml.push(
           `<div class="sum-country"><div class="sum-country-head"><div class="sc-flag">${flagHTML(c)}</div><h4>${LABELS[c] || c} <span style="opacity:.65;font-weight:600">· ${c}</span></h4><span class="sc-total">${haveCount}/${mf}</span></div><div class="sum-chips">${chips.join("")}</div></div>`
         );
@@ -2176,7 +2183,7 @@
         const parts = line.split(":");
         if (parts.length < 2) return;
         const codeUp = parts[0].trim().toUpperCase();
-        const nums = parts[1].split(",").map(n => Number(n.trim())).filter(n => Number.isInteger(n) && n >= 1 && n <= maxFor(codeUp));
+        const nums = parts[1].split(",").map(n => Number(n.trim())).filter(n => Number.isInteger(n) && n >= minFor(codeUp) && n <= lastFor(codeUp));
         if (nums.length) map[codeUp] = Array.from(new Set(nums));
       });
       return map;
@@ -2187,7 +2194,7 @@
       const ownRep = {};
       COUNTRIES.forEach(c => {
         const reps = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const q = Number(state[key(c, n)].repetidas || 0);
           if (q > 0) reps.push(n);
         }
@@ -2207,15 +2214,15 @@
       const lines = [];
       lines.push("Tu amigo puede darte:");
       if (!fcan.length) lines.push("Sin coincidencias.");
-      fcan.forEach(x => lines.push(`${x.c}: ${x.nums.join(", ")}`));
+      fcan.forEach(x => lines.push(`${x.c}: ${x.nums.map(n => formatStickerNum(x.c, n)).join(", ")}`));
       lines.push("");
       lines.push("Simon puede darle:");
       if (!scan.length) lines.push("Sin coincidencias.");
-      scan.forEach(x => lines.push(`${x.c}: ${x.nums.join(", ")}`));
+      scan.forEach(x => lines.push(`${x.c}: ${x.nums.map(n => formatStickerNum(x.c, n)).join(", ")}`));
       lines.push("");
       lines.push("Canje mutuo:");
       if (!mut.length) lines.push("Sin canje mutuo.");
-      mut.forEach(m => lines.push(`${m.c}: recibes [${m.rcv.join(", ")}], das [${m.giv.join(", ")}]`));
+      mut.forEach(m => lines.push(`${m.c}: recibes [${m.rcv.map(n => formatStickerNum(m.c, n)).join(", ")}], das [${m.giv.map(n => formatStickerNum(m.c, n)).join(", ")}]`));
       return lines.join("\n");
     };
 
@@ -2262,7 +2269,7 @@
       const card = t.closest(".sticker");
       if (!card) return;
       const c = card.dataset.code, n = Number(card.dataset.num);
-      pushHistory(`${LABELS[c]||c} #${n} ${t.checked ? "marcada" : "desmarcada"}`);
+      pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} ${t.checked ? "marcada" : "desmarcada"}`);
       state[key(c, n)].la_tengo = t.checked;
       card.classList.toggle("have", t.checked);
       if (t.checked) {
@@ -2285,22 +2292,22 @@
       const isPlus = t.classList.contains("plus");
       if (isPlus) {
         if (!s.la_tengo) {
-          pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} marcada ✅`);
           s.la_tengo = true;
           s.repetidas = 0;
           const r = card.getBoundingClientRect();
           fireConfetti(r.left + r.width / 2, r.top + r.height / 2);
         } else {
-          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} repetida +1`);
           s.repetidas = Number(s.repetidas || 0) + 1;
         }
       } else {
         if (!s.la_tengo) return;
         if (Number(s.repetidas || 0) > 0) {
-          pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} repetida -1`);
           s.repetidas = Number(s.repetidas || 0) - 1;
         } else {
-          pushHistory(`${LABELS[c]||c} #${n} quitada`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} quitada`);
           s.la_tengo = false;
           s.repetidas = 0;
         }
@@ -2324,23 +2331,23 @@
       const action = actionBtn.dataset.action;
       if (action === "plus") {
         if (!s.la_tengo) {
-          pushHistory(`${LABELS[c]||c} #${n} marcada ✅`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} marcada ✅`);
           s.la_tengo = true; s.repetidas = 0;
           try { navigator.vibrate && navigator.vibrate(40); } catch {}
           const wrap = actionBtn.closest(".chip-wrap");
           const rect = wrap ? wrap.getBoundingClientRect() : { left: 0, top: 0, width: 0, height: 0 };
           fireConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2);
         } else {
-          pushHistory(`${LABELS[c]||c} #${n} repetida +1`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} repetida +1`);
           s.repetidas = Number(s.repetidas || 0) + 1;
         }
       } else if (action === "minus") {
         if (!s.la_tengo) return;
         if (Number(s.repetidas) > 0) {
-          pushHistory(`${LABELS[c]||c} #${n} repetida -1`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} repetida -1`);
           s.repetidas = Number(s.repetidas) - 1;
         } else {
-          pushHistory(`${LABELS[c]||c} #${n} quitada`);
+          pushHistory(`${LABELS[c]||c} #${formatStickerNum(c, n)} quitada`);
           s.la_tengo = false; s.repetidas = 0;
         }
       }
@@ -2405,9 +2412,9 @@
               if (item && typeof item === "object") {
                 const numero = item.numero ?? item.n ?? item.valor ?? item.label;
                 const cantidad = item.qty ?? item.cantidad ?? 1;
-                return `<span class="chip rep"><span class="chip-num">${numero}</span><span class="chip-qty">x${cantidad}</span></span>`;
+                return `<span class="chip rep"><span class="chip-num">${formatStickerNum(g.codigo_pais, Number(numero))}</span><span class="chip-qty">x${cantidad}</span></span>`;
               }
-              return `<span class="chip">${item}</span>`;
+              return `<span class="chip">${formatStickerNum(g.codigo_pais, Number(item))}</span>`;
             }).join("");
             const cantidadTotal = items.reduce((sum, item) => sum + (item && typeof item === "object" ? Number(item.qty || item.cantidad || 0) : 1), 0);
             return `
@@ -2471,7 +2478,7 @@
       const groups = [];
       COUNTRIES.forEach(c => {
         const items = [];
-        for (let n = 1; n <= maxFor(c); n++) {
+        for (let n = minFor(c); n <= lastFor(c); n++) {
           const qty = Number(state[key(c, n)].repetidas || 0);
           if (qty > 0) items.push({ numero: n, qty });
         }
@@ -2608,3 +2615,5 @@
   </script>
 </body>
 </html>
+
+
