@@ -2088,10 +2088,7 @@
       return p;
     };
     const applySyncPayload = (payload) => {
-      Object.keys(state).forEach(k => {
-        state[k].la_tengo = false;
-        state[k].repetidas = 0;
-      });
+      // MERGE: nunca borra stickers locales, solo agrega los remotos
       payload.h.forEach(k => {
         if (!state[k]) return;
         state[k].la_tengo = true;
@@ -2103,7 +2100,7 @@
         const q = Math.max(0, Number(qRaw || 0));
         if (q > 0) {
           state[k].la_tengo = true;
-          state[k].repetidas = q;
+          state[k].repetidas = Math.max(state[k].repetidas || 0, q);
         }
       });
       save();
