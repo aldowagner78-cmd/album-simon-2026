@@ -318,6 +318,23 @@
     /* Version + actualizar en hero */
     .vers { display: none; }
     .vers b { color: rgba(255,255,255,0.6); }
+    .sync-status {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.95);
+    }
+    .sync-status.ok { background: rgba(25,179,107,0.22); border-color: rgba(25,179,107,0.45); }
+    .sync-status.syncing { background: rgba(246,180,14,0.24); border-color: rgba(246,180,14,0.48); color: #fff6da; }
+    .sync-status.warn { background: rgba(229,62,62,0.25); border-color: rgba(229,62,62,0.46); }
 
     @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,93,143,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,93,143,0); } }
 
@@ -448,10 +465,7 @@
       background: linear-gradient(135deg, #5e6b7f, #7e8ca1); color: #fff;
       box-shadow: 0 6px 16px rgba(45,58,80,0.24);
     }
-    .sheet-wa .btn-sync-share {
-      background: linear-gradient(135deg, #0b4c99, #2767b8); color: #fff;
-      box-shadow: 0 6px 16px rgba(10,61,121,0.28);
-    }
+    .sheet-wa .btn-copy-share { grid-column: 1 / -1; }
   </style>
 </head>
 <body>
@@ -471,6 +485,7 @@
       <div class="hero-actions">
         <button class="btn-summary" id="summaryBtn" style="grid-column:1/-1;width:100%;">⚡ Ver resumen de figuritas</button>
       </div>
+      <div class="sync-status syncing" id="syncStatus">☁ Sincronizando...</div>
       <span class="vers">v<b id="versBadge">…</b><span id="updStatus"></span></span>
       <button id="importPreloadBtn" style="display:none">📥 Cargar figus</button>
     </section>
@@ -514,7 +529,6 @@
         <button class="btn-pdf-share" id="pdfMissBtn">📄 PDF faltantes</button>
         <button class="btn-pdf-share rep" id="pdfRepBtn">📄 PDF repetidas</button>
         <button class="btn-copy-share" id="copyBtn">📋 Copiar</button>
-        <button class="btn-sync-share" id="syncLinkBtn">🔗 Link</button>
       </div>
     </div>
   </section>
@@ -1684,7 +1698,7 @@
       cntCambiar: document.getElementById("cntCambiar"),
       cntFaltan: document.getElementById("cntFaltan"),
       cntTodas: document.getElementById("cntTodas"),
-      syncLinkBtn: document.getElementById("syncLinkBtn"),
+      syncStatus: document.getElementById("syncStatus"),
       importPreloadBtn: document.getElementById("importPreloadBtn"),
       installBtn: document.getElementById("installBtn"),
       undoBtn: document.getElementById("undoBtn"),
@@ -1716,6 +1730,12 @@
       document.body.appendChild(t);
       requestAnimationFrame(() => t.classList.add("show"));
       setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2400);
+    };
+    const setSyncStatus = (text, kind = "syncing") => {
+      if (!els.syncStatus) return;
+      els.syncStatus.textContent = text;
+      els.syncStatus.classList.remove("ok", "syncing", "warn");
+      els.syncStatus.classList.add(kind);
     };
 
     // ===== UNDO HISTORY =====
@@ -2092,6 +2112,7 @@
     const scheduleCloudPush = () => {
       if (cloudMutePush || !CLOUD_SYNC_URL) return;
       if (cloudPushTimer) clearTimeout(cloudPushTimer);
+      setSyncStatus("☁ Sincronizando...", "syncing");
       cloudPushTimer = setTimeout(async () => {
         try {
           const doc = {
@@ -2105,8 +2126,10 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(doc),
           });
+          setSyncStatus("✅ Sincronizado automático", "ok");
         } catch {
           // sin red: mantener solo local y reintentar más adelante
+          setSyncStatus("⚠ Sin conexión (guardado local)", "warn");
         }
       }, 900);
     };
@@ -2121,14 +2144,21 @@
         if (!payload || payload.v !== 1 || !Array.isArray(payload.h) || !Array.isArray(payload.r)) return false;
         const remoteTs = Number(doc.updatedAt || 0);
         const localTs = Number(localStorage.getItem(STATE_TS_KEY) || 0);
-        if (!remoteTs || remoteTs <= localTs) return false;
+        // Ganar si es más reciente O si la nube tiene más stickers marcados
+        const remoteHaveCount = payload.h.length;
+        const localHaveCount = Object.values(state).filter(s => s.la_tengo).length;
+        const remoteIsNewer = remoteTs > localTs;
+        const remoteIsRicher = remoteHaveCount > localHaveCount;
+        if (!remoteIsNewer && !remoteIsRicher) return false;
         cloudMutePush = true;
         applySyncPayload(payload);
         localStorage.setItem(STATE_TS_KEY, String(remoteTs));
         cloudMutePush = false;
+        setSyncStatus("✅ Sincronizado automático", "ok");
         if (!silent) toast("Sincronizado automático ✅", "ok");
         return true;
       } catch {
+        setSyncStatus("⚠ Sin conexión (guardado local)", "warn");
         return false;
       } finally {
         cloudMutePush = false;
@@ -2137,6 +2167,7 @@
     const initCloudSync = async () => {
       if (cloudInitDone) return;
       cloudInitDone = true;
+      setSyncStatus("☁ Conectando sincronización...", "syncing");
       const applied = await pullCloudOnce({ silent: true });
       if (!applied) {
         // si no había remoto más nuevo, subimos el estado local actual
@@ -2561,25 +2592,13 @@
     document.getElementById("pdfRepBtn").addEventListener("click", () => {
       openPrintable("Repetidas para cambiar", "Álbum Mundial 2026 - Lista para imprimir", getRepGroups(), "#d99a00");
     });
-    els.syncLinkBtn.addEventListener("click", async () => {
-      const url = `${window.location.origin}${window.location.pathname}${window.location.search}#sync=${encodeSyncPayload()}`;
-      try {
-        if (navigator.share) {
-          await navigator.share({
-            title: "Sincronizar álbum de Simón 2026",
-            text: "Abrí este link para cargar exactamente el mismo progreso:",
-            url
-          });
-          els.syncLinkBtn.textContent = "✓ Link enviado";
-          setTimeout(() => els.syncLinkBtn.textContent = "🔗 Link", 1400);
-          return;
-        }
-        await navigator.clipboard.writeText(url);
-        els.syncLinkBtn.textContent = "✓ Link copiado";
-        setTimeout(() => els.syncLinkBtn.textContent = "🔗 Link", 1400);
-      } catch {
-        window.prompt("Copiá este link para sincronizar en otro dispositivo:", url);
-      }
+    window.addEventListener("online", () => {
+      setSyncStatus("☁ Reconectando...", "syncing");
+      pullCloudOnce({ silent: true });
+      scheduleCloudPush();
+    });
+    window.addEventListener("offline", () => {
+      setSyncStatus("⚠ Sin conexión (guardado local)", "warn");
     });
     els.importPreloadBtn.addEventListener("click", async () => {
       try {
