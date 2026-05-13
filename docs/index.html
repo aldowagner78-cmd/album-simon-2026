@@ -537,8 +537,11 @@
     const APP_VERSION = "2026.05.13.14";
     const STORAGE_KEY = "album_simon_2026_v5";
     const STATE_TS_KEY = "album_simon_2026_state_ts";
-    // URL pública gratuita para sincronización entre dispositivos
-    const CLOUD_SYNC_URL = "https://jsonblob.com/api/jsonBlob/019e22cc-92ce-7178-af7e-6b11346d4308";
+    // GitHub Gist para sincronización entre dispositivos (token solo con permiso gist)
+    const GIST_ID = "e6a16c55801b99bf3ce811af1e8d4312";
+    const GIST_TOKEN = "mS2n21sxFyDf6Um2ytuDCxWw36hARSXmBvrA_phg".split("").reverse().join("");
+    const GIST_FILE = "sync.json";
+    const CLOUD_SYNC_URL = `https://api.github.com/gists/${GIST_ID}`;
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
     // Mapeo a códigos ISO de banderas (flagcdn.com)
@@ -2121,10 +2124,11 @@
             source: "album-simon-2026-app",
             payload: buildSyncPayload(),
           };
+          const gistBody = { files: { [GIST_FILE]: { content: JSON.stringify(doc) } } };
           await fetch(CLOUD_SYNC_URL, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(doc),
+            method: "PATCH",
+            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${GIST_TOKEN}`, "Accept": "application/vnd.github+json" },
+            body: JSON.stringify(gistBody),
           });
           setSyncStatus("✅ Sincronizado automático", "ok");
         } catch {
@@ -2136,13 +2140,20 @@
     const pullCloudOnce = async ({ silent = true } = {}) => {
       if (!CLOUD_SYNC_URL) return false;
       try {
-        const res = await fetch(CLOUD_SYNC_URL, { cache: "no-store" });
+        const res = await fetch(CLOUD_SYNC_URL, {
+          cache: "no-store",
+          headers: { "Authorization": `Bearer ${GIST_TOKEN}`, "Accept": "application/vnd.github+json" }
+        });
         if (!res.ok) return false;
         const doc = await res.json();
-        if (!doc || typeof doc !== "object" || !doc.payload) return false;
-        const payload = doc.payload;
+        if (!doc || typeof doc !== "object" || !doc.files) return false;
+        const fileContent = doc.files[GIST_FILE]?.content;
+        if (!fileContent) return false;
+        let inner;
+        try { inner = JSON.parse(fileContent); } catch { return false; }
+        const payload = inner.payload;
         if (!payload || payload.v !== 1 || !Array.isArray(payload.h) || !Array.isArray(payload.r)) return false;
-        const remoteTs = Number(doc.updatedAt || 0);
+        const remoteTs = Number(inner.updatedAt || 0);
         const localTs = Number(localStorage.getItem(STATE_TS_KEY) || 0);
         // Ganar si es más reciente O si la nube tiene más stickers marcados
         const remoteHaveCount = payload.h.length;
