@@ -520,8 +520,11 @@
   </section>
 
   <script>
-    const APP_VERSION = "2026.05.13.13";
+    const APP_VERSION = "2026.05.13.14";
     const STORAGE_KEY = "album_simon_2026_v5";
+    const STATE_TS_KEY = "album_simon_2026_state_ts";
+    // URL pública gratuita para sincronización entre dispositivos
+    const CLOUD_SYNC_URL = "https://jsonblob.com/api/jsonBlob/019e22cc-92ce-7178-af7e-6b11346d4308";
     const COUNTRIES = ["FWC","MEX","RSA","KOR","CZE","CAN","BIH","QAT","SUI","BRA","MAR","HAI","SCO","USA","PAR","AUS","TUR","GER","COW","CIV","ECU","NED","JPN","SWE","TUN","BEL","EGY","IRN","NZL","ESP","CPV","KSA","URU","FRA","SEN","IRQ","NOR","ARG","ALG","AUT","JOR","POR","COD","UZB","COL","ENG","CRO","GHA","PAN","CC"];
     const LABELS = {FWC:"Mundial 2026",MEX:"México",RSA:"Sudáfrica",KOR:"Corea del Sur",CZE:"República Checa",CAN:"Canadá",BIH:"Bosnia y Herzegovina",QAT:"Qatar",SUI:"Suiza",BRA:"Brasil",MAR:"Marruecos",HAI:"Haití",SCO:"Escocia",USA:"Estados Unidos",PAR:"Paraguay",AUS:"Australia",TUR:"Turquía",GER:"Alemania",COW:"Curaçao",CIV:"Costa de Marfil",ECU:"Ecuador",NED:"Países Bajos",JPN:"Japón",SWE:"Suecia",TUN:"Túnez",CC:"Coca-Cola",BEL:"Bélgica",EGY:"Egipto",IRN:"Irán",NZL:"Nueva Zelanda",ESP:"España",CPV:"Cabo Verde",KSA:"Arabia Saudita",URU:"Uruguay",FRA:"Francia",SEN:"Senegal",IRQ:"Irak",NOR:"Noruega",ARG:"Argentina",ALG:"Argelia",AUT:"Austria",JOR:"Jordania",POR:"Portugal",COD:"R. D. del Congo",UZB:"Uzbekistán",COL:"Colombia",ENG:"Inglaterra",CRO:"Croacia",GHA:"Ghana",PAN:"Panamá"};
     // Mapeo a códigos ISO de banderas (flagcdn.com)
@@ -1695,7 +1698,15 @@
       tabMiss: document.getElementById("tabMiss"),
     };
     let deferredPrompt = null;
-    const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    let cloudPushTimer = null;
+    let cloudPullTimer = null;
+    let cloudMutePush = false;
+    let cloudInitDone = false;
+    const save = () => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      localStorage.setItem(STATE_TS_KEY, String(Date.now()));
+      scheduleCloudPush();
+    };
 
     // ===== TOAST =====
     const toast = (msg, kind = "") => {
@@ -2033,7 +2044,7 @@
       return lines.join("\n");
     };
 
-    const encodeSyncPayload = () => {
+    const buildSyncPayload = () => {
       const payload = { v: 1, h: [], r: [] };
       Object.keys(state).forEach(k => {
         const s = state[k];
@@ -2041,6 +2052,10 @@
         const q = Number(s.repetidas || 0);
         if (q > 0) payload.r.push([k, q]);
       });
+      return payload;
+    };
+    const encodeSyncPayload = () => {
+      const payload = buildSyncPayload();
       return btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
     };
     const decodeSyncPayload = (raw) => {
@@ -2073,6 +2088,62 @@
       renderReplist();
       stats();
       if (els.overlay.classList.contains("open")) refreshSummary();
+    };
+    const scheduleCloudPush = () => {
+      if (cloudMutePush || !CLOUD_SYNC_URL) return;
+      if (cloudPushTimer) clearTimeout(cloudPushTimer);
+      cloudPushTimer = setTimeout(async () => {
+        try {
+          const doc = {
+            v: 1,
+            updatedAt: Date.now(),
+            source: "album-simon-2026-app",
+            payload: buildSyncPayload(),
+          };
+          await fetch(CLOUD_SYNC_URL, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(doc),
+          });
+        } catch {
+          // sin red: mantener solo local y reintentar más adelante
+        }
+      }, 900);
+    };
+    const pullCloudOnce = async ({ silent = true } = {}) => {
+      if (!CLOUD_SYNC_URL) return false;
+      try {
+        const res = await fetch(CLOUD_SYNC_URL, { cache: "no-store" });
+        if (!res.ok) return false;
+        const doc = await res.json();
+        if (!doc || typeof doc !== "object" || !doc.payload) return false;
+        const payload = doc.payload;
+        if (!payload || payload.v !== 1 || !Array.isArray(payload.h) || !Array.isArray(payload.r)) return false;
+        const remoteTs = Number(doc.updatedAt || 0);
+        const localTs = Number(localStorage.getItem(STATE_TS_KEY) || 0);
+        if (!remoteTs || remoteTs <= localTs) return false;
+        cloudMutePush = true;
+        applySyncPayload(payload);
+        localStorage.setItem(STATE_TS_KEY, String(remoteTs));
+        cloudMutePush = false;
+        if (!silent) toast("Sincronizado automático ✅", "ok");
+        return true;
+      } catch {
+        return false;
+      } finally {
+        cloudMutePush = false;
+      }
+    };
+    const initCloudSync = async () => {
+      if (cloudInitDone) return;
+      cloudInitDone = true;
+      const applied = await pullCloudOnce({ silent: true });
+      if (!applied) {
+        // si no había remoto más nuevo, subimos el estado local actual
+        scheduleCloudPush();
+      }
+      if (cloudPullTimer) clearInterval(cloudPullTimer);
+      cloudPullTimer = setInterval(() => { pullCloudOnce({ silent: true }); }, 15000);
     };
     const applySyncFromHash = () => {
       const hash = window.location.hash || "";
@@ -2591,35 +2662,39 @@
       if (btn) switchTab(btn.dataset.tab);
     });
 
-    renderCountries();
-    renderReplist();
-    stats();
-    updateUndoBtn();
-    applySyncFromHash();
+    const boot = async () => {
+      renderCountries();
+      renderReplist();
+      stats();
+      updateUndoBtn();
+      applySyncFromHash();
+      await initCloudSync();
 
-    // Auto-cargar las figus de Simón si no tiene ninguna marcada
-    const anyOwned = Object.values(state).some(s => s.la_tengo);
-    if (!anyOwned) {
-      fetch("preload.json?t=" + Date.now())
-        .then(r => r.ok ? r.json() : null)
-        .then(p => {
-          if (!p || typeof p !== "object") return;
-          let count = 0;
-          Object.keys(state).forEach(k => {
-            if (p[k] !== undefined) {
-              state[k].la_tengo = Boolean(p[k].la_tengo);
-              state[k].repetidas = Math.max(0, Number(p[k].repetidas || 0));
-              if (state[k].la_tengo) count++;
-            }
-          });
-          save();
-          renderCountries();
-          renderReplist();
-          stats();
-          toast(count + " figus de Simón cargadas ✅", "ok");
-        })
-        .catch(() => {});
-    }
+      // Auto-cargar las figus de Simón solo si sigue vacío tras sync local/hash/nube
+      const anyOwned = Object.values(state).some(s => s.la_tengo);
+      if (!anyOwned) {
+        fetch("preload.json?t=" + Date.now())
+          .then(r => r.ok ? r.json() : null)
+          .then(p => {
+            if (!p || typeof p !== "object") return;
+            let count = 0;
+            Object.keys(state).forEach(k => {
+              if (p[k] !== undefined) {
+                state[k].la_tengo = Boolean(p[k].la_tengo);
+                state[k].repetidas = Math.max(0, Number(p[k].repetidas || 0));
+                if (state[k].la_tengo) count++;
+              }
+            });
+            save();
+            renderCountries();
+            renderReplist();
+            stats();
+            toast(count + " figus de Simón cargadas ✅", "ok");
+          })
+          .catch(() => {});
+      }
+    };
+    boot();
   </script>
 </body>
 </html>
